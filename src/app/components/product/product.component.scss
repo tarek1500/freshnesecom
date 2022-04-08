@@ -1,0 +1,90 @@
+@font-face {
+	font-family: "OpenSans";
+	src: url("../../../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../../../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../../../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../../../assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+	font-weight: 700;
+}
+
+.product-container {
+	padding: 16px;
+	border-radius: 12px;
+	border: 1px solid #D1D1D1;
+
+	.image {
+		padding: 12px;
+		height: 180px;
+		margin-bottom: 16px;
+		border-radius: 12px;
+		background-color: #F9F9F9;;
+
+		.discount {
+			border-radius: 12px;
+			background-color: #F4F8EC;;
+			color: #6A983C;;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 12px;
+		}
+	}
+
+	.heading {
+		margin-bottom: 4px;
+		color: #151515;
+		font-family: 'Poppins';
+		font-weight: 500;
+		font-size: 15px;
+	}
+
+	.description {
+		margin-bottom: 16px;
+		color: #575757;
+		font-family: 'OpenSans';
+		font-weight: 400;
+		font-size: 12px;
+	}
+
+	.footer {
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+
+		.price {
+			color: #151515;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 18px;
+		}
+	
+		.old-price {
+			color: #A9A9A9;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 12px;
+			text-decoration-line: line-through;
+		}
+	
+		.buy-button {
+			border-radius: 12px;
+			border: 2px solid #46760A;
+			background-color: #6A983C;
+			color: #FFF;
+			font-family: 'Poppins';
+			font-weight: 700;
+			font-size: 15px;
+		}
+	}
+}

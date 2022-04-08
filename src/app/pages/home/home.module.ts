@@ -6,13 +6,16 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { MenuComponent } from '../../components/menu/menu.component';
+import { BannerComponent } from '../../components/home/banner/banner.component';
+import { ProductComponent } from '../../components/product/product.component';
 
 @NgModule({
 	declarations: [
 		HomeComponent,
 		HeaderComponent,
 		MenuComponent,
-		BannerComponent
+		BannerComponent,
+		ProductComponent
 	],
 	imports: [
 		CommonModule,
