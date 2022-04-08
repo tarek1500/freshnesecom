@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
+	{ path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
 	{ path: '**', component: PageNotFoundComponent }
 ];
 
