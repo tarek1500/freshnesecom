@@ -5,11 +5,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HeaderComponent } from '../../components/header/header.component';
+import { MenuComponent } from '../../components/menu/menu.component';
 
 @NgModule({
 	declarations: [
 		HomeComponent,
-		HeaderComponent
+		HeaderComponent,
+		MenuComponent
 	],
 	imports: [
 		CommonModule,

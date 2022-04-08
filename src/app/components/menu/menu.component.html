@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container-fluid justify-content-end">
+		<button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<div ngbDropdown class="d-inline-block">
+						<button ngbDropdownToggle class="btn dropdown-button">Bakery <img class="down-arrow-icon" src="../../../assets/icons/down-arrow.svg" alt=""></button>
+						<div ngbDropdownMenu class="dropdown">
+							<button ngbDropdownItem class="dropdown-item">Bakery</button>
+							<button ngbDropdownItem class="dropdown-item">Bakery</button>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div ngbDropdown class="d-inline-block">
+						<button ngbDropdownToggle class="btn dropdown-button">Fruit and vegetables <img class="down-arrow-icon" src="../../../assets/icons/down-arrow.svg" alt=""></button>
+						<div ngbDropdownMenu class="dropdown">
+							<button ngbDropdownItem class="dropdown-item">Fruit and vegetables</button>
+							<button ngbDropdownItem class="dropdown-item">Fruit and vegetables</button>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div ngbDropdown class="d-inline-block">
+						<button ngbDropdownToggle class="btn dropdown-button">Meat and fish <img class="down-arrow-icon" src="../../../assets/icons/down-arrow.svg" alt=""></button>
+						<div ngbDropdownMenu class="dropdown">
+							<button ngbDropdownItem class="dropdown-item">Meat and fish</button>
+							<button ngbDropdownItem class="dropdown-item">Meat and fish</button>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div ngbDropdown class="d-inline-block">
+						<button ngbDropdownToggle class="btn dropdown-button">Drinks <img class="down-arrow-icon" src="../../../assets/icons/down-arrow.svg" alt=""></button>
+						<div ngbDropdownMenu class="dropdown">
+							<button ngbDropdownItem class="dropdown-item">Drinks</button>
+							<button ngbDropdownItem class="dropdown-item">Drinks</button>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div ngbDropdown class="d-inline-block">
+						<button ngbDropdownToggle class="btn dropdown-button">Kitchen <img class="down-arrow-icon" src="../../../assets/icons/down-arrow.svg" alt=""></button>
+						<div ngbDropdownMenu class="dropdown">
+							<button ngbDropdownItem class="dropdown-item">Kitchen</button>
+							<button ngbDropdownItem class="dropdown-item">Kitchen</button>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div ngbDropdown class="d-inline-block">
+						<button ngbDropdownToggle class="btn dropdown-button">Special nutrition <img class="down-arrow-icon" src="../../../assets/icons/down-arrow.svg" alt=""></button>
+						<div ngbDropdownMenu class="dropdown">
+							<button ngbDropdownItem class="dropdown-item">Special nutrition</button>
+							<button ngbDropdownItem class="dropdown-item">Special nutrition</button>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div ngbDropdown class="d-inline-block">
+						<button ngbDropdownToggle class="btn dropdown-button">Baby <img class="down-arrow-icon" src="../../../assets/icons/down-arrow.svg" alt=""></button>
+						<div ngbDropdownMenu class="dropdown">
+							<button ngbDropdownItem class="dropdown-item">Baby</button>
+							<button ngbDropdownItem class="dropdown-item">Baby</button>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div ngbDropdown class="d-inline-block">
+						<button ngbDropdownToggle class="btn dropdown-button">Pharmacy <img class="down-arrow-icon" src="../../../assets/icons/down-arrow.svg" alt=""></button>
+						<div ngbDropdownMenu class="dropdown">
+							<button ngbDropdownItem class="dropdown-item">Pharmacy</button>
+							<button ngbDropdownItem class="dropdown-item">Pharmacy</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
