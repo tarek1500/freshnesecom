@@ -11,7 +11,8 @@ import { MenuComponent } from '../../components/menu/menu.component';
 	declarations: [
 		HomeComponent,
 		HeaderComponent,
-		MenuComponent
+		MenuComponent,
+		BannerComponent
 	],
 	imports: [
 		CommonModule,
