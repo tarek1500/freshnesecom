@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "postinstall": "ng build --output-path freshnesecom --aot --prod"
+    "postinstall": "ng build --output-path freshnesecom --aot"
   },
   "private": true,
   "dependencies": {
