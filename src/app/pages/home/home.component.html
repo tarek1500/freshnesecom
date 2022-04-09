@@ -73,4 +73,27 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="row extra-section quotes">
+		<div class="header">
+			<h2 class="heading">Our customers says</h2>
+			<button class="btn goto-button">Button <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></button>
+		</div>
+		<div class="carousel">
+			<owl-carousel-o [options]="quotesOptions">
+				<ng-template carouselSlide>
+					<app-quote></app-quote>
+				</ng-template>
+				<ng-template carouselSlide>
+					<app-quote></app-quote>
+				</ng-template>
+				<ng-template carouselSlide>
+					<app-quote></app-quote>
+				</ng-template>
+				<ng-template carouselSlide>
+					<app-quote></app-quote>
+				</ng-template>
+			</owl-carousel-o>
+		</div>
+	</div>
 </div>
