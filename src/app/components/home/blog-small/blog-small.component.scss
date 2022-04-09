@@ -1,0 +1,42 @@
+@font-face {
+	font-family: "OpenSans";
+	src: url("../../../../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../../../../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+	font-weight: 500;
+}
+
+.blog-container {
+	display: flex;
+	justify-content: space-between;
+
+	.heading {
+		color: #151515;
+		font-family: 'Poppins';
+		font-weight: 500;
+		font-size: 15px;
+		cursor: pointer;
+	}
+
+	.info {
+		display: flex;
+		color: #151515;
+		font-family: 'OpenSans';
+		font-weight: 400;
+		font-size: 12px;
+
+		.author {
+			margin-right: 16px;
+		}
+	}
+
+	.image {
+		width: 96px;
+		height: 96px;
+		border-radius: 12px;
+		background-color: #F5F5F5;
+	}
+}

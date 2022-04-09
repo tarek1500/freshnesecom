@@ -10,6 +10,9 @@ import { MenuComponent } from '../../components/menu/menu.component';
 import { BannerComponent } from '../../components/home/banner/banner.component';
 import { ProductComponent } from '../../components/product/product.component';
 import { QuoteComponent } from '../../components/home/quote/quote.component';
+import { BlogLargeComponent } from '../../components/blog-large/blog-large.component';
+import { BlogMediumComponent } from '../../components/blog-medium/blog-medium.component';
+import { BlogSmallComponent } from '../../components/home/blog-small/blog-small.component';
 
 @NgModule({
 	declarations: [
@@ -18,7 +21,10 @@ import { QuoteComponent } from '../../components/home/quote/quote.component';
 		MenuComponent,
 		BannerComponent,
 		ProductComponent,
-		QuoteComponent
+		QuoteComponent,
+		BlogLargeComponent,
+		BlogMediumComponent,
+		BlogSmallComponent
 	],
 	imports: [
 		CommonModule,

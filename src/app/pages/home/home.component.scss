@@ -218,5 +218,22 @@
 				}
 			}
 		}
+
+		.blogs {
+			margin: 0px;
+			padding: 0px 30px;
+
+			.item {
+				padding: 0px 16px;
+
+				@media (max-width: 1199.98px) {
+					margin-bottom: 24px;
+				}
+
+				div {
+					margin-bottom: 32px;
+				}
+			}
+		}
 	}
 }
