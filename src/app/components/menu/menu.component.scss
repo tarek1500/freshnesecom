@@ -30,26 +30,26 @@
 				margin-right: 0px;
 				padding: 4px 0px;
 			}
-	
+
 			.dropdown-button {
 				padding: 0px;
 				font-family: 'Poppins';
 				font-weight: 500;
 				font-size: 15px;
-	
+
 				&::after {
 					display: none;
 				}
-	
+
 				.down-arrow-icon {
 					width: 7px;
 					height: 4.2px;
 				}
 			}
-	
+
 			.dropdown {
 				background-color: #F9F9F9;
-	
+
 				.dropdown-item {
 					font-family: 'Poppins';
 					font-weight: 400;
