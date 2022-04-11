@@ -1,16 +1,5 @@
-@font-face {
-	font-family: "OpenSans";
-	src: url("../../../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
-	font-weight: 400;
-}
-@font-face {
-	font-family: "Poppins";
-	src: url("../../../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
-	font-weight: 600;
-}
-
-.footer-container {
-	padding: 64px 30px;
+.container {
+	padding: 64px 45px;
 
 	.links {
 		margin-bottom: 48px;

@@ -10,6 +10,32 @@
 /* Importing Bootstrap Slider SASS files */
 @import '~bootstrap-slider/src/sass/bootstrap-slider';
 
+@font-face {
+	font-family: "OpenSans";
+	src: url("./assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("./assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("./assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+	font-weight: 700;
+}
+
 body {
 	background-color: #F9F9F9;
 }

@@ -1,16 +1,13 @@
-@font-face {
-	font-family: "Poppins";
-	src: url("../../../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
-	font-weight: 600;
-}
-
-.blog-container {
+.container {
 	position: relative;
 	min-height: 400px;
+	padding: 0px;
 	border-radius: 12px;
 	overflow: hidden;
 
 	.tag {
+		margin: 24px;
+
 		span {
 			padding: 0px 8px;
 			border-radius: 12px;
