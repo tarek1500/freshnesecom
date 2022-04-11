@@ -7,6 +7,9 @@
 @import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
+/* Importing Bootstrap Slider SASS files */
+@import '~bootstrap-slider/src/sass/bootstrap-slider';
+
 body {
 	background-color: #F9F9F9;
 }

@@ -1,0 +1,273 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a routerLink="/">Homepage</a></li>
+		<li class="breadcrumb-item active">Fruit and vegetables</li>
+	</ol>
+
+	<div class="header">
+		<h2 class="heading">Fruit and vegetables</h2>
+		<div class="view">
+			<div [class]="{ 'item': true, 'grid-view': true, 'active': isGridView }" (click)="isGridView = true">
+				<img class="grid-icon" src="../../../assets/icons/grid-view-green.svg" alt="" *ngIf="isGridView">
+				<img class="grid-icon" src="../../../assets/icons/grid-view-gray.svg" alt="" *ngIf="!isGridView">
+				<span class="text">Grid view</span>
+			</div>
+			<div [class]="{ 'item': true, 'list-view': true, 'active': !isGridView }" (click)="isGridView = false">
+				<img class="list-icon" src="../../../assets/icons/list-view-green.svg" alt="" *ngIf="!isGridView">
+				<img class="list-icon" src="../../../assets/icons/list-view-gray.svg" alt="" *ngIf="isGridView">
+				<span class="text">List view</span>
+			</div>
+			<div class="item products">
+				<span class="count">117</span>
+				<span class="text">Products</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="filter">
+		<div class="filters">
+			<div class="filter-group">
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="filter-group1" id="filter-text1" checked>
+					<label class="form-check-label" for="filter-text1">Filter text</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="filter-group1" id="filter-text2">
+					<label class="form-check-label" for="filter-text2">Filter text</label>
+				</div>
+			</div>
+			<div class="filter-group">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="filter-text-3">
+					<label class="form-check-label" for="filter-text-3">Filter</label>
+				</div>
+				<span class="tag">Nbm</span>
+			</div>
+			<div class="filter-group">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="filter-text-4">
+					<label class="form-check-label" for="filter-text-4">Filter</label>
+				</div>
+				<span class="tag">Nbm</span>
+			</div>
+			<div class="filter-group">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="filter-text-5" checked>
+							<label class="form-check-label" for="filter-text-5">Filter</label>
+						</div>
+						<span class="tag">12</span>
+					</div>
+					<div class="vertical-splitter"></div>
+					<div ngbDropdown class="d-inline-block">
+						<button ngbDropdownToggle class="btn dropdown-button">Select <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-black.svg" alt=""></button>
+						<div ngbDropdownMenu class="dropdown">
+							<button ngbDropdownItem class="dropdown-item">Select</button>
+							<button ngbDropdownItem class="dropdown-item">Select</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tags">
+			<span class="heading">Applied filters:</span>
+			<span class="tag">Selected Filter <img class="close-icon" src="../../../assets/icons/close.svg" alt=""></span>
+			<span class="tag">Selected Filter <img class="close-icon" src="../../../assets/icons/close.svg" alt=""></span>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="row">
+			<div class="col-lg-3 filters">
+				<div class="filter-group">
+					<h3 class="heading">Categories</h3>
+					<div class="item categories">
+						<div class="category">Category name</div>
+						<div class="count">320</div>
+					</div>
+					<div class="item categories">
+						<div class="category">Category name</div>
+						<div class="count">112</div>
+					</div>
+					<div class="item categories">
+						<div class="category">Category name</div>
+						<div class="count">32</div>
+					</div>
+					<div class="item categories">
+						<div class="category">Category name</div>
+						<div class="count">48</div>
+					</div>
+				</div>
+				<div class="filter-group">
+					<h3 class="heading">Brands</h3>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-1">
+							<label class="form-check-label" for="brand-text-1">Filter by brand item</label>
+						</div>
+					</div>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-2" checked>
+							<label class="form-check-label" for="brand-text-2">Filter by brand item</label>
+						</div>
+					</div>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-3" checked>
+							<label class="form-check-label" for="brand-text-3">Filter by brand item</label>
+						</div>
+					</div>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-4">
+							<label class="form-check-label" for="brand-text-4">Filter by brand item</label>
+						</div>
+					</div>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-5">
+							<label class="form-check-label" for="brand-text-5">Filter by brand item</label>
+						</div>
+					</div>
+				</div>
+				<div class="filter-group">
+					<h3 class="heading">Rating</h3>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-1" #brandText1>
+							<div class="stars a" (click)="brandText1.checked = !brandText1.checked;">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-2" #brandText2>
+							<div class="stars" (click)="brandText2.checked = !brandText2.checked;">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-3" #brandText3>
+							<div class="stars" (click)="brandText3.checked = !brandText3.checked;">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-4" #brandText4>
+							<div class="stars" (click)="brandText4.checked = !brandText4.checked;">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="brand-text-5" #brandText5>
+							<div class="stars" (click)="brandText5.checked = !brandText5.checked;">
+								<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+								<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="filter-group">
+					<h3 class="heading">Price</h3>
+					<mv-slider [(value)]="priceValue" [min]="minPrice" [max]="maxPrice" [range]="true"></mv-slider>
+					<div class="range">
+						<div class="min">
+							<label for="min">Min</label>
+							<input class="form-control" id="min" type="text" placeholder="0" [value]="priceValue[0]">
+						</div>
+						<div class="horizontal-splitter">-</div>
+						<div class="max">
+							<label for="max">Max</label>
+							<input class="form-control" id="max" type="text" placeholder="000" [value]="priceValue[1]">
+						</div>
+					</div>
+					<div class="buttons">
+						<button class="btn apply-button">Apply</button>
+						<button class="btn reset-button"><img class="left-arrow-icon" src="../../../assets/icons/left-arrow-green.svg" alt=""> Reset</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 products">
+				<div class="row">
+					<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
+						<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+					</div>
+					<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
+						<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+					</div>
+					<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
+						<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+					</div>
+					<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
+						<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+					</div>
+					<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
+						<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+					</div>
+					<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
+						<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+					</div>
+					<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
+						<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+					</div>
+					<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
+						<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+					</div>
+					<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
+						<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row footer">
+		<div class="col-3 pages">
+			<h3 class="title">Page:</h3>
+			<a class="page" href="#">1</a>
+			<a class="page" href="#">2</a>
+			<a class="page active" href="#">3</a>
+			<a class="page" href="#">4</a>
+		</div>
+		<div class="col-6 more">
+			<button class="btn more-button">Show more products <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-white.svg" alt=""></button>
+		</div>
+		<div class="col-3 products">
+			<span class="count">336</span>
+			<span class="text">Products</span>
+		</div>
+	</div>
+
+	<app-footer></app-footer>
+</div>

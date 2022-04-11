@@ -57,14 +57,18 @@
 
 		.tag {
 			margin: 0px 16px 16px 0px;
-			padding: 4px 10px;
 			display: inline-block;
 			border-radius: 12px;
 			background-color: #F5F5F5;
-			color: #151515;
-			font-family: 'Poppins';
-			font-weight: 600;
-			font-size: 12px;
+
+			a {
+				padding: 4px 10px;
+				text-decoration: none;
+				color: #151515;
+				font-family: 'Poppins';
+				font-weight: 600;
+				font-size: 12px;
+			}
 		}
 	}
 
