@@ -16,4 +16,4 @@ import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.comp
 		BreadcrumbComponent
 	]
 })
-export class BreadcrumbModule { }
+export class SharedBreadcrumbModule { }
