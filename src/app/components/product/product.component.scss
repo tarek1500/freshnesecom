@@ -67,17 +67,17 @@
 				}
 
 				.old-price {
+					text-decoration-line: line-through;
 					color: #A9A9A9;
 					font-family: 'Poppins';
 					font-weight: 600;
 					font-size: 12px;
-					text-decoration-line: line-through;
 				}
 			}
 
 			.buttons {
 				.buy-button {
-					margin: 0px 0px 12px auto;
+					margin: 0px auto 12px auto;
 					display: block;
 					border-radius: 12px;
 					border: 2px solid #46760A;

@@ -4,16 +4,18 @@
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
 	.breadcrumb {
+		
 		padding: 16px 45px;
 
 		.breadcrumb-item {
 			&:not(.active) {
+				font-family: 'OpenSans';
+				font-weight: 400;
+				font-size: 12px;
+
 				a {
 					text-decoration: none;
 					color: #A9A9A9;
-					font-family: 'OpenSans';
-					font-weight: 400;
-					font-size: 12px;
 				}
 			}
 
@@ -374,6 +376,10 @@
 							font-family: 'OpenSans';
 							font-weight: 400;
 							font-size: 14px;
+
+							&::placeholder {
+								color: #A9A9A9;
+							}
 						}
 					}
 				}
