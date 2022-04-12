@@ -1,0 +1,184 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a routerLink="/">Homepage</a></li>
+		<li class="breadcrumb-item"><a routerLink="/shop">Fruit and vegetables</a></li>
+		<li class="breadcrumb-item active">Carrots from Tomissy Farm</li>
+	</ol>
+
+	<div class="content">
+		<div class="row">
+			<div class="col-md-6 images">
+				<div class="image">
+					<div class="tags">
+						<div class="tag"><span>- 36 %</span></div>
+						<div class="tag"><span>Free shipping</span></div>
+					</div>
+				</div>
+				<div class="image"></div>
+				<div class="image"></div>
+			</div>
+			<div class="col-md-6 details">
+				<h2 class="heading">Carrots from Tomissy Farm</h2>
+				<div class="stars">
+					<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+					<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+					<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+					<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+					<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+					<div class="review">
+						<a href="#">(1 customer review)</a>
+					</div>
+				</div>
+				<p class="description">Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.</p>
+				<div class="row info">
+					<div class="col-lg-6 col-md-12 col-sm-6">
+						<div class="row">
+							<div class="col-5">
+								<div class="text gray">SKU:</div>
+								<div class="text gray">Category:</div>
+								<div class="text gray">Stock:</div>
+								<div class="text gray">Farm:</div>
+							</div>
+							<div class="col-7">
+								<div class="text">76645</div>
+								<div class="text"><a routerLink="/shop">Vegetables</a></div>
+								<div class="text green"><a href="#">In Stock</a></div>
+								<div class="text">Grocery Tarm Fields</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 col-sm-6">
+						<div class="row">
+							<div class="col-5">
+								<div class="text gray">Freshness:</div>
+								<div class="text gray">Buy by:</div>
+								<div class="text gray">Delivery:</div>
+								<div class="text gray">Delivery area:</div>
+							</div>
+							<div class="col-7">
+								<div class="text">1 days old</div>
+								<div class="text">pcs, kgs, box, pack</div>
+								<div class="text">in 2 days</div>
+								<div class="text">Czech republic</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart">
+					<div class="price">
+						<div class="current-price">36.23 USD</div>
+						<div class="old-price">48.56 USD</div>
+					</div>
+					<div class="buttons">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<input class="form-control" type="text" placeholder="1">
+							</div>
+							<div class="vertical-splitter"></div>
+							<div ngbDropdown class="d-inline-block">
+								<button ngbDropdownToggle class="btn dropdown-button">Pcs <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-black.svg" alt=""></button>
+								<div ngbDropdownMenu class="dropdown">
+									<button ngbDropdownItem class="dropdown-item">Category 1</button>
+									<button ngbDropdownItem class="dropdown-item">Category 2</button>
+									<button ngbDropdownItem class="dropdown-item">Category 3</button>
+								</div>
+							</div>
+						</div>
+						<button class="btn add-button"><img class="plus-icon" src="../../../assets/icons/plus.svg" alt=""> Add to cart</button>
+					</div>
+				</div>
+				<div class="options">
+					<div class="wishlist"><img class="heart-icon" src="../../../assets/icons/heart-orange.svg" alt=""> Add to my wish list</div>
+					<div class="compare"><img class="compare-icon" src="../../../assets/icons/compare.svg" alt=""> Compare</div>
+				</div>
+				<div class="info">
+					<nav ngbNav #infoNav="ngbNav" class="nav-tabs">
+						<ng-container ngbNavItem>
+							<a ngbNavLink>Description</a>
+							<ng-template ngbNavContent>
+								<div>
+									<h3 class="heading">Origins</h3>
+									<p class="details">We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.</p>
+									<h3 class="heading">How to cook</h3>
+									<p class="details">From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.</p>
+									<h3 class="heading">Full of Vitamins!</h3>
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Vitamins</th>
+												<th>Quantity</th>
+												<th>% DV</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Vitamin A equiv.</td>
+												<td>735 μg</td>
+												<td>104 %</td>
+											</tr>
+											<tr>
+												<td>Thiamine (B1)</td>
+												<td>0.066 mg</td>
+												<td>6 %</td>
+											</tr>
+											<tr>
+												<td>Niacin (B3)</td>
+												<td>0.983 mg</td>
+												<td>7 %</td>
+											</tr>
+											<tr>
+												<td>Folate (Bg)</td>
+												<td>19 μg</td>
+												<td>5 %</td>
+											</tr>
+											<tr>
+												<td>Vitamin C</td>
+												<td>5.9 mg</td>
+												<td>7 %</td>
+											</tr>
+											<tr>
+												<td>Vitamin E</td>
+												<td>0.66 mg</td>
+												<td>4 %</td>
+											</tr>
+											<tr>
+												<td>Vitamin K</td>
+												<td>13.2</td>
+												<td>13 %</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</ng-template>
+						</ng-container>
+						<ng-container ngbNavItem>
+							<a ngbNavLink>
+								Reviews
+								<span class="tag">18</span>
+							</a>
+							<ng-template ngbNavContent>
+								<h2 class="heading">Reviews</h2>
+							</ng-template>
+						</ng-container>
+						<ng-container ngbNavItem>
+							<a ngbNavLink>
+								Questions
+								<span class="tag">4</span>
+							</a>
+							<ng-template ngbNavContent>
+								<h2 class="heading">Questions</h2>
+							</ng-template>
+						</ng-container>
+					</nav>
+					<div [ngbNavOutlet]="infoNav" class="mt-2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<app-related-products [heading]="'Related products'" [goto-button]="'More products'"></app-related-products>
+	<app-footer></app-footer>
+</div>

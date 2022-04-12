@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { ProductComponent } from '../../components/product/product.component';
 
@@ -8,7 +9,8 @@ import { ProductComponent } from '../../components/product/product.component';
 		ProductComponent
 	],
 	imports: [
-		CommonModule
+		CommonModule,
+		RouterModule
 	],
 	exports: [
 		ProductComponent

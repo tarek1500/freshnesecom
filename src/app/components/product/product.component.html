@@ -1,15 +1,15 @@
-<div [class]="{ 'container': true, 'large': size == 'large' }">
-	<div [class]="{ 'row': size == 'large' }">
-		<div [class]="{ 'col-md-4': size == 'large' }">
+<div [class]="{ 'container': true, 'large': size === 'large' }">
+	<div [class]="{ 'row': size === 'large' }">
+		<div [class]="{ 'col-md-4': size === 'large' }">
 			<div class="image">
 				<span class="discount">-36 %</span>
 			</div>
 		</div>
-		<div [class]="{ 'col-md-8': size == 'large' }">
+		<div [class]="{ 'col-md-8': size === 'large' }">
 			<div class="content">
-				<div [class]="{ 'row': size == 'large' }">
-					<div [class]="{ 'col-sm-6': size == 'large' }">
-						<h2 class="heading">Product Title</h2>
+				<div [class]="{ 'row': size === 'large' }">
+					<div [class]="{ 'col-sm-6': size === 'large' }">
+						<a class="heading" routerLink="/product-details">Product Title</a>
 						<p class="description">Space for a small product description</p>
 						<div class="stars">
 							<img class="black-star-icon" src="../../../assets/icons/star-black.svg" alt="">
@@ -18,7 +18,7 @@
 							<img class="black-star-icon" src="../../../assets/icons/star-black.svg" alt="">
 							<img class="white-star-icon" src="../../../assets/icons/star-white.svg" alt="">
 						</div>
-						<div class="row details" *ngIf="size == 'large'">
+						<div class="row details" *ngIf="size === 'large'">
 							<div class="col-5">
 								<div class="text">Fresheness</div>
 								<div class="text">Farm</div>
@@ -33,19 +33,19 @@
 							</div>
 						</div>
 					</div>
-					<div [class]="{ 'col-sm-4': size == 'large' }">
+					<div [class]="{ 'col-sm-4': size === 'large' }">
 						<div class="footer">
 							<div class="price">
 								<div class="current-price">0.28 USD</div>
 								<div class="old-price">48.56 USD</div>
 							</div>
-							<div class="shipping" *ngIf="size == 'large'">
+							<div class="shipping" *ngIf="size === 'large'">
 								<div class="type">Free Shipping</div>
 								<div class="days">Delivery in 1 day</div>
 							</div>
 							<div class="buttons">
 								<button class="btn buy-button">Buy now</button>
-								<button class="btn wishlist-button"><img class="heart-icon" src="../../../assets/icons/heart.svg" alt=""> Wishlist</button>
+								<button class="btn wishlist-button"><img class="heart-icon" src="../../../assets/icons/heart-black.svg" alt=""> Wishlist</button>
 							</div>
 						</div>
 					</div>
