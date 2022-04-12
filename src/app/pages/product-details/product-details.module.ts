@@ -5,7 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsRoutingModule } from './product-details-routing.module';
 import { SharedModule } from '../../shared/shared/shared.module';
 import { BreadcrumbModule } from '../../shared/breadcrumb/breadcrumb.module';
-import { RelatedProductsModule } from '../../shared/related-products/related-products.module';
+import { SharedRelatedProductsModule } from '../../shared/shared-related-products/shared-related-products.module';
 import { ProductDetailsComponent } from './product-details.component';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { ProductDetailsComponent } from './product-details.component';
 		NgbModule,
 		SharedModule,
 		BreadcrumbModule,
-		RelatedProductsModule
+		SharedRelatedProductsModule
 	]
 })
 export class ProductDetailsModule { }

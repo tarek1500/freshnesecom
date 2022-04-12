@@ -16,4 +16,4 @@ import { RelatedProductsComponent } from '../../components/related-products/rela
 		RelatedProductsComponent
 	]
 })
-export class RelatedProductsModule { }
+export class SharedRelatedProductsModule { }
