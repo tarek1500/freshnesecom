@@ -10,7 +10,7 @@ import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 export class ProductDetailsComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
 		{ text: 'Homepage', link: '/' },
-		{ text: 'Fruit and vegetables', link: '/shop' },
+		{ text: 'Fruit and vegetables', link: '/products' },
 		{ text: 'Carrots from Tomissy Farm', link: '' },
 	]
 

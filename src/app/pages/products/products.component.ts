@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 
 @Component({
-	selector: 'app-shop',
-	templateUrl: './shop.component.html',
-	styleUrls: ['./shop.component.scss']
+	selector: 'app-products',
+	templateUrl: './products.component.html',
+	styleUrls: ['./products.component.scss']
 })
-export class ShopComponent implements OnInit {
+export class ProductsComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
 		{ text: 'Homepage', link: '/' },
 		{ text: 'Fruit and vegetables', link: '' },

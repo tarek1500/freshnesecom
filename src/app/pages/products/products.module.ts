@@ -3,19 +3,19 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
 
-import { ShopRoutingModule } from './shop-routing.module';
+import { ProductsRoutingModule } from './products-routing.module';
 import { SharedModule } from '../../shared/shared/shared.module';
 import { SharedBreadcrumbModule } from '../../shared/shared-breadcrumb/shared-breadcrumb.module';
 import { SharedProductsModule } from '../../shared/shared-products/shared-products.module';
-import { ShopComponent } from './shop.component';
+import { ProductsComponent } from './products.component';
 
 @NgModule({
 	declarations: [
-		ShopComponent
+		ProductsComponent
 	],
 	imports: [
 		CommonModule,
-		ShopRoutingModule,
+		ProductsRoutingModule,
 		NgbModule,
 		NgxBootstrapSliderModule,
 		SharedModule,
@@ -23,4 +23,4 @@ import { ShopComponent } from './shop.component';
 		SharedProductsModule
 	]
 })
-export class ShopModule { }
+export class ProductsModule { }
