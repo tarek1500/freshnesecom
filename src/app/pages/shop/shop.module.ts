@@ -5,6 +5,7 @@ import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
 
 import { ShopRoutingModule } from './shop-routing.module';
 import { SharedModule } from '../../shared/shared/shared.module';
+import { BreadcrumbModule } from '../../shared/breadcrumb/breadcrumb.module';
 import { ProductModule } from '../../shared/product/product.module';
 import { ShopComponent } from './shop.component';
 
@@ -18,6 +19,7 @@ import { ShopComponent } from './shop.component';
 		NgbModule,
 		NgxBootstrapSliderModule,
 		SharedModule,
+		BreadcrumbModule,
 		ProductModule
 	]
 })

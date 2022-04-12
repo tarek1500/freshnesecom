@@ -3,36 +3,6 @@
 	background-color: #FFF;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
-	.breadcrumb {
-		
-		padding: 16px 45px;
-
-		.breadcrumb-item {
-			&:not(.active) {
-				font-family: 'OpenSans';
-				font-weight: 400;
-				font-size: 12px;
-
-				a {
-					text-decoration: none;
-					color: #A9A9A9;
-				}
-			}
-
-			&.active {
-				margin-top: auto;
-				color: #151515;
-				font-family: 'OpenSans';
-				font-weight: 400;
-				font-size: 12px;
-
-				&::before {
-					color: #D1D1D1;
-				}
-			}
-		}
-	}
-
 	.header {
 		padding: 8px 45px;
 		display: flex;
