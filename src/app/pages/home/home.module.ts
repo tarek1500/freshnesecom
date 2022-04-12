@@ -4,7 +4,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../../shared/shared/shared.module';
-import { ProductModule } from '../../shared/product/product.module';
+import { SharedProductsModule } from '../../shared/shared-products/shared-products.module';
 import { RelatedProductsModule } from '../../shared/related-products/related-products.module';
 import { HomeComponent } from './home.component';
 import { BannerComponent } from '../../components/home/banner/banner.component';
@@ -26,7 +26,7 @@ import { BlogSmallComponent } from '../../components/home/blog-small/blog-small.
 		CommonModule,
 		HomeRoutingModule,
 		SharedModule,
-		ProductModule,
+		SharedProductsModule,
 		RelatedProductsModule,
 		CarouselModule
 	]

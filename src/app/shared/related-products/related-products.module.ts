@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProductModule } from '../product/product.module';
+import { SharedProductsModule } from '../shared-products/shared-products.module';
 import { RelatedProductsComponent } from '../../components/related-products/related-products.component';
 
 @NgModule({
@@ -10,7 +10,7 @@ import { RelatedProductsComponent } from '../../components/related-products/rela
 	],
 	imports: [
 		CommonModule,
-		ProductModule
+		SharedProductsModule
 	],
 	exports: [
 		RelatedProductsComponent
