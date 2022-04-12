@@ -6,11 +6,10 @@ import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../../shared/shared/shared.module';
 import { SharedProductsModule } from '../../shared/shared-products/shared-products.module';
 import { SharedRelatedProductsModule } from '../../shared/shared-related-products/shared-related-products.module';
+import { SharedBlogsModule } from '../../shared/shared-blogs/shared-blogs.module';
 import { HomeComponent } from './home.component';
 import { BannerComponent } from '../../components/home/banner/banner.component';
 import { QuoteComponent } from '../../components/home/quote/quote.component';
-import { BlogLargeComponent } from '../../components/blog-large/blog-large.component';
-import { BlogMediumComponent } from '../../components/blog-medium/blog-medium.component';
 import { BlogSmallComponent } from '../../components/home/blog-small/blog-small.component';
 
 @NgModule({
@@ -18,17 +17,16 @@ import { BlogSmallComponent } from '../../components/home/blog-small/blog-small.
 		HomeComponent,
 		BannerComponent,
 		QuoteComponent,
-		BlogLargeComponent,
-		BlogMediumComponent,
 		BlogSmallComponent
 	],
 	imports: [
 		CommonModule,
 		HomeRoutingModule,
+		CarouselModule,
 		SharedModule,
 		SharedProductsModule,
 		SharedRelatedProductsModule,
-		CarouselModule
+		SharedBlogsModule
 	]
 })
 export class HomeModule { }
