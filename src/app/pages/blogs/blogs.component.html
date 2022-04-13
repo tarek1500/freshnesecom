@@ -1,0 +1,104 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+	<div class="header">
+		<h2 class="heading">Blogs</h2>
+		<div class="view">
+			<div class="item blogs">
+				<span class="count">117</span>
+				<span class="text">Blogs</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="row large-blogs">
+			<div class="col-lg-6 blog">
+				<app-blog-large></app-blog-large>
+			</div>
+			<div class="col-lg-6 blog">
+				<app-blog-large></app-blog-large>
+			</div>
+		</div>
+		<div class="row small-blogs">
+			<div class="col-lg-3 widgets">
+				<div class="widget">
+					<h3 class="heading">Archives</h3>
+					<div class="link"><a href="#">March 2020</a></div>
+					<div class="link"><a href="#">February 2020</a></div>
+					<div class="link"><a href="#">January 2020</a></div>
+					<div class="link"><a href="#">November 2019</a></div>
+					<div class="link"><a href="#">December 2019</a></div>
+				</div>
+				<div class="widget">
+					<h3 class="heading">Category</h3>
+					<div class="link"><a class="gray" href="#">Food</a></div>
+					<div class="link"><a class="gray" href="#">Chefs specialities</a></div>
+					<div class="link"><a class="gray" href="#">Vegetable</a></div>
+					<div class="link"><a class="gray" href="#">Meat</a></div>
+					<div class="link"><a class="gray" href="#">Recommendations</a></div>
+				</div>
+				<div class="widget">
+					<h3 class="heading join">Join our list</h3>
+					<p class="description">Signup to be the first to hear about exclusive deals, special offers, recepies from our masters and others.</p>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<input class="form-control" type="text" placeholder="Your email address">
+						</div>
+						<button class="btn">Subscribe</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 blogs">
+				<div class="row">
+					<div class="col-xl-4 col-lg-6 col-md-6 blog">
+						<app-blog-medium></app-blog-medium>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-6 blog">
+						<app-blog-medium></app-blog-medium>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-6 blog">
+						<app-blog-medium></app-blog-medium>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-6 blog">
+						<app-blog-medium></app-blog-medium>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-6 blog">
+						<app-blog-medium></app-blog-medium>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-6 blog">
+						<app-blog-medium></app-blog-medium>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-6 blog">
+						<app-blog-medium></app-blog-medium>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-6 blog">
+						<app-blog-medium></app-blog-medium>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row footer">
+		<div class="col-3 pages">
+			<h3 class="title">Page:</h3>
+			<a class="page active" href="#">1</a>
+			<a class="page" href="#">2</a>
+			<a class="page" href="#">3</a>
+			<a class="page" href="#">4</a>
+		</div>
+		<div class="col-6 more">
+			<button class="btn more-button">Next page <img class="down-arrow-icon" src="../../../assets/icons/right-arrow-white.svg" alt=""></button>
+		</div>
+		<div class="col-3 blogs">
+			<span class="count">198</span>
+			<span class="text">Blogs</span>
+		</div>
+	</div>
+
+	<app-footer></app-footer>
+</div>

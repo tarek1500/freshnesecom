@@ -394,12 +394,14 @@
 	}
 
 	.footer {
+		margin: 0px;
 		padding: 16px 45px;
 		display: flex;
 		justify-content: space-between;
 
 		.pages {
 			margin: auto 0px;
+			padding-left: 0px;
 
 			@media (max-width: 991.98px) {
 				width: 50%;
@@ -456,6 +458,7 @@
 
 		.products {
 			margin: auto 0px;
+			padding-right: 0px;
 			text-align: right;
 
 			@media (max-width: 991.98px) {
