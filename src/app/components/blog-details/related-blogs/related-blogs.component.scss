@@ -1,0 +1,43 @@
+.container {
+	padding: 53px 0px 48px;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 33.5px;
+		padding: 0px 45px;
+
+		.heading {
+			margin: auto 0px;
+			color: #151515;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 18px;
+		}
+
+		.goto-button {
+			border-radius: 12px;
+			color: #151515;
+			font-family: 'Poppins';
+			font-weight: 700;
+			font-size: 15px;
+
+			.right-arrow-icon {
+				margin-left: 7px;
+			}
+		}
+	}
+
+	.blogs {
+		margin: 0px;
+		padding: 0px 30px;
+
+		.item {
+			padding: 0px 16px;
+
+			@media (max-width: 1199.98px) {
+				margin-bottom: 24px;
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="header">
+		<div class="image"></div>
+		<div class="info">
+			<div class="author">{{ comment.author }}</div>
+			<div [class]="{ 'tag': true, 'green': comment.tagClass === 'green', 'gray': comment.tagClass === 'gray' }">{{ comment.tag }}</div>
+			<div class="date">22. 6. 2020</div>
+		</div>
+	</div>
+	<div class="comment">{{ comment.comment }}</div>
+</div>

@@ -26,11 +26,15 @@
 		background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 
 		.heading {
-			color: #FFF;
-			font-family: 'Poppins';
-			font-weight: 600;
-			font-size: 22px;
-			cursor: pointer;
+			margin-bottom: 8px;
+
+			a {
+				text-decoration: none;
+				color: #FFF;
+				font-family: 'Poppins';
+				font-weight: 600;
+				font-size: 22px;
+			}
 		}
 
 		.info {

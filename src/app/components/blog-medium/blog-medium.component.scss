@@ -24,11 +24,14 @@
 
 	.heading {
 		margin-bottom: 16px;
-		color: #151515;
-		font-family: 'Poppins';
-		font-weight: 600;
-		font-size: 18px;
-		cursor: pointer;
+
+		a {
+			text-decoration: none;
+			color: #151515;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 18px;
+		}
 	}
 
 	.info {

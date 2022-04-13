@@ -1,0 +1,61 @@
+.container {
+	padding: 16px;
+	border-radius: 12px;
+	border: 1px solid #D1D1D1;
+
+	.header {
+		margin-bottom: 24px;
+		display: flex;
+
+		.image {
+			width: 40px;
+			height: 40px;
+			margin-right: 12px;
+			border-radius: 50%;
+			background-color: #F9F9F9;
+		}
+
+		.info {
+			.author {
+				margin-right: 6px;
+				display: inline-block;
+				color: #151515;
+				font-family: 'Poppins';
+				font-weight: 600;
+				font-size: 12px;
+			}
+
+			.tag {
+				padding: 0px 8px;
+				display: inline-block;
+				border-radius: 12px;
+				font-family: 'Poppins';
+				font-weight: 600;
+				font-size: 12px;
+
+				&.green {
+					background-color: #F4F8EC;
+					color: #6A983C;
+				}
+				&.gray {
+					background-color: #F5F5F5;
+					color: #151515;
+				}
+			}
+
+			.date {
+				color: #D1D1D1;
+				font-family: 'OpenSans';
+				font-weight: 400;
+				font-size: 12px;
+			}
+		}
+	}
+
+	.comment {
+		color: #151515;
+		font-family: 'OpenSans';
+		font-weight: 400;
+		font-size: 14px;
+	}
+}

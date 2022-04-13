@@ -100,7 +100,7 @@
 					input {
 						width: 22px;
 						height: 22px;
-						margin: 0px 8px 0px 0px;
+						margin: 1px 8px 0px 0px;
 						border: 1.5px solid #D1D1D1;
 						cursor: pointer;
 
@@ -115,16 +115,12 @@
 					}
 
 					label {
-						vertical-align: top;
+						display: inline;
 						color: #151515;
 						font-family: 'OpenSans';
 						font-weight: 400;
 						font-size: 14px;
 						cursor: pointer;
-
-						@media (max-width: 575.98px) {
-							vertical-align: text-top;
-						}
 					}
 				}
 
@@ -206,9 +202,12 @@
 	}
 
 	.content {
+		margin: 0px;
 		padding: 64px 45px;
 
 		.filters {
+			padding-left: 0px;
+
 			.filter-group {
 				margin-bottom: 48px;
 
@@ -387,6 +386,8 @@
 		}
 
 		.products {
+			padding-right: 0px;
+
 			.product {
 				margin-bottom: 48px;
 			}
