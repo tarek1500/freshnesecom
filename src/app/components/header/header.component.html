@@ -23,7 +23,8 @@
 	<div class="horizontal-splitter"></div>
 
 	<div class="row extra">
-		<div [class]="{ 'cart-container': true, 'visible': isCartVisible }">
+		<!-- Adding cart-container class to class binding makes the cart appears then disappears -->
+		<div class="cart-container" [class]="{ 'visible': isCartVisible }">
 			<app-cart (onClose)="onCartClose()"></app-cart>
 		</div>
 		<div class="col-3 brand">
