@@ -23,6 +23,9 @@
 	<div class="horizontal-splitter"></div>
 
 	<div class="row extra">
+		<div [class]="{ 'cart-container': true, 'visible': isCartVisible }">
+			<app-cart (onClose)="onCartClose()"></app-cart>
+		</div>
 		<div class="col-3 brand">
 			<img class="brand-image" src="../../../assets/images/brand.svg" alt="">
 		</div>
@@ -47,11 +50,9 @@
 			<div class="user">
 				<img class="user-icon" src="../../../assets/icons/user.svg" alt="">
 			</div>
-			<div class="cart">
-				<a routerLink="/checkout">
-					<img class="cart-icon" src="../../../assets/icons/cart.svg" alt="">
-					<span class="icon-badge">4</span>
-				</a>
+			<div class="cart" (click)="isCartVisible = !isCartVisible">
+				<img class="cart-icon" src="../../../assets/icons/cart.svg" alt="">
+				<span class="icon-badge">4</span>
 			</div>
 		</div>
 	</div>

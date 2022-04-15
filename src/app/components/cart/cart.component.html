@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="header">
+		<h2 class="heading">Shopping cart</h2>
+		<button class="btn close-button" (click)="close($event)">Close <img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""></button>
+	</div>
+
+	<div class="products">
+		<div class="product">
+			<app-product-tiny></app-product-tiny>
+		</div>
+		<div class="product">
+			<app-product-tiny></app-product-tiny>
+		</div>
+		<div class="product">
+			<app-product-tiny></app-product-tiny>
+		</div>
+		<div class="product">
+			<app-product-tiny></app-product-tiny>
+		</div>
+	</div>
+
+	<div class="subtotal">
+		<h3 class="heading">Subtotal</h3>
+		<div class="price">73.98 USD</div>
+	</div>
+
+	<div class="footer">
+		<button class="btn continue-button" (click)="close($event)">Continue shopping</button>
+		<a class="btn checkout-button" routerLink="/checkout">Go to Checkout</a>
+	</div>
+</div>
