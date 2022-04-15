@@ -10,7 +10,7 @@ describe('CommentComponent', () => {
 		await TestBed.configureTestingModule({
 			declarations: [ CommentComponent ]
 		})
-		.compileComponents();
+			.compileComponents();
 	});
 
 	beforeEach(() => {

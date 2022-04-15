@@ -8,7 +8,7 @@ import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 	styleUrls: ['./breadcrumb.component.scss']
 })
 export class BreadcrumbComponent implements OnInit {
-	@Input('breadcrumb') breadcrumb: Breadcrumb[] = [];
+	@Input() breadcrumb: Breadcrumb[] = [];
 
 	constructor() { }
 

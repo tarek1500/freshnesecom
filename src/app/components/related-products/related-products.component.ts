@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
 	styleUrls: ['./related-products.component.scss']
 })
 export class RelatedProductsComponent implements OnInit {
-	@Input('heading') heading: string = '';
+	@Input() heading: string = '';
 	@Input('goto-button') gotoButton: string = '';
 
 	constructor() { }
