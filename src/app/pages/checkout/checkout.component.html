@@ -1,0 +1,256 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+	<div class="content row">
+		<div class="col-xl-7 col-lg-6 col-md-12 billing">
+			<div class="billing-info">
+				<h2 class="heading">Billing info</h2>
+				<div class="subheading">
+					<h3>Please enter your billing info</h3>
+					<div class="step">Step 1 of 5</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 form-group">
+						<label for="first-name">First name</label>
+						<input class="form-control" id="first-name" type="text" placeholder="First name">
+					</div>
+					<div class="col-md-6 form-group">
+						<label for="last-name">Last name</label>
+						<input class="form-control" id="last-name" type="text" placeholder="Last name">
+					</div>
+					<div class="col-md-6 form-group">
+						<label for="email">Email address</label>
+						<input class="form-control" id="email" type="email" placeholder="Email address">
+					</div>
+					<div class="col-md-6 form-group">
+						<label for="phone">Phone number</label>
+						<input class="form-control" id="phone" type="text" placeholder="Phone number">
+					</div>
+					<div class="col-md-6 form-group">
+						<label for="address">Address</label>
+						<input class="form-control" id="address" type="text" placeholder="Address">
+					</div>
+					<div class="col-md-6 form-group">
+						<label for="town">Town / City</label>
+						<input class="form-control" id="town" type="text" placeholder="Town / City">
+					</div>
+					<div class="col-md-6 form-group">
+						<label for="state">State / Country</label>
+						<select class="form-select" id="state">
+							<option selected>State / Country</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+					<div class="col-md-6 form-group">
+						<label for="zip">ZIP / Postal code</label>
+						<input class="form-control" id="zip" type="text" placeholder="ZIP / Postal code">
+					</div>
+					<div class="col-md-6 form-group">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="save">
+							<label class="form-check-label" for="save">Ship to a different address?</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="billing-method">
+				<h2 class="heading">Billing method</h2>
+				<div class="subheading">
+					<h3>Please enter your payment method</h3>
+					<div class="step">Step 2 of 5</div>
+				</div>
+				<div class="row fedex">
+					<div class="col-md-2 col-6 name">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="billing-method" id="fedex-button">
+							<label class="form-check-label" for="fedex-button">FedEx</label>
+						</div>
+					</div>
+					<div class="col-md-8 col-12 data">
+						<span class="text">+32 USD</span>
+						<span class="tag">Additional price</span>
+					</div>
+					<div class="col-md-2 col-6 icon">
+						<img class="fedex-icon" src="../../../assets/icons/fedex.svg" alt="">
+					</div>
+				</div>
+				<div class="row dhl">
+					<div class="col-md-2 col-6 name">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="billing-method" id="dhl-button">
+							<label class="form-check-label" for="dhl-button">DHL</label>
+						</div>
+					</div>
+					<div class="col-md-8 col-12 data">
+						<span class="text">+15 USD</span>
+						<span class="tag">Additional price</span>
+					</div>
+					<div class="col-md-2 col-6 icon">
+						<img class="dhl-icon" src="../../../assets/icons/dhl.svg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="payment-method">
+				<h2 class="heading">Payment method</h2>
+				<div class="subheading">
+					<h3>Please enter your payment method</h3>
+					<div class="step">Step 3 of 5</div>
+				</div>
+				<ngb-accordion [closeOthers]="true" activeIds="credit-card" #accordion="ngbAccordion">
+					<ngb-panel id="credit-card" #creditCard>
+						<ng-template ngbPanelTitle>
+							<div class="credit-card">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="credit-card-button" [checked]="accordion.isExpanded('credit-card')">
+									<label class="form-check-label" for="credit-card-button" (click)="accordion.toggle('credit-card')">Credit card</label>
+								</div>
+								<div class="icons">
+									<img class="visa-icon" src="../../../assets/icons/visa.svg" alt="">
+									<img class="master-card-icon" src="../../../assets/icons/master-card.svg" alt="">
+								</div>
+							</div>
+						</ng-template>
+						<ng-template ngbPanelContent>
+							<div class="row">
+								<div class="col-md-12 form-group">
+									<label for="card-number">Card number</label>
+									<input class="form-control" id="card-number" type="text" placeholder="Card number">
+								</div>
+								<div class="col-md-6 form-group card-holder-column">
+									<label for="card-holder">Card holder</label>
+									<input class="form-control" id="card-holder" type="text" placeholder="Card holder">
+								</div>
+								<div class="col-md-3 col-sm-6 form-group expiration-date-column">
+									<label for="expiration-date">Expiration date</label>
+									<input class="form-control" id="expiration-date" type="text" placeholder="DD/MM/YY">
+								</div>
+								<div class="col-md-3 col-sm-6 form-group cvc-column">
+									<label for="cvc">CVC</label>
+									<input class="form-control" id="cvc" type="text" placeholder="CVC">
+								</div>
+							</div>
+						</ng-template>
+					</ngb-panel>
+					<ngb-panel id="paypal">
+						<ng-template ngbPanelTitle>
+							<div class="paypal">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="paypal-button" [checked]="accordion.isExpanded('paypal')">
+									<label class="form-check-label" for="paypal-button" (click)="accordion.toggle('paypal')">PayPal</label>
+								</div>
+								<div class="icons">
+									<img class="dhl-icon" src="../../../assets/icons/paypal.svg" alt="">
+								</div>
+							</div>
+						</ng-template>
+						<ng-template ngbPanelContent>PayPal</ng-template>
+					</ngb-panel>
+					<ngb-panel id="bitcoin">
+						<ng-template ngbPanelTitle>
+							<div class="bitcoin">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="bitcoin-button" [checked]="accordion.isExpanded('bitcoin')">
+									<label class="form-check-label" for="bitcoin-button" (click)="accordion.toggle('bitcoin')">Bitcoin</label>
+								</div>
+								<div class="icons">
+									<img class="bitcoin-icon" src="../../../assets/icons/bitcoin.svg" alt="">
+								</div>
+							</div>
+						</ng-template>
+						<ng-template ngbPanelContent>Bitcoin</ng-template>
+					</ngb-panel>
+				</ngb-accordion>
+			</div>
+			<div class="additional">
+				<h2 class="heading">Additional information</h2>
+				<div class="subheading">
+					<h3>Need something else? We will make it for you!</h3>
+					<div class="step">Step 4 of 5</div>
+				</div>
+				<div class="form-group">
+					<label for="notes">Order notes</label>
+					<textarea class="form-control" id="notes" rows="4" placeholder="Need a specific delivery day? Sending a gift? Let’s say ..."></textarea>
+				</div>
+			</div>
+			<div class="confirm">
+				<h2 class="heading">Confirmation</h2>
+				<div class="subheading">
+					<h3>We are getting to the end. Just few clicks and your order si ready!</h3>
+					<div class="step">Step 5 of 5</div>
+				</div>
+				<div class="form-group">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="newsletter">
+						<label class="form-check-label" for="newsletter">I agree with sending an Marketing and newsletter emails. No spam, promised!</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="terms">
+						<label class="form-check-label" for="terms">I agree with our terms and conditions and privacy policy.</label>
+					</div>
+				</div>
+				<div class="button">
+					<button class="btn complete-button">Complete order</button>
+				</div>
+				<div class="safe">
+					<div class="icon">
+						<img class="safe-icon" src="../../../assets/icons/safe.svg" alt="">
+					</div>
+					<h3 class="heading">All your data are safe</h3>
+					<p class="paragraph">We are using the most advanced security to provide you the best experience ever.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-5 col-lg-6 col-md-12">
+			<div class="summary">
+				<h2 class="heading">Order Summary</h2>
+				<h3 class="subheading">Price can change depending on shipping method and taxes of your state.</h3>
+				<div class="products">
+					<div class="product">
+						<app-product-tiny></app-product-tiny>
+					</div>
+					<div class="product">
+						<app-product-tiny></app-product-tiny>
+					</div>
+				</div>
+				<div class="row price">
+					<div class="col-6 text-column">
+						<div class="text">Subtotal</div>
+						<div class="text">Tax</div>
+						<div class="text">Shipping</div>
+					</div>
+					<div class="col-6 value-column">
+						<div class="value">73.98 USD</div>
+						<div class="value">17% 16.53 USD</div>
+						<div class="value">0 USD</div>
+					</div>
+				</div>
+				<div class="promo">
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<input class="form-control" type="text" placeholder="Apply promo code">
+						</div>
+						<button class="btn">Apply now</button>
+					</div>
+				</div>
+				<div class="row total">
+					<div class="col-6">
+						<div class="text">Total Order</div>
+						<div class="delivery">Guaranteed delivery day: June 12, 2020</div>
+					</div>
+					<div class="col-6 price-column">
+						<div class="price">89.84 USD</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<app-footer [show-links]="false" [show-tags]="false"></app-footer>
+</div>
