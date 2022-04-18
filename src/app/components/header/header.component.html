@@ -1,13 +1,13 @@
 <div class="container">
-	<div class="row header">
-		<div class="col-6 info">
+	<div class="header">
+		<div class="info">
 			<div class="chat">
 				<a href="#">Chat with us</a>
 			</div>
 			<div class="phone">+420 336 775 664</div>
 			<div class="email">info@freshnesecom.com</div>
 		</div>
-		<div class="col-6 links">
+		<div class="links">
 			<div class="link">
 				<a routerLink="/blogs">Blog</a>
 			</div>
@@ -22,10 +22,10 @@
 
 	<div class="horizontal-splitter"></div>
 
-	<div class="row extra">
-		<!-- Adding cart-container class to class binding makes the cart appears then disappears -->
-		<div class="cart-container" [class]="{ 'visible': isCartVisible }">
-			<app-cart (onClose)="onCartClose()"></app-cart>
+	<div class="row content">
+		<!-- Adding cart class to class binding makes the cart appears then disappears -->
+		<div class="cart" [class]="{ 'visible': isCartVisible }">
+			<app-cart (onClose)="onCartClosed()"></app-cart>
 		</div>
 		<div class="col-3 brand">
 			<img class="brand-image" src="../../../assets/images/brand.svg" alt="">
@@ -34,11 +34,9 @@
 			<div class="input-group">
 				<div class="input-group-prepend">
 					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">All categories <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
+						<button ngbDropdownToggle class="btn dropdown-button">{{ selectedCategory.name }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
 						<div ngbDropdownMenu class="dropdown">
-							<button ngbDropdownItem class="dropdown-item">Category 1</button>
-							<button ngbDropdownItem class="dropdown-item">Category 2</button>
-							<button ngbDropdownItem class="dropdown-item">Category 3</button>
+							<button ngbDropdownItem class="dropdown-item" (click)="onCategorySelected(category)" *ngFor="let category of categories">{{ category.name }}</button>
 						</div>
 					</div>
 				</div>
@@ -51,8 +49,8 @@
 			<div class="user">
 				<img class="user-icon" src="../../../assets/icons/user.svg" alt="">
 			</div>
-			<div class="cart" (click)="isCartVisible = !isCartVisible">
-				<img class="cart-icon" src="../../../assets/icons/cart.svg" alt="">
+			<div class="basket" (click)="isCartVisible = !isCartVisible">
+				<img class="basket-icon" src="../../../assets/icons/basket.svg" alt="">
 				<span class="icon-badge">4</span>
 			</div>
 		</div>
