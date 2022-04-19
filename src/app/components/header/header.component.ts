@@ -17,22 +17,26 @@ export class HeaderComponent implements OnInit {
 			{
 				id: 0,
 				name: 'All categories',
-				slug: ''
+				slug: '',
+				subcategories: []
 			},
 			{
 				id: 1,
 				name: 'Category 1',
-				slug: 'category-1'
+				slug: 'category-1',
+				subcategories: []
 			},
 			{
 				id: 2,
 				name: 'Category 2',
-				slug: 'category-2'
+				slug: 'category-2',
+				subcategories: []
 			},
 			{
 				id: 3,
 				name: 'Category 3',
-				slug: 'category-4'
+				slug: 'category-4',
+				subcategories: []
 			}
 		];
 

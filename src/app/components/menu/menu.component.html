@@ -1,79 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<div class="container-fluid justify-content-end">
+	<div class="container-fluid">
 		<button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item">
+			<ul class="navbar-nav">
+				<li class="nav-item" *ngFor="let category of categories">
 					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">Bakery <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
+						<button ngbDropdownToggle class="btn dropdown-button">{{ category.name }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
 						<div ngbDropdownMenu class="dropdown">
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Bakery</a>
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Bakery</a>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">Fruit and vegetables <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
-						<div ngbDropdownMenu class="dropdown">
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Fruit and vegetables</a>
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Fruit and vegetables</a>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">Meat and fish <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
-						<div ngbDropdownMenu class="dropdown">
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Meat and fish</a>
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Meat and fish</a>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">Drinks <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
-						<div ngbDropdownMenu class="dropdown">
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Drinks</a>
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Drinks</a>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">Kitchen <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
-						<div ngbDropdownMenu class="dropdown">
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Kitchen</a>
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Kitchen</a>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">Special nutrition <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
-						<div ngbDropdownMenu class="dropdown">
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Special nutrition</a>
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Special nutrition</a>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">Baby <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
-						<div ngbDropdownMenu class="dropdown">
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Baby</a>
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Baby</a>
-						</div>
-					</div>
-				</li>
-				<li class="nav-item">
-					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">Pharmacy <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
-						<div ngbDropdownMenu class="dropdown">
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Pharmacy</a>
-							<a ngbDropdownItem class="dropdown-item" routerLink="/products">Pharmacy</a>
+							<a ngbDropdownItem class="dropdown-item" [routerLink]="['/categories/', subcategory.slug]" *ngFor="let subcategory of category.subcategories">{{ subcategory.name }}</a>
 						</div>
 					</div>
 				</li>
