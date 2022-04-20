@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row links" *ngIf="showLinks">
-		<div class="col-lg-3 col-md-6 column">
+		<div class="col-lg-3 col-md-6 in-touch">
 			<h2 class="heading">Get in touch</h2>
 			<div class="link">
 				<a href="#">About Us</a>
@@ -15,7 +15,7 @@
 				<a routerLink="/blogs">Blog</a>
 			</div>
 		</div>
-		<div class="col-lg-3 col-md-6 column">
+		<div class="col-lg-3 col-md-6 connections">
 			<h2 class="heading">Connections</h2>
 			<div class="link">
 				<a href="#">Facebook</a>
@@ -33,7 +33,7 @@
 				<a href="#">LinkedIn</a>
 			</div>
 		</div>
-		<div class="col-lg-3 col-md-6 column">
+		<div class="col-lg-3 col-md-6 earnings">
 			<h2 class="heading">Earnings</h2>
 			<div class="link">
 				<a href="#">Become an Affiliate</a>
@@ -45,7 +45,7 @@
 				<a href="#">Sell on Market</a>
 			</div>
 		</div>
-		<div class="col-lg-3 col-md-6 column">
+		<div class="col-lg-3 col-md-6 account">
 			<h2 class="heading">Account</h2>
 			<div class="link">
 				<a href="#">Your account</a>
@@ -67,25 +67,9 @@
 
 	<div class="tags" *ngIf="showTags">
 		<h2 class="heading">Product tags</h2>
-		<div class="tag"><a routerLink="/products">Beans</a></div>
-		<div class="tag"><a routerLink="/products">Carrots</a></div>
-		<div class="tag"><a routerLink="/products">Apples</a></div>
-		<div class="tag"><a routerLink="/products">Garlic</a></div>
-		<div class="tag"><a routerLink="/products">Mushrooms</a></div>
-		<div class="tag"><a routerLink="/products">Tomatoes</a></div>
-		<div class="tag"><a routerLink="/products">Chilli peppers</a></div>
-		<div class="tag"><a routerLink="/products">Broccoli</a></div>
-		<div class="tag"><a routerLink="/products">Watermelons</a></div>
-		<div class="tag"><a routerLink="/products">Oranges</a></div>
-		<div class="tag"><a routerLink="/products">Bananas</a></div>
-		<div class="tag"><a routerLink="/products">Grapes</a></div>
-		<div class="tag"><a routerLink="/products">Cherries</a></div>
-		<div class="tag"><a routerLink="/products">Meat</a></div>
-		<div class="tag"><a routerLink="/products">Seo tag</a></div>
-		<div class="tag"><a routerLink="/products">Fish</a></div>
-		<div class="tag"><a routerLink="/products">Seo tag</a></div>
-		<div class="tag"><a routerLink="/products">Fresh food</a></div>
-		<div class="tag"><a routerLink="/products">Lemons</a></div>
+		<div class="tag" *ngFor="let tag of tags">
+			<a [routerLink]="['/tags', tag.slug]">{{ tag.name }}</a>
+		</div>
 	</div>
 
 	<div class="copyright">Copyright &copy; {{ year }} petrbilek.com</div>

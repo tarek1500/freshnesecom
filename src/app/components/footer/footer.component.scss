@@ -5,7 +5,14 @@
 		margin-bottom: 48px;
 		padding: 0px 15px;
 
-		.column {
+		@media (max-width: 991.98px) {
+			margin-bottom: 32px;
+		}
+
+		.in-touch,
+		.connections,
+		.earnings,
+		.account {
 			padding: 0px;
 
 			@media (max-width: 991.98px) {
@@ -22,6 +29,11 @@
 
 			.link {
 				margin-bottom: 16px;
+
+				&:last-of-type {
+					margin: 0px;
+				}
+
 				a {
 					text-decoration: none;
 					color: #6A983C;
