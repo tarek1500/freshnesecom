@@ -14,11 +14,8 @@
 		</div>
 		<div class="col-lg-9 items">
 			<div class="row">
-				<div class="col-md-6 item">
-					<app-banner></app-banner>
-				</div>
-				<div class="col-md-6 item">
-					<app-banner></app-banner>
+				<div class="col-md-6 item" *ngFor="let banner of banners">
+					<app-banner [banner]="banner"></app-banner>
 				</div>
 			</div>
 		</div>

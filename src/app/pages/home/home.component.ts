@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
+import { Banner } from '../../interfaces/banner.interface';
 import { Blog } from '../../interfaces/blog.interface';
 
 @Component({
@@ -9,6 +10,7 @@ import { Blog } from '../../interfaces/blog.interface';
 	styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+	banners: Banner[];
 	quotesOptions: OwlOptions = {
 		loop: true,
 		mouseDrag: false,
@@ -39,6 +41,18 @@ export class HomeComponent implements OnInit {
 	mediumBlog: Blog;
 
 	constructor() {
+		this.banners = [
+			{
+				id: 1,
+				title: 'Space for heading',
+				subtitle: 'Banner subfocus'
+			},
+			{
+				id: 1,
+				title: 'Space for heading',
+				subtitle: 'Banner subfocus'
+			}
+		];
 		this.largeBlog = {
 			id: 1,
 			title: 'Our chef tips for a great and tasty dinner ready in 20 minutes',
@@ -53,7 +67,6 @@ export class HomeComponent implements OnInit {
 			date: new Date('2020-6-17'),
 			image: 'https://picsum.photos/seed/picsum/650/650'
 		};
-
 		this.mediumBlog = {
 			id: 2,
 			title: 'Which vegetable your family will love and want’s eat each day',
