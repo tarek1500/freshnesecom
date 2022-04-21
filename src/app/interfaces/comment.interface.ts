@@ -1,6 +1,9 @@
+import { User } from './user.interface';
+
 export interface Comment {
-	author: string,
-	tag: string,
-	tagClass: string,
-	comment: string
+	id: number,
+	author: User
+	date: Date,
+	content: string,
+	replies: Comment[]
 }

@@ -103,11 +103,8 @@
 				</div>
 				<div class="comments">
 					<h3 class="heading">Comments</h3>
-					<div class="comment">
+					<div class="comment" *ngFor="let comment of comments">
 						<app-comment [comment]="comment"></app-comment>
-					</div>
-					<div class="reply">
-						<app-comment [comment]="reply"></app-comment>
 					</div>
 				</div>
 			</div>

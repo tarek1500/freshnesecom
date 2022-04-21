@@ -1,61 +1,96 @@
-.container {
-	padding: 16px;
-	border-radius: 12px;
-	border: 1px solid #D1D1D1;
-
-	.header {
+.comment {
+	.container {
 		margin-bottom: 24px;
-		display: flex;
+		padding: 16px;
+		border-radius: 12px;
+		border: 1px solid #D1D1D1;
 
-		.image {
-			width: 40px;
-			height: 40px;
-			margin-right: 12px;
-			border-radius: 50%;
-			background-color: #F9F9F9;
+		&:last-of-type {
+			margin-bottom: 0px;
 		}
 
-		.info {
-			.author {
-				margin-right: 6px;
-				display: inline-block;
-				color: #151515;
-				font-family: 'Poppins';
-				font-weight: 600;
-				font-size: 12px;
+		.header {
+			margin-bottom: 24px;
+			display: flex;
+
+			.avatar-image {
+				position: relative;
+				width: 40px;
+				height: 40px;
+				margin-right: 12px;
+				border-radius: 50%;
+				background-color: #F9F9F9;
+
+				img {
+					position: absolute;
+					top: 50%;
+					width: 100%;
+					height: auto;
+					border-radius: 50%;
+					transform: translateY(-50%);
+				}
 			}
 
-			.tag {
-				padding: 0px 8px;
-				display: inline-block;
-				border-radius: 12px;
-				font-family: 'Poppins';
-				font-weight: 600;
-				font-size: 12px;
-
-				&.green {
-					background-color: #F4F8EC;
-					color: #6A983C;
+			.info {
+				.author {
+					margin-right: 6px;
+					display: inline-block;
+					color: #151515;
+					font-family: 'Poppins';
+					font-weight: 600;
+					font-size: 12px;
 				}
-				&.gray {
+
+				.tag {
+					padding: 0px 8px;
+					display: inline-block;
+					border-radius: 12px;
 					background-color: #F5F5F5;
 					color: #151515;
+					font-family: 'Poppins';
+					font-weight: 600;
+					font-size: 12px;
+
+					&.green {
+						background-color: #F4F8EC;
+						color: #6A983C;
+					}
+				}
+
+				.date {
+					padding: 0px;
+					display: block;
+					border: none;
+					color: #D1D1D1;
+					font-family: 'OpenSans';
+					font-weight: 400;
+					font-size: 12px;
+
+					&:focus {
+						box-shadow: none;
+					}
 				}
 			}
+		}
 
-			.date {
-				color: #D1D1D1;
-				font-family: 'OpenSans';
-				font-weight: 400;
-				font-size: 12px;
-			}
+		.content {
+			color: #151515;
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 14px;
 		}
 	}
 
-	.comment {
-		color: #151515;
-		font-family: 'OpenSans';
-		font-weight: 400;
-		font-size: 14px;
+	.reply {
+		width: initial;
+		margin-left: 100px;
+
+		@media (max-width: 991.98px) {
+			margin-left: 70px;
+		}
+
+		@media (max-width: 575.98px) {
+			margin-left: 50px;
+		}
 	}
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { BlogDetailsRoutingModule } from './blog-details-routing.module';
 import { SharedModule } from '../../shared/shared/shared.module';
@@ -18,6 +19,7 @@ import { RelatedBlogsComponent } from '../../components/blog-details/related-blo
 	imports: [
 		CommonModule,
 		BlogDetailsRoutingModule,
+		NgbModule,
 		SharedModule,
 		SharedBreadcrumbModule,
 		SharedBlogsModule

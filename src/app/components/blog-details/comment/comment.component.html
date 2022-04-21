@@ -1,11 +1,28 @@
-<div class="container">
-	<div class="header">
-		<div class="image"></div>
-		<div class="info">
-			<div class="author">{{ comment.author }}</div>
-			<div [class]="{ 'tag': true, 'green': comment.tagClass === 'green', 'gray': comment.tagClass === 'gray' }">{{ comment.tag }}</div>
-			<div class="date">22. 6. 2020</div>
+<div class="comment">
+	<div class="container">
+		<div class="header">
+			<div class="avatar-image">
+				<img src="{{ comment.author.image }}" alt="">
+			</div>
+			<div class="info">
+				<div class="author">{{ comment.author.name }}</div>
+				<div [class]="{ 'tag': true, 'green': comment.author.role.toLowerCase() === 'admin' }">{{ comment.author.role }}</div>
+				<button class="btn date" placement="bottom" ngbTooltip="{{ comment.date.toLocaleString() }}">{{ moment(comment.date).fromNow() }}</button>
+			</div>
 		</div>
+		<div class="content">{{ comment.content }}</div>
 	</div>
-	<div class="comment">{{ comment.comment }}</div>
+	<div class="container reply" *ngFor="let reply of comment.replies">
+		<div class="header">
+			<div class="avatar-image">
+				<img src="{{ reply.author.image }}" alt="">
+			</div>
+			<div class="info">
+				<div class="author">{{ reply.author.name }}</div>
+				<div [class]="{ 'tag': true, 'green': reply.author.role.toLowerCase() === 'admin' }">{{ reply.author.role }}</div>
+				<button class="btn date" placement="bottom" ngbTooltip="{{ reply.date.toLocaleString() }}">{{ moment(reply.date).fromNow() }}</button>
+			</div>
+		</div>
+		<div class="content">{{ reply.content }}</div>
+	</div>
 </div>

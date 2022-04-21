@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as moment from 'moment';
+
 import { Comment } from '../../../interfaces/comment.interface';
 
 @Component({
@@ -7,9 +9,12 @@ import { Comment } from '../../../interfaces/comment.interface';
 	styleUrls: ['./comment.component.scss']
 })
 export class CommentComponent implements OnInit {
-	@Input() comment: Comment = { author: '', tag: '', tagClass: '', comment: '' };
+	@Input() comment!: Comment;
 
-	constructor() { }
+	moment: any = moment;
+
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}
