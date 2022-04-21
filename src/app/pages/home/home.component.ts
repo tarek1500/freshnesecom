@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit {
 	}
 	largeBlog: Blog;
 	mediumBlog: Blog;
+	smallBlogs: Blog[];
 
 	constructor() {
 		this.banners = [
@@ -81,6 +82,50 @@ export class HomeComponent implements OnInit {
 			date: new Date('2020-6-15'),
 			image: 'https://picsum.photos/seed/picsum/650/650'
 		};
+		this.smallBlogs = [
+			{
+				id: 3,
+				title: 'Salad is kinda good start to your morning routines',
+				slug: 'salad-is-kinda-good-start-to-your-morning-routines',
+				tag: '',
+				author: {
+					id: 3,
+					name: 'Author',
+					role: '',
+					image: ''
+				},
+				date: new Date('2020-1-14'),
+				image: 'https://picsum.photos/seed/picsum/300/300'
+			},
+			{
+				id: 4,
+				title: 'Salad is kinda good start to your morning routines',
+				slug: 'salad-is-kinda-good-start-to-your-morning-routines',
+				tag: '',
+				author: {
+					id: 4,
+					name: 'Author',
+					role: '',
+					image: ''
+				},
+				date: new Date('2020-1-14'),
+				image: 'https://picsum.photos/seed/picsum/300/300'
+			},
+			{
+				id: 5,
+				title: 'Salad is kinda good start to your morning routines',
+				slug: 'salad-is-kinda-good-start-to-your-morning-routines',
+				tag: '',
+				author: {
+					id: 5,
+					name: 'Author',
+					role: '',
+					image: ''
+				},
+				date: new Date('2020-1-14'),
+				image: 'https://picsum.photos/seed/picsum/300/300'
+			}
+		];
 	}
 
 	ngOnInit(): void {

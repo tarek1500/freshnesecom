@@ -109,15 +109,10 @@
 				<app-blog-medium [blog]="mediumBlog"></app-blog-medium>
 			</div>
 			<div class="col-xl-4 col-lg-6 item">
-				<div>
-					<app-blog-small></app-blog-small>
+				<div *ngFor="let blog of smallBlogs">
+					<app-blog-small [blog]="blog"></app-blog-small>
 				</div>
 				<div>
-					<app-blog-small></app-blog-small>
-				</div>
-				<div>
-					<app-blog-small></app-blog-small>
-				</div>
 			</div>
 		</div>
 	</div>

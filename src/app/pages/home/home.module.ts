@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { HomeRoutingModule } from './home-routing.module';
+import { ReplaceStringModule } from '../../modules/replace-string/replace-string.module';
 import { SharedModule } from '../../shared/shared/shared.module';
 import { SharedProductsModule } from '../../shared/shared-products/shared-products.module';
 import { SharedRelatedProductsModule } from '../../shared/shared-related-products/shared-related-products.module';
@@ -22,6 +23,7 @@ import { BlogSmallComponent } from '../../components/home/blog-small/blog-small.
 	imports: [
 		CommonModule,
 		HomeRoutingModule,
+		ReplaceStringModule,
 		CarouselModule,
 		SharedModule,
 		SharedProductsModule,

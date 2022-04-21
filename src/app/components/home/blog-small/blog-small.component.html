@@ -1,14 +1,16 @@
 <div class="container">
 	<div>
 		<div class="heading">
-			<a routerLink="/blog-details">Salad is kinda good start to your morning routines</a>
+			<a [routerLink]="['/blogs', blog.slug]">{{ blog.title }}</a>
 		</div>
 		<div class="info">
-			<div class="author">Author</div>
-			<div class="date">14.1.2020</div>
+			<div class="author">{{ blog.author.name }}</div>
+			<div class="date">{{ blog.date.toLocaleDateString() | replaceString:'/':'. ' }}</div>
 		</div>
 	</div>
 	<div>
-		<div class="image"></div>
+		<div class="cover-image">
+			<img src="{{ blog.image }}" alt="">
+		</div>
 	</div>
 </div>
