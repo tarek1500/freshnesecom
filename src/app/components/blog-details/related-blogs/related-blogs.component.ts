@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { Blog } from '../../../interfaces/blog.interface';
 
 @Component({
 	selector: 'app-related-blogs',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./related-blogs.component.scss']
 })
 export class RelatedBlogsComponent implements OnInit {
+	@Input() blogs!: Blog[];
 
 	constructor() { }
 

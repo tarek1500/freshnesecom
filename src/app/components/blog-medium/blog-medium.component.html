@@ -1,13 +1,15 @@
 <div class="container">
-	<div class="image"></div>
+	<div class="cover-image">
+		<img src="{{ blog.image }}" alt="">
+	</div>
 	<div class="tag">
-		<span>Vegetable</span>
+		<span>{{ blog.tag }}</span>
 	</div>
 	<div class="heading">
-		<a routerLink="/blog-details">Which vegetable your family will love and want’s eat each day</a>
+		<a [routerLink]="['/blogs', blog.slug]">{{ blog.title }}</a>
 	</div>
 	<div class="info">
-		<div class="author">Author</div>
-		<div class="date">15. 6. 2020</div>
+		<div class="author">{{ blog.author.name }}</div>
+		<div class="date">{{ blog.date.toLocaleDateString() | replaceString:'/':'. ' }}</div>
 	</div>
 </div>

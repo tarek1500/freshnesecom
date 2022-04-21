@@ -16,11 +16,8 @@
 
 	<div class="content">
 		<div class="row large-blogs">
-			<div class="col-lg-6 blog">
-				<app-blog-large></app-blog-large>
-			</div>
-			<div class="col-lg-6 blog">
-				<app-blog-large></app-blog-large>
+			<div class="col-lg-6 blog" *ngFor="let blog of largeBlogs">
+				<app-blog-large [blog]="blog"></app-blog-large>
 			</div>
 		</div>
 		<div class="row small-blogs">

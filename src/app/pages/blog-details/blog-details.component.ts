@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Comment } from '../../interfaces/comment.interface';
+import { Blog } from '../../interfaces/blog.interface';
 
 @Component({
 	selector: 'app-blog-details',
@@ -15,6 +16,7 @@ export class BlogDetailsComponent implements OnInit {
 		{ text: 'Blog title', link: '' },
 	]
 	comments: Comment[];
+	relatedBlogs: Blog[]
 
 	constructor() {
 		this.comments = [
@@ -42,6 +44,64 @@ export class BlogDetailsComponent implements OnInit {
 						replies: []
 					}
 				]
+			}
+		];
+		this.relatedBlogs = [
+			{
+				id: 1,
+				title: 'Space for your heading is here, write what you need',
+				slug: 'space-for-your-heading-is-here-write-what-you-need',
+				tag: 'Tag',
+				author: {
+					id: 1,
+					name: 'Author',
+					role: '',
+					image: ''
+				},
+				date: new Date('2020-6-15'),
+				image: 'https://picsum.photos/seed/picsum/650/650'
+			},
+			{
+				id: 2,
+				title: 'Space for your heading is here, write what you need',
+				slug: 'space-for-your-heading-is-here-write-what-you-need',
+				tag: 'Tag',
+				author: {
+					id: 2,
+					name: 'Author',
+					role: '',
+					image: ''
+				},
+				date: new Date('2020-6-15'),
+				image: 'https://picsum.photos/seed/picsum/650/650'
+			},
+			{
+				id: 3,
+				title: 'Space for your heading is here, write what you need',
+				slug: 'space-for-your-heading-is-here-write-what-you-need',
+				tag: 'Tag',
+				author: {
+					id: 3,
+					name: 'Author',
+					role: '',
+					image: ''
+				},
+				date: new Date('2020-6-15'),
+				image: 'https://picsum.photos/seed/picsum/650/650'
+			},
+			{
+				id: 4,
+				title: 'Space for your heading is here, write what you need',
+				slug: 'space-for-your-heading-is-here-write-what-you-need',
+				tag: 'Tag',
+				author: {
+					id: 4,
+					name: 'Author',
+					role: '',
+					image: ''
+				},
+				date: new Date('2020-6-15'),
+				image: 'https://picsum.photos/seed/picsum/650/650'
 			}
 		];
 	}
