@@ -78,17 +78,8 @@
 		</div>
 		<div class="carousel">
 			<owl-carousel-o [options]="quotesOptions">
-				<ng-template carouselSlide>
-					<app-quote></app-quote>
-				</ng-template>
-				<ng-template carouselSlide>
-					<app-quote></app-quote>
-				</ng-template>
-				<ng-template carouselSlide>
-					<app-quote></app-quote>
-				</ng-template>
-				<ng-template carouselSlide>
-					<app-quote></app-quote>
+				<ng-template carouselSlide *ngFor="let quote of quotes">
+					<app-quote [quote]="quote"></app-quote>
 				</ng-template>
 			</owl-carousel-o>
 		</div>

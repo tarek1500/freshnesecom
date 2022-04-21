@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 import { Banner } from '../../interfaces/banner.interface';
+import { Quote } from '../../interfaces/quote.interface';
 import { Blog } from '../../interfaces/blog.interface';
 
 @Component({
@@ -37,6 +38,7 @@ export class HomeComponent implements OnInit {
 		autoplaySpeed: 1200,
 		autoplayHoverPause: false
 	}
+	quotes: Quote[];
 	largeBlog: Blog;
 	mediumBlog: Blog;
 	smallBlogs: Blog[];
@@ -52,6 +54,48 @@ export class HomeComponent implements OnInit {
 				id: 1,
 				title: 'Space for heading',
 				subtitle: 'Banner subfocus'
+			}
+		];
+		this.quotes = [
+			{
+				id: 1,
+				author: {
+					id: 1,
+					name: 'Name and Surname',
+					role: '',
+					image: 'https://picsum.photos/id/237/40/40'
+				},
+				content: '“ This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “'
+			},
+			{
+				id: 2,
+				author: {
+					id: 2,
+					name: 'Name and Surname',
+					role: '',
+					image: 'https://picsum.photos/id/237/40/40'
+				},
+				content: '“ This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “'
+			},
+			{
+				id: 3,
+				author: {
+					id: 3,
+					name: 'Name and Surname',
+					role: '',
+					image: 'https://picsum.photos/id/237/40/40'
+				},
+				content: '“ This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “'
+			},
+			{
+				id: 4,
+				author: {
+					id: 4,
+					name: 'Name and Surname',
+					role: '',
+					image: 'https://picsum.photos/id/237/40/40'
+				},
+				content: '“ This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “'
 			}
 		];
 		this.largeBlog = {

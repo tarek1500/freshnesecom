@@ -1,5 +1,7 @@
 <div class="container">
-	<p class="quote">“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “</p>
-	<h3 class="author">Name and Surname</h3>
-	<div class="image"></div>
+	<p class="quote">{{ quote.content }}</p>
+	<h3 class="author">{{ quote.author.name }}</h3>
+	<div class="avatar-image">
+		<img src="{{ quote.author.image }}" alt="">
+	</div>
 </div>
