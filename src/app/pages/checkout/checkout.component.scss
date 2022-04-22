@@ -16,7 +16,7 @@
 			}
 
 			.billing-info,
-			.billing-method,
+			.shipping-method,
 			.payment-method,
 			.additional,
 			.confirm {
@@ -146,9 +146,8 @@
 				}
 			}
 
-			.billing-method {
-				.fedex,
-				.dhl {
+			.shipping-method {
+				.shipping {
 					margin: 0px 0px 16px 0px;
 					padding: 14px 16px;
 					border-radius: 12px;

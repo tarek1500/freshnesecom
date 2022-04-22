@@ -58,40 +58,25 @@
 					</div>
 				</div>
 			</div>
-			<div class="billing-method">
-				<h2 class="heading">Billing method</h2>
+			<div class="shipping-method">
+				<h2 class="heading">Shipping method</h2>
 				<div class="subheading">
-					<h3>Please enter your payment method</h3>
+					<h3>Please enter your shipping method</h3>
 					<div class="step">Step 2 of 5</div>
 				</div>
-				<div class="row fedex">
+				<div class="row shipping" *ngFor="let delivery of deliveries">
 					<div class="col-md-2 col-6 name">
 						<div class="form-check">
-							<input class="form-check-input" type="radio" name="billing-method" id="fedex-button">
-							<label class="form-check-label" for="fedex-button">FedEx</label>
+							<input class="form-check-input" type="radio" [value]="delivery.price" name="billing-method" id="{{ 'shipping-button-' + delivery.id }}" [(ngModel)]="cart.shipping">
+							<label class="form-check-label" for="{{ 'shipping-button-' + delivery.id }}">{{ delivery.name }}</label>
 						</div>
 					</div>
 					<div class="col-md-8 col-12 data">
-						<span class="text">+32 USD</span>
+						<span class="text">+{{ delivery.price }} {{ delivery.currency }}</span>
 						<span class="tag">Additional price</span>
 					</div>
 					<div class="col-md-2 col-6 icon">
-						<img class="fedex-icon" src="../../../assets/icons/fedex.svg" alt="">
-					</div>
-				</div>
-				<div class="row dhl">
-					<div class="col-md-2 col-6 name">
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="billing-method" id="dhl-button">
-							<label class="form-check-label" for="dhl-button">DHL</label>
-						</div>
-					</div>
-					<div class="col-md-8 col-12 data">
-						<span class="text">+15 USD</span>
-						<span class="tag">Additional price</span>
-					</div>
-					<div class="col-md-2 col-6 icon">
-						<img class="dhl-icon" src="../../../assets/icons/dhl.svg" alt="">
+						<img class="shipping-icon" src="{{ delivery.logo }}" alt="">
 					</div>
 				</div>
 			</div>
@@ -212,7 +197,7 @@
 				<h2 class="heading">Order Summary</h2>
 				<h3 class="subheading">Price can change depending on shipping method and taxes of your state.</h3>
 				<div class="products">
-					<div class="product" *ngFor="let product of products">
+					<div class="product" *ngFor="let product of cart.products">
 						<app-product-tiny [product]="product"></app-product-tiny>
 					</div>
 				</div>
@@ -223,9 +208,9 @@
 						<div class="text">Shipping</div>
 					</div>
 					<div class="col-6 value-column">
-						<div class="value">73.98 USD</div>
-						<div class="value">17% 16.53 USD</div>
-						<div class="value">0 USD</div>
+						<div class="value">{{ cart.subtotal }} {{ cart.currency }}</div>
+						<div class="value">{{ (cart.tax / cart.subtotal * 100) | number:'1.0-0' }}% {{ cart.tax }} {{ cart.currency }}</div>
+						<div class="value">{{ cart.shipping }} {{ cart.currency }}</div>
 					</div>
 				</div>
 				<div class="promo">
@@ -242,7 +227,7 @@
 						<div class="delivery">Guaranteed delivery day: June 12, 2020</div>
 					</div>
 					<div class="col-6 price-column">
-						<div class="price">89.84 USD</div>
+						<div class="price">{{ (cart.subtotal + cart.tax + cart.shipping) | number:'1.0-2' }} {{ cart.currency }}</div>
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { CheckoutRoutingModule } from './checkout-routing.module';
@@ -15,6 +16,7 @@ import { CheckoutComponent } from './checkout.component';
 	imports: [
 		CommonModule,
 		CheckoutRoutingModule,
+		FormsModule,
 		NgbModule,
 		SharedModule,
 		BreadcrumbModule,

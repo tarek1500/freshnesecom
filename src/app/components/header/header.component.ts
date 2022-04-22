@@ -122,7 +122,9 @@ export class HeaderComponent implements OnInit {
 					image: 'https://picsum.photos/id/107/200/100'
 				}
 			],
-			total: 73.98,
+			subtotal: 147.96,
+			tax: 0,
+			shipping: 0,
 			currency: 'USD'
 		};
 	}
