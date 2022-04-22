@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
+import { Category } from '../../interfaces/category.interface';
+import { Tag } from '../../interfaces/tag.interface';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Product } from '../../interfaces/product.interface';
 
@@ -8,10 +12,13 @@ import { Product } from '../../interfaces/product.interface';
 	templateUrl: './products.component.html',
 	styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit, OnDestroy {
+	subscriptions: Subscription[] = [];
+	category!: Category;
+	tag!: Tag;
 	breadcrumb: Breadcrumb[] = [
 		{ text: 'Homepage', link: '/' },
-		{ text: 'Fruit and vegetables', link: '' }
+		{ text: '', link: '' }
 	];
 	products: Product[];
 
@@ -20,7 +27,7 @@ export class ProductsComponent implements OnInit {
 	minPrice: number = 0;
 	maxPrice: number = 1000;
 
-	constructor() {
+	constructor(private route: ActivatedRoute) {
 		this.products = [
 			{
 				id: 1,
@@ -197,6 +204,50 @@ export class ProductsComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
+		let subscription = this.route.data.subscribe(data => {
+			let name = data['name'];
+
+			if (name) {
+				let subscription = this.route.params.subscribe(params => {
+					let slug: string = params['slug'];
+
+					switch (name) {
+						case 'products.categories':
+							// Fetch category and its products from server
+							this.category = {
+								id: 0,
+								name: 'Fruit and vegetables',
+								slug: slug,
+								subcategories: []
+							};
+							this.breadcrumb[1].text = this.category.name;
+
+							break;
+						case 'products.tags':
+							// Fetch tag and its products from server
+							this.tag = {
+								id: 0,
+								name: 'Vegetable',
+								slug: slug
+							};
+							this.breadcrumb[1].text = this.tag.name;
+
+							break;
+					}
+				});
+
+				this.subscriptions.push(subscription);
+			}
+			else {
+				this.breadcrumb[1].text = 'Products';
+			}
+		});
+
+		this.subscriptions.push(subscription);
+	}
+
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 }
