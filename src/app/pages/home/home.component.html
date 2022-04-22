@@ -2,64 +2,58 @@
 	<app-header></app-header>
 	<app-menu></app-menu>
 
-	<div class="row section">
+	<div class="row categories">
 		<div class="col-lg-3 links">
 			<h2 class="heading">Category menu</h2>
-			<div class="link"><a routerLink="/products">Bakery</a></div>
-			<div class="link"><a routerLink="/products">Fruit and vegetables</a></div>
-			<div class="link"><a routerLink="/products">Meat and fish</a></div>
-			<div class="link"><a routerLink="/products">Drinks</a></div>
-			<div class="link"><a routerLink="/products">Kitchen</a></div>
+			<div class="link" *ngFor="let category of categories">
+				<a [routerLink]="['/products/categories', category.slug]">{{ category.name }}</a>
+			</div>
 			<a class="btn more-button" routerLink="/products">More categories <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-black.svg" alt=""></a>
 		</div>
-		<div class="col-lg-9 items">
+		<div class="col-lg-9 banners">
 			<div class="row">
-				<div class="col-md-6 item" *ngFor="let banner of banners">
+				<div class="col-md-6 banner" *ngFor="let banner of banners">
 					<app-banner [banner]="banner"></app-banner>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="row section">
+	<div class="row best-selling">
 		<div class="col-lg-3 links">
 			<h2 class="heading">Best selling products</h2>
-			<div class="link"><a routerLink="/products">Kitchen</a></div>
-			<div class="link"><a routerLink="/products">Meat and fish</a></div>
-			<div class="link"><a routerLink="/products">Special nutrition</a></div>
-			<div class="link"><a routerLink="/products">Pharmacy</a></div>
-			<div class="link"><a routerLink="/products">Bakery</a></div>
+			<div class="link" *ngFor="let category of bestSelling">
+				<a [routerLink]="['/products/categories', category.slug]">{{ category.name }}</a>
+			</div>
 			<a class="btn more-button" routerLink="/products">More products <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-black.svg" alt=""></a>
 		</div>
-		<div class="col-lg-9 items">
+		<div class="col-lg-9 products">
 			<div class="row">
-				<div class="col-xl-4 col-lg-6 col-md-6 item" *ngFor="let product of bestSellingProducts">
+				<div class="col-xl-4 col-lg-6 col-md-6 product" *ngFor="let product of bestSellingProducts">
 					<app-product [product]="product"></app-product>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="row section">
+	<div class="row best-from-farmers">
 		<div class="col-lg-3 links">
 			<h2 class="heading">Best from Farmers</h2>
-			<div class="link"><a routerLink="/products">Carrots</a></div>
-			<div class="link"><a routerLink="/products">Tomatoes</a></div>
-			<div class="link"><a routerLink="/products">Potatoes</a></div>
-			<div class="link"><a routerLink="/products">Chicken</a></div>
-			<div class="link"><a routerLink="/products">Pork</a></div>
+			<div class="link" *ngFor="let category of bestFromFarmers">
+				<a [routerLink]="['/products/categories', category.slug]">{{ category.name }}</a>
+			</div>
 			<a class="btn more-button" routerLink="/products">More products <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-black.svg" alt=""></a>
 		</div>
-		<div class="col-lg-9 items">
+		<div class="col-lg-9 products">
 			<div class="row">
-				<div class="col-xl-4 col-lg-6 col-md-6 item" *ngFor="let product of bestSellingProducts">
+				<div class="col-xl-4 col-lg-6 col-md-6 product" *ngFor="let product of bestSellingProducts">
 					<app-product [product]="product"></app-product>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="row extra-section quotes">
+	<div class="quotes">
 		<div class="header">
 			<h2 class="heading">Our customers says</h2>
 			<button class="btn goto-button">Button <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></button>
@@ -75,23 +69,22 @@
 
 	<app-related-products [heading]="'Section Headline'" [goto-button]="'Button'" [products]="sectionProducts"></app-related-products>
 
-	<div class="row extra-section">
+	<div class="posts">
 		<div class="header">
 			<h2 class="heading">Read our Blog posts</h2>
 			<a class="btn goto-button" routerLink="/blogs">Go to Blog <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></a>
 		</div>
 		<div class="row blogs">
-			<div class="col-xl-5 col-lg-6 item">
+			<div class="col-xl-5 col-lg-6 blog">
 				<app-blog-large [blog]="largeBlog"></app-blog-large>
 			</div>
-			<div class="col-xl-3 col-lg-6 item">
+			<div class="col-xl-3 col-lg-6 blog">
 				<app-blog-medium [blog]="mediumBlog"></app-blog-medium>
 			</div>
-			<div class="col-xl-4 col-lg-6 item">
-				<div *ngFor="let blog of smallBlogs">
+			<div class="col-xl-4 col-lg-6 blog">
+				<div class="small-blog" *ngFor="let blog of smallBlogs">
 					<app-blog-small [blog]="blog"></app-blog-small>
 				</div>
-				<div>
 			</div>
 		</div>
 	</div>

@@ -16,7 +16,7 @@
 							<div class="text">Author:</div>
 						</div>
 						<div class="col-7">
-							<div class="value">{{ blog.date.toLocaleDateString() | replaceString:'/':'. ' }}</div>
+							<div class="value">{{ blog.date | date:'dd. MM. yyyy' }}</div>
 							<div class="value">
 								<a [routerLink]="['/blogs/categories', blog.category.slug]">{{ blog.category.name }}</a>
 							</div>

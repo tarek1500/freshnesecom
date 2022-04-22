@@ -10,6 +10,6 @@
 	</div>
 	<div class="info">
 		<div class="author">{{ blog.author.name }}</div>
-		<div class="date">{{ blog.date.toLocaleDateString() | replaceString:'/':'. ' }}</div>
+		<div class="date">{{ blog.date | date:'dd. MM. yyyy' }}</div>
 	</div>
 </div>

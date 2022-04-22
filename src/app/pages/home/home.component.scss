@@ -3,7 +3,9 @@
 	background-color: #FFF;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
-	.section {
+	.categories,
+	.best-selling,
+	.best-from-farmers {
 		margin: 0px;
 		padding: 64px 45px 32px;
 
@@ -53,13 +55,15 @@
 			}
 		}
 
-		.items {
+		.banners,
+		.products {
 			padding: 0px;
 
 			.row {
 				margin: 0px -16px;
 
-				.item {
+				.banner,
+				.product {
 					margin-bottom: 32px;
 					padding: 0px 16px;
 
@@ -71,8 +75,8 @@
 		}
 	}
 
-	.extra-section {
-		margin: 0px;
+	.quotes,
+	.posts {
 		padding: 65px 0px 90px;
 
 		&.quotes {
@@ -211,14 +215,14 @@
 			margin: 0px;
 			padding: 0px 30px;
 
-			.item {
+			.blog {
 				padding: 0px 16px;
 
 				@media (max-width: 1199.98px) {
 					margin-bottom: 24px;
 				}
 
-				div {
+				.small-blog {
 					margin-bottom: 32px;
 				}
 			}

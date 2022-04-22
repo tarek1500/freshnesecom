@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { ReplaceStringModule } from '../replace-string/replace-string.module';
 import { BlogMediumComponent } from '../../components/blog-medium/blog-medium.component';
 import { BlogLargeComponent } from '../../components/blog-large/blog-large.component';
 
@@ -13,8 +12,7 @@ import { BlogLargeComponent } from '../../components/blog-large/blog-large.compo
 	],
 	imports: [
 		CommonModule,
-		RouterModule,
-		ReplaceStringModule
+		RouterModule
 	],
 	exports: [
 		BlogMediumComponent,

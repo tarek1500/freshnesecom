@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
+import { Category } from '../../interfaces/category.interface';
 import { Banner } from '../../interfaces/banner.interface';
 import { Product } from '../../interfaces/product.interface';
 import { Quote } from '../../interfaces/quote.interface';
@@ -12,8 +13,11 @@ import { Blog } from '../../interfaces/blog.interface';
 	styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+	categories: Category[];
 	banners: Banner[];
+	bestSelling: Category[];
 	bestSellingProducts: Product[];
+	bestFromFarmers: Category[];
 	quotesOptions: OwlOptions = {
 		loop: true,
 		mouseDrag: false,
@@ -47,6 +51,38 @@ export class HomeComponent implements OnInit {
 	smallBlogs: Blog[];
 
 	constructor() {
+		this.categories = [
+			{
+				id: 1,
+				name: 'Bakery',
+				slug: 'bakery',
+				subcategories: []
+			},
+			{
+				id: 2,
+				name: 'Fruit and vegetables',
+				slug: 'fruit-and-vegetables',
+				subcategories: []
+			},
+			{
+				id: 3,
+				name: 'Meat and fish',
+				slug: 'meat-and-fish',
+				subcategories: []
+			},
+			{
+				id: 4,
+				name: 'Drinks',
+				slug: 'drinks',
+				subcategories: []
+			},
+			{
+				id: 5,
+				name: 'Kitchen',
+				slug: 'kitchen',
+				subcategories: []
+			}
+		];
 		this.banners = [
 			{
 				id: 1,
@@ -57,6 +93,38 @@ export class HomeComponent implements OnInit {
 				id: 1,
 				title: 'Space for heading',
 				subtitle: 'Banner subfocus'
+			}
+		];
+		this.bestSelling = [
+			{
+				id: 6,
+				name: 'Kitchen',
+				slug: 'kitchen',
+				subcategories: []
+			},
+			{
+				id: 7,
+				name: 'Meat and fish',
+				slug: 'meat-and-fish',
+				subcategories: []
+			},
+			{
+				id: 8,
+				name: 'Special nutrition',
+				slug: 'special-nutrition',
+				subcategories: []
+			},
+			{
+				id: 9,
+				name: 'Pharmacy',
+				slug: 'pharmacy',
+				subcategories: []
+			},
+			{
+				id: 10,
+				name: 'Bakery',
+				slug: 'bakery',
+				subcategories: []
 			}
 		];
 		this.bestSellingProducts = [
@@ -116,6 +184,38 @@ export class HomeComponent implements OnInit {
 				shipping: '',
 				deliveryDays: 0,
 				image: 'https://picsum.photos/id/102/600/200'
+			}
+		];
+		this.bestFromFarmers = [
+			{
+				id: 11,
+				name: 'Carrots',
+				slug: 'carrots',
+				subcategories: []
+			},
+			{
+				id: 12,
+				name: 'Tomatoes',
+				slug: 'tomatoes',
+				subcategories: []
+			},
+			{
+				id: 13,
+				name: 'Potatoes',
+				slug: 'potatoes',
+				subcategories: []
+			},
+			{
+				id: 14,
+				name: 'Chicken',
+				slug: 'chicken',
+				subcategories: []
+			},
+			{
+				id: 15,
+				name: 'Pork',
+				slug: 'pork',
+				subcategories: []
 			}
 		];
 		this.quotes = [
