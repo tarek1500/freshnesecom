@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 import { Banner } from '../../interfaces/banner.interface';
+import { Product } from '../../interfaces/product.interface';
 import { Quote } from '../../interfaces/quote.interface';
 import { Blog } from '../../interfaces/blog.interface';
 
@@ -12,6 +13,7 @@ import { Blog } from '../../interfaces/blog.interface';
 })
 export class HomeComponent implements OnInit {
 	banners: Banner[];
+	bestSellingProducts: Product[];
 	quotesOptions: OwlOptions = {
 		loop: true,
 		mouseDrag: false,
@@ -39,6 +41,7 @@ export class HomeComponent implements OnInit {
 		autoplayHoverPause: false
 	}
 	quotes: Quote[];
+	sectionProducts: Product[];
 	largeBlog: Blog;
 	mediumBlog: Blog;
 	smallBlogs: Blog[];
@@ -54,6 +57,62 @@ export class HomeComponent implements OnInit {
 				id: 1,
 				title: 'Space for heading',
 				subtitle: 'Banner subfocus'
+			}
+		];
+		this.bestSellingProducts = [
+			{
+				id: 1,
+				name: 'Product Title',
+				slug: 'product-title',
+				description: 'Space for a small product description',
+				rating: 4.33,
+				price: 1.48,
+				oldPrice: 0,
+				currency: 'USD',
+				freshness: '',
+				freshnessDescription: '',
+				farm: '',
+				delivery: '',
+				quantity: 0,
+				shipping: '',
+				deliveryDays: 0,
+				image: 'https://picsum.photos/id/112/400/200'
+			},
+			{
+				id: 2,
+				name: 'Product Title',
+				slug: 'product-title',
+				description: 'Space for a small product description',
+				rating: 4.33,
+				price: 0.28,
+				oldPrice: 48.56,
+				currency: 'USD',
+				freshness: '',
+				freshnessDescription: '',
+				farm: '',
+				delivery: '',
+				quantity: 0,
+				shipping: '',
+				deliveryDays: 0,
+				image: 'https://picsum.photos/id/1080/400/200'
+			},
+			{
+				id: 3,
+				name: 'Product Title',
+				slug: 'product-title',
+				description: 'Space for a small product description',
+				rating: 4.33,
+				price: 1.12,
+				oldPrice: 48.56,
+				currency: 'USD',
+				freshness: '',
+				freshnessDescription: '',
+				farm: '',
+				delivery: '',
+				quantity: 0,
+				shipping: '',
+				deliveryDays: 0,
+				image: 'https://picsum.photos/id/102/600/200'
 			}
 		];
 		this.quotes = [
@@ -96,6 +155,80 @@ export class HomeComponent implements OnInit {
 					image: 'https://picsum.photos/id/237/40/40'
 				},
 				content: '“ This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “'
+			}
+		];
+		this.sectionProducts = [
+			{
+				id: 1,
+				name: 'Product Title',
+				slug: 'product-title',
+				description: 'Space for a small product description',
+				rating: 4.33,
+				price: 3.26,
+				oldPrice: 0,
+				currency: 'USD',
+				freshness: '',
+				freshnessDescription: '',
+				farm: '',
+				delivery: '',
+				quantity: 0,
+				shipping: '',
+				deliveryDays: 0,
+				image: 'https://picsum.photos/id/112/400/200'
+			},
+			{
+				id: 2,
+				name: 'Product Title',
+				slug: 'product-title',
+				description: 'Space for a small product description',
+				rating: 4.33,
+				price: 1.48,
+				oldPrice: 0,
+				currency: 'USD',
+				freshness: '',
+				freshnessDescription: '',
+				farm: '',
+				delivery: '',
+				quantity: 0,
+				shipping: '',
+				deliveryDays: 0,
+				image: 'https://picsum.photos/id/1080/400/200'
+			},
+			{
+				id: 3,
+				name: 'Product Title',
+				slug: 'product-title',
+				description: 'Space for a small product description',
+				rating: 4.33,
+				price: 0.28,
+				oldPrice: 48.56,
+				currency: 'USD',
+				freshness: '',
+				freshnessDescription: '',
+				farm: '',
+				delivery: '',
+				quantity: 0,
+				shipping: '',
+				deliveryDays: 0,
+				image: 'https://picsum.photos/id/102/600/200'
+			},
+			{
+				id: 4,
+				name: 'Product Title',
+				slug: 'product-title',
+				description: 'Space for a small product description',
+				rating: 4.33,
+				price: 1.12,
+				oldPrice: 0,
+				currency: 'USD',
+				freshness: '',
+				freshnessDescription: '',
+				farm: '',
+				delivery: '',
+				quantity: 0,
+				shipping: '',
+				deliveryDays: 0,
+				image: 'https://picsum.photos/id/107/400/200'
 			}
 		];
 		this.largeBlog = {

@@ -216,32 +216,8 @@
 		</div>
 		<div class="col-lg-9 products">
 			<div class="row">
-				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
-					<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
-				</div>
-				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
-					<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
-				</div>
-				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
-					<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
-				</div>
-				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
-					<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
-				</div>
-				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
-					<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
-				</div>
-				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
-					<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
-				</div>
-				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
-					<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
-				</div>
-				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
-					<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
-				</div>
-				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }">
-					<app-product [size]="isGridView ? 'small' : 'large'"></app-product>
+				<div [class]="{ 'col-xl-4': isGridView, 'col-lg-6': isGridView, 'col-md-6': isGridView, 'product': true }" *ngFor="let product of products">
+					<app-product [size]="isGridView ? 'small' : 'large'" [product]="product"></app-product>
 				</div>
 			</div>
 		</div>

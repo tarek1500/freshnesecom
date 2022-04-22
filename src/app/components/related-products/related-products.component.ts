@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Product } from '../../interfaces/product.interface';
+
 @Component({
 	selector: 'app-related-products',
 	templateUrl: './related-products.component.html',
@@ -8,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class RelatedProductsComponent implements OnInit {
 	@Input() heading: string = '';
 	@Input('goto-button') gotoButton: string = '';
+	@Input() products!: Product[];
 
 	constructor() { }
 
