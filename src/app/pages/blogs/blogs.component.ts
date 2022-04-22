@@ -1,25 +1,31 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Blog } from '../../interfaces/blog.interface';
 import { Category } from '../../interfaces/category.interface';
+import { Tag } from '../../interfaces/tag.interface';
 
 @Component({
 	selector: 'app-blogs',
 	templateUrl: './blogs.component.html',
 	styleUrls: ['./blogs.component.scss']
 })
-export class BlogsComponent implements OnInit, AfterViewInit {
+export class BlogsComponent implements OnInit, AfterViewInit, OnDestroy {
 	@ViewChild('subscribeInput') subscribeInput!: ElementRef<HTMLDivElement>;
+	subscriptions: Subscription[] = [];
+	category!: Category;
+	tag!: Tag;
 	breadcrumb: Breadcrumb[] = [
 		{ text: 'Homepage', link: '/' },
-		{ text: 'Blogs', link: '' },
+		{ text: '', link: '' },
 	];
 	largeBlogs: Blog[];
 	blogs: Blog[];
 	categories: Category[]
 
-	constructor() {
+	constructor(private route: ActivatedRoute) {
 		this.largeBlogs = [
 			{
 				id: 1,
@@ -339,10 +345,54 @@ export class BlogsComponent implements OnInit, AfterViewInit {
 	}
 
 	ngOnInit(): void {
+		let subscription = this.route.data.subscribe(data => {
+			let name = data['name'];
+
+			if (name) {
+				let subscription = this.route.params.subscribe(params => {
+					let slug: string = params['slug'];
+
+					switch (name) {
+						case 'blogs.categories':
+							// Fetch category and its blogs from server
+							this.category = {
+								id: 0,
+								name: 'Dinner',
+								slug: slug,
+								subcategories: []
+							};
+							this.breadcrumb[1].text = this.category.name;
+
+							break;
+						case 'blogs.tags':
+							// Fetch tag and its blogs from server
+							this.tag = {
+								id: 0,
+								name: 'Recipes',
+								slug: slug
+							};
+							this.breadcrumb[1].text = this.tag.name;
+
+							break;
+					}
+				});
+
+				this.subscriptions.push(subscription);
+			}
+			else {
+				this.breadcrumb[1].text = 'Blogs';
+			}
+		});
+
+		this.subscriptions.push(subscription);
 	}
 
 	ngAfterViewInit() {
 		this.setInputGroupWidth(this.subscribeInput, 14);
+	}
+
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	@HostListener('window:resize', ['$event'])

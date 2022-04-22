@@ -12,8 +12,8 @@ const routes: Routes = [
 
 	{ path: 'products/:slug', loadChildren: () => import('./pages/product-details/product-details.module').then(m => m.ProductDetailsModule) },
 
-	{ path: 'blogs/categories/:slug', loadChildren: () => import('./pages/blogs/blogs.module').then(m => m.BlogsModule) },
-	{ path: 'blogs/tags/:slug', loadChildren: () => import('./pages/blogs/blogs.module').then(m => m.BlogsModule) },
+	{ path: 'blogs/categories/:slug', loadChildren: () => import('./pages/blogs/blogs.module').then(m => m.BlogsModule), data: { name: 'blogs.categories' } },
+	{ path: 'blogs/tags/:slug', loadChildren: () => import('./pages/blogs/blogs.module').then(m => m.BlogsModule), data: { name: 'blogs.tags' } },
 	{ path: 'blogs', loadChildren: () => import('./pages/blogs/blogs.module').then(m => m.BlogsModule) },
 
 	{ path: 'blogs/:slug', loadChildren: () => import('./pages/blog-details/blog-details.module').then(m => m.BlogDetailsModule) },
