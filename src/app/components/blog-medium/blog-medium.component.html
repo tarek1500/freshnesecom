@@ -2,8 +2,8 @@
 	<div class="cover-image">
 		<img src="{{ blog.image }}" alt="">
 	</div>
-	<div class="tag">
-		<span>{{ blog.tag }}</span>
+	<div class="tag" *ngIf="blog.tags.length > 0">
+		<span>{{ blog.tags[0].name }}</span>
 	</div>
 	<div class="heading">
 		<a [routerLink]="['/blogs', blog.slug]">{{ blog.title }}</a>

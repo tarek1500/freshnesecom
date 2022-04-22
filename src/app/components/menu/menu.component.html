@@ -9,7 +9,7 @@
 					<div ngbDropdown class="d-inline-block">
 						<button ngbDropdownToggle class="btn dropdown-button">{{ category.name }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
 						<div ngbDropdownMenu class="dropdown">
-							<a ngbDropdownItem class="dropdown-item" [routerLink]="['/categories/', subcategory.slug]" *ngFor="let subcategory of category.subcategories">{{ subcategory.name }}</a>
+							<a ngbDropdownItem class="dropdown-item" [routerLink]="['/products/categories', subcategory.slug]" *ngFor="let subcategory of category.subcategories">{{ subcategory.name }}</a>
 						</div>
 					</div>
 				</li>

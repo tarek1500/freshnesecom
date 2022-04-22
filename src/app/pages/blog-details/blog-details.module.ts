@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { BlogDetailsRoutingModule } from './blog-details-routing.module';
+import { ReplaceStringModule } from '../../modules/replace-string/replace-string.module';
 import { SharedModule } from '../../modules/shared/shared.module';
 import { BreadcrumbModule } from '../../modules/breadcrumb/breadcrumb.module';
 import { BlogModule } from '../../modules/blog/blog.module';
@@ -19,6 +20,7 @@ import { RelatedBlogsComponent } from '../../components/blog-details/related-blo
 	imports: [
 		CommonModule,
 		BlogDetailsRoutingModule,
+		ReplaceStringModule,
 		NgbModule,
 		SharedModule,
 		BreadcrumbModule,

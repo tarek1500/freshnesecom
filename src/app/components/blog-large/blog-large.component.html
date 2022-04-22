@@ -1,7 +1,7 @@
 <div class="container">
 	<img class="cover-image" src="{{ blog.image }}" alt="">
-	<div class="tag">
-		<span>{{ blog.tag }}</span>
+	<div class="tag" *ngIf="blog.tags.length > 0">
+		<span>{{ blog.tags[0].name }}</span>
 	</div>
 	<div class="details">
 		<div class="heading">

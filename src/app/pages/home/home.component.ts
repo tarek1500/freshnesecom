@@ -242,28 +242,56 @@ export class HomeComponent implements OnInit {
 			id: 1,
 			title: 'Our chef tips for a great and tasty dinner ready in 20 minutes',
 			slug: 'our-chef-tips-for-a-great-and-tasty-dinner-ready-in-20-minutes',
-			tag: 'Dinner tips',
 			author: {
 				id: 1,
 				name: 'Author',
 				role: '',
 				image: 'https://picsum.photos/id/237/32/32'
 			},
+			category: {
+				id: 0,
+				name: '',
+				slug: '',
+				subcategories: []
+			},
+			tags: [
+				{
+					id: 1,
+					name: 'Dinner tips',
+					slug: 'dinner-tips'
+				}
+			],
+			content: '',
 			date: new Date('2020-6-17'),
+			comments: [],
 			image: 'https://picsum.photos/seed/picsum/650/650'
 		};
 		this.mediumBlog = {
 			id: 2,
 			title: 'Which vegetable your family will love and want’s eat each day',
 			slug: 'which-vegetable-your-family-will-love-and-wants-eat-each-day',
-			tag: 'Vegetable',
 			author: {
 				id: 2,
 				name: 'Author',
 				role: '',
 				image: ''
 			},
+			category: {
+				id: 0,
+				name: '',
+				slug: '',
+				subcategories: []
+			},
+			tags: [
+				{
+					id: 1,
+					name: 'Vegetable',
+					slug: 'vegetable'
+				}
+			],
+			content: '',
 			date: new Date('2020-6-15'),
+			comments: [],
 			image: 'https://picsum.photos/seed/picsum/650/650'
 		};
 		this.smallBlogs = [
@@ -271,42 +299,66 @@ export class HomeComponent implements OnInit {
 				id: 3,
 				title: 'Salad is kinda good start to your morning routines',
 				slug: 'salad-is-kinda-good-start-to-your-morning-routines',
-				tag: '',
 				author: {
 					id: 3,
 					name: 'Author',
 					role: '',
 					image: ''
 				},
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
+				tags: [],
+				content: '',
 				date: new Date('2020-1-14'),
+				comments: [],
 				image: 'https://picsum.photos/seed/picsum/300/300'
 			},
 			{
 				id: 4,
 				title: 'Salad is kinda good start to your morning routines',
 				slug: 'salad-is-kinda-good-start-to-your-morning-routines',
-				tag: '',
 				author: {
 					id: 4,
 					name: 'Author',
 					role: '',
 					image: ''
 				},
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
+				tags: [],
+				content: '',
 				date: new Date('2020-1-14'),
+				comments: [],
 				image: 'https://picsum.photos/seed/picsum/300/300'
 			},
 			{
 				id: 5,
 				title: 'Salad is kinda good start to your morning routines',
 				slug: 'salad-is-kinda-good-start-to-your-morning-routines',
-				tag: '',
 				author: {
 					id: 5,
 					name: 'Author',
 					role: '',
 					image: ''
 				},
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
+				tags: [],
+				content: '',
 				date: new Date('2020-1-14'),
+				comments: [],
 				image: 'https://picsum.photos/seed/picsum/300/300'
 			}
 		];
