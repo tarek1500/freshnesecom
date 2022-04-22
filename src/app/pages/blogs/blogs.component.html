@@ -7,8 +7,8 @@
 	<div class="header">
 		<h2 class="heading">Blogs</h2>
 		<div class="view">
-			<div class="item blogs">
-				<span class="count">117</span>
+			<div class="item">
+				<span class="count">{{ largeBlogs.length + blogs.length }}</span>
 				<span class="text">Blogs</span>
 			</div>
 		</div>
@@ -32,17 +32,15 @@
 				</div>
 				<div class="widget">
 					<h3 class="heading">Category</h3>
-					<div class="link"><a class="gray" href="#">Food</a></div>
-					<div class="link"><a class="gray" href="#">Chefs specialities</a></div>
-					<div class="link"><a class="gray" href="#">Vegetable</a></div>
-					<div class="link"><a class="gray" href="#">Meat</a></div>
-					<div class="link"><a class="gray" href="#">Recommendations</a></div>
+					<div class="link" *ngFor="let category of categories">
+						<a class="gray" [routerLink]="['/blogs/categories', category.slug]">{{ category.name }}</a>
+					</div>
 				</div>
 				<div class="widget">
 					<h3 class="heading join">Join our list</h3>
 					<p class="description">Signup to be the first to hear about exclusive deals, special offers, recepies from our masters and others.</p>
 					<div class="input-group">
-						<div class="input-group-prepend">
+						<div class="input-group-prepend" #subscribeInput>
 							<input class="form-control" type="text" placeholder="Your email address">
 						</div>
 						<button class="btn">Subscribe</button>
@@ -71,7 +69,7 @@
 			<button class="btn more-button">Next page <img class="down-arrow-icon" src="../../../assets/icons/right-arrow-white.svg" alt=""></button>
 		</div>
 		<div class="col-3 blogs">
-			<span class="count">198</span>
+			<span class="count">{{ largeBlogs.length + blogs.length }}</span>
 			<span class="text">Blogs</span>
 		</div>
 	</div>

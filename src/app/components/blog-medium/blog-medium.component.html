@@ -3,7 +3,7 @@
 		<img src="{{ blog.image }}" alt="">
 	</div>
 	<div class="tag" *ngIf="blog.tags.length > 0">
-		<span>{{ blog.tags[0].name }}</span>
+		<a [routerLink]="['/blogs/tags', blog.tags[0].slug]">{{ blog.tags[0].name }}</a>
 	</div>
 	<div class="heading">
 		<a [routerLink]="['/blogs', blog.slug]">{{ blog.title }}</a>

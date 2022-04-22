@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Blog } from '../../interfaces/blog.interface';
+import { Category } from '../../interfaces/category.interface';
 
 @Component({
 	selector: 'app-blogs',
 	templateUrl: './blogs.component.html',
 	styleUrls: ['./blogs.component.scss']
 })
-export class BlogsComponent implements OnInit {
+export class BlogsComponent implements OnInit, AfterViewInit {
+	@ViewChild('subscribeInput') subscribeInput!: ElementRef<HTMLDivElement>;
 	breadcrumb: Breadcrumb[] = [
 		{ text: 'Homepage', link: '/' },
 		{ text: 'Blogs', link: '' },
 	];
 	largeBlogs: Blog[];
 	blogs: Blog[];
+	categories: Category[]
 
 	constructor() {
 		this.largeBlogs = [
@@ -300,10 +303,60 @@ export class BlogsComponent implements OnInit {
 				comments: [],
 				image: 'https://picsum.photos/seed/picsum/650/650'
 			}
-		]
+		];
+		this.categories = [
+			{
+				id: 1,
+				name: 'Food',
+				slug: 'food',
+				subcategories: []
+			},
+			{
+				id: 2,
+				name: 'Chefs specialities',
+				slug: 'chefs-specialities',
+				subcategories: []
+			},
+			{
+				id: 3,
+				name: 'Vegetable',
+				slug: 'vegetable',
+				subcategories: []
+			},
+			{
+				id: 4,
+				name: 'Meat',
+				slug: 'meat',
+				subcategories: []
+			},
+			{
+				id: 5,
+				name: 'Recommendations',
+				slug: 'recommendations',
+				subcategories: []
+			}
+		];
 	}
 
 	ngOnInit(): void {
+	}
+
+	ngAfterViewInit() {
+		this.setInputGroupWidth(this.subscribeInput, 14);
+	}
+
+	@HostListener('window:resize', ['$event'])
+	onResize(event: Event) {
+		this.setInputGroupWidth(this.subscribeInput);
+	}
+
+	setInputGroupWidth(inputGroupPrepend: ElementRef<HTMLDivElement>, sizeFixer: number = 0) {
+		let parent = inputGroupPrepend.nativeElement.parentElement as HTMLDivElement;
+		let parentWidth = parent.offsetWidth;
+		let nextItem = inputGroupPrepend.nativeElement.nextElementSibling as HTMLButtonElement;
+		let nextItemWidth = nextItem.offsetWidth;
+
+		inputGroupPrepend.nativeElement.style.width = (parentWidth - nextItemWidth - sizeFixer) + 'px';
 	}
 
 }
