@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Delivery } from '../../interfaces/delivery.interface';
@@ -9,7 +9,8 @@ import { Cart } from '../../interfaces/cart.interface';
 	templateUrl: './checkout.component.html',
 	styleUrls: ['./checkout.component.scss']
 })
-export class CheckoutComponent implements OnInit {
+export class CheckoutComponent implements OnInit, AfterViewInit {
+	@ViewChild('promoInput') promoInput!: ElementRef<HTMLDivElement>;
 	breadcrumb: Breadcrumb[] = [
 		{ text: 'Homepage', link: '/' },
 		{ text: 'Checkout', link: '' },
@@ -84,6 +85,24 @@ export class CheckoutComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
+	}
+
+	ngAfterViewInit() {
+		this.setInputGroupWidth(this.promoInput, 11);
+	}
+
+	@HostListener('window:resize', ['$event'])
+	onResize(event: Event) {
+		this.setInputGroupWidth(this.promoInput);
+	}
+
+	setInputGroupWidth(inputGroupPrepend: ElementRef<HTMLDivElement>, sizeFixer: number = 0) {
+		let parent = inputGroupPrepend.nativeElement.parentElement as HTMLDivElement;
+		let parentWidth = parent.offsetWidth;
+		let nextItem = inputGroupPrepend.nativeElement.nextElementSibling as HTMLButtonElement;
+		let nextItemWidth = nextItem.offsetWidth;
+
+		inputGroupPrepend.nativeElement.style.width = (parentWidth - nextItemWidth - sizeFixer) + 'px';
 	}
 
 }
