@@ -14,9 +14,9 @@ export class BlogDetailsComponent implements OnInit {
 		{ text: 'Homepage', link: '/' },
 		{ text: 'Blogs', link: '/blogs' },
 		{ text: 'Blog title', link: '' },
-	]
+	];
 	comments: Comment[];
-	relatedBlogs: Blog[]
+	relatedBlogs: Blog[];
 
 	constructor() {
 		this.comments = [

@@ -1,4 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+import { Cart } from '../../interfaces/cart.interface';
 
 @Component({
 	selector: 'app-cart',
@@ -6,6 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 	styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+	@Input() cart!: Cart;
 	@Output() onClose = new EventEmitter<null>();
 
 	constructor() { }

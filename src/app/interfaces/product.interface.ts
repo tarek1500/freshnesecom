@@ -11,6 +11,7 @@ export interface Product {
 	freshnessDescription: string,
 	farm: string,
 	delivery: string,
+	stock: number,
 	quantity: number,
 	shipping: string,
 	deliveryDays: number,

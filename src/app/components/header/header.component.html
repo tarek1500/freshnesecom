@@ -25,7 +25,7 @@
 	<div class="row content">
 		<!-- Adding cart class to class binding makes the cart appears then disappears -->
 		<div class="cart" [class]="{ 'visible': isCartVisible }">
-			<app-cart (onClose)="onCartClosed()"></app-cart>
+			<app-cart [cart]="cart" (onClose)="onCartClosed()"></app-cart>
 		</div>
 		<div class="col-3 brand">
 			<img class="brand-image" src="../../../assets/images/brand.svg" alt="">
@@ -51,7 +51,7 @@
 			</div>
 			<div class="basket" (click)="isCartVisible = !isCartVisible">
 				<img class="basket-icon" src="../../../assets/icons/basket.svg" alt="">
-				<span class="icon-badge">4</span>
+				<span class="icon-badge">{{ cart.products.length }}</span>
 			</div>
 		</div>
 	</div>

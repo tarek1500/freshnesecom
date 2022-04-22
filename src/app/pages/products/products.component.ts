@@ -35,7 +35,8 @@ export class ProductsComponent implements OnInit {
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
 				delivery: 'Europe',
-				quantity: 320,
+				stock: 320,
+				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				image: 'https://picsum.photos/id/112/600/300'
@@ -53,7 +54,8 @@ export class ProductsComponent implements OnInit {
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
 				delivery: 'Europe',
-				quantity: 320,
+				stock: 320,
+				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				image: 'https://picsum.photos/id/1080/600/300'
@@ -71,7 +73,8 @@ export class ProductsComponent implements OnInit {
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
 				delivery: 'Europe',
-				quantity: 320,
+				stock: 320,
+				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				image: 'https://picsum.photos/id/102/900/300'
@@ -89,7 +92,8 @@ export class ProductsComponent implements OnInit {
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
 				delivery: 'Europe',
-				quantity: 320,
+				stock: 320,
+				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				image: 'https://picsum.photos/id/107/600/300'
@@ -107,7 +111,8 @@ export class ProductsComponent implements OnInit {
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
 				delivery: 'Europe',
-				quantity: 320,
+				stock: 320,
+				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				image: 'https://picsum.photos/id/112/600/300'
@@ -125,7 +130,8 @@ export class ProductsComponent implements OnInit {
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
 				delivery: 'Europe',
-				quantity: 320,
+				stock: 320,
+				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				image: 'https://picsum.photos/id/1080/600/300'
@@ -143,7 +149,8 @@ export class ProductsComponent implements OnInit {
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
 				delivery: 'Europe',
-				quantity: 320,
+				stock: 320,
+				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				image: 'https://picsum.photos/id/102/900/300'
@@ -161,7 +168,8 @@ export class ProductsComponent implements OnInit {
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
 				delivery: 'Europe',
-				quantity: 320,
+				stock: 320,
+				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				image: 'https://picsum.photos/id/107/600/300'
@@ -179,7 +187,8 @@ export class ProductsComponent implements OnInit {
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
 				delivery: 'Europe',
-				quantity: 320,
+				stock: 320,
+				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				image: 'https://picsum.photos/id/112/600/300'

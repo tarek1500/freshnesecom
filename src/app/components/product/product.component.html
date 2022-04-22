@@ -31,15 +31,15 @@
 								<div class="text"><span class="green">{{ product.freshness }}</span> ({{ product.freshnessDescription }})</div>
 								<div class="text">{{ product.farm }}</div>
 								<div class="text">{{ product.delivery }}</div>
-								<div class="text green">{{ product.quantity }} pcs</div>
+								<div class="text green">{{ product.stock }} pcs</div>
 							</div>
 						</div>
 					</div>
 					<div [class]="{ 'col-sm-4': size === 'large' }">
 						<div class="footer">
 							<div class="price">
-								<div class="current-price">{{ product.price }} USD</div>
-								<div class="old-price" *ngIf="product.oldPrice != 0">{{ product.oldPrice }} USD</div>
+								<div class="current-price">{{ product.price }} {{ product.currency }}</div>
+								<div class="old-price" *ngIf="product.oldPrice != 0">{{ product.oldPrice }} {{ product.currency }}</div>
 							</div>
 							<div class="shipping" *ngIf="size === 'large'">
 								<div class="type">{{ product.shipping }}</div>

@@ -5,23 +5,14 @@
 	</div>
 
 	<div class="products">
-		<div class="product">
-			<app-product-tiny></app-product-tiny>
-		</div>
-		<div class="product">
-			<app-product-tiny></app-product-tiny>
-		</div>
-		<div class="product">
-			<app-product-tiny></app-product-tiny>
-		</div>
-		<div class="product">
-			<app-product-tiny></app-product-tiny>
+		<div class="product" *ngFor="let product of cart.products">
+			<app-product-tiny [product]="product"></app-product-tiny>
 		</div>
 	</div>
 
 	<div class="subtotal">
 		<h3 class="heading">Subtotal</h3>
-		<div class="price">73.98 USD</div>
+		<div class="price">{{ cart.total }} {{ cart.currency }}</div>
 	</div>
 
 	<div class="footer">

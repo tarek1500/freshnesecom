@@ -212,11 +212,8 @@
 				<h2 class="heading">Order Summary</h2>
 				<h3 class="subheading">Price can change depending on shipping method and taxes of your state.</h3>
 				<div class="products">
-					<div class="product">
-						<app-product-tiny></app-product-tiny>
-					</div>
-					<div class="product">
-						<app-product-tiny></app-product-tiny>
+					<div class="product" *ngFor="let product of products">
+						<app-product-tiny [product]="product"></app-product-tiny>
 					</div>
 				</div>
 				<div class="row price">

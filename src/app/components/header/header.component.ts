@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Category } from '../../interfaces/category.interface';
+import { Cart } from '../../interfaces/cart.interface';
 
 @Component({
 	selector: 'app-header',
@@ -10,6 +11,7 @@ import { Category } from '../../interfaces/category.interface';
 export class HeaderComponent implements OnInit {
 	categories: Category[];
 	selectedCategory: Category;
+	cart: Cart;
 	isCartVisible: boolean = false;
 
 	constructor() {
@@ -39,8 +41,90 @@ export class HeaderComponent implements OnInit {
 				subcategories: []
 			}
 		];
-
 		this.selectedCategory = this.categories[0];
+		this.cart = {
+			id: 1,
+			products: [
+				{
+					id: 1,
+					name: 'Product Title',
+					slug: 'product-title',
+					description: '',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'USD',
+					freshness: '1 day old',
+					freshnessDescription: '',
+					farm: 'Tharamis Farm',
+					delivery: '',
+					stock: 0,
+					quantity: 1,
+					shipping: '',
+					deliveryDays: 0,
+					image: 'https://picsum.photos/id/112/200/100'
+				},
+				{
+					id: 2,
+					name: 'Product Title',
+					slug: 'product-title',
+					description: '',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'USD',
+					freshness: '1 day old',
+					freshnessDescription: '',
+					farm: 'Tharamis Farm',
+					delivery: '',
+					stock: 0,
+					quantity: 1,
+					shipping: '',
+					deliveryDays: 0,
+					image: 'https://picsum.photos/id/1080/200/100'
+				},
+				{
+					id: 3,
+					name: 'Product Title',
+					slug: 'product-title',
+					description: '',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 0,
+					currency: 'USD',
+					freshness: '1 day old',
+					freshnessDescription: '',
+					farm: 'Tharamis Farm',
+					delivery: '',
+					stock: 0,
+					quantity: 1,
+					shipping: '',
+					deliveryDays: 0,
+					image: 'https://picsum.photos/id/102/300/100'
+				},
+				{
+					id: 4,
+					name: 'Product Title',
+					slug: 'product-title',
+					description: '',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'USD',
+					freshness: '1 day old',
+					freshnessDescription: '',
+					farm: 'Tharamis Farm',
+					delivery: '',
+					stock: 0,
+					quantity: 1,
+					shipping: '',
+					deliveryDays: 0,
+					image: 'https://picsum.photos/id/107/200/100'
+				}
+			],
+			total: 73.98,
+			currency: 'USD'
+		};
 	}
 
 	ngOnInit(): void {

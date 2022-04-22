@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductTinyComponent } from '../../components/product-tiny/product-tiny.component';
@@ -10,6 +11,7 @@ import { ProductTinyComponent } from '../../components/product-tiny/product-tiny
 	],
 	imports: [
 		CommonModule,
+		FormsModule,
 		NgbModule
 	],
 	exports: [
