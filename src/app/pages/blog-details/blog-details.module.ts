@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { BlogDetailsRoutingModule } from './blog-details-routing.module';
-import { SharedModule } from '../../shared/shared/shared.module';
-import { SharedBreadcrumbModule } from '../../shared/shared-breadcrumb/shared-breadcrumb.module';
-import { SharedBlogsModule } from '../../shared/shared-blogs/shared-blogs.module';
+import { SharedModule } from '../../modules/shared/shared.module';
+import { BreadcrumbModule } from '../../modules/breadcrumb/breadcrumb.module';
+import { BlogModule } from '../../modules/blog/blog.module';
 import { BlogDetailsComponent } from './blog-details.component';
 import { CommentComponent } from '../../components/blog-details/comment/comment.component';
 import { RelatedBlogsComponent } from '../../components/blog-details/related-blogs/related-blogs.component';
@@ -21,8 +21,8 @@ import { RelatedBlogsComponent } from '../../components/blog-details/related-blo
 		BlogDetailsRoutingModule,
 		NgbModule,
 		SharedModule,
-		SharedBreadcrumbModule,
-		SharedBlogsModule
+		BreadcrumbModule,
+		BlogModule
 	]
 })
 export class BlogDetailsModule { }

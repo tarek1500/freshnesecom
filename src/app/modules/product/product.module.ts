@@ -18,4 +18,4 @@ import { ProductComponent } from '../../components/product/product.component';
 		ProductComponent
 	]
 })
-export class SharedProductsModule { }
+export class ProductModule { }

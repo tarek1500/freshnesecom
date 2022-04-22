@@ -4,9 +4,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
 
 import { ProductsRoutingModule } from './products-routing.module';
-import { SharedModule } from '../../shared/shared/shared.module';
-import { SharedBreadcrumbModule } from '../../shared/shared-breadcrumb/shared-breadcrumb.module';
-import { SharedProductsModule } from '../../shared/shared-products/shared-products.module';
+import { SharedModule } from '../../modules/shared/shared.module';
+import { BreadcrumbModule } from '../../modules/breadcrumb/breadcrumb.module';
+import { ProductModule } from '../../modules/product/product.module';
 import { ProductsComponent } from './products.component';
 
 @NgModule({
@@ -19,8 +19,8 @@ import { ProductsComponent } from './products.component';
 		NgbModule,
 		NgxBootstrapSliderModule,
 		SharedModule,
-		SharedBreadcrumbModule,
-		SharedProductsModule
+		BreadcrumbModule,
+		ProductModule
 	]
 })
 export class ProductsModule { }

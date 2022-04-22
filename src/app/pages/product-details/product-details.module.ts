@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductDetailsRoutingModule } from './product-details-routing.module';
-import { SharedModule } from '../../shared/shared/shared.module';
-import { SharedBreadcrumbModule } from '../../shared/shared-breadcrumb/shared-breadcrumb.module';
-import { SharedRelatedProductsModule } from '../../shared/shared-related-products/shared-related-products.module';
+import { SharedModule } from '../../modules/shared/shared.module';
+import { BreadcrumbModule } from '../../modules/breadcrumb/breadcrumb.module';
+import { RelatedProductsModule } from '../../modules/related-products/related-products.module';
 import { ProductDetailsComponent } from './product-details.component';
 
 @NgModule({
@@ -17,8 +17,8 @@ import { ProductDetailsComponent } from './product-details.component';
 		ProductDetailsRoutingModule,
 		NgbModule,
 		SharedModule,
-		SharedBreadcrumbModule,
-		SharedRelatedProductsModule
+		BreadcrumbModule,
+		RelatedProductsModule
 	]
 })
 export class ProductDetailsModule { }

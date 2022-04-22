@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { ReplaceStringModule } from '../../modules/replace-string/replace-string.module';
+import { ReplaceStringModule } from '../replace-string/replace-string.module';
 import { BlogMediumComponent } from '../../components/blog-medium/blog-medium.component';
 import { BlogLargeComponent } from '../../components/blog-large/blog-large.component';
 
@@ -21,4 +21,4 @@ import { BlogLargeComponent } from '../../components/blog-large/blog-large.compo
 		BlogLargeComponent
 	]
 })
-export class SharedBlogsModule { }
+export class BlogModule { }

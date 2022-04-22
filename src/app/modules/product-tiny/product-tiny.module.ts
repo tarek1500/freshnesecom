@@ -18,4 +18,4 @@ import { ProductTinyComponent } from '../../components/product-tiny/product-tiny
 		ProductTinyComponent
 	]
 })
-export class SharedProductTinyModule { }
+export class ProductTinyModule { }
