@@ -9,7 +9,7 @@
 			<div class="remove"><img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""> Remove</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-8 col-12 info">
-			<h3 class="heading">{{ product.name }}</h3>
+			<a class="heading" [routerLink]="['/products', product.slug]">{{ product.name }}</a>
 			<div class="details">
 				<div class="text-column">
 					<div class="text">Farm:</div>
@@ -41,7 +41,7 @@
 						<div class="vertical-splitter"></div>
 						<div ngbDropdown class="d-inline-block">
 							<button ngbDropdownToggle class="btn dropdown-button">Pcs <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-black.svg" alt=""></button>
-							<div ngbDropdownMenu class="dropdown">
+							<div ngbDropdownMenu class="dropdown-menu">
 								<button ngbDropdownItem class="dropdown-item">Pcs</button>
 								<button ngbDropdownItem class="dropdown-item">Pcs</button>
 							</div>
