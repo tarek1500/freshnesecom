@@ -137,15 +137,26 @@ export class HomeComponent implements OnInit {
 				price: 1.48,
 				oldPrice: 0,
 				currency: 'USD',
+				sku: '',
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: '',
 				stock: 0,
 				quantity: 0,
 				shipping: '',
 				deliveryDays: 0,
-				image: 'https://picsum.photos/id/112/400/200'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/112/400/200']
 			},
 			{
 				id: 2,
@@ -156,15 +167,26 @@ export class HomeComponent implements OnInit {
 				price: 0.28,
 				oldPrice: 48.56,
 				currency: 'USD',
+				sku: '',
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: '',
 				stock: 0,
 				quantity: 0,
 				shipping: '',
 				deliveryDays: 0,
-				image: 'https://picsum.photos/id/1080/400/200'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/1080/400/200']
 			},
 			{
 				id: 3,
@@ -175,15 +197,26 @@ export class HomeComponent implements OnInit {
 				price: 1.12,
 				oldPrice: 48.56,
 				currency: 'USD',
+				sku: '',
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: '',
 				stock: 0,
 				quantity: 0,
 				shipping: '',
 				deliveryDays: 0,
-				image: 'https://picsum.photos/id/102/600/200'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/102/600/200']
 			}
 		];
 		this.bestFromFarmers = [
@@ -270,15 +303,26 @@ export class HomeComponent implements OnInit {
 				price: 3.26,
 				oldPrice: 0,
 				currency: 'USD',
+				sku: '',
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: '',
 				stock: 0,
 				quantity: 0,
 				shipping: '',
 				deliveryDays: 0,
-				image: 'https://picsum.photos/id/112/400/200'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/112/400/200']
 			},
 			{
 				id: 2,
@@ -289,15 +333,26 @@ export class HomeComponent implements OnInit {
 				price: 1.48,
 				oldPrice: 0,
 				currency: 'USD',
+				sku: '',
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: '',
 				stock: 0,
 				quantity: 0,
 				shipping: '',
 				deliveryDays: 0,
-				image: 'https://picsum.photos/id/1080/400/200'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/1080/400/200']
 			},
 			{
 				id: 3,
@@ -308,15 +363,26 @@ export class HomeComponent implements OnInit {
 				price: 0.28,
 				oldPrice: 48.56,
 				currency: 'USD',
+				sku: '',
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: '',
 				stock: 0,
 				quantity: 0,
 				shipping: '',
 				deliveryDays: 0,
-				image: 'https://picsum.photos/id/102/600/200'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/102/600/200']
 			},
 			{
 				id: 4,
@@ -327,15 +393,26 @@ export class HomeComponent implements OnInit {
 				price: 1.12,
 				oldPrice: 0,
 				currency: 'USD',
+				sku: '',
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: '',
 				stock: 0,
 				quantity: 0,
 				shipping: '',
 				deliveryDays: 0,
-				image: 'https://picsum.photos/id/107/400/200'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/107/400/200']
 			}
 		];
 		this.largeBlog = {

@@ -38,15 +38,26 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				price: 36.99,
 				oldPrice: 48.56,
 				currency: 'USD',
+				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: 'Europe',
 				stock: 320,
 				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
-				image: 'https://picsum.photos/id/112/600/300'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/112/600/300']
 			},
 			{
 				id: 2,
@@ -57,15 +68,26 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				price: 36.99,
 				oldPrice: 48.56,
 				currency: 'USD',
+				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: 'Europe',
 				stock: 320,
 				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
-				image: 'https://picsum.photos/id/1080/600/300'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/1080/600/300']
 			},
 			{
 				id: 3,
@@ -76,15 +98,26 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				price: 36.99,
 				oldPrice: 0,
 				currency: 'USD',
+				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: 'Europe',
 				stock: 320,
 				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
-				image: 'https://picsum.photos/id/102/900/300'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/102/900/300']
 			},
 			{
 				id: 4,
@@ -95,15 +128,26 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				price: 36.99,
 				oldPrice: 48.56,
 				currency: 'USD',
+				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: 'Europe',
 				stock: 320,
 				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
-				image: 'https://picsum.photos/id/107/600/300'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/107/600/300']
 			},
 			{
 				id: 5,
@@ -114,15 +158,26 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				price: 36.99,
 				oldPrice: 48.56,
 				currency: 'USD',
+				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: 'Europe',
 				stock: 320,
 				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
-				image: 'https://picsum.photos/id/112/600/300'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/112/600/300']
 			},
 			{
 				id: 6,
@@ -133,15 +188,26 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				price: 36.99,
 				oldPrice: 0,
 				currency: 'USD',
+				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: 'Europe',
 				stock: 320,
 				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
-				image: 'https://picsum.photos/id/1080/600/300'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/1080/600/300']
 			},
 			{
 				id: 7,
@@ -152,15 +218,26 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				price: 36.99,
 				oldPrice: 48.56,
 				currency: 'USD',
+				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: 'Europe',
 				stock: 320,
 				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
-				image: 'https://picsum.photos/id/102/900/300'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/102/900/300']
 			},
 			{
 				id: 8,
@@ -171,15 +248,26 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				price: 36.99,
 				oldPrice: 0,
 				currency: 'USD',
+				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: 'Europe',
 				stock: 320,
 				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
-				image: 'https://picsum.photos/id/107/600/300'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/107/600/300']
 			},
 			{
 				id: 9,
@@ -190,15 +278,26 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				price: 36.99,
 				oldPrice: 48.56,
 				currency: 'USD',
+				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
+				buyBy: '',
+				category: {
+					id: 0,
+					name: '',
+					slug: '',
+					subcategories: []
+				},
 				delivery: 'Europe',
 				stock: 320,
 				quantity: 0,
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
-				image: 'https://picsum.photos/id/112/600/300'
+				info: '',
+				reviews: [],
+				questions: [],
+				images: ['https://picsum.photos/id/112/600/300']
 			},
 		];
 	}

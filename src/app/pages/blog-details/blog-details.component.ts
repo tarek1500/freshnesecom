@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
-import { Comment } from '../../interfaces/comment.interface';
 import { Blog } from '../../interfaces/blog.interface';
 
 @Component({
@@ -16,7 +15,6 @@ export class BlogDetailsComponent implements OnInit {
 		{ text: '', link: '' },
 	];
 	blog!: Blog;
-	comments: Comment[] = [];
 	relatedBlogs: Blog[];
 
 	constructor() {
@@ -206,7 +204,7 @@ export class BlogDetailsComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		// Fetch blog for server
+		// Fetch blog form server
 		this.breadcrumb[2].text = this.blog.title;
 	}
 

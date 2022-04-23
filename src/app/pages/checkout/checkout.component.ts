@@ -47,15 +47,26 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
 					price: 36.99,
 					oldPrice: 48.56,
 					currency: 'USD',
+					sku: '',
 					freshness: '1 day old',
 					freshnessDescription: '',
 					farm: 'Tharamis Farm',
+					buyBy: '',
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
+					},
 					delivery: '',
 					stock: 0,
 					quantity: 1,
 					shipping: '',
 					deliveryDays: 0,
-					image: 'https://picsum.photos/id/112/200/100'
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/112/200/100']
 				},
 				{
 					id: 2,
@@ -66,15 +77,26 @@ export class CheckoutComponent implements OnInit, AfterViewInit {
 					price: 36.99,
 					oldPrice: 48.56,
 					currency: 'USD',
+					sku: '',
 					freshness: '1 day old',
 					freshnessDescription: '',
 					farm: 'Tharamis Farm',
+					buyBy: '',
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
+					},
 					delivery: '',
 					stock: 0,
 					quantity: 1,
 					shipping: '',
 					deliveryDays: 0,
-					image: 'https://picsum.photos/id/1080/200/100'
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/1080/200/100']
 				}
 			],
 			subtotal: 73.98,

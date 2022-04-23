@@ -6,19 +6,30 @@
 	.content {
 		padding: 16px 45px;
 
-		.images {
-			.image {
+		.cover-images {
+			.cover-image {
+				position: relative;
 				margin-bottom: 32px;
 				padding: 16px;
 				height: 436px;
 				border-radius: 12px;
 				background-color: #F9F9F9;
+				overflow: hidden;
 
 				@media (max-width: 991.98px) {
 					height: 338px;
 				}
 
+				img {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					transform: translate(-50%, -50%);
+				}
+
 				.tags {
+					position: absolute;
+
 					.tag {
 						margin: 0px 12px 8px 0px;
 						display: inline-block;
@@ -39,7 +50,7 @@
 
 		.details {
 			.heading {
-				margin-bottom: 8px;
+				margin-bottom: 4px;
 				color: #151515;
 				font-family: 'Poppins';
 				font-weight: 600;
@@ -47,20 +58,30 @@
 			}
 
 			.stars {
-				margin-bottom: 40px;
+				margin-bottom: 36px;
 
-				.star-icon {
-					width: 20px;
-					height: 20px;
-					margin-right: 2px;
+				.star {
+					position: relative;
+					display: inline-block;
+					font-size: 24px;
+					color: #D1D1D1;
 
-					&:last-of-type {
-						margin-right: 8px
+					&.full {
+						color: #FDBC15;
+					}
+
+					.half {
+						position: absolute;
+						display: inline-block;
+						overflow: hidden;
+						color: #FDBC15;
 					}
 				}
 
 				.review {
+					margin-left: 8px;
 					display: inline-block;
+					vertical-align: text-bottom;
 
 					a {
 						color: #A9A9A9;
@@ -177,7 +198,7 @@
 						}
 
 						input {
-							width: 50px;
+							width: 76px;
 							padding: 13.5px 16px;
 							border-radius: 12px 0px 0px 12px;
 							border: 1px solid #D1D1D1;
@@ -352,58 +373,60 @@
 				.tab-content {
 					padding-top: 48px;
 
-					.heading {
-						color: #151515;
-						font-family: 'Poppins';
-						font-weight: 500;
-						font-size: 15px;
+					::ng-deep {
+						.heading {
+							color: #151515;
+							font-family: 'Poppins';
+							font-weight: 500;
+							font-size: 15px;
 
-						&:last-of-type {
-							margin-bottom: 16px;
-						}
-					}
-
-					.details {
-						margin-bottom: 32px;
-						color: #151515;
-						font-family: 'OpenSans';
-						font-weight: 400;
-						font-size: 14px;
-					}
-
-					.table {
-						margin: 0px;
-
-						thead {
-							tr {
-								color: #151515;
-								font-family: 'Poppins';
-								font-weight: 600;
-								font-size: 12px;
-
-								th {
-									padding: 7px 0px;
-									border-color: #EBEBEB;
-								}
+							&:last-of-type {
+								margin-bottom: 16px;
 							}
 						}
 
-						tbody {
-							border-top: none;
+						.details {
+							margin-bottom: 32px;
+							color: #151515;
+							font-family: 'OpenSans';
+							font-weight: 400;
+							font-size: 14px;
+						}
 
-							tr {
-								color: #575757;
-								font-family: 'OpenSans';
-								font-weight: 400;
-								font-size: 14px;
+						.table {
+							margin: 0px;
 
-								&:nth-of-type(odd) {
-									background-color: #FDFDFD;
+							thead {
+								tr {
+									color: #151515;
+									font-family: 'Poppins';
+									font-weight: 600;
+									font-size: 12px;
+
+									th {
+										padding: 7px 0px;
+										border-color: #EBEBEB;
+									}
 								}
+							}
 
-								td {
-									padding: 10px 0px;
-									border: none;
+							tbody {
+								border-top: none;
+
+								tr {
+									color: #575757;
+									font-family: 'OpenSans';
+									font-weight: 400;
+									font-size: 14px;
+
+									&:nth-of-type(odd) {
+										background-color: #FDFDFD;
+									}
+
+									td {
+										padding: 10px 0px;
+										border: none;
+									}
 								}
 							}
 						}

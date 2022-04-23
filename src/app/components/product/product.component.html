@@ -2,7 +2,7 @@
 	<div [class]="{ 'row': size === 'large' }">
 		<div [class]="{ 'col-md-4': size === 'large' }">
 			<div class="cover-image">
-				<img src="{{ product.image }}" alt="">
+				<img src="{{ product.images[0] }}" alt="" *ngIf="product.images.length > 0">
 				<span class="discount" *ngIf="discount != 0">-{{ discount }} %</span>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
 								<div class="text">Stock</div>
 							</div>
 							<div class="col-7">
-								<div class="text"><span class="green">{{ product.freshness }}</span> ({{ product.freshnessDescription }})</div>
+								<div class="text"><span class="green">{{ product.freshness }}</span><span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span></div>
 								<div class="text">{{ product.farm }}</div>
 								<div class="text">{{ product.delivery }}</div>
 								<div class="text green">{{ product.stock }} pcs</div>
@@ -43,7 +43,7 @@
 							</div>
 							<div class="shipping" *ngIf="size === 'large'">
 								<div class="type">{{ product.shipping }}</div>
-								<div class="days">Delivery in {{ product.deliveryDays }} day</div>
+								<div class="days">Delivery in {{ product.deliveryDays }} day(s)</div>
 							</div>
 							<div class="buttons">
 								<button class="btn buy-button">Buy now</button>

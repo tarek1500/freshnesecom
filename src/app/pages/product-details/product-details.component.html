@@ -6,29 +6,29 @@
 
 	<div class="content">
 		<div class="row">
-			<div class="col-md-6 images">
-				<div class="image">
-					<div class="tags">
-						<div class="tag"><span>- 36 %</span></div>
-						<div class="tag"><span>Free shipping</span></div>
+			<div class="col-md-6 cover-images">
+				<div class="cover-image" *ngFor="let image of product.images; first as isFirst">
+					<img src="{{ image }}" alt="">
+					<div class="tags" *ngIf="isFirst">
+						<div class="tag" *ngIf="discount != 0"><span>-{{ discount }} %</span></div>
+						<div class="tag"><span>{{ product.shipping }}</span></div>
 					</div>
 				</div>
-				<div class="image"></div>
-				<div class="image"></div>
 			</div>
 			<div class="col-md-6 details">
-				<h2 class="heading">Carrots from Tomissy Farm</h2>
+				<h2 class="heading">{{ product.name }}</h2>
 				<div class="stars">
-					<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-					<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-					<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-					<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-					<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+					<ng-template #starTemplate let-fill="fill">
+						<span class="star" [class.full]="fill === 100">
+							<span class="half" [style.width.%]="fill">&starf;</span>&starf;
+						</span>
+					</ng-template>
+					<ngb-rating [(rate)]="product.rating" [starTemplate]="starTemplate" [readonly]="true" [max]="5"></ngb-rating>
 					<div class="review">
-						<a href="#">(1 customer review)</a>
+						<a href="#">({{ product.reviews.length }} customer review)</a>
 					</div>
 				</div>
-				<p class="description">Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.</p>
+				<p class="description">{{ product.description }}</p>
 				<div class="row info">
 					<div class="col-lg-6 col-md-12 col-sm-6">
 						<div class="row">
@@ -39,10 +39,10 @@
 								<div class="text gray">Farm:</div>
 							</div>
 							<div class="col-7">
-								<div class="text">76645</div>
-								<div class="text"><a routerLink="/products">Vegetables</a></div>
-								<div class="text green"><a href="#">In Stock</a></div>
-								<div class="text">Grocery Tarm Fields</div>
+								<div class="text">{{ product.sku }}</div>
+								<div class="text"><a [routerLink]="['/products/categories', product.category.slug]">{{ product.category.name }}</a></div>
+								<div class="text green">{{ product.stock }} pcs</div>
+								<div class="text">{{ product.farm }}</div>
 							</div>
 						</div>
 					</div>
@@ -55,18 +55,18 @@
 								<div class="text gray">Delivery area:</div>
 							</div>
 							<div class="col-7">
-								<div class="text">1 days old</div>
-								<div class="text">pcs, kgs, box, pack</div>
-								<div class="text">in 2 days</div>
-								<div class="text">Czech republic</div>
+								<div class="text">{{ product.freshness }}<span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span></div>
+								<div class="text">{{ product.buyBy }}</div>
+								<div class="text">in {{ product.deliveryDays }} day(s)</div>
+								<div class="text">{{ product.delivery }}</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="cart">
 					<div class="price">
-						<div class="current-price">36.23 USD</div>
-						<div class="old-price">48.56 USD</div>
+						<div class="current-price">{{ product.price }} {{ product.currency }}</div>
+						<div class="old-price">{{ product.oldPrice }} {{ product.currency }}</div>
 					</div>
 					<div class="buttons">
 						<div class="input-group">
@@ -94,65 +94,13 @@
 						<ng-container ngbNavItem>
 							<a ngbNavLink>Description</a>
 							<ng-template ngbNavContent>
-								<div>
-									<h3 class="heading">Origins</h3>
-									<p class="details">We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.</p>
-									<h3 class="heading">How to cook</h3>
-									<p class="details">From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.</p>
-									<h3 class="heading">Full of Vitamins!</h3>
-									<table class="table">
-										<thead>
-											<tr>
-												<th>Vitamins</th>
-												<th>Quantity</th>
-												<th>% DV</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Vitamin A equiv.</td>
-												<td>735 μg</td>
-												<td>104 %</td>
-											</tr>
-											<tr>
-												<td>Thiamine (B1)</td>
-												<td>0.066 mg</td>
-												<td>6 %</td>
-											</tr>
-											<tr>
-												<td>Niacin (B3)</td>
-												<td>0.983 mg</td>
-												<td>7 %</td>
-											</tr>
-											<tr>
-												<td>Folate (Bg)</td>
-												<td>19 μg</td>
-												<td>5 %</td>
-											</tr>
-											<tr>
-												<td>Vitamin C</td>
-												<td>5.9 mg</td>
-												<td>7 %</td>
-											</tr>
-											<tr>
-												<td>Vitamin E</td>
-												<td>0.66 mg</td>
-												<td>4 %</td>
-											</tr>
-											<tr>
-												<td>Vitamin K</td>
-												<td>13.2</td>
-												<td>13 %</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+								<div [innerHtml]="product.info"></div>
 							</ng-template>
 						</ng-container>
 						<ng-container ngbNavItem>
 							<a ngbNavLink>
 								Reviews
-								<span class="tag">18</span>
+								<span class="tag">{{ product.reviews.length }}</span>
 							</a>
 							<ng-template ngbNavContent>
 								<h2 class="heading">Reviews</h2>
@@ -161,7 +109,7 @@
 						<ng-container ngbNavItem>
 							<a ngbNavLink>
 								Questions
-								<span class="tag">4</span>
+								<span class="tag">{{ product.questions.length }}</span>
 							</a>
 							<ng-template ngbNavContent>
 								<h2 class="heading">Questions</h2>
