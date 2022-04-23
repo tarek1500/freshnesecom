@@ -353,27 +353,27 @@ export class BlogsComponent implements OnInit, AfterViewInit, OnDestroy {
 					let slug: string = params['slug'];
 
 					switch (name) {
-						case 'blogs.categories':
-							// Fetch category and its blogs from server
-							this.category = {
-								id: 0,
-								name: 'Dinner',
-								slug: slug,
-								subcategories: []
-							};
-							this.breadcrumb[1].text = this.category.name;
+					case 'blogs.categories':
+						// Fetch category and its blogs from server
+						this.category = {
+							id: 0,
+							name: 'Dinner',
+							slug: slug,
+							subcategories: []
+						};
+						this.breadcrumb[1].text = this.category.name;
 
-							break;
-						case 'blogs.tags':
-							// Fetch tag and its blogs from server
-							this.tag = {
-								id: 0,
-								name: 'Recipes',
-								slug: slug
-							};
-							this.breadcrumb[1].text = this.tag.name;
+						break;
+					case 'blogs.tags':
+						// Fetch tag and its blogs from server
+						this.tag = {
+							id: 0,
+							name: 'Recipes',
+							slug: slug
+						};
+						this.breadcrumb[1].text = this.tag.name;
 
-							break;
+						break;
 					}
 				});
 

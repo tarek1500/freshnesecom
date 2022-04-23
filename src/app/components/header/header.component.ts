@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
+import { CartService } from '../../services/cart.service';
 import { Category } from '../../interfaces/category.interface';
 import { Cart } from '../../interfaces/cart.interface';
 
@@ -8,13 +10,14 @@ import { Cart } from '../../interfaces/cart.interface';
 	templateUrl: './header.component.html',
 	styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
+	cartSubscription!: Subscription;
 	categories: Category[];
 	selectedCategory: Category;
-	cart: Cart;
+	cart!: Cart;
 	isCartVisible: boolean = false;
 
-	constructor() {
+	constructor(private cartService: CartService) {
 		this.categories = [
 			{
 				id: 0,
@@ -42,138 +45,16 @@ export class HeaderComponent implements OnInit {
 			}
 		];
 		this.selectedCategory = this.categories[0];
-		this.cart = {
-			id: 1,
-			products: [
-				{
-					id: 1,
-					name: 'Product Title',
-					slug: 'product-title',
-					description: '',
-					rating: 4.33,
-					price: 36.99,
-					oldPrice: 48.56,
-					currency: 'USD',
-					sku: '',
-					freshness: '1 day old',
-					freshnessDescription: '',
-					farm: 'Tharamis Farm',
-					buyBy: '',
-					category: {
-						id: 0,
-						name: '',
-						slug: '',
-						subcategories: []
-					},
-					delivery: '',
-					stock: 0,
-					quantity: 1,
-					shipping: '',
-					deliveryDays: 0,
-					info: '',
-					reviews: [],
-					questions: [],
-					images: ['https://picsum.photos/id/112/200/100']
-				},
-				{
-					id: 2,
-					name: 'Product Title',
-					slug: 'product-title',
-					description: '',
-					rating: 4.33,
-					price: 36.99,
-					oldPrice: 48.56,
-					currency: 'USD',
-					sku: '',
-					freshness: '1 day old',
-					freshnessDescription: '',
-					farm: 'Tharamis Farm',
-					buyBy: '',
-					category: {
-						id: 0,
-						name: '',
-						slug: '',
-						subcategories: []
-					},
-					delivery: '',
-					stock: 0,
-					quantity: 1,
-					shipping: '',
-					deliveryDays: 0,
-					info: '',
-					reviews: [],
-					questions: [],
-					images: ['https://picsum.photos/id/1080/200/100']
-				},
-				{
-					id: 3,
-					name: 'Product Title',
-					slug: 'product-title',
-					description: '',
-					rating: 4.33,
-					price: 36.99,
-					oldPrice: 0,
-					currency: 'USD',
-					sku: '',
-					freshness: '1 day old',
-					freshnessDescription: '',
-					farm: 'Tharamis Farm',
-					buyBy: '',
-					category: {
-						id: 0,
-						name: '',
-						slug: '',
-						subcategories: []
-					},
-					delivery: '',
-					stock: 0,
-					quantity: 1,
-					shipping: '',
-					deliveryDays: 0,
-					info: '',
-					reviews: [],
-					questions: [],
-					images: ['https://picsum.photos/id/102/300/100']
-				},
-				{
-					id: 4,
-					name: 'Product Title',
-					slug: 'product-title',
-					description: '',
-					rating: 4.33,
-					price: 36.99,
-					oldPrice: 48.56,
-					currency: 'USD',
-					sku: '',
-					freshness: '1 day old',
-					freshnessDescription: '',
-					farm: 'Tharamis Farm',
-					buyBy: '',
-					category: {
-						id: 0,
-						name: '',
-						slug: '',
-						subcategories: []
-					},
-					delivery: '',
-					stock: 0,
-					quantity: 1,
-					shipping: '',
-					deliveryDays: 0,
-					info: '',
-					reviews: [],
-					questions: [],
-					images: ['https://picsum.photos/id/107/200/100']
-				}
-			],
-			subtotal: 147.96,
-			tax: 0,
-			shipping: 0,
-			currency: 'USD'
-		};
 	}
 
 	ngOnInit(): void {
+		this.cartSubscription = this.cartService.cartSubject$.subscribe(cart => {
+			this.cart = cart;
+		});
+	}
+
+	ngOnDestroy(): void {
+		this.cartSubscription.unsubscribe();
 	}
 
 	onCategorySelected(category: Category) {
