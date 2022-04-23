@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { CartService } from '../../services/cart.service';
@@ -55,6 +55,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
 	ngOnDestroy(): void {
 		this.cartSubscription.unsubscribe();
+	}
+
+	@HostListener('document:click', ['$event'])
+	onClick(event: MouseEvent) {
+		let basketElement = (event.target as Element).closest('.basket');
+		let cartElement = (event.target as Element).closest('app-cart');
+
+		if (!basketElement && !cartElement) {
+			this.isCartVisible = false;
+		}
 	}
 
 	onCategorySelected(category: Category) {
