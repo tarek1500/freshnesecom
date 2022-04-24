@@ -42,7 +42,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
-				buyBy: '',
+				availablePacks: [
+					{
+						id: 1,
+						stock: 10,
+						pack: 'pcs'
+					},
+					{
+						id: 2,
+						stock: 20,
+						pack: 'kgs'
+					},
+					{
+						id: 3,
+						stock: 1,
+						pack: 'box'
+					},
+					{
+						id: 4,
+						stock: 2,
+						pack: 'pack'
+					}
+				],
 				category: {
 					id: 0,
 					name: '',
@@ -50,8 +71,11 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					subcategories: []
 				},
 				delivery: 'Europe',
-				stock: 320,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				info: '',
@@ -72,7 +96,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
-				buyBy: '',
+				availablePacks: [
+					{
+						id: 1,
+						stock: 10,
+						pack: 'pcs'
+					},
+					{
+						id: 2,
+						stock: 20,
+						pack: 'kgs'
+					},
+					{
+						id: 3,
+						stock: 1,
+						pack: 'box'
+					},
+					{
+						id: 4,
+						stock: 2,
+						pack: 'pack'
+					}
+				],
 				category: {
 					id: 0,
 					name: '',
@@ -80,8 +125,11 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					subcategories: []
 				},
 				delivery: 'Europe',
-				stock: 320,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				info: '',
@@ -102,7 +150,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
-				buyBy: '',
+				availablePacks: [
+					{
+						id: 1,
+						stock: 10,
+						pack: 'pcs'
+					},
+					{
+						id: 2,
+						stock: 20,
+						pack: 'kgs'
+					},
+					{
+						id: 3,
+						stock: 1,
+						pack: 'box'
+					},
+					{
+						id: 4,
+						stock: 2,
+						pack: 'pack'
+					}
+				],
 				category: {
 					id: 0,
 					name: '',
@@ -110,8 +179,11 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					subcategories: []
 				},
 				delivery: 'Europe',
-				stock: 320,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				info: '',
@@ -132,7 +204,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
-				buyBy: '',
+				availablePacks: [
+					{
+						id: 1,
+						stock: 10,
+						pack: 'pcs'
+					},
+					{
+						id: 2,
+						stock: 20,
+						pack: 'kgs'
+					},
+					{
+						id: 3,
+						stock: 1,
+						pack: 'box'
+					},
+					{
+						id: 4,
+						stock: 2,
+						pack: 'pack'
+					}
+				],
 				category: {
 					id: 0,
 					name: '',
@@ -140,8 +233,11 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					subcategories: []
 				},
 				delivery: 'Europe',
-				stock: 320,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				info: '',
@@ -162,7 +258,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
-				buyBy: '',
+				availablePacks: [
+					{
+						id: 1,
+						stock: 10,
+						pack: 'pcs'
+					},
+					{
+						id: 2,
+						stock: 20,
+						pack: 'kgs'
+					},
+					{
+						id: 3,
+						stock: 1,
+						pack: 'box'
+					},
+					{
+						id: 4,
+						stock: 2,
+						pack: 'pack'
+					}
+				],
 				category: {
 					id: 0,
 					name: '',
@@ -170,8 +287,11 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					subcategories: []
 				},
 				delivery: 'Europe',
-				stock: 320,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				info: '',
@@ -192,7 +312,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
-				buyBy: '',
+				availablePacks: [
+					{
+						id: 1,
+						stock: 10,
+						pack: 'pcs'
+					},
+					{
+						id: 2,
+						stock: 20,
+						pack: 'kgs'
+					},
+					{
+						id: 3,
+						stock: 1,
+						pack: 'box'
+					},
+					{
+						id: 4,
+						stock: 2,
+						pack: 'pack'
+					}
+				],
 				category: {
 					id: 0,
 					name: '',
@@ -200,8 +341,11 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					subcategories: []
 				},
 				delivery: 'Europe',
-				stock: 320,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				info: '',
@@ -222,7 +366,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
-				buyBy: '',
+				availablePacks: [
+					{
+						id: 1,
+						stock: 10,
+						pack: 'pcs'
+					},
+					{
+						id: 2,
+						stock: 20,
+						pack: 'kgs'
+					},
+					{
+						id: 3,
+						stock: 1,
+						pack: 'box'
+					},
+					{
+						id: 4,
+						stock: 2,
+						pack: 'pack'
+					}
+				],
 				category: {
 					id: 0,
 					name: '',
@@ -230,8 +395,11 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					subcategories: []
 				},
 				delivery: 'Europe',
-				stock: 320,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				info: '',
@@ -252,7 +420,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
-				buyBy: '',
+				availablePacks: [
+					{
+						id: 1,
+						stock: 10,
+						pack: 'pcs'
+					},
+					{
+						id: 2,
+						stock: 20,
+						pack: 'kgs'
+					},
+					{
+						id: 3,
+						stock: 1,
+						pack: 'box'
+					},
+					{
+						id: 4,
+						stock: 2,
+						pack: 'pack'
+					}
+				],
 				category: {
 					id: 0,
 					name: '',
@@ -260,8 +449,11 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					subcategories: []
 				},
 				delivery: 'Europe',
-				stock: 320,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				info: '',
@@ -282,7 +474,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
 				farm: 'Grocery Tarm Fields',
-				buyBy: '',
+				availablePacks: [
+					{
+						id: 1,
+						stock: 10,
+						pack: 'pcs'
+					},
+					{
+						id: 2,
+						stock: 20,
+						pack: 'kgs'
+					},
+					{
+						id: 3,
+						stock: 1,
+						pack: 'box'
+					},
+					{
+						id: 4,
+						stock: 2,
+						pack: 'pack'
+					}
+				],
 				category: {
 					id: 0,
 					name: '',
@@ -290,8 +503,11 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					subcategories: []
 				},
 				delivery: 'Europe',
-				stock: 320,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: 'Free Shipping',
 				deliveryDays: 1,
 				info: '',

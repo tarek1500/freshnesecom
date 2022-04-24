@@ -1,4 +1,6 @@
+import { ProductPack } from './product-pack.interface';
 import { Category } from './category.interface';
+import { Quantity } from './quantity.interface';
 import { Review } from './review.interface';
 import { Question } from './question.interface';
 
@@ -15,11 +17,10 @@ export interface Product {
 	freshness: string,
 	freshnessDescription: string,
 	farm: string,
-	buyBy: string,
+	availablePacks: ProductPack[],
 	category: Category;
 	delivery: string,
-	stock: number,
-	quantity: number,
+	selectedQuantity: Quantity,
 	shipping: string,
 	deliveryDays: number,
 	info: string,

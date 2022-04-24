@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { CartService } from './services/cart.service';
+import { Cart } from './interfaces/cart.interface';
 
 @Component({
 	selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent {
 
 	constructor(private cartService: CartService) {
 		// Fetch cart from server
-		let cart = {
+		let cart: Cart = {
 			id: 1,
 			products: [
 				{
@@ -28,7 +29,28 @@ export class AppComponent {
 					freshness: '1 day old',
 					freshnessDescription: '',
 					farm: 'Tharamis Farm',
-					buyBy: '',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
 					category: {
 						id: 0,
 						name: '',
@@ -36,8 +58,11 @@ export class AppComponent {
 						subcategories: []
 					},
 					delivery: '',
-					stock: 0,
-					quantity: 1,
+					selectedQuantity: {
+						id:1,
+						quantity: 1,
+						pack: 'pcs'
+					},
 					shipping: '',
 					deliveryDays: 0,
 					info: '',
@@ -58,7 +83,28 @@ export class AppComponent {
 					freshness: '1 day old',
 					freshnessDescription: '',
 					farm: 'Tharamis Farm',
-					buyBy: '',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
 					category: {
 						id: 0,
 						name: '',
@@ -66,8 +112,11 @@ export class AppComponent {
 						subcategories: []
 					},
 					delivery: '',
-					stock: 0,
-					quantity: 1,
+					selectedQuantity: {
+						id: 1,
+						quantity: 1,
+						pack: 'pcs'
+					},
 					shipping: '',
 					deliveryDays: 0,
 					info: '',
@@ -88,7 +137,28 @@ export class AppComponent {
 					freshness: '1 day old',
 					freshnessDescription: '',
 					farm: 'Tharamis Farm',
-					buyBy: '',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
 					category: {
 						id: 0,
 						name: '',
@@ -96,8 +166,11 @@ export class AppComponent {
 						subcategories: []
 					},
 					delivery: '',
-					stock: 0,
-					quantity: 1,
+					selectedQuantity: {
+						id: 0,
+						quantity: 1,
+						pack: 'pcs'
+					},
 					shipping: '',
 					deliveryDays: 0,
 					info: '',
@@ -118,7 +191,28 @@ export class AppComponent {
 					freshness: '1 day old',
 					freshnessDescription: '',
 					farm: 'Tharamis Farm',
-					buyBy: '',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
 					category: {
 						id: 0,
 						name: '',
@@ -126,8 +220,11 @@ export class AppComponent {
 						subcategories: []
 					},
 					delivery: '',
-					stock: 0,
-					quantity: 1,
+					selectedQuantity: {
+						id: 1,
+						quantity: 1,
+						pack: 'pcs'
+					},
 					shipping: '',
 					deliveryDays: 0,
 					info: '',

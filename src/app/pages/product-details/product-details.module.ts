@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductDetailsRoutingModule } from './product-details-routing.module';
@@ -15,6 +16,7 @@ import { ProductDetailsComponent } from './product-details.component';
 	imports: [
 		CommonModule,
 		ProductDetailsRoutingModule,
+		FormsModule,
 		NgbModule,
 		SharedModule,
 		BreadcrumbModule,

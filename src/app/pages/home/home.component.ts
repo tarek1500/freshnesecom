@@ -141,7 +141,7 @@ export class HomeComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -149,8 +149,11 @@ export class HomeComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -171,7 +174,7 @@ export class HomeComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -179,8 +182,11 @@ export class HomeComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -201,7 +207,7 @@ export class HomeComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -209,8 +215,11 @@ export class HomeComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -307,7 +316,7 @@ export class HomeComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -315,8 +324,11 @@ export class HomeComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -337,7 +349,7 @@ export class HomeComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -345,8 +357,11 @@ export class HomeComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -367,7 +382,7 @@ export class HomeComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -375,8 +390,11 @@ export class HomeComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -397,7 +415,7 @@ export class HomeComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -405,8 +423,11 @@ export class HomeComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',

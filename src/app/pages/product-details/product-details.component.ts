@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Product } from '../../interfaces/product.interface';
+import { ProductPack } from '../../interfaces/product-pack.interface';
 
 @Component({
 	selector: 'app-product-details',
@@ -15,6 +16,8 @@ export class ProductDetailsComponent implements OnInit {
 		{ text: '', link: '' },
 	];
 	product: Product;
+	selectedStockPack!: ProductPack;
+	selectedCartPack!: ProductPack;
 	discount: number = 0;
 	relatedProducts: Product[];
 
@@ -32,7 +35,28 @@ export class ProductDetailsComponent implements OnInit {
 			freshness: '1 days old',
 			freshnessDescription: '',
 			farm: 'Grocery Tarm Fields',
-			buyBy: 'pcs, kgs, box, pack',
+			availablePacks: [
+				{
+					id: 1,
+					stock: 10,
+					pack: 'pcs'
+				},
+				{
+					id: 2,
+					stock: 20,
+					pack: 'kgs'
+				},
+				{
+					id: 3,
+					stock: 1,
+					pack: 'box'
+				},
+				{
+					id: 4,
+					stock: 2,
+					pack: 'pack'
+				}
+			],
 			category: {
 				id: 1,
 				name: 'Vegetables',
@@ -40,8 +64,11 @@ export class ProductDetailsComponent implements OnInit {
 				subcategories: []
 			},
 			delivery: 'Czech republic',
-			stock: 320,
-			quantity: 0,
+			selectedQuantity: {
+				id:0,
+				quantity: 0,
+				pack: ''
+			},
 			shipping: 'Free shipping',
 			deliveryDays: 2,
 			info: '<h3 class="heading">Origins</h3><p class="details">We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.</p><h3 class="heading">How to cook</h3><p class="details">From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.</p><h3 class="heading">Full of Vitamins!</h3><table class="table"><thead><tr><th>Vitamins</th><th>Quantity</th><th>% DV</th></tr></thead><tbody><tr><td>Vitamin A equiv.</td><td>735 μg</td><td>104 %</td></tr><tr><td>Thiamine (B1)</td><td>0.066 mg</td><td>6 %</td></tr><tr><td>Niacin (B3)</td><td>0.983 mg</td><td>7 %</td></tr><tr><td>Folate (Bg)</td><td>19 μg</td><td>5 %</td></tr><tr><td>Vitamin C</td><td>5.9 mg</td><td>7 %</td></tr><tr><td>Vitamin E</td><td>0.66 mg</td><td>4 %</td></tr><tr><td>Vitamin K</td><td>13.2</td><td>13 %</td></tr></tbody></table>',
@@ -131,7 +158,7 @@ export class ProductDetailsComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -139,8 +166,11 @@ export class ProductDetailsComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -161,7 +191,7 @@ export class ProductDetailsComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -169,8 +199,11 @@ export class ProductDetailsComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -191,7 +224,7 @@ export class ProductDetailsComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -199,8 +232,11 @@ export class ProductDetailsComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -221,7 +257,7 @@ export class ProductDetailsComponent implements OnInit {
 				freshness: '',
 				freshnessDescription: '',
 				farm: '',
-				buyBy: '',
+				availablePacks: [],
 				category: {
 					id: 0,
 					name: '',
@@ -229,8 +265,11 @@ export class ProductDetailsComponent implements OnInit {
 					subcategories: []
 				},
 				delivery: '',
-				stock: 0,
-				quantity: 0,
+				selectedQuantity: {
+					id:0,
+					quantity: 0,
+					pack: ''
+				},
 				shipping: '',
 				deliveryDays: 0,
 				info: '',
@@ -243,11 +282,23 @@ export class ProductDetailsComponent implements OnInit {
 
 	ngOnInit(): void {
 		// Fetch product form server
+		this.selectedStockPack = this.product.availablePacks[0];
+		this.selectedCartPack = this.product.availablePacks[0];
 		this.breadcrumb[2].text = this.product.name;
 
 		if (this.product.oldPrice != 0) {
 			this.discount = Math.round((this.product.oldPrice - this.product.price) / this.product.oldPrice * 100);
 		}
+	}
+
+	onStockPackSelected(pack: ProductPack) {
+		this.selectedStockPack = pack;
+	}
+
+	onCartPackSelected(pack: ProductPack) {
+		this.selectedCartPack = pack;
+		this.product.selectedQuantity.pack = pack.pack;
+		console.log(this.product);
 	}
 
 }

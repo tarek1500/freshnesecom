@@ -31,7 +31,20 @@
 								<div class="text"><span class="green">{{ product.freshness }}</span><span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span></div>
 								<div class="text">{{ product.farm }}</div>
 								<div class="text">{{ product.delivery }}</div>
-								<div class="text green">{{ product.stock }} pcs</div>
+								<div class="text">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<input class="form-control" type="text" [value]="selectedPack.stock" disabled>
+										</div>
+										<div class="vertical-splitter"></div>
+										<div ngbDropdown class="d-inline-block">
+											<button ngbDropdownToggle class="btn dropdown-button">{{ selectedPack.pack }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-black.svg" alt=""></button>
+											<div ngbDropdownMenu class="dropdown-menu">
+												<button ngbDropdownItem class="dropdown-item" (click)="onPackSelected(pack)" *ngFor="let pack of product.availablePacks">{{ pack.pack }}</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
