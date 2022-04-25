@@ -144,37 +144,51 @@
 		.content {
 			padding: 32px;
 
-			.row {
-				justify-content: space-between;
+			.heading {
+				font-weight: 600;
+				font-size: 18px;
+			}
 
-				.heading {
-					font-weight: 600;
-					font-size: 18px;
+			.stars {
+				margin-bottom: 25px;
+			}
+
+			.details {
+				@media (max-width: 575.98px) {
+					margin-bottom: 16px;
 				}
 
-				.stars {
-					margin-bottom: 25px;
-				}
+				.details-row {
+					margin: 0px 0px 12px 0px;
+					padding: 0px;
 
-				.details {
-					@media (max-width: 575.98px) {
-						margin-bottom: 16px;
+					&:last-of-type {
+						margin-bottom: 0px;
 					}
 
-					.text {
-						margin-bottom: 12px;
+					.text,
+					.value {
+						margin: auto;
 						color: #A9A9A9;
 						font-family: 'OpenSans';
 						font-weight: 400;
 						font-size: 14px;
 						overflow-wrap: break-word;
 
-						&:last-of-type {
-							margin-bottom: 0px;
+						&.text {
+							padding: 0px 12px 0px 0px;
+
+							@media (max-width: 575.98px) {
+								padding-right: 4px;
+							}
 						}
 
-						&.green {
-							color: #6A983C;
+						&.value {
+							padding: 0px 0px 0px 12px;
+
+							@media (max-width: 575.98px) {
+								padding-left: 4px;
+							}
 						}
 
 						span {
@@ -199,6 +213,10 @@
 
 							&::placeholder {
 								color: #D1D1D1;
+							}
+
+							@media (max-width: 575.98px) {
+								width: 35px;
 							}
 						}
 
@@ -240,47 +258,47 @@
 						}
 					}
 				}
+			}
 
-				.footer {
-					height: 100%;
-					display: block;
+			.footer {
+				height: 100%;
+				display: block;
 
+				@media (min-width: 576px) {
+					position: relative;
+				}
+
+				.price {
+					margin-bottom: 16px;
+				}
+
+				.shipping {
+					margin-bottom: 26px;
+
+					.type {
+						color: #A9A9A9;
+						font-family: 'Poppins';
+						font-weight: 600;
+						font-size: 12px;
+					}
+
+					.days {
+						color: #A9A9A9;
+						font-family: 'OpenSans';
+						font-weight: 400;
+						font-size: 12px;
+					}
+				}
+
+				.buttons {
 					@media (min-width: 576px) {
-						position: relative;
+						position: absolute;
+						bottom: 0px;
 					}
 
-					.price {
-						margin-bottom: 16px;
-					}
-
-					.shipping {
-						margin-bottom: 26px;
-
-						.type {
-							color: #A9A9A9;
-							font-family: 'Poppins';
-							font-weight: 600;
-							font-size: 12px;
-						}
-
-						.days {
-							color: #A9A9A9;
-							font-family: 'OpenSans';
-							font-weight: 400;
-							font-size: 12px;
-						}
-					}
-
-					.buttons {
-						@media (min-width: 576px) {
-							position: absolute;
-							bottom: 0px;
-						}
-
-						.buy-button,
-						.wishlist-button {
-							width: 100%;
-						}
+					.buy-button,
+					.wishlist-button {
+						width: 100%;
 					}
 				}
 			}

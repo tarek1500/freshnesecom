@@ -88,36 +88,30 @@
 			}
 
 			.details {
-				display: flex;
+				.details-row {
+					margin: 0px 0px 7px 0px;
 
-				.text-column {
-					margin-right: 14px;
+					&:last-of-type {
+						margin: 0px;
+					}
 
 					.text {
-						margin-bottom: 7px;
+						margin: auto;
+						padding-left: 0px;
 						color: #A9A9A9;
 						font-family: 'OpenSans';
 						font-weight: 400;
 						font-size: 12px;
 						overflow-wrap: break-word;
-
-						&:last-of-type {
-							margin: 0px;
-						}
 					}
-				}
 
-				.value-column {
 					.value {
-						margin-bottom: 7px;
+						margin: auto;
+						padding-right: 0px;
 						color: #151515;
 						font-family: 'OpenSans';
 						font-weight: 400;
 						font-size: 12px;
-
-						&:last-of-type {
-							margin: 0px;
-						}
 					}
 				}
 			}

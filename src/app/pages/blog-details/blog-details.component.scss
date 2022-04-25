@@ -48,29 +48,42 @@
 					.info {
 						position: absolute;
 						bottom: 32px;
+						width: 100%;
 
 						@media (max-width: 767.98px) {
-							bottom: 16px;
+							bottom: 24px;
 							width: 100%;
 						}
 
-						.text {
-							margin-bottom: 12px;
-							color: #A9A9A9;
-							font-family: 'Poppins';
-							font-weight: 600;
-							font-size: 12px;
-						}
+						.info-row {
+							margin: 0px 0px 12px 0px;
 
-						.value {
-							margin-bottom: 12px;
-							color: #FFF;
-							font-family: 'Poppins';
-							font-weight: 600;
-							font-size: 12px;
+							&:last-of-type {
+								margin: 0px;
+							}
 
-							a {
+							.text {
+								margin: auto;
+								padding: 0px 12px 0px 0px;
+								overflow-wrap: break-word;
+								color: #A9A9A9;
+								font-family: 'Poppins';
+								font-weight: 600;
+								font-size: 12px;
+							}
+
+							.value {
+								margin: auto;
+								padding: 0px 0px 0px 12px;
+								overflow-wrap: break-word;
 								color: #FFF;
+								font-family: 'Poppins';
+								font-weight: 600;
+								font-size: 12px;
+
+								a {
+									color: #FFF;
+								}
 							}
 						}
 					}
@@ -89,7 +102,7 @@
 						}
 
 						@media (max-width: 575.98px) {
-							font-size: 24px;
+							font-size: 20px;
 						}
 					}
 				}

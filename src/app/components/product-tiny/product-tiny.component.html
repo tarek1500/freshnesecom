@@ -11,13 +11,13 @@
 		<div class="col-lg-9 col-md-8 col-sm-8 col-12 info">
 			<a class="heading" [routerLink]="['/products', product.slug]">{{ product.name }}</a>
 			<div class="details">
-				<div class="text-column">
-					<div class="text">Farm:</div>
-					<div class="text">Freshness:</div>
+				<div class="row details-row">
+					<div class="col-5 text">Farm:</div>
+					<div class="col-7 value">{{ product.farm }}</div>
 				</div>
-				<div class="value-column">
-					<div class="value">{{ product.farm }}</div>
-					<div class="value">{{ product.freshness }}</div>
+				<div class="row details-row">
+					<div class="col-5 text">Freshness:</div>
+					<div class="col-7 value">{{ product.freshness }}</div>
 				</div>
 			</div>
 			<div class="stars">

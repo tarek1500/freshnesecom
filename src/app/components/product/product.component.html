@@ -9,7 +9,7 @@
 		<div [class]="{ 'col-md-8': size === 'large' }">
 			<div class="content">
 				<div [class]="{ 'row': size === 'large' }">
-					<div [class]="{ 'col-sm-6': size === 'large' }">
+					<div [class]="{ 'col-sm-8': size === 'large' }">
 						<a class="heading" [routerLink]="['/products', product.slug]">{{ product.name }}</a>
 						<p class="description">{{ product.description }}</p>
 						<div class="stars">
@@ -20,18 +20,24 @@
 							</ng-template>
 							<ngb-rating [(rate)]="product.rating" [starTemplate]="starTemplate" [readonly]="true" [max]="5"></ngb-rating>
 						</div>
-						<div class="row details" *ngIf="size === 'large'">
-							<div class="col-5">
-								<div class="text">Freshness</div>
-								<div class="text">Farm</div>
-								<div class="text">Delivery</div>
-								<div class="text">Stock</div>
+						<div class="details" *ngIf="size === 'large'">
+							<div class="row details-row">
+								<div class="col-sm-5 col-4 text">Freshness</div>
+								<div class="col-sm-7 col-8 value">
+									<span class="green">{{ product.freshness }}</span><span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span>
+								</div>
 							</div>
-							<div class="col-7">
-								<div class="text"><span class="green">{{ product.freshness }}</span><span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span></div>
-								<div class="text">{{ product.farm }}</div>
-								<div class="text">{{ product.delivery }}</div>
-								<div class="text">
+							<div class="row details-row">
+								<div class="col-sm-5 col-4 text">Farm</div>
+								<div class="col-sm-7 col-8 value">{{ product.farm }}</div>
+							</div>
+							<div class="row details-row">
+								<div class="col-sm-5 col-4 text">Delivery</div>
+								<div class="col-sm-7 col-8 value">{{ product.delivery }}</div>
+							</div>
+							<div class="row details-row">
+								<div class="col-sm-5 col-4 text">Stock</div>
+								<div class="col-sm-7 col-8 value">
 									<div class="input-group">
 										<div class="input-group-prepend">
 											<input class="form-control" type="text" [value]="selectedPack.stock" disabled>

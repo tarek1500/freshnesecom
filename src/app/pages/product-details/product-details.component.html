@@ -29,48 +29,54 @@
 					</div>
 				</div>
 				<p class="description">{{ product.description }}</p>
-				<div class="row info">
-					<div class="col-lg-6 col-md-12 col-sm-6">
-						<div class="row">
-							<div class="col-5">
-								<div class="text gray">SKU:</div>
-								<div class="text gray">Category:</div>
-								<div class="text gray">Farm:</div>
-								<div class="text gray">Stock:</div>
+				<div class="row details">
+					<div class="col-lg-6 col-md-12 col-sm-6 details-column">
+						<div class="row details-row">
+							<div class="col-5 text gray">SKU:</div>
+							<div class="col-7 value">{{ product.sku }}</div>
+						</div>
+						<div class="row details-row">
+							<div class="col-5 text gray">Category</div>
+							<div class="col-7 value">
+								<a [routerLink]="['/products/categories', product.category.slug]">{{ product.category.name }}</a>
 							</div>
-							<div class="col-7">
-								<div class="text">{{ product.sku }}</div>
-								<div class="text"><a [routerLink]="['/products/categories', product.category.slug]">{{ product.category.name }}</a></div>
-								<div class="text">{{ product.farm }}</div>
-								<div class="text">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<input class="form-control" type="text" [value]="selectedStockPack.stock" disabled>
-										</div>
-										<div class="vertical-splitter"></div>
-										<div ngbDropdown class="d-inline-block">
-											<button ngbDropdownToggle class="btn dropdown-button">{{ selectedStockPack.pack }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-black.svg" alt=""></button>
-											<div ngbDropdownMenu class="dropdown-menu">
-												<button ngbDropdownItem class="dropdown-item" (click)="onStockPackSelected(pack)" *ngFor="let pack of product.availablePacks">{{ pack.pack }}</button>
-											</div>
+						</div>
+						<div class="row details-row">
+							<div class="col-5 text gray">Farm:</div>
+							<div class="col-7 value">{{ product.farm }}</div>
+						</div>
+						<div class="row details-row">
+							<div class="col-5 text gray">Stock:</div>
+							<div class="col-7 value">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<input class="form-control" type="text" [value]="selectedStockPack.stock" disabled>
+									</div>
+									<div class="vertical-splitter"></div>
+									<div ngbDropdown class="d-inline-block">
+										<button ngbDropdownToggle class="btn dropdown-button">{{ selectedStockPack.pack }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-black.svg" alt=""></button>
+										<div ngbDropdownMenu class="dropdown-menu">
+											<button ngbDropdownItem class="dropdown-item" (click)="onStockPackSelected(pack)" *ngFor="let pack of product.availablePacks">{{ pack.pack }}</button>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-12 col-sm-6">
-						<div class="row">
-							<div class="col-5">
-								<div class="text gray">Freshness:</div>
-								<div class="text gray">Delivery:</div>
-								<div class="text gray">Delivery area:</div>
+					<div class="col-lg-6 col-md-12 col-sm-6 details-column">
+						<div class="row details-row">
+							<div class="col-5 text gray">Freshness:</div>
+							<div class="col-7 value">
+								{{ product.freshness }}<span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span>
 							</div>
-							<div class="col-7">
-								<div class="text">{{ product.freshness }}<span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span></div>
-								<div class="text">in {{ product.deliveryDays }} day(s)</div>
-								<div class="text">{{ product.delivery }}</div>
-							</div>
+						</div>
+						<div class="row details-row">
+							<div class="col-5 text gray">Delivery:</div>
+							<div class="col-7 value">in {{ product.deliveryDays }} day(s)</div>
+						</div>
+						<div class="row details-row">
+							<div class="col-5 text gray">Delivery area</div>
+							<div class="col-7 value">{{ product.delivery }}</div>
 						</div>
 					</div>
 				</div>

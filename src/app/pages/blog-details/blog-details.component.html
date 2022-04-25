@@ -9,18 +9,20 @@
 			<img class="cover-image" src="{{ blog.image }}" alt="">
 			<div class="row shadow-box">
 				<div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 info-column">
-					<div class="row info">
-						<div class="col-5">
-							<div class="text">Date:</div>
-							<div class="text">Category:</div>
-							<div class="text">Author:</div>
+					<div class="info">
+						<div class="row info-row">
+							<div class="col-5 text">Date:</div>
+							<div class="col-7 value">{{ blog.date | date:'dd. MM. yyyy' }}</div>
 						</div>
-						<div class="col-7">
-							<div class="value">{{ blog.date | date:'dd. MM. yyyy' }}</div>
-							<div class="value">
+						<div class="row info-row">
+							<div class="col-5 text">Category:</div>
+							<div class="col-7 value">
 								<a [routerLink]="['/blogs/categories', blog.category.slug]">{{ blog.category.name }}</a>
 							</div>
-							<div class="value">
+						</div>
+						<div class="row info-row">
+							<div class="col-5 text">Author:</div>
+							<div class="col-7 value">
 								<a href="#">{{ blog.author.name }}</a>
 							</div>
 						</div>
