@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="header">
+		<div class="info">
+			<div class="author">{{ review.author }}</div>
+			<div class="stars">
+				<ng-template #starTemplate let-fill="fill">
+					<span class="star" [class.full]="fill === 100">
+						<span class="half" [style.width.%]="fill">&starf;</span>&starf;
+					</span>
+				</ng-template>
+				<ngb-rating [(rate)]="review.rating" [starTemplate]="starTemplate" [readonly]="true" [max]="5"></ngb-rating>
+			</div>
+			<button class="btn date" placement="bottom" ngbTooltip="{{ review.date.toLocaleString() }}">{{ moment(review.date).fromNow() }}</button>
+		</div>
+	</div>
+	<div class="content">{{ review.content }}</div>
+</div>

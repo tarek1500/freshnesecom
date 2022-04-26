@@ -119,7 +119,39 @@
 								<span class="tag">{{ product.reviews.length }}</span>
 							</a>
 							<ng-template ngbNavContent>
+								<h2 class="heading">Leave a review</h2>
+								<form>
+									<div class="row">
+										<div class="form-group col-md-12">
+											<label for="name">Name</label>
+											<input class="form-control" id="name" name="name" type="text" placeholder="Name" [(ngModel)]="review.author">
+										</div>
+										<div class="form-group col-md-12">
+											<label for="rate">Rate</label>
+											<div class="review-stars">
+												<ng-template #reviewTemplate let-fill="fill">
+													<span class="star" [class.full]="fill === 100">
+														<span class="half" [style.width.%]="fill">&starf;</span>&starf;
+													</span>
+												</ng-template>
+												<ngb-rating [(rate)]="review.rating" [starTemplate]="reviewTemplate" [max]="5"></ngb-rating>
+											</div>
+										</div>
+										<div class="form-group col-md-12">
+											<label for="comment">Review</label>
+											<textarea class="form-control" id="review" name="review" rows="4" placeholder="Space for your review" [(ngModel)]="review.content"></textarea>
+										</div>
+										<div class="form-group col-md-12 buttons">
+											<button class="btn add-button">Add a review</button>
+										</div>
+									</div>
+								</form>
 								<h2 class="heading">Reviews</h2>
+								<div class="reviews">
+									<div class="review" *ngFor="let review of product.reviews">
+										<app-review [review]="review"></app-review>
+									</div>
+								</div>
 							</ng-template>
 						</ng-container>
 						<ng-container ngbNavItem>
@@ -129,6 +161,14 @@
 							</a>
 							<ng-template ngbNavContent>
 								<h2 class="heading">Questions</h2>
+								<div class="questions">
+									<ngb-accordion>
+										<ngb-panel *ngFor="let question of product.questions">
+											<ng-template ngbPanelTitle>{{ question.content }}</ng-template>
+											<ng-template ngbPanelContent>{{ question.answer }}</ng-template>
+										</ngb-panel>
+									</ngb-accordion>
+								</div>
 							</ng-template>
 						</ng-container>
 					</nav>

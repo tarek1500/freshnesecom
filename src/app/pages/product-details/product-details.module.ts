@@ -8,10 +8,12 @@ import { SharedModule } from '../../modules/shared/shared.module';
 import { BreadcrumbModule } from '../../modules/breadcrumb/breadcrumb.module';
 import { RelatedProductsModule } from '../../modules/related-products/related-products.module';
 import { ProductDetailsComponent } from './product-details.component';
+import { ReviewComponent } from '../../components/product-details/review/review.component';
 
 @NgModule({
 	declarations: [
-		ProductDetailsComponent
+		ProductDetailsComponent,
+		ReviewComponent
 	],
 	imports: [
 		CommonModule,

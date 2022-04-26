@@ -1,3 +1,7 @@
 export interface Review {
-	id: number
+	id: number,
+	author: string,
+	date: Date,
+	rating: number,
+	content: string
 }
