@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { CartService } from '../../services/cart.service';
@@ -11,9 +11,8 @@ import { Cart } from '../../interfaces/cart.interface';
 	templateUrl: './checkout.component.html',
 	styleUrls: ['./checkout.component.scss']
 })
-export class CheckoutComponent implements OnInit, AfterViewInit, OnDestroy {
+export class CheckoutComponent implements OnInit, OnDestroy {
 	cartSubscription!: Subscription;
-	@ViewChild('promoInput') promoInput!: ElementRef<HTMLDivElement>;
 	breadcrumb: Breadcrumb[] = [
 		{ text: 'Homepage', link: '/' },
 		{ text: 'Checkout', link: '' },
@@ -46,26 +45,10 @@ export class CheckoutComponent implements OnInit, AfterViewInit, OnDestroy {
 		});
 	}
 
-	ngAfterViewInit() {
-		this.setInputGroupWidth(this.promoInput, 11);
-	}
-
 	ngOnDestroy(): void {
 		this.cartSubscription.unsubscribe();
 	}
 
-	@HostListener('window:resize', ['$event'])
-	onResize(event: Event) {
-		this.setInputGroupWidth(this.promoInput);
-	}
-
-	setInputGroupWidth(inputGroupPrepend: ElementRef<HTMLDivElement>, sizeFixer: number = 0) {
-		let parent = inputGroupPrepend.nativeElement.parentElement as HTMLDivElement;
-		let parentWidth = parent.offsetWidth;
-		let nextItem = inputGroupPrepend.nativeElement.nextElementSibling as HTMLButtonElement;
-		let nextItemWidth = nextItem.offsetWidth;
-
-		inputGroupPrepend.nativeElement.style.width = (parentWidth - nextItemWidth - sizeFixer) + 'px';
-	}
+	onPromoApplied(event: string) { }
 
 }

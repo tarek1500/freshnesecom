@@ -135,45 +135,6 @@
 					font-weight: 600;
 					font-size: 12px;
 				}
-
-				.input-group {
-					.vertical-splitter {
-						width: 1px;
-						margin: 0px 24px;
-						background-color: #D1D1D1;
-						z-index: 4;
-
-						@media (max-width: 575.98px) {
-							margin: 0px 12px;
-						}
-					}
-
-					.dropdown-button {
-						padding: 0px;
-						color: #151515;
-						font-family: 'Poppins';
-						font-weight: 600;
-						font-size: 12px;
-
-						&::after {
-							display: none;
-						}
-
-						.down-arrow-icon {
-							margin-left: 4px;
-						}
-					}
-
-					.dropdown-menu {
-						background-color: #F9F9F9;
-
-						.dropdown-item {
-							font-family: 'Poppins';
-							font-weight: 400;
-							font-size: 12px;
-						}
-					}
-				}
 			}
 		}
 

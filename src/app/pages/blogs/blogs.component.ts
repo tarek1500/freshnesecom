@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -12,8 +12,7 @@ import { Tag } from '../../interfaces/tag.interface';
 	templateUrl: './blogs.component.html',
 	styleUrls: ['./blogs.component.scss']
 })
-export class BlogsComponent implements OnInit, AfterViewInit, OnDestroy {
-	@ViewChild('subscribeInput') subscribeInput!: ElementRef<HTMLDivElement>;
+export class BlogsComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
 	category!: Category;
 	tag!: Tag;
@@ -387,26 +386,10 @@ export class BlogsComponent implements OnInit, AfterViewInit, OnDestroy {
 		this.subscriptions.push(subscription);
 	}
 
-	ngAfterViewInit() {
-		this.setInputGroupWidth(this.subscribeInput, 14);
-	}
-
 	ngOnDestroy(): void {
 		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
-	@HostListener('window:resize', ['$event'])
-	onResize(event: Event) {
-		this.setInputGroupWidth(this.subscribeInput);
-	}
-
-	setInputGroupWidth(inputGroupPrepend: ElementRef<HTMLDivElement>, sizeFixer: number = 0) {
-		let parent = inputGroupPrepend.nativeElement.parentElement as HTMLDivElement;
-		let parentWidth = parent.offsetWidth;
-		let nextItem = inputGroupPrepend.nativeElement.nextElementSibling as HTMLButtonElement;
-		let nextItemWidth = nextItem.offsetWidth;
-
-		inputGroupPrepend.nativeElement.style.width = (parentWidth - nextItemWidth - sizeFixer) + 'px';
-	}
+	onSubscribed(event: string) { }
 
 }

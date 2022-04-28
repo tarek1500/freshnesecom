@@ -1,0 +1,31 @@
+.input-group {
+	.input-group-prepend {
+		input {
+			padding: 9px 20px;
+			border-radius: 12px 0px 0px 12px;
+			border: 1px solid #D1D1D1;
+			border-right: none;
+			background-color: #F9F9F9;
+			color: #A9A9A9;
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 14px;
+
+			&::placeholder {
+				color: #A9A9A9;
+			}
+		}
+	}
+
+	button {
+		padding: 8px 16px;
+		border-radius: 0px 12px 12px 0px;
+		border: 1px solid #D1D1D1;
+		border-left: none;
+		background-color: #F9F9F9;
+		color: #151515;
+		font-family: 'Poppins';
+		font-weight: 700;
+		font-size: 15px;
+	}
+}

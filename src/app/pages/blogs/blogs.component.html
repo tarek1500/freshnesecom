@@ -39,12 +39,7 @@
 				<div class="widget">
 					<h3 class="heading join">Join our list</h3>
 					<p class="description">Signup to be the first to hear about exclusive deals, special offers, recepies from our masters and others.</p>
-					<div class="input-group">
-						<div class="input-group-prepend" #subscribeInput>
-							<input class="form-control" type="text" placeholder="Your email address">
-						</div>
-						<button class="btn">Subscribe</button>
-					</div>
+					<app-text-input-group [placeholder]="'Your email address'" [button]="'Subscribe'" (onApply)="onSubscribed($event)"></app-text-input-group>
 				</div>
 			</div>
 			<div class="col-lg-9 blogs">

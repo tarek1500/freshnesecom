@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductTinyModule } from '../product-tiny/product-tiny.module';
 import { HeaderComponent } from '../../components/header/header.component';
+import { CategorySearchInputGroupComponent } from '../../components/category-search-input-group/category-search-input-group.component';
 import { CartComponent } from '../../components/cart/cart.component';
 import { MenuComponent } from '../../components/menu/menu.component';
 import { FooterComponent } from '../../components/footer/footer.component';
@@ -12,6 +13,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 @NgModule({
 	declarations: [
 		HeaderComponent,
+		CategorySearchInputGroupComponent,
 		CartComponent,
 		MenuComponent,
 		FooterComponent

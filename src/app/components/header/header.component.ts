@@ -13,7 +13,6 @@ import { Cart } from '../../interfaces/cart.interface';
 export class HeaderComponent implements OnInit, OnDestroy {
 	cartSubscription!: Subscription;
 	categories: Category[];
-	selectedCategory: Category;
 	cart!: Cart;
 	isCartVisible: boolean = false;
 
@@ -44,7 +43,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 				subcategories: []
 			}
 		];
-		this.selectedCategory = this.categories[0];
 	}
 
 	ngOnInit(): void {
@@ -67,9 +65,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 		}
 	}
 
-	onCategorySelected(category: Category) {
-		this.selectedCategory = category;
-	}
+	onCategorySearch(event: { search: string, category: Category }) { }
 
 	onCartClosed() {
 		this.isCartVisible = false;

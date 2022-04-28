@@ -214,12 +214,7 @@
 					</div>
 				</div>
 				<div class="promo">
-					<div class="input-group">
-						<div class="input-group-prepend" #promoInput>
-							<input class="form-control" type="text" placeholder="Apply promo code">
-						</div>
-						<button class="btn">Apply now</button>
-					</div>
+					<app-text-input-group [placeholder]="'Apply promo code'" [button]="'Apply now'" (onApply)="onPromoApplied($event)"></app-text-input-group>
 				</div>
 				<div class="row total">
 					<div class="col-6">

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BlogsRoutingModule } from './blogs-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
 import { BreadcrumbModule } from '../../modules/breadcrumb/breadcrumb.module';
+import { TextInputGroupModule } from '../../modules/text-input-group/text-input-group.module';
 import { BlogModule } from '../../modules/blog/blog.module';
 import { BlogsComponent } from './blogs.component';
 
@@ -16,6 +17,7 @@ import { BlogsComponent } from './blogs.component';
 		BlogsRoutingModule,
 		SharedModule,
 		BreadcrumbModule,
+		TextInputGroupModule,
 		BlogModule
 	]
 })

@@ -48,18 +48,7 @@
 						<div class="row details-row">
 							<div class="col-5 text gray">Stock:</div>
 							<div class="col-7 value">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<input class="form-control" type="text" [value]="selectedStockPack.stock" disabled>
-									</div>
-									<div class="vertical-splitter"></div>
-									<div ngbDropdown class="d-inline-block">
-										<button ngbDropdownToggle class="btn dropdown-button">{{ selectedStockPack.pack }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-black.svg" alt=""></button>
-										<div ngbDropdownMenu class="dropdown-menu">
-											<button ngbDropdownItem class="dropdown-item" (click)="onStockPackSelected(pack)" *ngFor="let pack of product.availablePacks">{{ pack.pack }}</button>
-										</div>
-									</div>
-								</div>
+								<app-stock-input-group [availablePacks]="product.availablePacks" [readonly]="true"></app-stock-input-group>
 							</div>
 						</div>
 					</div>
@@ -86,17 +75,8 @@
 						<div class="old-price">{{ product.oldPrice }} {{ product.currency }}</div>
 					</div>
 					<div class="buttons">
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<input class="form-control" type="text" [placeholder]="'1' + selectedCartPack.pack" [(ngModel)]="product.selectedQuantity.quantity">
-							</div>
-							<div class="vertical-splitter"></div>
-							<div ngbDropdown class="d-inline-block">
-								<button ngbDropdownToggle class="btn dropdown-button">{{ selectedCartPack.pack }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-black.svg" alt=""></button>
-								<div ngbDropdownMenu class="dropdown-menu">
-									<button ngbDropdownItem class="dropdown-item" (click)="onCartPackSelected(pack)" *ngFor="let pack of product.availablePacks">{{ pack.pack }}</button>
-								</div>
-							</div>
+						<div class="quantity">
+							<app-stock-input-group [availablePacks]="product.availablePacks" [(quantity)]="product.selectedQuantity" [large]="true"></app-stock-input-group>
 						</div>
 						<button class="btn add-button"><img class="plus-icon" src="../../../assets/icons/plus.svg" alt=""> Add to cart</button>
 					</div>

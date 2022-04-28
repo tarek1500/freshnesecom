@@ -17,7 +17,6 @@ export class ProductDetailsComponent implements OnInit {
 		{ text: '', link: '' },
 	];
 	product: Product;
-	selectedStockPack!: ProductPack;
 	selectedCartPack!: ProductPack;
 	discount: number = 0;
 	review: Review;
@@ -273,17 +272,12 @@ export class ProductDetailsComponent implements OnInit {
 
 	ngOnInit(): void {
 		// Fetch product form server
-		this.selectedStockPack = this.product.availablePacks[0];
 		this.selectedCartPack = this.product.availablePacks[0];
 		this.breadcrumb[2].text = this.product.name;
 
 		if (this.product.oldPrice != 0) {
 			this.discount = Math.round((this.product.oldPrice - this.product.price) / this.product.oldPrice * 100);
 		}
-	}
-
-	onStockPackSelected(pack: ProductPack) {
-		this.selectedStockPack = pack;
 	}
 
 	onCartPackSelected(pack: ProductPack) {

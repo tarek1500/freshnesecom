@@ -150,66 +150,6 @@
 								color: #151515;
 							}
 						}
-
-						.input-group {
-							input {
-								width: 45px;
-								padding: 5px 6px;
-								border-radius: 12px 0px 0px 12px;
-								border: 1px solid #D1D1D1;
-								border-right: none;
-								background-color: #F9F9F9;
-								color: #D1D1D1;
-								font-family: 'OpenSans';
-								font-weight: 400;
-								font-size: 14px;
-
-								&::placeholder {
-									color: #D1D1D1;
-								}
-
-								@media (max-width: 575.98px) {
-									width: 35px;
-								}
-							}
-
-							.vertical-splitter {
-								width: 1px;
-								margin: 6px 0px;
-								background-color: #D1D1D1;
-								z-index: 4;
-							}
-
-							.dropdown-button {
-								padding: 6.5px 6px;
-								border-radius: 0px 12px 12px 0px;
-								border: 1px solid #D1D1D1;
-								border-left: none;
-								background-color: #F9F9F9;
-								color: #151515;
-								font-family: 'Poppins';
-								font-weight: 600;
-								font-size: 12px;
-
-								&::after {
-									display: none;
-								}
-
-								.down-arrow-icon {
-									margin-left: 4px;
-								}
-							}
-
-							.dropdown-menu {
-								background-color: #F9F9F9;
-
-								.dropdown-item {
-									font-family: 'Poppins';
-									font-weight: 400;
-									font-size: 12px;
-								}
-							}
-						}
 					}
 				}
 			}
@@ -275,66 +215,12 @@
 						text-align: center;
 					}
 
-					.input-group {
-						width: initial;
+					.quantity {
 						margin-right: 24px;
 						display: inline-flex;
 
 						@media (max-width: 1199.98px) {
 							margin: 0px auto 12px auto;
-						}
-
-						input {
-							width: 76px;
-							padding: 13.5px 16px;
-							border-radius: 12px 0px 0px 12px;
-							border: 1px solid #D1D1D1;
-							border-right: none;
-							background-color: #F9F9F9;
-							color: #D1D1D1;
-							font-family: 'OpenSans';
-							font-weight: 400;
-							font-size: 14px;
-
-							&::placeholder {
-								color: #D1D1D1;
-							}
-						}
-
-						.vertical-splitter {
-							width: 1px;
-							background-color: #D1D1D1;
-							z-index: 4;
-						}
-
-						.dropdown-button {
-							padding: 15px 16px;
-							border-radius: 0px 12px 12px 0px;
-							border: 1px solid #D1D1D1;
-							border-left: none;
-							background-color: #F9F9F9;
-							color: #151515;
-							font-family: 'Poppins';
-							font-weight: 600;
-							font-size: 12px;
-
-							&::after {
-								display: none;
-							}
-
-							.down-arrow-icon {
-								margin-left: 4px;
-							}
-						}
-
-						.dropdown-menu {
-							background-color: #F9F9F9;
-
-							.dropdown-item {
-								font-family: 'Poppins';
-								font-weight: 400;
-								font-size: 12px;
-							}
 						}
 					}
 

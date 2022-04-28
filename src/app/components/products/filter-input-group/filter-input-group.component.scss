@@ -1,0 +1,77 @@
+.input-group {
+	.form-check {
+		margin: 0px 8px 0px 0px;
+		padding: 0px;
+		display: inline-block;
+
+		input {
+			width: 22px;
+			height: 22px;
+			margin: 1px 8px 0px 0px;
+			border: 1.5px solid #D1D1D1;
+			cursor: pointer;
+
+			&:checked {
+				background-color: #6A983C;
+				border-color: #46760A;
+			}
+		}
+
+		label {
+			display: inline;
+			color: #151515;
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 14px;
+			cursor: pointer;
+		}
+	}
+
+	.tag {
+		padding: 0px 8px;
+		border-radius: 12px;
+		border: 1px solid #EBEBEB;
+		vertical-align: text-bottom;
+		color: #151515;
+		font-family: 'Poppins';
+		font-weight: 600;
+		font-size: 12px;
+	}
+
+	.vertical-splitter {
+		width: 1px;
+		margin: 0px 24px !important;
+		background-color: #D1D1D1;
+		z-index: 4;
+
+		@media (max-width: 575.98px) {
+			margin: 0px 12px;
+		}
+	}
+
+	.dropdown-button {
+		padding: 0px;
+		color: #151515;
+		font-family: 'Poppins';
+		font-weight: 600;
+		font-size: 12px;
+
+		&::after {
+			display: none;
+		}
+
+		.down-arrow-icon {
+			margin-left: 4px;
+		}
+	}
+
+	.dropdown-menu {
+		background-color: #F9F9F9;
+
+		.dropdown-item {
+			font-family: 'Poppins';
+			font-weight: 400;
+			font-size: 12px;
+		}
+	}
+}

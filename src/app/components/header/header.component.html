@@ -31,19 +31,7 @@
 			<img class="brand-image" src="../../../assets/images/brand.svg" alt="">
 		</div>
 		<div class="col-6 search">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">{{ selectedCategory.name }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
-						<div ngbDropdownMenu class="dropdown-menu">
-							<button ngbDropdownItem class="dropdown-item" (click)="onCategorySelected(category)" *ngFor="let category of categories">{{ category.name }}</button>
-						</div>
-					</div>
-				</div>
-				<div class="vertical-splitter"></div>
-				<input class="form-control" type="text" placeholder="Search Products, categories ...">
-				<img class="search-icon" src="../../../assets/icons/search.svg" alt="">
-			</div>
+			<app-category-search-input-group [categories]="categories" (onSearch)="onCategorySearch($event)"></app-category-search-input-group>
 		</div>
 		<div class="col-3 icons">
 			<div class="user">

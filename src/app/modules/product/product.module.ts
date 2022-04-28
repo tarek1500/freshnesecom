@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductComponent } from '../../components/product/product.component';
+import { StockInputGroupModule } from '../stock-input-group/stock-input-group.module';
 
 @NgModule({
 	declarations: [
@@ -12,7 +13,8 @@ import { ProductComponent } from '../../components/product/product.component';
 	imports: [
 		CommonModule,
 		RouterModule,
-		NgbModule
+		NgbModule,
+		StockInputGroupModule
 	],
 	exports: [
 		ProductComponent

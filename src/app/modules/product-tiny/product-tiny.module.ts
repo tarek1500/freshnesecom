@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductTinyComponent } from '../../components/product-tiny/product-tiny.component';
+import { StockInputGroupModule } from '../stock-input-group/stock-input-group.module';
 
 @NgModule({
 	declarations: [
@@ -14,7 +15,8 @@ import { ProductTinyComponent } from '../../components/product-tiny/product-tiny
 		CommonModule,
 		RouterModule,
 		FormsModule,
-		NgbModule
+		NgbModule,
+		StockInputGroupModule
 	],
 	exports: [
 		ProductTinyComponent

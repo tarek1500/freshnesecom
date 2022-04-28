@@ -8,10 +8,12 @@ import { SharedModule } from '../../modules/shared/shared.module';
 import { BreadcrumbModule } from '../../modules/breadcrumb/breadcrumb.module';
 import { ProductModule } from '../../modules/product/product.module';
 import { ProductsComponent } from './products.component';
+import { FilterInputGroupComponent } from '../../components/products/filter-input-group/filter-input-group.component';
 
 @NgModule({
 	declarations: [
-		ProductsComponent
+		ProductsComponent,
+		FilterInputGroupComponent
 	],
 	imports: [
 		CommonModule,
