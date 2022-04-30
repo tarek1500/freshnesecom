@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { CartService } from '../../services/cart.service';
+import { CartService } from '../../services/cart/cart.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Delivery } from '../../interfaces/delivery.interface';
 import { Cart } from '../../interfaces/cart.interface';
