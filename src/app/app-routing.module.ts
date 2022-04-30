@@ -6,6 +6,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
 	{ path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
 
+	{ path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },
+
 	{ path: 'categories', loadChildren: () => import('./pages/categories/categories.module').then(m => m.CategoriesModule) },
 
 	{ path: 'categories/:slug/products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule), data: { name: 'categories.products' } },

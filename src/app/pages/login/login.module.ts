@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CategoriesRoutingModule } from './categories-routing.module';
+import { LoginRoutingModule } from './login-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
 import { BreadcrumbModule } from '../../modules/breadcrumb/breadcrumb.module';
-import { CategoriesComponent } from './categories.component';
+import { LoginComponent } from './login.component';
 
 @NgModule({
 	declarations: [
-		CategoriesComponent
+		LoginComponent
 	],
 	imports: [
 		CommonModule,
-		CategoriesRoutingModule,
+		LoginRoutingModule,
 		SharedModule,
 		BreadcrumbModule
 	]
 })
-export class CategoriesModule { }
+export class LoginModule { }
