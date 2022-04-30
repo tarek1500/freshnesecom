@@ -33,7 +33,7 @@
 				<div class="widget">
 					<h3 class="heading">Category</h3>
 					<div class="link" *ngFor="let category of categories">
-						<a class="gray" [routerLink]="['/blogs/categories', category.slug]">{{ category.name }}</a>
+						<a class="gray" [routerLink]="['/categories', category.slug, 'blogs']">{{ category.name }}</a>
 					</div>
 				</div>
 				<div class="widget">

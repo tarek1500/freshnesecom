@@ -352,7 +352,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 					let slug: string = params['slug'];
 
 					switch (name) {
-					case 'blogs.categories':
+					case 'categories.blogs':
 						// Fetch category and its blogs from server
 						this.category = {
 							id: 0,
@@ -363,7 +363,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 						this.breadcrumb[1].text = this.category.name;
 
 						break;
-					case 'blogs.tags':
+					case 'tags.blogs':
 						// Fetch tag and its blogs from server
 						this.tag = {
 							id: 0,

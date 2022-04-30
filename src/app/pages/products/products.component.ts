@@ -527,7 +527,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					let slug: string = params['slug'];
 
 					switch (name) {
-					case 'products.categories':
+					case 'categories.products':
 						// Fetch category and its products from server
 						this.category = {
 							id: 0,
@@ -538,7 +538,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 						this.breadcrumb[1].text = this.category.name;
 
 						break;
-					case 'products.tags':
+					case 'tags.products':
 						// Fetch tag and its products from server
 						this.tag = {
 							id: 0,

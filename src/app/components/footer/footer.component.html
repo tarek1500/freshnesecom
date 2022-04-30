@@ -68,7 +68,7 @@
 	<div class="tags" *ngIf="showTags">
 		<h2 class="heading">Product tags</h2>
 		<div class="tag" *ngFor="let tag of tags">
-			<a [routerLink]="['/products/tags', tag.slug]">{{ tag.name }}</a>
+			<a [routerLink]="['/tags', tag.slug, 'products']">{{ tag.name }}</a>
 		</div>
 	</div>
 

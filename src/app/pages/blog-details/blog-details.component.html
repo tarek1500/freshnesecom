@@ -17,7 +17,7 @@
 						<div class="row info-row">
 							<div class="col-5 text">Category:</div>
 							<div class="col-7 value">
-								<a [routerLink]="['/blogs/categories', blog.category.slug]">{{ blog.category.name }}</a>
+								<a [routerLink]="['/categories', blog.category.slug, 'blogs']">{{ blog.category.name }}</a>
 							</div>
 						</div>
 						<div class="row info-row">
@@ -41,7 +41,7 @@
 				<div class="tags">
 					<h3 class="heading">Tags</h3>
 					<div class="tag" *ngFor="let tag of blog.tags">
-						<a [routerLink]="['/blogs/tags', tag.slug]">{{ tag.name }}</a>
+						<a [routerLink]="['/tags', tag.slug, 'blogs']">{{ tag.name }}</a>
 					</div>
 				</div>
 				<a class="btn back-button" routerLink="/blogs"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> Back to Blog</a>
