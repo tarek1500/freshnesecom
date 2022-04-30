@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
+import { LoaderService } from './services/loader/loader.service';
 import { CartService } from './services/cart/cart.service';
 import { Cart } from './interfaces/cart.interface';
 
@@ -8,10 +10,21 @@ import { Cart } from './interfaces/cart.interface';
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
 	title = 'freshnesecom';
+	loaderSubscription!: Subscription;
+	showLoader: boolean = false;
 
-	constructor(private cartService: CartService) {
+	constructor(
+		private loaderService: LoaderService,
+		private cartService: CartService
+	) { }
+
+	ngOnInit(): void {
+		this.loaderSubscription = this.loaderService.loaderSubject$.subscribe(showLoader => {
+			this.showLoader = showLoader;
+		});
+
 		// Fetch cart from server
 		let cart: Cart = {
 			id: 1,
@@ -239,5 +252,9 @@ export class AppComponent {
 			currency: 'USD'
 		};
 		this.cartService.cartSubject$.next(cart);
+	}
+
+	ngOnDestroy(): void {
+		this.loaderSubscription.unsubscribe();
 	}
 }
