@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
 		autoplayTimeout: 5000,
 		autoplaySpeed: 1200,
 		autoplayHoverPause: false
-	}
+	};
 	quotes: Quote[];
 	sectionProducts: Product[];
 	largeBlog: Blog;

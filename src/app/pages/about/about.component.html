@@ -1,0 +1,59 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+	<div class="header">
+		<h2 class="heading">About Us</h2>
+	</div>
+
+	<div class="content">
+		<div class="history">
+			<div class="subheading">{{ about.subtitle | uppercase }}</div>
+			<h3 class="heading">{{ about.title }}</h3>
+			<div class="year">{{ about.year }}</div>
+			<div class="intro">{{ about.intro }}</div>
+		</div>
+		<div class="carousel">
+			<owl-carousel-o [options]="quotesOptions">
+				<ng-template carouselSlide *ngFor="let image of about.images">
+					<img src="{{ image }}" alt="">
+				</ng-template>
+			</owl-carousel-o>
+		</div>
+		<div class="row services">
+			<div class="col-lg-3 col-md-4 col-sm-6 service" *ngFor="let service of about.services">
+				<div class="heading">{{ service.title }}</div>
+				<div class="paragraph">{{ service.description }}</div>
+			</div>
+		</div>
+		<div class="statistics">
+			<img class="cover-image" src="{{ about.statistics.image }}" alt="">
+			<div class="shadow-box"></div>
+			<div class="row data">
+				<div class="col-md-4 data-column">
+					<div class="heading">{{ about.statistics.title }}</div>
+					<div class="subheading">{{ about.statistics.description }}</div>
+				</div>
+				<div class="col-md-4 data-column">
+					<div class="row">
+						<div class="col-lg-4 col-md-12 statistic" *ngFor="let statistic of about.statistics.statistics">
+							<div class="count">{{ statistic.count | number }}</div>
+							<div class="name">{{ statistic.name }}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contacts">
+			<div class="row contacts-row">
+				<div class="col-lg-4 col-sm-5 contact" *ngFor="let contact of about.contacts">
+					<img class="contact-icon" src="{{ contact.icon }}" alt=""> {{ contact.info }}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<app-footer></app-footer>
+</div>
