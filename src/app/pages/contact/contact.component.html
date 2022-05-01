@@ -1,0 +1,49 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+	<div class="header">
+		<h2 class="heading">Contact Us</h2>
+	</div>
+
+	<div class="content">
+		<div class="contacts">
+			<div class="row contacts-row">
+				<div class="col-lg-4 col-sm-5 contact" *ngFor="let contact of contact.contactsInfo">
+					<img class="contact-icon" src="{{ contact.icon }}" alt=""> {{ contact.info }}
+				</div>
+			</div>
+		</div>
+		<div class="maps">
+			<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDf-f1DSmCjXWf6hVAChdOxbYmf3kbrUnE&amp;q=Pizza Hut,Alexandria,Egypt" width=500 height=500 allowfullscreen></iframe>
+		</div>
+		<form class="form">
+			<div class="row">
+				<div class="col-12 form-group">
+					<label for="name">Name</label>
+					<input class="form-control" id="name" type="text" placeholder="Name">
+				</div>
+				<div class="col-12 form-group">
+					<label for="email">Email address</label>
+					<input class="form-control" id="email" type="email" placeholder="Email address">
+				</div>
+				<div class="col-12 form-group">
+					<label for="message">Message</label>
+					<textarea class="form-control" id="message" rows="4" placeholder="Message ..."></textarea>
+				</div>
+				<div class="col-12 form-group">
+					<button class="btn submit-button">Submit</button>
+				</div>
+			</div>
+		</form>
+		<div class="socials">
+			<div class="social" *ngFor="let social of contact.socials">
+				<a class="facebook" href="{{ social.link }}"><img class="social-icon" src="{{ social.icon }}" alt=""></a> {{ social.name }}
+			</div>
+		</div>
+	</div>
+
+	<app-footer></app-footer>
+</div>

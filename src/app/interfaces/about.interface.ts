@@ -1,4 +1,4 @@
-import { Contact } from './contact.interface';
+import { ContactInfo } from './contact-info.interface';
 import { Service } from './service.interface';
 import { Statistics } from './statistics.interface';
 
@@ -10,5 +10,5 @@ export interface About {
 	images: string[],
 	services: Service[]
 	statistics: Statistics,
-	contacts: Contact[]
+	contactsInfo: ContactInfo[]
 }

@@ -115,10 +115,10 @@ export class AboutComponent implements OnInit {
 					}
 				]
 			},
-			contacts: [
+			contactsInfo: [
 				{
 					id: 1,
-					info: '(123) 456-7890',
+					info: '+420 336 775 664',
 					icon: '../../../assets/icons/phone.svg'
 				},
 				{

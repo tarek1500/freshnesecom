@@ -26,6 +26,7 @@ const routes: Routes = [
 	{ path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) },
 
 	{ path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
+	{ path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) },
 
 	{ path: '**', component: PageNotFoundComponent }
 ];

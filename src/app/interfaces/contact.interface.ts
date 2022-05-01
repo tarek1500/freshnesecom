@@ -1,5 +1,7 @@
+import { ContactInfo } from './contact-info.interface';
+import { Social } from './social.interface';
+
 export interface Contact {
-	id: number,
-	info: string,
-	icon: string
+	contactsInfo: ContactInfo[],
+	socials: Social[]
 }
