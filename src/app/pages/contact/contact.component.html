@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div class="maps">
-			<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDf-f1DSmCjXWf6hVAChdOxbYmf3kbrUnE&amp;q=Pizza Hut,Alexandria,Egypt" width=500 height=500 allowfullscreen></iframe>
+			<iframe [src]="mapLink | safe" width=500 height=500 allowfullscreen></iframe>
 		</div>
 		<form class="form">
 			<div class="row">

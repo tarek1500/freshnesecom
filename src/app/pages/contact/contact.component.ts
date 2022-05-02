@@ -14,11 +14,14 @@ export class ContactComponent implements OnInit {
 		{ text: 'Contact Us', link: '' }
 	];
 	contact!: Contact;
+	mapLink!: string;
 
 	constructor() { }
 
 	ngOnInit(): void {
 		this.contact = {
+			mapKey: 'AIzaSyDf-f1DSmCjXWf6hVAChdOxbYmf3kbrUnE',
+			mapLocation: 'Pizza Hut,Alexandria,Egypt',
 			contactsInfo: [
 				{
 					id: 1,
@@ -63,6 +66,7 @@ export class ContactComponent implements OnInit {
 				}
 			]
 		};
+		this.mapLink = 'https://www.google.com/maps/embed/v1/place?key=' + this.contact.mapKey + '&q=' + this.contact.mapLocation;
 	}
 
 }
