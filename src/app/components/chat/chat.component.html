@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="chat" [class]="{ 'visible': isChatVisible }">
+		<div class="header">
+			<img class="close-icon" src="../../../assets/icons/close-black.svg" alt="" (click)="isChatVisible = false">
+		</div>
+		<div class="content">
+			<div class="messages">
+				<div class="message" *ngFor="let message of messages; let isOdd = odd">
+					<app-message [message]="message" [right-position]="isOdd"></app-message>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<app-text-input-group [placeholder]="'Message'" [button]="'Send'" (onApply)="onSent($event)"></app-text-input-group>
+		</div>
+	</div>
+	<div class="icon" (click)="isChatVisible = !isChatVisible">
+		<img class="visa-icon" src="../../../assets/icons/chat.svg" alt="">
+	</div>
+</div>

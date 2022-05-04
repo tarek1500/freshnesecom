@@ -1,0 +1,9 @@
+<div [class]="{ 'container': true, 'right-position': rightPosition }">
+	<div class="avatar-image" *ngIf="!rightPosition">
+		<img src="{{ message.author.image }}" alt="">
+	</div>
+	<div class="message">
+		<div class="content">{{ message.content }}</div>
+		<button class="btn date" placement="top" ngbTooltip="{{ message.date.toLocaleString() }}">{{ moment(message.date).fromNow() }}</button>
+	</div>
+</div>
