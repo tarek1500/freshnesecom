@@ -8,7 +8,7 @@ import { Message } from '../../interfaces/message.interface';
 	styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
-	isChatVisible: boolean = true;
+	isChatVisible: boolean = false;
 	messages!: Message[];
 
 	constructor() { }
