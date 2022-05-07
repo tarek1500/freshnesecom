@@ -5,14 +5,17 @@ import { BehaviorSubject, Observable } from 'rxjs';
 	providedIn: 'root'
 })
 export class ChatService {
-	private _chatSubject$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+	private _chatSubject$: BehaviorSubject<boolean>;
 	get chatSubject$(): Observable<boolean> { return this._chatSubject$.asObservable() };
 
 	private _chat!: boolean;
 	get chat(): boolean { return this._chat };
 
 	constructor() {
-		this.updateValue(false);
+		let chat = false;
+
+		this._chatSubject$ = new BehaviorSubject<boolean>(chat);
+		this.updateValue(chat);
 	}
 
 	updateValue(chat: boolean) {

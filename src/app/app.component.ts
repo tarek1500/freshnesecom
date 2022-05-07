@@ -251,7 +251,7 @@ export class AppComponent implements OnInit, OnDestroy {
 			shipping: 0,
 			currency: 'USD'
 		};
-		this.cartService.cartSubject$.next(cart);
+		this.cartService.updateValue(cart);
 	}
 
 	ngOnDestroy(): void {

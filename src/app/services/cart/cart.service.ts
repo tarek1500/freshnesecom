@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { Cart } from '../../interfaces/cart.interface';
 
@@ -8,7 +8,10 @@ import { Cart } from '../../interfaces/cart.interface';
 })
 export class CartService {
 	private _cartSubject$: BehaviorSubject<Cart>;
-	get cartSubject$(): BehaviorSubject<Cart> { return this._cartSubject$; };
+	get cartSubject$(): Observable<Cart> { return this._cartSubject$.asObservable(); };
+
+	private _cart!: Cart;
+	get cart(): Cart { return this._cart };
 
 	constructor() {
 		let cart = {
@@ -19,6 +22,13 @@ export class CartService {
 			shipping: 0,
 			currency: ''
 		};
+
 		this._cartSubject$ = new BehaviorSubject<Cart>(cart);
+		this.updateValue(cart);
+	}
+
+	updateValue(cart: Cart) {
+		this._cart = cart;
+		this._cartSubject$.next(cart);
 	}
 }
