@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { ChatService } from '../../services/chat/chat.service';
 import { Tag } from '../../interfaces/tag.interface';
 
 @Component({
@@ -14,7 +15,7 @@ export class FooterComponent implements OnInit {
 	tags: Tag[];
 	year: number;
 
-	constructor() {
+	constructor(private chatService: ChatService) {
 		this.tags = [
 			{
 				id: 1,
@@ -116,6 +117,10 @@ export class FooterComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
+	}
+
+	openChatWindow(event: MouseEvent) {
+		this.chatService.updateValue(true);
 	}
 
 }

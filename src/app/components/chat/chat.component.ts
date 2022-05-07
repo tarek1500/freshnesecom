@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
+import { ChatService } from '../../services/chat/chat.service';
 import { Message } from '../../interfaces/message.interface';
 
 @Component({
@@ -7,11 +9,12 @@ import { Message } from '../../interfaces/message.interface';
 	templateUrl: './chat.component.html',
 	styleUrls: ['./chat.component.scss']
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements OnInit, OnDestroy {
+	chatSubscription!: Subscription;
 	isChatVisible: boolean = false;
 	messages!: Message[];
 
-	constructor() { }
+	constructor(private chatService: ChatService) { }
 
 	ngOnInit(): void {
 		this.messages = [
@@ -71,6 +74,13 @@ export class ChatComponent implements OnInit {
 				content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
 			}
 		];
+		this.chatSubscription = this.chatService.chatSubject$.subscribe(chat => {
+			this.isChatVisible = chat;
+		});
+	}
+
+	ngOnDestroy(): void {
+		this.chatSubscription.unsubscribe();
 	}
 
 	onSent(event: string) { }

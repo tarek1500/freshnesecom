@@ -2,6 +2,7 @@ import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { CartService } from '../../services/cart/cart.service';
+import { ChatService } from '../../services/chat/chat.service';
 import { Category } from '../../interfaces/category.interface';
 import { Cart } from '../../interfaces/cart.interface';
 
@@ -16,7 +17,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	cart!: Cart;
 	isCartVisible: boolean = false;
 
-	constructor(private cartService: CartService) {
+	constructor(
+		private cartService: CartService,
+		private chatService: ChatService
+	) {
 		this.categories = [
 			{
 				id: 0,
@@ -63,6 +67,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 		if (!basketElement && !cartElement) {
 			this.isCartVisible = false;
 		}
+	}
+
+	openChatWindow(event: MouseEvent) {
+		this.chatService.updateValue(true);
 	}
 
 	onCategorySearch(event: { search: string, category: Category }) { }
