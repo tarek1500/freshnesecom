@@ -1,0 +1,40 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+	<div class="header">
+		<h2 class="heading">Profile</h2>
+	</div>
+
+	<div class="row content">
+		<div class="col-md-3 menu-column">
+			<ul class="nav nav-pills" ngbNav orientation="vertical" [(activeId)]="active" #nav="ngbNav">
+				<li class="nav-item" ngbNavItem="info">
+					<div class="form-check" routerLink="/profile">
+						<input class="form-check-input" type="radio" name="profile-tab" id="info-tab" [checked]="url === '/profile'">
+						<label class="form-check-label" for="info-tab">Info</label>
+					</div>
+				</li>
+				<li class="nav-item" ngbNavItem="addresses">
+					<div class="form-check" routerLink="/profile/addresses">
+						<input class="form-check-input" type="radio" name="profile-tab" id="addresses-tab" [checked]="url.startsWith('/profile/addresses')">
+						<label class="form-check-label" for="addresses-tab">Addresses</label>
+					</div>
+				</li>
+				<li class="nav-item" ngbNavItem="orders">
+					<div class="form-check" routerLink="/profile/orders">
+						<input class="form-check-input" type="radio" name="profile-tab" id="orders-tab" [checked]="url.startsWith('/profile/orders')">
+						<label class="form-check-label" for="orders-tab">Orders</label>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9 router-column">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+
+	<app-footer></app-footer>
+</div>

@@ -1,0 +1,56 @@
+<div class="header">
+	<h3 class="heading">Order details</h3>
+	<a class="btn back-button" routerLink="/profile/orders"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> Back</a>
+</div>
+
+<div class="details">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="row details-row">
+				<div class="col-6 text">Number</div>
+				<div class="col-6 text">{{ order.number }}</div>
+			</div>
+			<div class="row details-row">
+				<div class="col-6 text">Date</div>
+				<div class="col-6 text">{{ order.date.toLocaleString() }}</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="row details-row">
+				<div class="col-6 text">Total</div>
+				<div class="col-6 text">{{ order.total }}</div>
+			</div>
+			<div class="row details-row">
+				<div class="col-6 text">Address</div>
+				<div class="col-6 text">
+					<button class="btn address" placement="top" ngbTooltip="{{ order.address.address + ', ' + order.address.postal }}">{{ order.address.title }}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="table-responsive">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Total</th>
+				<th>View</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let item of order.items; let index = index;">
+				<td>{{ index + 1 }}</td>
+				<td>{{ item.product.name }}</td>
+				<td>{{ item.quantity }}</td>
+				<td>{{ item.price }}</td>
+				<td>{{ (item.quantity * item.price) | number:'1.0-2' }}</td>
+				<td><a [routerLink]="['/products', item.product.slug]">View</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

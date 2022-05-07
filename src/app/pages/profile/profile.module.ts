@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { ContactRoutingModule } from './contact-routing.module';
+import { ProfileRoutingModule } from './profile-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
 import { BreadcrumbModule } from '../../modules/breadcrumb/breadcrumb.module';
-import { SafeModule } from '../../modules/safe/safe.module';
-import { ContactComponent } from './contact.component';
+import { ProfileComponent } from './profile.component';
 
 @NgModule({
 	declarations: [
-		ContactComponent
+		ProfileComponent
 	],
 	imports: [
 		CommonModule,
-		ContactRoutingModule,
+		ProfileRoutingModule,
+		NgbModule,
 		SharedModule,
-		BreadcrumbModule,
-		SafeModule
+		BreadcrumbModule
 	]
 })
-export class ContactModule { }
+export class ProfileModule { }

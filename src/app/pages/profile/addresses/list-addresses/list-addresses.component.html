@@ -1,0 +1,58 @@
+<div class="create">
+	<a class="btn create-button" routerLink="/profile/addresses/create">Create address</a>
+</div>
+
+<div class="table-responsive">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Title</th>
+				<th>Address</th>
+				<th>Map</th>
+				<th>Options</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let address of addresses; let index = index;">
+				<td>{{ index + 1 }}</td>
+				<td>{{ address.title }}</td>
+				<td>{{ address.address + ', ' + address.postal }}</td>
+				<td><a (click)="openViewMapModel(viewMapModalContent, address)">View map</a></td>
+				<td>
+					<a class="edit" [routerLink]="['/profile/addresses', address.id, 'edit']"><img class="edit-icon" src="../../../../../assets/icons/edit.svg" alt=""></a>
+					<a class="delete" (click)="openDeleteModal(deleteModalContent, address)"><img class="delete-icon" src="../../../../../assets/icons/delete.svg" alt=""></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<ng-template #viewMapModalContent let-viewMapModal>
+	<div class="modal-header">
+		<h4 class="modal-title">View map: {{ modalTitle }}</h4>
+		<button class="btn-close" (click)="viewMapModal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<div class="maps">
+			<iframe [src]="mapLink | safe" width=500 height=500 allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn close-button" (click)="viewMapModal.close('Close click')">Close</button>
+	</div>
+</ng-template>
+
+<ng-template #deleteModalContent let-deleteModal>
+	<div class="modal-header">
+		<h4 class="modal-title">Address deletion: {{ modalTitle }}</h4>
+		<button class="btn-close" (click)="deleteModal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<div class="caution">Are you sure you want to delete <span class="red">{{ modalTitle }}</span> address?</div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn close-button" ngbAutofocus (click)="deleteModal.dismiss('cancel click')">Cancel</button>
+		<button class="btn delete-button" (click)="deleteModal.close('Ok click')">Delete</button>
+	</div>
+</ng-template>

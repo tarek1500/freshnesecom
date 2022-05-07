@@ -67,7 +67,7 @@
 				<div class="row shipping" *ngFor="let delivery of deliveries">
 					<div class="col-md-2 col-6 name">
 						<div class="form-check">
-							<input class="form-check-input" type="radio" [value]="delivery.price" name="billing-method" id="{{ 'shipping-button-' + delivery.id }}" [(ngModel)]="cart.shipping">
+							<input class="form-check-input" type="radio" [value]="delivery.price" name="shipping-method" id="{{ 'shipping-button-' + delivery.id }}" [(ngModel)]="cart.shipping">
 							<label class="form-check-label" for="{{ 'shipping-button-' + delivery.id }}">{{ delivery.name }}</label>
 						</div>
 					</div>

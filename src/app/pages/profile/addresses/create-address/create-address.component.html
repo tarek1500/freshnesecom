@@ -1,0 +1,29 @@
+<div class="header">
+	<h3 class="heading">{{ title }} address</h3>
+	<a class="btn back-button" routerLink="/profile/addresses"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> Back</a>
+</div>
+
+<form>
+	<div class="row">
+		<div class="col-12 form-group">
+			<label for="title">Title</label>
+			<input class="form-control" name="title" id="title" type="text" placeholder="Title" [(ngModel)]="address.title">
+		</div>
+		<div class="col-12 form-group">
+			<label for="address">Address</label>
+			<textarea class="form-control" name="address" id="address" rows="4" placeholder="Address in details ..." [(ngModel)]="address.address"></textarea>
+		</div>
+		<div class="col-12 form-group">
+			<label for="postal">Postal code</label>
+			<input class="form-control" name="postal" id="postal" type="text" placeholder="Postal code" [(ngModel)]="address.postal">
+		</div>
+		<div class="col-12 form-group">
+			<div class="maps">
+				<iframe [src]="mapLink | safe" width=400 height=400 allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-12 form-group">
+			<button class="btn button">{{ title }}</button>
+		</div>
+	</div>
+</form>
