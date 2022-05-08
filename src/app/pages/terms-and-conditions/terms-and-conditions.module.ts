@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { TermsAndConditionsRoutingModule } from './terms-and-conditions-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
@@ -15,8 +14,7 @@ import { TermsAndConditionsComponent } from './terms-and-conditions.component';
 		CommonModule,
 		TermsAndConditionsRoutingModule,
 		SharedModule,
-		BreadcrumbModule,
-		NgxPageScrollModule
+		BreadcrumbModule
 	]
 })
 export class TermsAndConditionsModule { }
