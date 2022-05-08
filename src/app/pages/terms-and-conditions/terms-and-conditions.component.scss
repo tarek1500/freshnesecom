@@ -1,0 +1,125 @@
+.container {
+	padding: 0px;
+	background-color: #FFF;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+	.header {
+		padding: 8px 45px;
+
+		.heading {
+			margin-bottom: 12px;
+			color: #151515;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 32px;
+
+			@media (max-width: 767.98px) {
+				font-size: 24px;
+			}
+
+			@media (max-width: 575.98px) {
+				font-size: 20px;
+			}
+		}
+
+		.date {
+			color: #575757;
+			font-family: 'Poppins';
+			font-weight: 500;
+			font-size: 14px;
+		}
+	}
+
+	.content {
+		padding: 30px 45px;
+
+		.table-of-contents {
+			margin-bottom: 30px;
+
+			.heading {
+				margin-bottom: 20px;
+				color: #151515;
+				font-family: 'OpenSans';
+				font-weight: 500;
+				font-size: 26px;
+			}
+
+			.list {
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+
+				.list-item {
+					a {
+						color: #151515;
+						font-family: 'OpenSans';
+						font-weight: 400;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.contents {
+			.section {
+				margin-bottom: 30px;
+
+				&:last-of-type {
+					margin: 0px;
+				}
+
+				.heading {
+					margin-bottom: 20px;
+					color: #151515;
+					font-family: 'OpenSans';
+					font-weight: 500;
+					font-size: 26px;
+				}
+
+				.table-content {
+					color: #151515;
+					font-family: 'OpenSans';
+					font-weight: 400;
+					font-size: 14px;
+
+					::ng-deep {
+						p {
+							margin-bottom: 8px;
+
+							&:last-child {
+								margin: 0px;
+							}
+
+							.bold {
+								font-weight: 700;
+							}
+						}
+
+						ul {
+							margin: 0px 0px 8px 36px;
+							padding-left: 0px;
+						}
+
+						.contact {
+							color: #575757;
+
+							.heading,
+							.phone,
+							.fax,
+							.email {
+								font-weight: 700;
+							}
+
+							.heading {
+								margin-bottom: 4px;
+								padding-bottom: 16px;
+								display: inline-block;
+								border-bottom: 1px solid #575757;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -452,7 +452,7 @@ export class HomeComponent implements OnInit {
 				id: 1,
 				name: 'Author',
 				email: '',
-					phone: '',
+				phone: '',
 				role: '',
 				image: 'https://picsum.photos/id/237/32/32'
 			},

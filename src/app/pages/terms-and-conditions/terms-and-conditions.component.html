@@ -1,0 +1,30 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+	<div class="header">
+		<h2 class="heading">Terms and Conditions</h2>
+		<div class="date">Last updated {{ terms.date.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+	</div>
+
+	<div class="content">
+		<div class="table-of-contents">
+			<h3 class="heading">Table of contents</h3>
+			<ul class="list">
+				<li class="list-item" *ngFor="let content of terms.tableOfContents; let index = index;">
+					<a href="terms#{{ content.link }}" (click)="scrollToContent($event, contents)">{{ index + 1 }}. {{ content.name }}</a>
+				</li>
+			</ul>
+		</div>
+		<div class="contents" #contents>
+			<div class="section" [id]="content.link" *ngFor="let content of terms.tableOfContents; let index = index;">
+				<h3 class="heading">{{ index + 1 }}. {{ content.name }}</h3>
+				<div class="table-content" [innerHtml]="content.content"></div>
+			</div>
+		</div>
+	</div>
+
+	<app-footer></app-footer>
+</div>
