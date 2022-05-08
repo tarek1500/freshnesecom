@@ -28,7 +28,9 @@ const routes: Routes = [
 
 	{ path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
 	{ path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) },
-	{ path: 'terms', loadChildren: () => import('./pages/terms-and-conditions/terms-and-conditions.module').then(m => m.TermsAndConditionsModule) },
+
+	{ path: 'terms-and-conditions', loadChildren: () => import('./pages/terms-and-conditions/terms-and-conditions.module').then(m => m.TermsAndConditionsModule) },
+	{ path: 'return-policy', loadChildren: () => import('./pages/return-policy/return-policy.module').then(m => m.ReturnPolicyModule) },
 
 	{ path: '**', component: PageNotFoundComponent }
 ];

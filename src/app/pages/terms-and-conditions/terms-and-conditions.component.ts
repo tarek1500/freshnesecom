@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
-import { Terms } from '../../interfaces/terms.interface';
+import { TermsAndConditions } from '../../interfaces/terms-and-conditions.interface';
 
 @Component({
 	selector: 'app-terms-and-conditions',
@@ -13,12 +13,12 @@ export class TermsAndConditionsComponent implements OnInit {
 		{ text: 'Homepage', link: '/' },
 		{ text: 'Terms and Conditions', link: '' }
 	];
-	terms!: Terms;
+	termsAndConditions!: TermsAndConditions;
 
 	constructor() { }
 
 	ngOnInit(): void {
-		this.terms = {
+		this.termsAndConditions = {
 			date: new Date('2022-5-8'),
 			tableOfContents: [
 				{

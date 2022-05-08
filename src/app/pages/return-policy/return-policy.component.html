@@ -1,0 +1,24 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+	<div class="header">
+		<h2 class="heading">Return Policy</h2>
+		<div class="date">Last updated {{ returnPolicy.date.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+		<!-- Remove caution on production -->
+		<div class="caution">THIS PAGE FOR DEVELOPMENT PURPOSE ONLY!</div>
+	</div>
+
+	<div class="content">
+		<div class="contents" #contents>
+			<div class="section" *ngFor="let content of returnPolicy.tableOfContents">
+				<h3 class="heading">{{ content.name }}</h3>
+				<div class="table-content" [innerHtml]="content.content"></div>
+			</div>
+		</div>
+	</div>
+
+	<app-footer></app-footer>
+</div>

@@ -6,7 +6,7 @@
 
 	<div class="header">
 		<h2 class="heading">Terms and Conditions</h2>
-		<div class="date">Last updated {{ terms.date.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+		<div class="date">Last updated {{ termsAndConditions.date.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
 		<!-- Remove caution on production -->
 		<div class="caution">THIS PAGE FOR DEVELOPMENT PURPOSE ONLY!</div>
 	</div>
@@ -15,13 +15,13 @@
 		<div class="table-of-contents">
 			<h3 class="heading">Table of contents</h3>
 			<ul class="list">
-				<li class="list-item" *ngFor="let content of terms.tableOfContents; let index = index;">
+				<li class="list-item" *ngFor="let content of termsAndConditions.tableOfContents; let index = index;">
 					<a href="terms#{{ content.link }}" (click)="scrollToContent($event, contents)">{{ index + 1 }}. {{ content.name }}</a>
 				</li>
 			</ul>
 		</div>
 		<div class="contents" #contents>
-			<div class="section" [id]="content.link" *ngFor="let content of terms.tableOfContents; let index = index;">
+			<div class="section" [id]="content.link" *ngFor="let content of termsAndConditions.tableOfContents; let index = index;">
 				<h3 class="heading">{{ index + 1 }}. {{ content.name }}</h3>
 				<div class="table-content" [innerHtml]="content.content"></div>
 			</div>
