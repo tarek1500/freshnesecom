@@ -2,8 +2,8 @@ import { ContactInfo } from './contact-info.interface';
 import { Social } from './social.interface';
 
 export interface Contact {
-	mapKey: string,
-	mapLocation: string,
+	latitude: number,
+	longitude: number
 	contactsInfo: ContactInfo[],
 	socials: Social[]
 }

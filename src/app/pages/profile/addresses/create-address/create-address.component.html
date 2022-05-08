@@ -32,7 +32,9 @@
 		</div>
 		<div class="col-12 form-group">
 			<div class="maps">
-				<iframe [src]="mapLink | safe" width=400 height=400 allowfullscreen></iframe>
+				<agm-map [latitude]="mapCenter.latitude" [longitude]="mapCenter.longitude" [zoom]="15" (mapClick)="mapClicked($event)">
+					<agm-marker [latitude]="address.latitude" [longitude]="address.longitude"></agm-marker>
+				</agm-map>
 			</div>
 		</div>
 		<div class="col-12 form-group">

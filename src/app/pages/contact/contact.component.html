@@ -17,7 +17,9 @@
 			</div>
 		</div>
 		<div class="maps">
-			<iframe [src]="mapLink | safe" width=500 height=500 allowfullscreen></iframe>
+			<agm-map [latitude]="contact.latitude" [longitude]="contact.longitude" [zoom]="15">
+				<agm-marker [latitude]="contact.latitude" [longitude]="contact.longitude"></agm-marker>
+			</agm-map>
 		</div>
 		<form class="form">
 			<div class="row">

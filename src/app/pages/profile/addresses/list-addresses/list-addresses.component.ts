@@ -11,8 +11,6 @@ import { Address } from '../../../../interfaces/address.interface';
 export class ListAddressesComponent implements OnInit {
 	addresses!: Address[];
 	modalTitle!: string;
-	mapKey!: string;
-	mapLink!: string;
 
 	constructor(private modalService: NgbModal) { }
 
@@ -39,14 +37,6 @@ export class ListAddressesComponent implements OnInit {
 				longitude: 29.952374
 			}
 		];
-		this.mapKey = 'AIzaSyDf-f1DSmCjXWf6hVAChdOxbYmf3kbrUnE';
-	}
-
-	openViewMapModel(content: TemplateRef<any>, address: Address) {
-		this.modalTitle = address.title;
-		this.mapLink = 'https://www.google.com/maps/embed/v1/place?key=' + this.mapKey + '&q=' + address.latitude + ',' + address.longitude;
-
-		this.modalService.open(content, { size: 'lg', centered: true });
 	}
 
 	openDeleteModal(content: TemplateRef<any>, address: Address) {

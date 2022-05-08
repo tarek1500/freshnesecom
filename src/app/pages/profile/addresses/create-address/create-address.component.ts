@@ -1,3 +1,4 @@
+import { MouseEvent } from '@agm/core';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -13,13 +14,11 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 	routeSubscription!: Subscription;
 	title: string = 'Create';
 	address!: Address;
-	mapKey!: string;
-	mapLink!: string;
+	mapCenter!: { latitude: number, longitude: number };
 
 	constructor(private route: ActivatedRoute) { }
 
 	ngOnInit(): void {
-		this.mapKey = 'AIzaSyDf-f1DSmCjXWf6hVAChdOxbYmf3kbrUnE';
 		this.routeSubscription = this.route.params.subscribe(params => {
 			let id = params['address'];
 
@@ -36,7 +35,6 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 					latitude: 31.259672,
 					longitude: 29.996615
 				};
-				this.mapLink = 'https://www.google.com/maps/embed/v1/place?key=' + this.mapKey + '&q=' + this.address.latitude + ',' + this.address.longitude;
 			}
 			else {
 				this.address = {
@@ -49,13 +47,22 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 					latitude: 31.259672,
 					longitude: 29.996615
 				};
-				this.mapLink = 'https://www.google.com/maps/embed/v1/place?key=' + this.mapKey + '&q=' + this.address.latitude + ',' + this.address.longitude;
 			}
+
+			this.mapCenter = {
+				latitude: 31.259672,
+				longitude: 29.996615
+			};
 		});
 	}
 
 	ngOnDestroy(): void {
 		this.routeSubscription.unsubscribe();
+	}
+
+	mapClicked($event: MouseEvent) {
+		this.address.latitude = $event.coords.lat;
+		this.address.longitude = $event.coords.lng;
 	}
 
 }

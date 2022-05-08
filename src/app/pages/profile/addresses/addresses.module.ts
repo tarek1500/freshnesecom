@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { AddressesRoutingModule } from './addresses-routing.module';
-import { SafeModule } from '../../../modules/safe/safe.module';
 import { AddressesComponent } from './addresses.component';
 import { ListAddressesComponent } from './list-addresses/list-addresses.component';
 import { CreateAddressComponent } from './create-address/create-address.component';
@@ -18,7 +18,9 @@ import { CreateAddressComponent } from './create-address/create-address.componen
 		CommonModule,
 		FormsModule,
 		AddressesRoutingModule,
-		SafeModule
+		AgmCoreModule.forRoot({
+			apiKey: ''
+		})
 	]
 })
 export class AddressesModule { }
