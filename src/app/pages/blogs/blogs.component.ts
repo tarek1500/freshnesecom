@@ -33,6 +33,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 1,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/32/32'
 				},
@@ -61,6 +63,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 2,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/32/32'
 				},
@@ -91,6 +95,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 1,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -119,6 +125,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 2,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -147,6 +155,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 3,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -175,6 +185,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 4,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -203,6 +215,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 5,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -231,6 +245,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 6,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -259,6 +275,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 7,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -287,6 +305,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				author: {
 					id: 8,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},

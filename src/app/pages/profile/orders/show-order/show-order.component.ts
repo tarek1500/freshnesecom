@@ -26,6 +26,8 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 				user: {
 					id: 1,
 					name: 'User',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -122,7 +124,9 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 				address: {
 					id: 1,
 					title: 'Main address',
-					address: '1234 Freshnesecom St, San Francisco, CA',
+					address: '1234 Freshnesecom St',
+					city: 'San Francisco, CA',
+					country: 'USA',
 					postal: '12345',
 					latitude: 31.259672,
 					longitude: 29.996615

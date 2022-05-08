@@ -29,7 +29,9 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 				this.address = {
 					id: id,
 					title: 'Main address',
-					address: '1234 Freshnesecom St, San Francisco, CA',
+					address: '1234 Freshnesecom St',
+					city: 'San Francisco, CA',
+					country: 'USA',
 					postal: '12345',
 					latitude: 31.259672,
 					longitude: 29.996615
@@ -41,6 +43,8 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 					id: 0,
 					title: '',
 					address: '',
+					city: '',
+					country: '',
 					postal: '',
 					latitude: 31.259672,
 					longitude: 29.996615

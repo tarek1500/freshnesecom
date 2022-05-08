@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { InfoRoutingModule } from './info-routing.module';
 import { InfoComponent } from './info.component';
@@ -10,6 +11,7 @@ import { InfoComponent } from './info.component';
 	],
 	imports: [
 		CommonModule,
+		FormsModule,
 		InfoRoutingModule
 	]
 })

@@ -17,7 +17,7 @@
 			<tr *ngFor="let address of addresses; let index = index;">
 				<td>{{ index + 1 }}</td>
 				<td>{{ address.title }}</td>
-				<td>{{ address.address + ', ' + address.postal }}</td>
+				<td>{{ address.address + ', ' + address.city + ', ' + address.country + ', ' + address.postal }}</td>
 				<td><a (click)="openViewMapModel(viewMapModalContent, address)">View map</a></td>
 				<td>
 					<a class="edit" [routerLink]="['/profile/addresses', address.id, 'edit']"><img class="edit-icon" src="../../../../../assets/icons/edit.svg" alt=""></a>

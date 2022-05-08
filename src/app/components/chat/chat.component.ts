@@ -23,6 +23,8 @@ export class ChatComponent implements OnInit, OnDestroy {
 				author: {
 					id: 1,
 					name: 'Admin',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
@@ -34,6 +36,8 @@ export class ChatComponent implements OnInit, OnDestroy {
 				author: {
 					id: 2,
 					name: 'User',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
@@ -45,6 +49,8 @@ export class ChatComponent implements OnInit, OnDestroy {
 				author: {
 					id: 1,
 					name: 'Admin',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
@@ -56,6 +62,8 @@ export class ChatComponent implements OnInit, OnDestroy {
 				author: {
 					id: 2,
 					name: 'User',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
@@ -67,6 +75,8 @@ export class ChatComponent implements OnInit, OnDestroy {
 				author: {
 					id: 1,
 					name: 'Admin',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},

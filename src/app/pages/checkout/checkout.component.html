@@ -14,36 +14,32 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6 form-group">
-						<label for="first-name">First name</label>
-						<input class="form-control" id="first-name" type="text" placeholder="First name">
-					</div>
-					<div class="col-md-6 form-group">
-						<label for="last-name">Last name</label>
-						<input class="form-control" id="last-name" type="text" placeholder="Last name">
+						<label for="name">Full name</label>
+						<input class="form-control" id="name" type="text" placeholder="Full name">
 					</div>
 					<div class="col-md-6 form-group">
 						<label for="email">Email address</label>
 						<input class="form-control" id="email" type="email" placeholder="Email address">
+					</div>
+					<div class="col-md-12 form-group">
+						<label for="address">Address</label>
+						<input class="form-control" id="address" type="text" placeholder="Address">
 					</div>
 					<div class="col-md-6 form-group">
 						<label for="phone">Phone number</label>
 						<input class="form-control" id="phone" type="text" placeholder="Phone number">
 					</div>
 					<div class="col-md-6 form-group">
-						<label for="address">Address</label>
-						<input class="form-control" id="address" type="text" placeholder="Address">
+						<label for="city">City</label>
+						<input class="form-control" id="city" type="text" placeholder="City">
 					</div>
 					<div class="col-md-6 form-group">
-						<label for="town">Town / City</label>
-						<input class="form-control" id="town" type="text" placeholder="Town / City">
-					</div>
-					<div class="col-md-6 form-group">
-						<label for="state">State / Country</label>
-						<select class="form-select" id="state">
-							<option selected>State / Country</option>
-							<option value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
+						<label for="country">Country</label>
+						<select class="form-select" id="country">
+							<option value="" selected>Select country</option>
+							<option value="Egypt">Egypt</option>
+							<option value="USA">USA</option>
+							<option value="UK">UK</option>
 						</select>
 					</div>
 					<div class="col-md-6 form-group">
@@ -195,7 +191,7 @@
 		<div class="col-xl-5 col-lg-6 col-md-12 summary">
 			<div class="summary-content">
 				<h2 class="heading">Order Summary</h2>
-				<h3 class="subheading">Price can change depending on shipping method and taxes of your state.</h3>
+				<h3 class="subheading">Price can change depending on shipping method and taxes of your country.</h3>
 				<div class="products">
 					<div class="product" *ngFor="let product of cart.products">
 						<app-product-tiny [product]="product"></app-product-tiny>

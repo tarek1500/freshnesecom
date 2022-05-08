@@ -2,28 +2,24 @@
 	<div class="row">
 		<div class="col-12 form-group">
 			<div class="avatar-image">
-				<img src="https://picsum.photos/id/237/150/150" alt="">
+				<img [src]="user.image" alt="">
 			</div>
 		</div>
 		<div class="col-12 form-group">
-			<label for="first-name">First name</label>
-			<input class="form-control" id="first-name" type="text" placeholder="First name">
-		</div>
-		<div class="col-12 form-group">
-			<label for="last-name">Last name</label>
-			<input class="form-control" id="last-name" type="text" placeholder="Last name">
+			<label for="name">Full name</label>
+			<input class="form-control" name="name" id="name" type="text" placeholder="Full name" [(ngModel)]="user.name">
 		</div>
 		<div class="col-12 form-group">
 			<label for="email">Email address</label>
-			<input class="form-control" id="email" type="email" placeholder="Email address">
+			<input class="form-control" name="email" id="email" type="email" placeholder="Email address" [(ngModel)]="user.email">
 		</div>
 		<div class="col-12 form-group">
 			<label for="password">Password</label>
-			<input class="form-control" id="password" type="password" placeholder="Password">
+			<input class="form-control" name="password" id="password" type="password" placeholder="Password">
 		</div>
 		<div class="col-12 form-group">
 			<label for="phone">Phone number</label>
-			<input class="form-control" id="phone" type="text" placeholder="Phone number">
+			<input class="form-control" name="phone" id="phone" type="text" placeholder="Phone number" [(ngModel)]="user.phone">
 		</div>
 		<div class="col-12 form-group">
 			<label class="form-label" for="avatar-image">Avatar image</label>

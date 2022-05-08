@@ -79,6 +79,19 @@ form {
 			}
 		}
 
+		select {
+			position: relative;
+			padding: 11px 20px;
+			border-radius: 12px;
+			border: 1px solid #D1D1D1;
+			background-color: #F9F9F9;
+			background-image: url('../../../../../assets/icons/up-down-arrow.svg');
+			color: #A9A9A9;
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 14px;
+		}
+
 		.maps {
 			iframe {
 				width: 100%;

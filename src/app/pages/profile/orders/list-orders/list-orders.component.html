@@ -17,7 +17,7 @@
 				<td>{{ order.number }}</td>
 				<td>{{ order.items.length }}</td>
 				<td>
-					<button class="btn address" placement="top" ngbTooltip="{{ order.address.address + ', ' + order.address.postal }}">{{ order.address.title }}</button>
+					<button class="btn address" placement="top" ngbTooltip="{{ order.address.address + ', ' + order.address.city + ', ' + order.address.country + ', ' + order.address.postal }}">{{ order.address.title }}</button>
 				</td>
 				<td>{{ order.total }}</td>
 				<td>{{ order.date.toLocaleString() }}</td>

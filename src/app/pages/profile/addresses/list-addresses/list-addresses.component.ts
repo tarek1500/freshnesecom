@@ -21,7 +21,9 @@ export class ListAddressesComponent implements OnInit {
 			{
 				id: 1,
 				title: 'Main address',
-				address: '1234 Freshnesecom St, San Francisco, CA',
+				address: '1234 Freshnesecom St',
+				city: 'San Francisco, CA',
+				country: 'USA',
 				postal: '12345',
 				latitude: 31.259672,
 				longitude: 29.996615
@@ -29,7 +31,9 @@ export class ListAddressesComponent implements OnInit {
 			{
 				id: 2,
 				title: 'Secondary address',
-				address: '1234 Freshnesecom St, San Francisco, CA',
+				address: '1234 Freshnesecom St',
+				city: 'San Francisco, CA',
+				country: 'USA',
 				postal: '12345',
 				latitude: 31.228255,
 				longitude: 29.952374

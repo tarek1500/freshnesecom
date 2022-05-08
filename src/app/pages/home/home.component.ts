@@ -266,6 +266,8 @@ export class HomeComponent implements OnInit {
 				author: {
 					id: 1,
 					name: 'Name and Surname',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
@@ -276,6 +278,8 @@ export class HomeComponent implements OnInit {
 				author: {
 					id: 2,
 					name: 'Name and Surname',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
@@ -286,6 +290,8 @@ export class HomeComponent implements OnInit {
 				author: {
 					id: 3,
 					name: 'Name and Surname',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
@@ -296,6 +302,8 @@ export class HomeComponent implements OnInit {
 				author: {
 					id: 4,
 					name: 'Name and Surname',
+					email: '',
+					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
@@ -443,6 +451,8 @@ export class HomeComponent implements OnInit {
 			author: {
 				id: 1,
 				name: 'Author',
+				email: '',
+					phone: '',
 				role: '',
 				image: 'https://picsum.photos/id/237/32/32'
 			},
@@ -471,6 +481,8 @@ export class HomeComponent implements OnInit {
 			author: {
 				id: 2,
 				name: 'Author',
+				email: '',
+				phone: '',
 				role: '',
 				image: ''
 			},
@@ -500,6 +512,8 @@ export class HomeComponent implements OnInit {
 				author: {
 					id: 3,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -522,6 +536,8 @@ export class HomeComponent implements OnInit {
 				author: {
 					id: 4,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -544,6 +560,8 @@ export class HomeComponent implements OnInit {
 				author: {
 					id: 5,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},

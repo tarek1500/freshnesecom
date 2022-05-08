@@ -25,6 +25,8 @@ export class BlogDetailsComponent implements OnInit {
 			author: {
 				id: 1,
 				name: 'Admin',
+				email: '',
+				phone: '',
 				role: '',
 				image: ''
 			},
@@ -64,6 +66,8 @@ export class BlogDetailsComponent implements OnInit {
 					author: {
 						id: 1,
 						name: 'Author',
+						email: '',
+						phone: '',
 						role: 'Admin',
 						image: 'https://picsum.photos/id/237/40/40'
 					},
@@ -75,6 +79,8 @@ export class BlogDetailsComponent implements OnInit {
 							author: {
 								id: 2,
 								name: 'User',
+								email: '',
+								phone: '',
 								role: 'Customer',
 								image: 'https://picsum.photos/id/237/40/40'
 							},
@@ -95,6 +101,8 @@ export class BlogDetailsComponent implements OnInit {
 				author: {
 					id: 1,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -123,6 +131,8 @@ export class BlogDetailsComponent implements OnInit {
 				author: {
 					id: 2,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -151,6 +161,8 @@ export class BlogDetailsComponent implements OnInit {
 				author: {
 					id: 3,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
@@ -179,6 +191,8 @@ export class BlogDetailsComponent implements OnInit {
 				author: {
 					id: 4,
 					name: 'Author',
+					email: '',
+					phone: '',
 					role: '',
 					image: ''
 				},
