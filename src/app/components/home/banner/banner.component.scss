@@ -4,20 +4,31 @@
 	padding: 48px 32px 82px 32px;
 	border-radius: 12px;
 	background-color: #F4F8EC;
-	background-image: url("../../../../assets/images/banner-background.svg");
+	overflow: hidden;
 
-	.subheading {
-		color: #6A983C;
-		font-family: 'Poppins';
-		font-weight: 600;
-		font-size: 12px;
+	.background-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
-	.heading {
-		color: #151515;
-		font-family: 'Poppins';
-		font-weight: 600;
-		font-size: 22px;
+	.banner {
+		position: relative;
+
+		.subheading {
+			color: #6A983C;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 12px;
+		}
+
+		.heading {
+			color: #151515;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 22px;
+		}
 	}
 
 	.read-button {
