@@ -25,7 +25,7 @@
 					</ng-template>
 					<ngb-rating [(rate)]="product.rating" [starTemplate]="starTemplate" [readonly]="true" [max]="5"></ngb-rating>
 					<div class="review">
-						<a routerLink="." fragment="reviews" (click)="scrollToReviews($event, reviews, infoNav)">({{ product.reviews.length }} customer review)</a>
+						<a (click)="scrollToReviews($event, info, infoNav)">({{ product.reviews.length }} customer review)</a>
 					</div>
 				</div>
 				<p class="description">{{ product.description }}</p>
@@ -85,7 +85,7 @@
 					<div class="wishlist"><img class="heart-icon" src="../../../assets/icons/heart-orange.svg" alt=""> Add to my wish list</div>
 					<div class="compare"><img class="compare-icon" src="../../../assets/icons/compare.svg" alt=""> Compare</div>
 				</div>
-				<div class="info">
+				<div class="info" #info>
 					<nav ngbNav #infoNav="ngbNav" class="nav-tabs">
 						<ng-container ngbNavItem="description">
 							<a ngbNavLink>Description</a>
@@ -94,7 +94,7 @@
 							</ng-template>
 						</ng-container>
 						<ng-container ngbNavItem="reviews">
-							<a ngbNavLink #reviews>
+							<a ngbNavLink>
 								Reviews
 								<span class="tag">{{ product.reviews.length }}</span>
 							</a>

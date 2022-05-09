@@ -84,10 +84,12 @@
 					vertical-align: text-bottom;
 
 					a {
+						text-decoration: underline;
 						color: #A9A9A9;
 						font-family: 'OpenSans';
 						font-weight: 400;
 						font-size: 12px;
+						cursor: pointer;
 					}
 				}
 			}

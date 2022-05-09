@@ -278,12 +278,12 @@ export class ProductDetailsComponent implements OnInit {
 		}
 	}
 
-	scrollToReviews(event: MouseEvent, reviews: HTMLElement, nav: NgbNav) {
+	scrollToReviews(event: MouseEvent, info: HTMLDivElement, nav: NgbNav) {
 		event.preventDefault();
 
 		nav.select('reviews');
 
-		reviews.scrollIntoView();
+		info.scrollIntoView();
 	}
 
 }
