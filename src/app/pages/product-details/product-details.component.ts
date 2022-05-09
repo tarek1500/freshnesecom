@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbNav } from '@ng-bootstrap/ng-bootstrap';
 
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Product } from '../../interfaces/product.interface';
-import { ProductPack } from '../../interfaces/product-pack.interface';
 import { Review } from '../../interfaces/review.interface';
 
 @Component({
@@ -17,7 +17,6 @@ export class ProductDetailsComponent implements OnInit {
 		{ text: '', link: '' },
 	];
 	product: Product;
-	selectedCartPack!: ProductPack;
 	discount: number = 0;
 	review: Review;
 	relatedProducts: Product[];
@@ -272,7 +271,6 @@ export class ProductDetailsComponent implements OnInit {
 
 	ngOnInit(): void {
 		// Fetch product form server
-		this.selectedCartPack = this.product.availablePacks[0];
 		this.breadcrumb[2].text = this.product.name;
 
 		if (this.product.oldPrice != 0) {
@@ -280,9 +278,12 @@ export class ProductDetailsComponent implements OnInit {
 		}
 	}
 
-	onCartPackSelected(pack: ProductPack) {
-		this.selectedCartPack = pack;
-		this.product.selectedQuantity.pack = pack.pack;
+	scrollToReviews(event: MouseEvent, reviews: HTMLElement, nav: NgbNav) {
+		event.preventDefault();
+
+		nav.select('reviews');
+
+		reviews.scrollIntoView();
 	}
 
 }
