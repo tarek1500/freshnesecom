@@ -21,7 +21,6 @@ export class ProductsComponent implements OnInit, OnDestroy {
 		{ text: '', link: '' }
 	];
 	products: Product[];
-
 	isGridView: boolean = true;
 	priceValue: number[] = [0, 1000];
 	minPrice: number = 0;
@@ -514,7 +513,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				reviews: [],
 				questions: [],
 				images: ['https://picsum.photos/id/112/600/300']
-			},
+			}
 		];
 	}
 

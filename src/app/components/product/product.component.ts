@@ -10,6 +10,7 @@ import { Product } from '../../interfaces/product.interface';
 export class ProductComponent implements OnInit {
 	@Input() product!: Product;
 	@Input() size: string = 'small';
+	@Input('show-wishlist') showWishlist: boolean = true;
 	discount: number = 0;
 
 	constructor() { }

@@ -14,7 +14,7 @@ export class CartService {
 	get cart(): Cart { return this._cart };
 
 	constructor() {
-		let cart = {
+		let cart: Cart = {
 			id: 0,
 			products: [],
 			subtotal: 0,

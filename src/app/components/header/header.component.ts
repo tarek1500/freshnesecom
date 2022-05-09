@@ -2,9 +2,11 @@ import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core
 import { Subscription } from 'rxjs';
 
 import { CartService } from '../../services/cart/cart.service';
+import { WishlistService } from '../../services/wishlist/wishlist.service';
 import { ChatService } from '../../services/chat/chat.service';
 import { Category } from '../../interfaces/category.interface';
 import { Cart } from '../../interfaces/cart.interface';
+import { Wishlist } from '../../interfaces/wishlist.interface';
 
 @Component({
 	selector: 'app-header',
@@ -13,13 +15,15 @@ import { Cart } from '../../interfaces/cart.interface';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 	@Input('show-icons') showIcons: boolean = true;
-	cartSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	categories: Category[];
 	cart!: Cart;
 	isCartVisible: boolean = false;
+	wishlist!: Wishlist;
 
 	constructor(
 		private cartService: CartService,
+		private wishlistService: WishlistService,
 		private chatService: ChatService
 	) {
 		this.categories = [
@@ -51,13 +55,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		this.cartSubscription = this.cartService.cartSubject$.subscribe(cart => {
+		let subscription = this.cartService.cartSubject$.subscribe(cart => {
 			this.cart = cart;
 		});
+		this.subscriptions.push(subscription);
+
+		subscription = this.wishlistService.wishlistSubject$.subscribe(wishlist => {
+			this.wishlist = wishlist;
+		});
+		this.subscriptions.push(subscription);
 	}
 
 	ngOnDestroy(): void {
-		this.cartSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	@HostListener('document:click', ['$event'])

@@ -3,7 +3,9 @@ import { Subscription } from 'rxjs';
 
 import { LoaderService } from './services/loader/loader.service';
 import { CartService } from './services/cart/cart.service';
+import { WishlistService } from './services/wishlist/wishlist.service';
 import { Cart } from './interfaces/cart.interface';
+import { Wishlist } from './interfaces/wishlist.interface';
 
 @Component({
 	selector: 'app-root',
@@ -17,7 +19,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
 	constructor(
 		private loaderService: LoaderService,
-		private cartService: CartService
+		private cartService: CartService,
+		private wishlistService: WishlistService
 	) { }
 
 	ngOnInit(): void {
@@ -25,7 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
 			this.showLoader = showLoader;
 		});
 
-		// Fetch cart from server
+		// Fetch cart and wishlist from server
 		let cart: Cart = {
 			id: 1,
 			products: [
@@ -251,7 +254,229 @@ export class AppComponent implements OnInit, OnDestroy {
 			shipping: 0,
 			currency: 'USD'
 		};
+		let wishlist: Wishlist = {
+			id: 1,
+			products: [
+				{
+					id: 1,
+					name: 'Product Title',
+					slug: 'product-title',
+					description: 'Space for a small product description',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'USD',
+					sku: '',
+					freshness: 'New',
+					freshnessDescription: 'Extra fresh',
+					farm: 'Grocery Tarm Fields',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
+					},
+					delivery: 'Europe',
+					selectedQuantity: {
+						id:0,
+						quantity: 0,
+						pack: ''
+					},
+					shipping: 'Free Shipping',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/112/600/300']
+				},
+				{
+					id: 2,
+					name: 'Product Title',
+					slug: 'product-title',
+					description: 'Space for a small product description',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'USD',
+					sku: '',
+					freshness: 'New',
+					freshnessDescription: 'Extra fresh',
+					farm: 'Grocery Tarm Fields',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
+					},
+					delivery: 'Europe',
+					selectedQuantity: {
+						id:0,
+						quantity: 0,
+						pack: ''
+					},
+					shipping: 'Free Shipping',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/1080/600/300']
+				},
+				{
+					id: 3,
+					name: 'Product Title',
+					slug: 'product-title',
+					description: 'Space for a small product description',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 0,
+					currency: 'USD',
+					sku: '',
+					freshness: 'New',
+					freshnessDescription: 'Extra fresh',
+					farm: 'Grocery Tarm Fields',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
+					},
+					delivery: 'Europe',
+					selectedQuantity: {
+						id:0,
+						quantity: 0,
+						pack: ''
+					},
+					shipping: 'Free Shipping',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/102/900/300']
+				},
+				{
+					id: 4,
+					name: 'Product Title',
+					slug: 'product-title',
+					description: 'Space for a small product description',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'USD',
+					sku: '',
+					freshness: 'New',
+					freshnessDescription: 'Extra fresh',
+					farm: 'Grocery Tarm Fields',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
+					},
+					delivery: 'Europe',
+					selectedQuantity: {
+						id:0,
+						quantity: 0,
+						pack: ''
+					},
+					shipping: 'Free Shipping',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/107/600/300']
+				}
+			]
+		};
 		this.cartService.updateValue(cart);
+		this.wishlistService.updateValue(wishlist);
 	}
 
 	ngOnDestroy(): void {
