@@ -33,7 +33,7 @@
 		<div class="col-6 search">
 			<app-category-search-input-group [categories]="categories" (onSearch)="onCategorySearch($event)"></app-category-search-input-group>
 		</div>
-		<div class="col-3 icons">
+		<div class="col-3 icons" *ngIf="showIcons">
 			<div class="user">
 				<a routerLink="/login">
 					<img class="user-icon" src="../../../assets/icons/user.svg" alt="">

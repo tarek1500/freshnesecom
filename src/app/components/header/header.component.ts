@@ -1,4 +1,4 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { CartService } from '../../services/cart/cart.service';
@@ -12,6 +12,7 @@ import { Cart } from '../../interfaces/cart.interface';
 	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+	@Input('show-icons') showIcons: boolean = true;
 	cartSubscription!: Subscription;
 	categories: Category[];
 	cart!: Cart;
