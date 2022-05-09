@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
 const routes: Routes = [
 	{ path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
 
@@ -34,7 +32,7 @@ const routes: Routes = [
 	{ path: 'return-policy', loadChildren: () => import('./pages/return-policy/return-policy.module').then(m => m.ReturnPolicyModule) },
 	{ path: 'shipping-policy', loadChildren: () => import('./pages/shipping-policy/shipping-policy.module').then(m => m.ShippingPolicyModule) },
 
-	{ path: '**', component: PageNotFoundComponent }
+	{ path: '**', loadChildren: () => import('./pages/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) }
 ];
 
 @NgModule({
