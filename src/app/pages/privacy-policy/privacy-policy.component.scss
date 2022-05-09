@@ -156,6 +156,7 @@
 					::ng-deep {
 						p {
 							margin-bottom: 8px;
+							overflow-wrap: break-word;
 
 							&:last-child {
 								margin: 0px;

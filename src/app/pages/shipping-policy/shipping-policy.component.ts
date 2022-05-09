@@ -27,7 +27,7 @@ export class ShippingPolicyComponent implements OnInit {
 				},
 				{
 					name: 'What are my shipping & delivery options?',
-					content: '<h4>In-Store Pickup</h4><p>In-store pickup is available for all purchases. Pickups are available Monday - Sunday from 9:00 AM - 1:00 PM.</p><p>We offer various shipping options. In some cases a third-party supplier may be managing our inventory and will be responsible for shipping your products.</p><h4>Free Shipping</h4><p>We offer free Standard shipping on orders over $300 for premium subscribers.</p><h4>Expedited Shipping Fees</h4><p>We also offer expedited shipping at the following rates:</p><table class="table"><thead><tr><th></th><th>Standard (7 Days)</th><th>Same Day</th></tr></thead><tbody><tr><td>500 g</td><td>$3</td><td>$9</td></tr><tr><td>600 g</td><td>$4</td><td>$12</td></tr><tr><td>700 g</td><td>$5</td><td>$15</td></tr></tbody></table><p>If you select an expedited shipping option, we will follow up after you have placed the order with any additional shipping information.</p><p>All times and dates given for delivery of the products are given in good faith but are estimates only.</p><p>For EU and UK consumers: This does not affect your statutory rights. Unless specifically noted, estimated delivery times reflect the earliest available delivery, and &nbsp;deliveries will be made within 30 days after the day we accept your order. For more information please refer to our Terms.</p>'
+					content: '<h4>In-Store Pickup</h4><p>In-store pickup is available for all purchases. Pickups are available Monday - Sunday from 9:00 AM - 1:00 PM.</p><p>We offer various shipping options. In some cases a third-party supplier may be managing our inventory and will be responsible for shipping your products.</p><h4>Free Shipping</h4><p>We offer free Standard shipping on orders over $300 for premium subscribers.</p><h4>Expedited Shipping Fees</h4><p>We also offer expedited shipping at the following rates:</p><div class="table-responsive"><table class="table"><thead><tr><th></th><th>Standard (7 Days)</th><th>Same Day</th></tr></thead><tbody><tr><td>500 g</td><td>$3</td><td>$9</td></tr><tr><td>600 g</td><td>$4</td><td>$12</td></tr><tr><td>700 g</td><td>$5</td><td>$15</td></tr></tbody></table></div><p>If you select an expedited shipping option, we will follow up after you have placed the order with any additional shipping information.</p><p>All times and dates given for delivery of the products are given in good faith but are estimates only.</p><p>For EU and UK consumers: This does not affect your statutory rights. Unless specifically noted, estimated delivery times reflect the earliest available delivery, and &nbsp;deliveries will be made within 30 days after the day we accept your order. For more information please refer to our Terms.</p>'
 				},
 				{
 					name: 'Do you deliver internationally?',
@@ -45,7 +45,7 @@ export class ShippingPolicyComponent implements OnInit {
 					name: 'How can you contact us about this policy?',
 					content: '<p>If you have any further questions or comments, you may contact us by:</p><ul><li>Phone (Toll free): +420 336 775 664</li><li>Email: info@freshnesecom.com</li><li>Online contact form: <a href="https://freshnesecom-template.herokuapp.com/contact">https://freshnesecom-template.herokuapp.com/contact</a></li></ul>'
 				}
-			] // <p></p>
+			]
 		};
 	}
 
