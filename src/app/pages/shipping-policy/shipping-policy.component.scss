@@ -1,0 +1,141 @@
+.container {
+	padding: 0px;
+	background-color: #FFF;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+	.header {
+		padding: 8px 45px;
+
+		.heading {
+			margin-bottom: 12px;
+			color: #151515;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 32px;
+
+			@media (max-width: 767.98px) {
+				font-size: 24px;
+			}
+
+			@media (max-width: 575.98px) {
+				font-size: 20px;
+			}
+		}
+
+		.date {
+			color: #575757;
+			font-family: 'Poppins';
+			font-weight: 500;
+			font-size: 14px;
+		}
+
+		.caution {
+			color: #151515;
+			font-family: 'Poppins';
+			font-weight: 500;
+			font-size: 36px;
+		}
+	}
+
+	.content {
+		padding: 30px 45px;
+
+		.contents {
+			.section {
+				margin-bottom: 30px;
+
+				&:last-of-type {
+					margin: 0px;
+				}
+
+				.heading {
+					margin-bottom: 20px;
+					color: #151515;
+					font-family: 'OpenSans';
+					font-weight: 500;
+					font-size: 26px;
+				}
+
+				.table-content {
+					color: #151515;
+					font-family: 'OpenSans';
+					font-weight: 400;
+					font-size: 14px;
+
+					::ng-deep {
+						p {
+							margin-bottom: 8px;
+
+							&:last-child {
+								margin: 0px;
+							}
+
+							.bold {
+								font-weight: 700;
+							}
+						}
+
+						h4 {
+							font-weight: 500;
+							font-size: 20px;
+						}
+
+						.table {
+							width: 50%;
+							margin: 0px;
+							text-align: center;
+
+							@media (max-width: 991.98px) {
+								width: 75%;
+							}
+
+							@media (max-width: 767.98px) {
+								width: 100%;
+							}
+
+							thead {
+								tr {
+									color: #151515;
+									font-family: 'Poppins';
+									font-weight: 600;
+									font-size: 14px;
+
+									th {
+										width: 33.33%;
+										padding: 7px 0px;
+										border-color: #EBEBEB;
+									}
+								}
+							}
+
+							tbody {
+								border-top: none;
+
+								tr {
+									color: #575757;
+									font-family: 'OpenSans';
+									font-weight: 400;
+									font-size: 14px;
+
+									&:nth-of-type(odd) {
+										background-color: #FDFDFD;
+									}
+
+									td {
+										padding: 10px 0px;
+										border: none;
+									}
+								}
+							}
+						}
+
+						ul {
+							margin: 0px 0px 8px 36px;
+							padding-left: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
