@@ -29,6 +29,7 @@ const routes: Routes = [
 	{ path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
 	{ path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) },
 
+	{ path: 'privacy-policy', loadChildren: () => import('./pages/privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyModule) },
 	{ path: 'terms-and-conditions', loadChildren: () => import('./pages/terms-and-conditions/terms-and-conditions.module').then(m => m.TermsAndConditionsModule) },
 	{ path: 'return-policy', loadChildren: () => import('./pages/return-policy/return-policy.module').then(m => m.ReturnPolicyModule) },
 	{ path: 'shipping-policy', loadChildren: () => import('./pages/shipping-policy/shipping-policy.module').then(m => m.ShippingPolicyModule) },
