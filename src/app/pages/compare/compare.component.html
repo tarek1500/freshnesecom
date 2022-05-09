@@ -1,0 +1,101 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+	<div class="header">
+		<h2 class="heading">Compare</h2>
+		<div class="view">
+			<div class="item products">
+				<span class="count">{{ products.length }}</span>
+				<span class="text">Products</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th *ngFor="let product of products">
+							<a [routerLink]="['/products', product.slug]">{{ product.name }}</a>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="title">Image</td>
+						<td *ngFor="let product of products">
+							<img class="product-image" src="{{ product.images[0] }}" alt="" *ngIf="product.images.length > 0">
+						</td>
+					</tr>
+					<tr>
+						<td class="title">Description</td>
+						<td *ngFor="let product of products">{{ product.description }}</td>
+					</tr>
+					<tr>
+						<td class="title">Rating</td>
+						<td *ngFor="let product of products">
+							<div class="stars">
+								<ng-template #starTemplate let-fill="fill">
+									<span class="star" [class.full]="fill === 100">
+										<span class="half" [style.width.%]="fill">&starf;</span>&starf;
+									</span>
+								</ng-template>
+								<ngb-rating [(rate)]="product.rating" [starTemplate]="starTemplate" [readonly]="true" [max]="5"></ngb-rating>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="title">Price</td>
+						<td *ngFor="let product of products">{{ product.price }} {{ product.currency }}</td>
+					</tr>
+					<tr>
+						<td class="title">Old price</td>
+						<td *ngFor="let product of products"><span *ngIf="product.oldPrice != 0">{{ product.oldPrice }} {{ product.currency }}</span></td>
+					</tr>
+					<tr>
+						<td class="title">SKU</td>
+						<td *ngFor="let product of products">{{ product.sku }}</td>
+					</tr>
+					<tr>
+						<td class="title">Freshness</td>
+						<td *ngFor="let product of products">{{ product.freshness }}<span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span></td>
+					</tr>
+					<tr>
+						<td class="title">Farm</td>
+						<td *ngFor="let product of products">{{ product.farm }}</td>
+					</tr>
+					<tr>
+						<td class="title">Category</td>
+						<td *ngFor="let product of products">{{ product.category.name }}</td>
+					</tr>
+					<tr>
+						<td class="title">Delivery</td>
+						<td *ngFor="let product of products">{{ product.delivery }}</td>
+					</tr>
+					<tr>
+						<td class="title">Shipping</td>
+						<td *ngFor="let product of products">{{ product.shipping }}</td>
+					</tr>
+					<tr>
+						<td class="title">Delivery days</td>
+						<td *ngFor="let product of products">{{ product.deliveryDays }} day(s)</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="products">
+			<span class="count">{{ products.length }}</span>
+			<span class="text">Products</span>
+		</div>
+	</div>
+
+	<app-footer></app-footer>
+</div>

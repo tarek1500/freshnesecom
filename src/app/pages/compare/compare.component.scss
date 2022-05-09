@@ -1,0 +1,165 @@
+.container {
+	padding: 0px;
+	background-color: #FFF;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+	.header {
+		padding: 8px 45px;
+		display: flex;
+		justify-content: space-between;
+
+		.heading {
+			margin-bottom: 12px;
+			color: #151515;
+			font-family: 'Poppins';
+			font-weight: 600;
+			font-size: 32px;
+
+			@media (max-width: 767.98px) {
+				font-size: 24px;
+			}
+
+			@media (max-width: 575.98px) {
+				font-size: 20px;
+			}
+		}
+
+		.view {
+			margin: auto 0px;
+
+			@media (max-width: 991.98px) {
+				text-align: right;
+			}
+
+			.item {
+				margin-left: 24px;
+				display: inline-block;
+				color: #A9A9A9;
+				font-family: 'OpenSans';
+				font-weight: 400;
+				font-size: 12px;
+
+				@media (max-width: 991.98px) {
+					margin-bottom: 8px;
+				}
+
+				.count {
+					margin-right: 4px;
+					padding: 0px 8px;
+					border-radius: 12px;
+					background-color: #F4F8EC;
+					color: #6A983C;
+					font-family: 'Poppins';
+					font-weight: 600;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	.content {
+		padding: 30px 45px;
+
+		.table {
+			margin: 0px;
+
+			thead {
+				tr {
+					color: #151515;
+					font-family: 'Poppins';
+					font-weight: 600;
+					font-size: 12px;
+
+					th {
+						padding: 7px 0px;
+						border-color: #EBEBEB;
+						vertical-align: middle;
+
+						a {
+							color: #151515;
+						}
+					}
+				}
+			}
+
+			tbody {
+				border-top: none;
+
+				tr {
+					color: #575757;
+					font-family: 'OpenSans';
+					font-weight: 400;
+					font-size: 14px;
+
+					&:nth-of-type(odd) {
+						background-color: #FDFDFD;
+					}
+
+					td {
+						padding: 10px 0px;
+						border: none;
+						vertical-align: middle;
+
+						&.title {
+							color: #151515;
+							font-family: 'Poppins';
+							font-weight: 600;
+							font-size: 12px;
+						}
+
+						.product-image {
+							width: 100%;
+							height: auto;
+						}
+
+						.stars {
+							.star {
+								position: relative;
+								display: inline-block;
+								font-size: 20px;
+								color: #D1D1D1;
+
+								&.full {
+									color: #FDBC15;
+								}
+
+								.half {
+									position: absolute;
+									display: inline-block;
+									overflow: hidden;
+									color: #FDBC15;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		padding: 16px 45px;
+
+		.products {
+			text-align: right;
+
+			.count {
+				margin-right: 4px;
+				padding: 0px 8px;
+				border-radius: 12px;
+				background-color: #F4F8EC;
+				color: #6A983C;
+				font-family: 'Poppins';
+				font-weight: 600;
+				font-size: 12px;
+			}
+
+			.text {
+				color: #A9A9A9;
+				font-family: 'OpenSans';
+				font-weight: 400;
+				font-size: 12px;
+			}
+		}
+	}
+}
