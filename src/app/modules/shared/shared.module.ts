@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductTinyModule } from '../product-tiny/product-tiny.module';
@@ -22,6 +23,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 		CommonModule,
 		RouterModule,
 		ProductTinyModule,
+		NgScrollbarModule,
 		NgbModule
 	],
 	exports: [
