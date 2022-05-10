@@ -9,6 +9,11 @@
 					<app-message [message]="message" [right-position]="isOdd"></app-message>
 				</div>
 			</div>
+			<div class="typing" *ngIf="isTyping">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</div>
 		</div>
 		<div class="footer">
 			<app-text-input-group [placeholder]="'Message'" [button]="'Send'" (onApply)="onSent($event)"></app-text-input-group>

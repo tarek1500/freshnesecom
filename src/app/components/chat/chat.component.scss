@@ -57,6 +57,52 @@
 					}
 				}
 			}
+
+			.typing {
+				margin-top: 8px;
+				padding: 10px;
+				display: inline-block;
+				border-radius: 16px;
+				background-color: #EBEBEB;
+
+				@keyframes typing {
+					0% {
+						transform: translateY(0px);
+					}
+					25% {
+						transform: translateY(-5px);
+					}
+					50% {
+						transform: translateY(3px);
+					}
+					100% {
+						transform: translateY(0px);
+					}
+				}
+
+				.circle {
+					width: 8px;
+					height: 8px;
+					margin-right: 3px;
+					display: inline-block;
+					border-radius: 50%;
+					background-color: #6A983C;
+
+					&:nth-of-type(1) {
+						animation: typing 1s linear 0s infinite normal none;
+					}
+					&:nth-of-type(2) {
+						animation: typing 1s linear 0.125s infinite normal none;
+					}
+					&:nth-of-type(3) {
+						animation: typing 1s linear 0.25s infinite normal none;
+					}
+
+					&:last-of-type {
+						margin: 0px;
+					}
+				}
+			}
 		}
 
 		.footer {

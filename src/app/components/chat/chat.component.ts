@@ -12,6 +12,7 @@ import { Message } from '../../interfaces/message.interface';
 export class ChatComponent implements OnInit, OnDestroy {
 	chatSubscription!: Subscription;
 	isChatVisible: boolean = false;
+	isTyping: boolean = false;
 	messages!: Message[];
 
 	constructor(private chatService: ChatService) { }
