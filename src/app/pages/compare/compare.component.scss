@@ -107,16 +107,6 @@
 							font-size: 12px;
 						}
 
-						&.delete {
-							text-align: center;
-
-							.delete-icon {
-								width: 20px;
-								height: 20px;
-								cursor: pointer;
-							}
-						}
-
 						.product-image {
 							width: 100%;
 							height: auto;
@@ -139,6 +129,19 @@
 									overflow: hidden;
 									color: #FDBC15;
 								}
+							}
+						}
+
+						.remove {
+							vertical-align: initial;
+							color: #A9A9A9;
+							font-family: 'OpenSans';
+							font-weight: 400;
+							font-size: 12px;
+							cursor: pointer;
+
+							.close-icon {
+								margin-right: 8px;
 							}
 						}
 					}
