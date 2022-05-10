@@ -107,6 +107,16 @@
 							font-size: 12px;
 						}
 
+						&.delete {
+							text-align: center;
+
+							.delete-icon {
+								width: 20px;
+								height: 20px;
+								cursor: pointer;
+							}
+						}
+
 						.product-image {
 							width: 100%;
 							height: auto;

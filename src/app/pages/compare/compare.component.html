@@ -85,6 +85,12 @@
 						<td class="title">Delivery days</td>
 						<td *ngFor="let product of products">{{ product.deliveryDays }} day(s)</td>
 					</tr>
+					<tr>
+						<td class="title">Remove</td>
+						<td class="delete" *ngFor="let product of products">
+							<img class="delete-icon" src="../../../../../assets/icons/delete.svg" alt="">
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
