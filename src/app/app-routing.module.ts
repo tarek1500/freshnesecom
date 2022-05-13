@@ -24,6 +24,8 @@ const routes: Routes = [
 
 	{ path: 'recipes', loadChildren: () => import('./pages/recipes/recipes.module').then(m => m.RecipesModule) },
 
+	{ path: 'recipes/:slug', loadChildren: () => import('./pages/recipe-details/recipe-details.module').then(m => m.RecipeDetailsModule) },
+
 	{ path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) },
 	{ path: 'wishlist', loadChildren: () => import('./pages/wishlist/wishlist.module').then(m => m.WishlistModule) },
 	{ path: 'compare', loadChildren: () => import('./pages/compare/compare.module').then(m => m.CompareModule) },
