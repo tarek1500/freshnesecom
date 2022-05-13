@@ -104,10 +104,7 @@
 						border: 1.5px solid #D1D1D1;
 						cursor: pointer;
 
-						&[type=radio]:checked {
-							background-color: #151515;
-							border-color: #151515;
-						}
+						&[type=radio]:checked,
 						&[type=checkbox]:checked {
 							background-color: #6A983C;
 							border-color: #46760A;
