@@ -11,6 +11,10 @@
 			<a class="btn more-button" routerLink="/categories">More categories <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-black.svg" alt=""></a>
 		</div>
 		<div class="col-lg-9 banners">
+			<div class="header">
+				<h2 class="heading">Recipes</h2>
+				<a class="btn goto-button" routerLink="/recipes">Go to recipes <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></a>
+			</div>
 			<div class="row">
 				<div class="col-md-6 banner" *ngFor="let recipe of recipes">
 					<app-banner [recipe]="recipe"></app-banner>

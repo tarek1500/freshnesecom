@@ -1,0 +1,45 @@
+<div class="container">
+	<app-header></app-header>
+	<app-menu></app-menu>
+
+	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+	<div class="header">
+		<h2 class="heading">Recipes</h2>
+		<div class="view">
+			<div class="item">
+				<span class="count">{{ recipes.length }}</span>
+				<span class="text">Recipes</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="recipes">
+			<div class="row">
+				<div class="col-xl-3 col-lg-4 col-md-6 recipe" *ngFor="let recipe of recipes">
+					<app-banner [recipe]="recipe"></app-banner>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row footer">
+		<div class="col-3 pages">
+			<h3 class="title">Page:</h3>
+			<a class="page active" href="#">1</a>
+			<a class="page" href="#">2</a>
+			<a class="page" href="#">3</a>
+			<a class="page" href="#">4</a>
+		</div>
+		<div class="col-6 more">
+			<button class="btn more-button">Next page <img class="down-arrow-icon" src="../../../assets/icons/right-arrow-white.svg" alt=""></button>
+		</div>
+		<div class="col-3 recipes">
+			<span class="count">{{ recipes.length }}</span>
+			<span class="text">Recipes</span>
+		</div>
+	</div>
+
+	<app-footer></app-footer>
+</div>
