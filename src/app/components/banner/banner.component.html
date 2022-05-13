@@ -1,0 +1,8 @@
+<div class="container">
+	<img class="background-image" src="../../../../assets/images/banner-background.svg" alt="">
+	<div class="banner">
+		<h3 class="subheading">{{ recipe.date | date:'dd. MM. yyyy' }}</h3>
+		<h2 class="heading">{{ recipe.title }}</h2>
+	</div>
+	<a class="btn read-button" [routerLink]="['/recipes', recipe.slug]">Read recipes <img class="right-arrow-icon" src="../../../../assets/icons/right-arrow-green.svg" alt=""></a>
+</div>

@@ -8,6 +8,6 @@ export interface Order {
 	user: User,
 	items: OrderItem[],
 	address: Address,
-	total: number
+	total: number,
 	date: Date
 }

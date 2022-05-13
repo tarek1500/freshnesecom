@@ -18,7 +18,7 @@ export interface Product {
 	freshnessDescription: string,
 	farm: string,
 	availablePacks: ProductPack[],
-	category: Category;
+	category: Category,
 	delivery: string,
 	selectedQuantity: Quantity,
 	shipping: string,

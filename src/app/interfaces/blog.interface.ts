@@ -12,6 +12,6 @@ export interface Blog {
 	tags: Tag[],
 	content: string,
 	date: Date,
-	comments: Comment[]
+	comments: Comment[],
 	image: string
 }

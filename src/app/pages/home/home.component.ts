@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 import { Category } from '../../interfaces/category.interface';
-import { Banner } from '../../interfaces/banner.interface';
+import { Recipe } from '../../interfaces/recipe.interface';
 import { Product } from '../../interfaces/product.interface';
 import { Quote } from '../../interfaces/quote.interface';
 import { Blog } from '../../interfaces/blog.interface';
@@ -14,7 +14,7 @@ import { Blog } from '../../interfaces/blog.interface';
 })
 export class HomeComponent implements OnInit {
 	categories: Category[];
-	banners: Banner[];
+	recipes: Recipe[];
 	bestSelling: Category[];
 	bestSellingProducts: Product[];
 	bestFromFarmers: Category[];
@@ -83,16 +83,26 @@ export class HomeComponent implements OnInit {
 				subcategories: []
 			}
 		];
-		this.banners = [
+		this.recipes = [
 			{
 				id: 1,
-				title: 'Space for heading',
-				subtitle: 'Banner subfocus'
+				title: 'Greek milk pie – Galatopita',
+				slug: 'greek-milk-pie-galatopita',
+				ingredientGroups: [],
+				executionGroups: [],
+				date: new Date('2020-6-17'),
+				comments: [],
+				video: ''
 			},
 			{
-				id: 1,
+				id: 2,
 				title: 'Space for heading',
-				subtitle: 'Banner subfocus'
+				slug: 'space-for-heading',
+				ingredientGroups: [],
+				executionGroups: [],
+				date: new Date('2020-6-17'),
+				comments: [],
+				video: ''
 			}
 		];
 		this.bestSelling = [

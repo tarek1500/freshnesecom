@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Banner } from '../../../interfaces/banner.interface';
+import { Recipe } from '../../interfaces/recipe.interface';
 
 @Component({
 	selector: 'app-banner',
@@ -8,7 +8,7 @@ import { Banner } from '../../../interfaces/banner.interface';
 	styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
-	@Input() banner!: Banner;
+	@Input() recipe!: Recipe;
 
 	constructor() { }
 

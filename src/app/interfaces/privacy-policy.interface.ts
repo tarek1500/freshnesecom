@@ -3,6 +3,6 @@ import { PrivacyPolicyContent } from './privacy-policy-content.interface';
 export interface PrivacyPolicy {
 	date: Date,
 	intro: string,
-	summary: PrivacyPolicyContent;
+	summary: PrivacyPolicyContent,
 	tableOfContents: PrivacyPolicyContent[]
 }
