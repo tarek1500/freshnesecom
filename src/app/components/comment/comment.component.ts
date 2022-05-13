@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as moment from 'moment';
 
-import { Comment } from '../../../interfaces/comment.interface';
+import { Comment } from '../../interfaces/comment.interface';
 
 @Component({
 	selector: 'app-comment',
