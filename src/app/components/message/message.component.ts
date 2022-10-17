@@ -9,14 +9,11 @@ import { Message } from '../../interfaces/message.interface';
 	styleUrls: ['./message.component.scss']
 })
 export class MessageComponent implements OnInit {
+	moment: any = moment;
 	@Input() message!: Message;
 	@Input('right-position') rightPosition: boolean = false;
 
-	moment: any = moment;
-
 	constructor() { }
 
-	ngOnInit(): void {
-	}
-
+	ngOnInit(): void { }
 }

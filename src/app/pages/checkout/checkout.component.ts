@@ -50,5 +50,4 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 	}
 
 	onPromoApplied(event: string) { }
-
 }

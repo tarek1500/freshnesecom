@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./filter-input-group.component.scss']
 })
 export class FilterInputGroupComponent implements OnInit {
-
 	constructor() { }
 
-	ngOnInit(): void {
-	}
-
+	ngOnInit(): void { }
 }

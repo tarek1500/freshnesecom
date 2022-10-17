@@ -9,14 +9,10 @@ import { Review } from 'src/app/interfaces/review.interface';
 	styleUrls: ['./review.component.scss']
 })
 export class ReviewComponent implements OnInit {
+	moment: any = moment;
 	@Input() review!: Review;
 
-	moment: any = moment;
+	constructor() { }
 
-	constructor() {
-	}
-
-	ngOnInit(): void {
-	}
-
+	ngOnInit(): void { }
 }

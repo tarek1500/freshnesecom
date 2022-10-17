@@ -23,5 +23,4 @@ export class InfoComponent implements OnInit {
 			image: 'https://picsum.photos/id/237/150/150'
 		};
 	}
-
 }

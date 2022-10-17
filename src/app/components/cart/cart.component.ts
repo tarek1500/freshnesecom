@@ -13,8 +13,7 @@ export class CartComponent implements OnInit {
 
 	constructor() { }
 
-	ngOnInit(): void {
-	}
+	ngOnInit(): void { }
 
 	close(event: MouseEvent) {
 		this.onClose.emit();

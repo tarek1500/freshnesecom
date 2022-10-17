@@ -12,7 +12,5 @@ export class BlogMediumComponent implements OnInit {
 
 	constructor() { }
 
-	ngOnInit(): void {
-	}
-
+	ngOnInit(): void { }
 }

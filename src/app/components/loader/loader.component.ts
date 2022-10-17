@@ -6,7 +6,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 	styleUrls: ['./loader.component.scss']
 })
 export class LoaderComponent implements OnInit, OnDestroy {
-
 	constructor() { }
 
 	ngOnInit(): void {
@@ -16,5 +15,4 @@ export class LoaderComponent implements OnInit, OnDestroy {
 	ngOnDestroy(): void {
 		document.body.style.overflow = 'initial';
 	}
-
 }

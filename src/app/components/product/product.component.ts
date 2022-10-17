@@ -20,5 +20,4 @@ export class ProductComponent implements OnInit {
 			this.discount = Math.round((this.product.oldPrice - this.product.price) / this.product.oldPrice * 100);
 		}
 	}
-
 }

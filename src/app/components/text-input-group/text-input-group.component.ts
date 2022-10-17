@@ -13,8 +13,7 @@ export class TextInputGroupComponent implements OnInit, AfterViewInit {
 
 	constructor() { }
 
-	ngOnInit(): void {
-	}
+	ngOnInit(): void { }
 
 	ngAfterViewInit() {
 		this.setInputGroupWidth(this.input, 0);
@@ -48,5 +47,4 @@ export class TextInputGroupComponent implements OnInit, AfterViewInit {
 	onButtonClicked(event: MouseEvent) {
 		this.onApply.emit(this.input.nativeElement.value);
 	}
-
 }

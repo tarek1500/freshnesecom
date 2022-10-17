@@ -237,5 +237,4 @@ export class CompareComponent implements OnInit {
 			}
 		];
 	}
-
 }

@@ -48,5 +48,4 @@ export class ReturnPolicyComponent implements OnInit {
 			]
 		};
 	}
-
 }

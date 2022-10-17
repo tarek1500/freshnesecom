@@ -9,14 +9,10 @@ import { Comment } from '../../interfaces/comment.interface';
 	styleUrls: ['./comment.component.scss']
 })
 export class CommentComponent implements OnInit {
+	moment: any = moment;
 	@Input() comment!: Comment;
 
-	moment: any = moment;
+	constructor() { }
 
-	constructor() {
-	}
-
-	ngOnInit(): void {
-	}
-
+	ngOnInit(): void { }
 }

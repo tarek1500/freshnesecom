@@ -40,5 +40,4 @@ export class StockInputGroupComponent implements OnInit {
 			this.quantity.quantity = this.selectedPack.stock;
 		}
 	}
-
 }

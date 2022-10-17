@@ -285,5 +285,4 @@ export class ProductDetailsComponent implements OnInit {
 
 		info.scrollIntoView();
 	}
-
 }

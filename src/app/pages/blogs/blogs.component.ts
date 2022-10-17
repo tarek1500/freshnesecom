@@ -411,5 +411,4 @@ export class BlogsComponent implements OnInit, OnDestroy {
 	}
 
 	onSubscribed(event: string) { }
-
 }

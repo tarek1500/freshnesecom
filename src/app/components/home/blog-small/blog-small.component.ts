@@ -12,7 +12,5 @@ export class BlogSmallComponent implements OnInit {
 
 	constructor() { }
 
-	ngOnInit(): void {
-	}
-
+	ngOnInit(): void { }
 }

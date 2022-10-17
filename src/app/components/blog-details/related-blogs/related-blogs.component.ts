@@ -12,7 +12,5 @@ export class RelatedBlogsComponent implements OnInit {
 
 	constructor() { }
 
-	ngOnInit(): void {
-	}
-
+	ngOnInit(): void { }
 }

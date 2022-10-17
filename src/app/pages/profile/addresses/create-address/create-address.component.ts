@@ -64,5 +64,4 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 		this.address.latitude = $event.coords.lat;
 		this.address.longitude = $event.coords.lng;
 	}
-
 }

@@ -563,5 +563,4 @@ export class ProductsComponent implements OnInit, OnDestroy {
 	ngOnDestroy(): void {
 		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
-
 }

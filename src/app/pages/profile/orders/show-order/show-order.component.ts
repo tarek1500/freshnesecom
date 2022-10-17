@@ -19,7 +19,7 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 		this.routeSubscription = this.route.params.subscribe(params => {
 			let id = params['order'];
 
-			// Fetch address from server
+			// Fetch order from server
 			this.order = {
 				id: id,
 				number: 'ABC-01',
@@ -140,5 +140,4 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 	ngOnDestroy(): void {
 		this.routeSubscription.unsubscribe();
 	}
-
 }

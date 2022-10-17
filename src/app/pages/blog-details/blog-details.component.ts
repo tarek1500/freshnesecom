@@ -221,5 +221,4 @@ export class BlogDetailsComponent implements OnInit {
 		// Fetch blog form server
 		this.breadcrumb[2].text = this.blog.title;
 	}
-
 }

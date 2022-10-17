@@ -11,7 +11,6 @@ import { Tag } from '../../interfaces/tag.interface';
 export class FooterComponent implements OnInit {
 	@Input('show-links') showLinks: boolean = true;
 	@Input('show-tags') showTags: boolean = true;
-
 	tags: Tag[];
 	year: number;
 
@@ -116,11 +115,9 @@ export class FooterComponent implements OnInit {
 		this.year = new Date().getFullYear();
 	}
 
-	ngOnInit(): void {
-	}
+	ngOnInit(): void { }
 
 	openChatWindow(event: MouseEvent) {
 		this.chatService.updateValue(true);
 	}
-
 }

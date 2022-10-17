@@ -44,5 +44,4 @@ export class ListAddressesComponent implements OnInit {
 
 		this.modalService.open(content, { size: 'lg', centered: true });
 	}
-
 }

@@ -42,5 +42,4 @@ export class CategorySearchInputGroupComponent implements OnInit {
 			category: this.selectedCategory
 		});
 	}
-
 }

@@ -105,5 +105,4 @@ export class PrivacyPolicyComponent implements OnInit {
 
 		contents.querySelector('#' + targetId)?.scrollIntoView();
 	}
-
 }

@@ -174,5 +174,4 @@ export class TermsAndConditionsComponent implements OnInit {
 
 		contents.querySelector('#' + targetId)?.scrollIntoView();
 	}
-
 }
