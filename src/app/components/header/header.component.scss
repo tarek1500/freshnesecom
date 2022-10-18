@@ -171,4 +171,71 @@
 			}
 		}
 	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.info {
+				.chat,
+				.phone,
+				.email {
+					margin: 0px 0px 0px 33px;
+
+					@media (max-width: 991.98px) {
+						margin-left: 0px;
+					}
+				}
+			}
+
+			.links {
+				text-align: left;
+
+				.link {
+					margin: 0px 38px 0px 0px;
+
+					@media (max-width: 991.98px) {
+						margin-right: 0px;
+					}
+				}
+			}
+		}
+
+		.content {
+			.cart {
+				left: 50px;
+				right: initial;
+
+				@media (max-width: 575.98px) {
+					left: initial;
+				}
+			}
+
+			.icons {
+				text-align: left;
+
+				.user,
+				.wishlist,
+				.basket {
+					margin: 4px 40px 4px 00px;
+
+					@media (max-width: 767.98px) {
+						margin-right: 16px;
+					}
+
+					@media (max-width: 575.98px) {
+						margin-right: 8px;
+					}
+				}
+
+				.wishlist,
+				.basket {
+					.icon-badge {
+						left: initial;
+						right: -6px;
+					}
+				}
+			}
+		}
+	}
 }

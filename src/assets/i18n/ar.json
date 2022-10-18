@@ -1,0 +1,12 @@
+{
+	"languageName": "العربية",
+	"languageDirection": "rtl",
+	"translate": {
+		"header": {
+			"chatWithUs": "تحدث معنا",
+			"blog": "مدونة",
+			"compare": "مقاؤنة",
+			"about": "حول"
+		}
+	}
+}

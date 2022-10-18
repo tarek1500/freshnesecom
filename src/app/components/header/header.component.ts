@@ -1,4 +1,5 @@
 import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
 import { CartService } from '../../services/cart/cart.service';
@@ -15,6 +16,7 @@ import { Wishlist } from '../../interfaces/wishlist.interface';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 	@Input('show-icons') showIcons: boolean = true;
+	rtl: boolean = false;
 	subscriptions: Subscription[] = [];
 	categories: Category[];
 	cart!: Cart;
@@ -22,6 +24,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	wishlist!: Wishlist;
 
 	constructor(
+		private translateService: TranslateService,
 		private cartService: CartService,
 		private wishlistService: WishlistService,
 		private chatService: ChatService
@@ -55,7 +58,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		let subscription = this.cartService.cartSubject$.subscribe(cart => {
+		let subscription = this.translateService.onLangChange.subscribe(event => {
+			this.rtl = event.translations.languageDirection === 'rtl';
+		});
+		this.subscriptions.push(subscription);
+
+		subscription = this.cartService.cartSubject$.subscribe(cart => {
 			this.cart = cart;
 		});
 		this.subscriptions.push(subscription);

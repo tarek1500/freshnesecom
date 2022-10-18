@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -21,6 +22,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 	],
 	imports: [
 		CommonModule,
+		TranslateModule,
 		RouterModule,
 		ProductTinyModule,
 		NgScrollbarModule,

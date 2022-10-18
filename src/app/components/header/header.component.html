@@ -1,21 +1,21 @@
-<div class="container">
+<div [class]="{ 'container': true, 'rtl': rtl }">
 	<div class="header">
 		<div class="info">
 			<div class="chat">
-				<a (click)="openChatWindow($event)">Chat with us</a>
+				<a (click)="openChatWindow($event)">{{ 'translate.header.chatWithUs' | translate }}</a>
 			</div>
 			<div class="phone">+420 336 775 664</div>
 			<div class="email">info@freshnesecom.com</div>
 		</div>
 		<div class="links">
 			<div class="link">
-				<a routerLink="/blogs">Blog</a>
+				<a routerLink="/blogs">{{ 'translate.header.blog' | translate }}</a>
 			</div>
 			<div class="link">
-				<a routerLink="/compare">Compare</a>
+				<a routerLink="/compare">{{ 'translate.header.compare' | translate }}</a>
 			</div>
 			<div class="link">
-				<a routerLink="/about">About Us</a>
+				<a routerLink="/about">{{ 'translate.header.about' | translate }}</a>
 			</div>
 		</div>
 	</div>

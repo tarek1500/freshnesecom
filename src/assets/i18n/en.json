@@ -1,0 +1,12 @@
+{
+	"languageName": "English",
+	"languageDirection": "ltr",
+	"translate": {
+		"header": {
+			"chatWithUs": "Chat with us",
+			"blog": "Blog",
+			"compare": "Compare",
+			"about": "About us"
+		}
+	}
+}
