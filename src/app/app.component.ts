@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
 import { LoaderService } from './services/loader/loader.service';
@@ -18,12 +19,16 @@ export class AppComponent implements OnInit, OnDestroy {
 	showLoader: boolean = false;
 
 	constructor(
+		private translateService: TranslateService,
 		private loaderService: LoaderService,
 		private cartService: CartService,
 		private wishlistService: WishlistService
 	) { }
 
 	ngOnInit(): void {
+		this.translateService.setDefaultLang('en');
+		this.translateService.use('en');
+
 		this.loaderSubscription = this.loaderService.loaderSubject$.subscribe(showLoader => {
 			this.showLoader = showLoader;
 		});
@@ -75,7 +80,7 @@ export class AppComponent implements OnInit, OnDestroy {
 					},
 					delivery: '',
 					selectedQuantity: {
-						id:1,
+						id: 1,
 						quantity: 1,
 						pack: 'pcs'
 					},
@@ -300,7 +305,7 @@ export class AppComponent implements OnInit, OnDestroy {
 					},
 					delivery: 'Europe',
 					selectedQuantity: {
-						id:0,
+						id: 0,
 						quantity: 0,
 						pack: ''
 					},
@@ -354,7 +359,7 @@ export class AppComponent implements OnInit, OnDestroy {
 					},
 					delivery: 'Europe',
 					selectedQuantity: {
-						id:0,
+						id: 0,
 						quantity: 0,
 						pack: ''
 					},
@@ -408,7 +413,7 @@ export class AppComponent implements OnInit, OnDestroy {
 					},
 					delivery: 'Europe',
 					selectedQuantity: {
-						id:0,
+						id: 0,
 						quantity: 0,
 						pack: ''
 					},
@@ -462,7 +467,7 @@ export class AppComponent implements OnInit, OnDestroy {
 					},
 					delivery: 'Europe',
 					selectedQuantity: {
-						id:0,
+						id: 0,
 						quantity: 0,
 						pack: ''
 					},
