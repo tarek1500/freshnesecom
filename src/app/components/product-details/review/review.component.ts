@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as moment from 'moment';
 
-import { Review } from 'src/app/interfaces/review.interface';
+import { Review } from '../../../interfaces/review.interface';
 
 @Component({
 	selector: 'app-review',

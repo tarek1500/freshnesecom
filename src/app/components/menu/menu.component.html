@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" [ngClass]="{ 'rtl': rtl }">
 	<div class="container-fluid">
 		<button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
 			<span class="navbar-toggler-icon"></span>
@@ -8,7 +8,7 @@
 				<li class="nav-item" *ngFor="let category of categories">
 					<div ngbDropdown class="d-inline-block">
 						<button ngbDropdownToggle class="btn dropdown-button">{{ category.name }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
-						<div ngbDropdownMenu class="dropdown">
+						<div ngbDropdownMenu class="dropdown-menu">
 							<a ngbDropdownItem class="dropdown-item" [routerLink]="['/categories', subcategory.slug, 'products']" *ngFor="let subcategory of category.subcategories">{{ subcategory.name }}</a>
 						</div>
 					</div>

@@ -1,4 +1,4 @@
-<div [class]="{ 'container': true, 'rtl': rtl }">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div class="header">
 		<div class="info">
 			<div class="chat">
@@ -23,8 +23,7 @@
 	<div class="horizontal-splitter"></div>
 
 	<div class="row content">
-		<!-- Adding cart class to class binding makes the cart appears then disappears -->
-		<div class="cart" [class]="{ 'visible': isCartVisible }">
+		<div class="cart" [ngClass]="{ 'visible': isCartVisible }">
 			<ng-scrollbar style="height: 780px;">
 				<app-cart [cart]="cart" (onClose)="onCartClosed()"></app-cart>
 			</ng-scrollbar>
