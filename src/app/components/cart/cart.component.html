@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div class="header">
-		<h2 class="heading">Shopping cart</h2>
-		<button class="btn close-button" (click)="close($event)">Close <img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""></button>
+		<h2 class="heading">{{ 'translate.components.cart.shoppingCart' | translate }}</h2>
+		<button class="btn close-button" (click)="close($event)">{{ 'translate.components.cart.close' | translate }} <img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""></button>
 	</div>
 
 	<div class="products">
@@ -11,12 +11,12 @@
 	</div>
 
 	<div class="subtotal">
-		<h3 class="heading">Subtotal</h3>
+		<h3 class="heading">{{ 'translate.components.cart.subtotal' | translate }}</h3>
 		<div class="price">{{ cart.subtotal }} {{ cart.currency }}</div>
 	</div>
 
 	<div class="footer">
-		<button class="btn continue-button" (click)="close($event)">Continue shopping</button>
-		<a class="btn checkout-button" routerLink="/checkout">Go to Checkout</a>
+		<button class="btn continue-button" (click)="close($event)">{{ 'translate.components.cart.continue' | translate }}</button>
+		<a class="btn checkout-button" routerLink="/checkout">{{ 'translate.components.cart.checkout' | translate }}</a>
 	</div>
 </div>

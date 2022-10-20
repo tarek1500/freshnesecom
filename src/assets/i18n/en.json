@@ -3,6 +3,13 @@
 	"direction": "ltr",
 	"translate": {
 		"components": {
+			"cart": {
+				"shoppingCart": "Shopping cart",
+				"close": "Close",
+				"subtotal": "Subtotal",
+				"continue": "Continue shopping",
+				"checkout": "Go to checkout"
+			},
 			"categorySearchInputGroup": {
 				"placeholder": "Search products, categories ..."
 			},

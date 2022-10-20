@@ -24,7 +24,7 @@
 
 	<div class="row content">
 		<div class="cart" [ngClass]="{ 'visible': isCartVisible }">
-			<ng-scrollbar style="height: 780px;">
+			<ng-scrollbar style="height: 780px;" [position]="rtl ? 'invertY' : 'native'">
 				<app-cart [cart]="cart" (onClose)="onCartClosed()"></app-cart>
 			</ng-scrollbar>
 		</div>

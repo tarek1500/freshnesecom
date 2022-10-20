@@ -3,6 +3,13 @@
 	"direction": "rtl",
 	"translate": {
 		"components": {
+			"cart": {
+				"shoppingCart": "عربة التسوق",
+				"close": "أغلق",
+				"subtotal": "المجموع الفرعي",
+				"continue": "مواصلة التسوق",
+				"checkout": "الذهاب إلى الدفع"
+			},
 			"categorySearchInputGroup": {
 				"placeholder": "البحث عن المنتجات، التصنيفات ..."
 			},

@@ -84,4 +84,37 @@
 			font-size: 15px;
 		}
 	}
+
+	&.rtl {
+		padding: 24px 16px 16px 24px;
+		direction: rtl;
+
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+
+			.close-button {
+				font-family: 'Cairo';
+
+				.close-icon {
+					margin: 0px 4px 0px 0px;
+				}
+			}
+		}
+
+		.subtotal {
+			.heading,
+			.price {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.footer {
+			.continue-button,
+			.checkout-button {
+				font-family: 'NotoSansArabic';
+			}
+		}
+	}
 }
