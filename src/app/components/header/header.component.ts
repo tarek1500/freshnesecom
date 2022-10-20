@@ -59,7 +59,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
 	ngOnInit(): void {
 		let subscription = this.translateService.onLangChange.subscribe(event => {
-			this.rtl = event.translations.languageDirection === 'rtl';
+			this.rtl = event.translations.direction === 'rtl';
 		});
 		this.subscriptions.push(subscription);
 

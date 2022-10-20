@@ -1,12 +1,14 @@
 {
 	"languageName": "العربية",
-	"languageDirection": "rtl",
+	"direction": "rtl",
 	"translate": {
-		"header": {
-			"chatWithUs": "تحدث معنا",
-			"blog": "مدونة",
-			"compare": "مقاؤنة",
-			"about": "حول"
+		"components": {
+			"header": {
+				"chatWithUs": "تحدث معنا",
+				"blog": "مدونة",
+				"compare": "مقارنة",
+				"about": "حول"
+			}
 		}
 	}
 }
