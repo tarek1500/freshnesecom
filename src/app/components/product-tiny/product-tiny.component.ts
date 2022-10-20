@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 import { Product } from '../../interfaces/product.interface';
 
@@ -7,10 +9,20 @@ import { Product } from '../../interfaces/product.interface';
 	templateUrl: './product-tiny.component.html',
 	styleUrls: ['./product-tiny.component.scss']
 })
-export class ProductTinyComponent implements OnInit {
+export class ProductTinyComponent implements OnInit, OnDestroy {
 	@Input() product!: Product;
+	translateSubscription!: Subscription;
+	rtl: boolean = false;
 
-	constructor() { }
+	constructor(private translateService: TranslateService) { }
 
-	ngOnInit(): void { }
+	ngOnInit(): void {
+		this.translateSubscription = this.translateService.onLangChange.subscribe(event => {
+			this.rtl = event.translations.direction === 'rtl';
+		});
+	}
+
+	ngOnDestroy(): void {
+		this.translateSubscription.unsubscribe();
+	}
 }

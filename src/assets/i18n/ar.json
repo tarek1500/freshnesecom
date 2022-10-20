@@ -44,6 +44,13 @@
 				"blog": "مدونة",
 				"compare": "مقارنة",
 				"about": "معلومات عنا"
+			},
+			"productTiny": {
+				"wishlist": "تمني",
+				"compare": "مقارنة",
+				"remove": "إزالة",
+				"farm": "المزرعة",
+				"freshness": "النضارة"
 			}
 		}
 	}

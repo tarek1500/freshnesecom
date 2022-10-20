@@ -173,4 +173,78 @@
 			}
 		}
 	}
+
+	&.rtl {
+		.row {
+			.options {
+				padding: 0px 0px 0px 8px;
+
+				@media (max-width: 575.98px) {
+					padding: 0px;
+				}
+
+				.wishlist,
+				.compare,
+				.remove {
+					font-family: 'Cairo';
+				}
+
+				.wishlist {
+					.heart-icon {
+						margin: 0px 0px 0px 6px;
+						transform: scaleX(-1);
+					}
+				}
+
+				.compare {
+					.compare-icon {
+						margin: 0px 0px 0px 6px;
+						transform: scaleX(-1);
+					}
+				}
+
+				.remove {
+					.close-icon {
+						margin-right: 2px;
+						margin-left: 8px;
+						transform: scaleX(-1);
+					}
+				}
+			}
+
+			.info {
+				padding: 0px 8px 0px 0px;
+
+				.heading {
+					font-family: 'NotoSansArabic';
+				}
+
+				.details {
+					.details-row {
+						.text,
+						.value {
+							font-family: 'Cairo';
+						}
+
+						.text {
+							padding: 0px 0px 0px 12px;
+						}
+
+						.value {
+							padding: 0px 12px 0px 0px;
+						}
+					}
+				}
+
+				.price {
+					.price-column {
+						.current-price,
+						.old-price {
+							font-family: 'NotoSansArabic';
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -13,6 +14,7 @@ import { StockInputGroupModule } from '../stock-input-group/stock-input-group.mo
 	],
 	imports: [
 		CommonModule,
+		TranslateModule,
 		RouterModule,
 		FormsModule,
 		NgbModule,

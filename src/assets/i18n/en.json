@@ -44,6 +44,13 @@
 				"blog": "Blog",
 				"compare": "Compare",
 				"about": "About us"
+			},
+			"productTiny": {
+				"wishlist": "Wishlist",
+				"compare": "Compare",
+				"remove": "Remove",
+				"farm": "Farm",
+				"freshness": "Freshness"
 			}
 		}
 	}

@@ -1,22 +1,22 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div class="row">
 		<div class="col-lg-3 col-md-4 col-sm-4 col-12 options">
 			<div class="cover-image">
 				<img src="{{ product.images[0] }}" alt="" *ngIf="product.images.length > 0">
 			</div>
-			<div class="wishlist"><img class="heart-icon" src="../../../assets/icons/heart-orange.svg" alt=""> Wishlist</div>
-			<div class="compare"><img class="compare-icon" src="../../../assets/icons/compare.svg" alt=""> Compare</div>
-			<div class="remove"><img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""> Remove</div>
+			<div class="wishlist"><img class="heart-icon" src="../../../assets/icons/heart-orange.svg" alt=""> {{ 'translate.components.productTiny.wishlist' | translate }}</div>
+			<div class="compare"><img class="compare-icon" src="../../../assets/icons/compare.svg" alt=""> {{ 'translate.components.productTiny.compare' | translate }}</div>
+			<div class="remove"><img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""> {{ 'translate.components.productTiny.remove' | translate }}</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-8 col-12 info">
 			<a class="heading" [routerLink]="['/products', product.slug]">{{ product.name }}</a>
 			<div class="details">
 				<div class="row details-row">
-					<div class="col-5 text">Farm:</div>
+					<div class="col-5 text">{{ 'translate.components.productTiny.farm' | translate }}:</div>
 					<div class="col-7 value">{{ product.farm }}</div>
 				</div>
 				<div class="row details-row">
-					<div class="col-5 text">Freshness:</div>
+					<div class="col-5 text">{{ 'translate.components.productTiny.freshness' | translate }}:</div>
 					<div class="col-7 value">{{ product.freshness }}</div>
 				</div>
 			</div>
