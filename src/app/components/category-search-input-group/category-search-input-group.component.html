@@ -1,4 +1,4 @@
-<div class="input-group">
+<div [class]="{ 'input-group': true, 'rtl': rtl }">
 	<div class="input-group-prepend">
 		<div ngbDropdown class="d-inline-block">
 			<button ngbDropdownToggle class="btn dropdown-button">{{ selectedCategory.name }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
@@ -8,6 +8,6 @@
 		</div>
 	</div>
 	<div class="vertical-splitter"></div>
-	<input class="form-control" type="text" placeholder="Search Products, categories ..." #searchInput (keypress)="onSearchKeyPressed($event)">
+	<input class="form-control" type="text" placeholder="{{ 'translate.components.categorySearchInputGroup.placeholder' | translate }}" #searchInput (keypress)="onSearchKeyPressed($event)">
 	<img class="search-icon" src="../../../assets/icons/search.svg" alt="" (click)="onSearchIconClicked($event)">
 </div>

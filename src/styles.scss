@@ -45,6 +45,41 @@
 	src: url('./assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
 	font-weight: 700;
 }
+@font-face {
+	font-family: 'Cairo';
+	src: url('./assets/fonts/Cairo/Cairo-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Cairo';
+	src: url('./assets/fonts/Cairo/Cairo-Medium.ttf') format('truetype');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Cairo';
+	src: url('./assets/fonts/Cairo/Cairo-Bold.ttf') format('truetype');
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'NotoSansArabic';
+	src: url('./assets/fonts/NotoSansArabic/NotoSansArabic-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'NotoSansArabic';
+	src: url('./assets/fonts/NotoSansArabic/NotoSansArabic-Medium.ttf') format('truetype');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'NotoSansArabic';
+	src: url('./assets/fonts/NotoSansArabic/NotoSansArabic-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'NotoSansArabic';
+	src: url('./assets/fonts/NotoSansArabic/NotoSansArabic-Bold.ttf') format('truetype');
+	font-weight: 700;
+}
 
 body {
 	background-color: #F9F9F9;

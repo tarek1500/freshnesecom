@@ -8,6 +8,9 @@
 				"blog": "Blog",
 				"compare": "Compare",
 				"about": "About us"
+			},
+			"categorySearchInputGroup": {
+				"placeholder": "Search products, categories ..."
 			}
 		}
 	}

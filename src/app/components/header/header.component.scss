@@ -176,6 +176,8 @@
 		direction: rtl;
 
 		.header {
+			font-family: 'Cairo';
+
 			.info {
 				.chat,
 				.phone,
@@ -185,6 +187,15 @@
 					@media (max-width: 991.98px) {
 						margin-left: 0px;
 					}
+				}
+
+				.phone,
+				.email {
+					font-family: 'OpenSans';
+				}
+
+				.phone {
+					direction: ltr;
 				}
 			}
 
@@ -233,6 +244,7 @@
 					.icon-badge {
 						left: initial;
 						right: -6px;
+						font-family: 'NotoSansArabic';
 					}
 				}
 			}

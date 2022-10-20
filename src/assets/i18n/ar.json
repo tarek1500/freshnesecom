@@ -8,6 +8,9 @@
 				"blog": "مدونة",
 				"compare": "مقارنة",
 				"about": "حول"
+			},
+			"categorySearchInputGroup": {
+				"placeholder": "البحث عن المنتجات، التصنيفات ..."
 			}
 		}
 	}
