@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 import { ProductPack } from '../../interfaces/product-pack.interface';
 import { Quantity } from '../../interfaces/quantity.interface';
@@ -8,17 +10,23 @@ import { Quantity } from '../../interfaces/quantity.interface';
 	templateUrl: './stock-input-group.component.html',
 	styleUrls: ['./stock-input-group.component.scss']
 })
-export class StockInputGroupComponent implements OnInit {
+export class StockInputGroupComponent implements OnInit, OnDestroy {
 	@Input() availablePacks!: ProductPack[];
 	@Input() large: boolean = false;
 	@Input() quantity!: Quantity;
 	@Input() readonly: boolean = false;
 	@Output() quantityChange: EventEmitter<Quantity> = new EventEmitter<Quantity>();
+	translateSubscription!: Subscription;
+	rtl: boolean = false;
 	selectedPack!: ProductPack;
 
-	constructor() { }
+	constructor(private translateService: TranslateService) { }
 
 	ngOnInit(): void {
+		this.translateSubscription = this.translateService.onLangChange.subscribe(event => {
+			this.rtl = event.translations.direction === 'rtl';
+		});
+
 		if (this.availablePacks.length > 1) {
 			this.selectedPack = this.availablePacks[0];
 
@@ -30,6 +38,10 @@ export class StockInputGroupComponent implements OnInit {
 				};
 			}
 		}
+	}
+
+	ngOnDestroy(): void {
+		this.translateSubscription.unsubscribe();
 	}
 
 	onPackSelected(pack: ProductPack) {

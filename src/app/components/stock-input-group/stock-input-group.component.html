@@ -1,4 +1,4 @@
-<div [class]="{ 'input-group': true, 'large': large }">
+<div class="input-group" [ngClass]="{ 'large': large, 'rtl': rtl }">
 	<div class="input-group-prepend">
 		<input class="form-control" type="text" [placeholder]="'1' + selectedPack.pack" [(ngModel)]="quantity.quantity" [disabled]="readonly">
 	</div>

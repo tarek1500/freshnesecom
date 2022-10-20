@@ -67,4 +67,32 @@
 			padding: 15px 16px;
 		}
 	}
+
+	&.rtl {
+		input {
+			border-radius: 0px 12px 12px 0px;
+			border: 1px solid #D1D1D1;
+			border-left: none;
+			font-family: 'Cairo';
+		}
+
+		.dropdown-button {
+			border-radius: 12px 0px 0px 12px;
+			border: 1px solid #D1D1D1;
+			border-right: none;
+			font-family: 'NotoSansArabic';
+
+			.down-arrow-icon {
+				margin: 0px 4px 0px 0px;
+			}
+		}
+
+		.dropdown-menu {
+			text-align: right;
+
+			.dropdown-item {
+				font-family: 'NotoSansArabic';
+			}
+		}
+	}
 }
