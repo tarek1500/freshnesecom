@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 import { ChatService } from '../../services/chat/chat.service';
 import { Tag } from '../../interfaces/tag.interface';
@@ -8,13 +10,18 @@ import { Tag } from '../../interfaces/tag.interface';
 	templateUrl: './footer.component.html',
 	styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent implements OnInit, OnDestroy {
 	@Input('show-links') showLinks: boolean = true;
 	@Input('show-tags') showTags: boolean = true;
+	translateSubscription!: Subscription;
+	rtl: boolean = false;
 	tags: Tag[];
 	year: number;
 
-	constructor(private chatService: ChatService) {
+	constructor(
+		private translateService: TranslateService,
+		private chatService: ChatService
+	) {
 		this.tags = [
 			{
 				id: 1,
@@ -115,7 +122,105 @@ export class FooterComponent implements OnInit {
 		this.year = new Date().getFullYear();
 	}
 
-	ngOnInit(): void { }
+	ngOnInit(): void {
+		this.translateSubscription = this.translateService.onLangChange.subscribe(event => {
+			this.rtl = event.translations.direction === 'rtl';
+
+			if (this.rtl) {
+				this.tags = [
+					{
+						id: 1,
+						name: 'فول',
+						slug: 'beans'
+					},
+					{
+						id: 2,
+						name: 'جزر',
+						slug: 'carrots'
+					},
+					{
+						id: 3,
+						name: 'تفاح',
+						slug: 'apples'
+					},
+					{
+						id: 4,
+						name: 'ثوم',
+						slug: 'garlic'
+					},
+					{
+						id: 5,
+						name: 'فطر',
+						slug: 'mushrooms'
+					},
+					{
+						id: 6,
+						name: 'طماطم',
+						slug: 'tomatoes'
+					},
+					{
+						id: 7,
+						name: 'فلفل حار',
+						slug: 'chilli-peppers'
+					},
+					{
+						id: 8,
+						name: 'بروكلي',
+						slug: 'broccoli'
+					},
+					{
+						id: 9,
+						name: 'بطيخ',
+						slug: 'watermelons'
+					},
+					{
+						id: 10,
+						name: 'برتقال',
+						slug: 'oranges'
+					},
+					{
+						id: 11,
+						name: 'موز',
+						slug: 'bananas'
+					},
+					{
+						id: 12,
+						name: 'عنب',
+						slug: 'grapes'
+					},
+					{
+						id: 13,
+						name: 'كرز',
+						slug: 'cherries'
+					},
+					{
+						id: 14,
+						name: 'لحمة',
+						slug: 'meat'
+					},
+					{
+						id: 15,
+						name: 'سمك',
+						slug: 'fish'
+					},
+					{
+						id: 16,
+						name: 'طعام طازج',
+						slug: 'fresh-food'
+					},
+					{
+						id: 17,
+						name: 'ليمون',
+						slug: 'lemons'
+					}
+				];
+			}
+		});
+	}
+
+	ngOnDestroy(): void {
+		this.translateSubscription.unsubscribe();
+	}
 
 	openChatWindow(event: MouseEvent) {
 		this.chatService.updateValue(true);

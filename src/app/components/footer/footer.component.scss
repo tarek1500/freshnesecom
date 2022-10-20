@@ -75,10 +75,53 @@
 		}
 	}
 
-	.copyright {
+	.copyrights {
 		color: #151515;
 		font-family: 'OpenSans';
 		font-weight: 400;
 		font-size: 14px;
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.links {
+			.in-touch,
+			.connections,
+			.policies,
+			.account {
+				.heading {
+					font-family: 'NotoSansArabic';
+				}
+
+				.link {
+					a {
+						font-family: 'Cairo';
+					}
+				}
+			}
+		}
+
+		.tags {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+
+			.tag {
+				margin: 0px 0px 16px 16px;
+
+				a {
+					font-family: 'NotoSansArabic';
+				}
+			}
+		}
+
+		.copyrights {
+			font-family: 'Cairo';
+
+			.website {
+				font-family: 'OpenSans';
+			}
+		}
 	}
 }

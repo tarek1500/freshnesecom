@@ -3,14 +3,40 @@
 	"direction": "ltr",
 	"translate": {
 		"components": {
+			"categorySearchInputGroup": {
+				"placeholder": "Search products, categories ..."
+			},
+			"footer": {
+				"getInTouch": "Get in touch",
+				"about": "About us",
+				"contact": "Contact us",
+				"blog": "Blog",
+				"connections": "Connections",
+				"facebook": "Facebook",
+				"twitter": "Twitter",
+				"instagram": "Instagram",
+				"youtube": "Youtube",
+				"linkedIn": "LinkedIn",
+				"policies": "Policies",
+				"privacy": "Privacy Policy",
+				"terms": "Terms and Conditions",
+				"return": "Return Policy",
+				"shipping": "Shipping Policy",
+				"account": "Account",
+				"yourAccount": "Your account",
+				"chat": "Chat with us",
+				"affiliate": "Become an affiliate",
+				"advertise": "Advertise your product",
+				"market": "Sell on market",
+				"help": "Help",
+				"productTags": "Product tags",
+				"copyrights": "Copyrights"
+			},
 			"header": {
-				"chatWithUs": "Chat with us",
+				"chat": "Chat with us",
 				"blog": "Blog",
 				"compare": "Compare",
 				"about": "About us"
-			},
-			"categorySearchInputGroup": {
-				"placeholder": "Search products, categories ..."
 			}
 		}
 	}

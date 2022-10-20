@@ -3,14 +3,40 @@
 	"direction": "rtl",
 	"translate": {
 		"components": {
-			"header": {
-				"chatWithUs": "تحدث معنا",
-				"blog": "مدونة",
-				"compare": "مقارنة",
-				"about": "حول"
-			},
 			"categorySearchInputGroup": {
 				"placeholder": "البحث عن المنتجات، التصنيفات ..."
+			},
+			"footer": {
+				"getInTouch": "ابقى على تواصل",
+				"about": "معلومات عنا",
+				"contact": "اتصل بنا",
+				"blog": "مدونة",
+				"connections": "الروابط",
+				"facebook": "فيسبوك",
+				"twitter": "تويتر",
+				"instagram": "انستغرام",
+				"youtube": "يوتيوب",
+				"linkedIn": "لينكد إن",
+				"policies": "السياسات",
+				"privacy": "سياسة الخصوصية",
+				"terms": "الأحكام والشروط",
+				"return": "سياسة الإرجاع",
+				"shipping": "سياسة الشحن",
+				"account": "الحساب",
+				"yourAccount": "حسابك",
+				"chat": "تحدث معنا",
+				"affiliate": "كن شريكا",
+				"advertise": "أعلن عن منتجك",
+				"market": "بيع في السوق",
+				"help": "مساعدة",
+				"productTags": "علامات المنتج",
+				"copyrights": "حقوق النشر"
+			},
+			"header": {
+				"chat": "تحدث معنا",
+				"blog": "مدونة",
+				"compare": "مقارنة",
+				"about": "معلومات عنا"
 			}
 		}
 	}

@@ -1,79 +1,79 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div class="row links" *ngIf="showLinks">
 		<div class="col-lg-3 col-md-6 in-touch">
-			<h2 class="heading">Get in touch</h2>
+			<h2 class="heading">{{ 'translate.components.footer.getInTouch' | translate }}</h2>
 			<div class="link">
-				<a routerLink="/about">About Us</a>
+				<a routerLink="/about">{{ 'translate.components.footer.about' | translate }}</a>
 			</div>
 			<div class="link">
-				<a routerLink="/contact">Contact Us</a>
+				<a routerLink="/contact">{{ 'translate.components.footer.contact' | translate }}</a>
 			</div>
 			<div class="link">
-				<a routerLink="/blogs">Blog</a>
+				<a routerLink="/blogs">{{ 'translate.components.footer.blog' | translate }}</a>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 connections">
-			<h2 class="heading">Connections</h2>
+			<h2 class="heading">{{ 'translate.components.footer.connections' | translate }}</h2>
 			<div class="link">
-				<a href="#">Facebook</a>
+				<a href="#">{{ 'translate.components.footer.facebook' | translate }}</a>
 			</div>
 			<div class="link">
-				<a href="#">Twitter</a>
+				<a href="#">{{ 'translate.components.footer.twitter' | translate }}</a>
 			</div>
 			<div class="link">
-				<a href="#">Instagram</a>
+				<a href="#">{{ 'translate.components.footer.instagram' | translate }}</a>
 			</div>
 			<div class="link">
-				<a href="#">Youtube</a>
+				<a href="#">{{ 'translate.components.footer.youtube' | translate }}</a>
 			</div>
 			<div class="link">
-				<a href="#">LinkedIn</a>
+				<a href="#">{{ 'translate.components.footer.linkedIn' | translate }}</a>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 policies">
-			<h2 class="heading">Policies</h2>
+			<h2 class="heading">{{ 'translate.components.footer.policies' | translate }}</h2>
 			<div class="link">
-				<a routerLink="/privacy-policy">Privacy Policy</a>
+				<a routerLink="/privacy-policy">{{ 'translate.components.footer.privacy' | translate }}</a>
 			</div>
 			<div class="link">
-				<a routerLink="/terms-and-conditions">Terms and Conditions</a>
+				<a routerLink="/terms-and-conditions">{{ 'translate.components.footer.terms' | translate }}</a>
 			</div>
 			<div class="link">
-				<a routerLink="/return-policy">Return Policy</a>
+				<a routerLink="/return-policy">{{ 'translate.components.footer.return' | translate }}</a>
 			</div>
 			<div class="link">
-				<a routerLink="/shipping-policy">Shipping Policy</a>
+				<a routerLink="/shipping-policy">{{ 'translate.components.footer.shipping' | translate }}</a>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 account">
-			<h2 class="heading">Account</h2>
+			<h2 class="heading">{{ 'translate.components.footer.account' | translate }}</h2>
 			<div class="link">
-				<a routerLink="/profile">Your account</a>
+				<a routerLink="/profile">{{ 'translate.components.footer.yourAccount' | translate }}</a>
 			</div>
 			<div class="link">
-				<a (click)="openChatWindow($event)">Chat with us</a>
+				<a (click)="openChatWindow($event)">{{ 'translate.components.footer.chat' | translate }}</a>
 			</div>
 			<div class="link">
-				<a href="#">Become an Affiliate</a>
+				<a href="#">{{ 'translate.components.footer.affiliate' | translate }}</a>
 			</div>
 			<div class="link">
-				<a href="#">Advertise your product</a>
+				<a href="#">{{ 'translate.components.footer.advertise' | translate }}</a>
 			</div>
 			<div class="link">
-				<a href="#">Sell on Market</a>
+				<a href="#">{{ 'translate.components.footer.market' | translate }}</a>
 			</div>
 			<div class="link">
-				<a href="#">Help</a>
+				<a href="#">{{ 'translate.components.footer.help' | translate }}</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="tags" *ngIf="showTags">
-		<h2 class="heading">Product tags</h2>
+		<h2 class="heading">{{ 'translate.components.footer.productTags' | translate }}</h2>
 		<div class="tag" *ngFor="let tag of tags">
 			<a [routerLink]="['/tags', tag.slug, 'products']">{{ tag.name }}</a>
 		</div>
 	</div>
 
-	<div class="copyright">Copyright &copy; {{ year }} petrbilek.com</div>
+	<div class="copyrights">{{ 'translate.components.footer.copyrights' | translate }} &copy; {{ year }} <span class="website">petrbilek.com</span></div>
 </div>
