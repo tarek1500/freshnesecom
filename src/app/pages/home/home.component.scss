@@ -254,4 +254,98 @@
 			}
 		}
 	}
+
+	&.rtl {
+		direction: rtl;
+
+		.categories,
+		.best-selling,
+		.best-from-farmers {
+			.links {
+				.heading {
+					font-family: 'NotoSansArabic';
+				}
+
+				.link {
+					a {
+						font-family: 'Cairo';
+					}
+				}
+
+				.more-button {
+					font-family: 'NotoSansArabic';
+
+					.right-arrow-icon {
+						margin: 0px 7px 0px 0px;
+						transform: scaleX(-1);
+					}
+				}
+			}
+
+			.banners {
+				.header {
+					.heading {
+						font-family: 'NotoSansArabic';
+					}
+
+					.goto-button {
+						font-family: 'NotoSansArabic';
+
+						.right-arrow-icon {
+							margin: 0px 7px 0px 0px;
+							transform: scaleX(-1);
+						}
+					}
+				}
+			}
+		}
+
+		.quotes,
+		.posts {
+			.header {
+				.heading {
+					font-family: 'NotoSansArabic';
+				}
+
+				.goto-button {
+					font-family: 'NotoSansArabic';
+
+					.right-arrow-icon {
+						margin: 0px 7px 0px 0px;
+						transform: scaleX(-1);
+					}
+				}
+			}
+
+			.carousel {
+				::ng-deep {
+					.owl-carousel {
+						.owl-nav {
+							.owl-prev,
+							.owl-next {
+								&::after {
+									background: linear-gradient(-90deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
+								}
+							}
+
+							.owl-prev {
+								border-radius: 12px 0px 0px 12px;
+								background-image: url('../../../assets/icons/right-arrow-white.svg');
+							}
+
+							.owl-next {
+								border-radius: 0px 12px 12px 0px;
+								background-image: url('../../../assets/icons/left-arrow-white.svg');
+
+								&::after {
+									left: 0px;
+									right: unset;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

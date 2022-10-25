@@ -65,6 +65,22 @@
 				"farm": "Farm",
 				"freshness": "Freshness"
 			}
+		},
+		"pages": {
+			"home": {
+				"categoryMenu": "Category menu",
+				"moreCategories": "More categories",
+				"recipes": "Recipes",
+				"goToRecipes": "Go to recipes",
+				"bestSellingProducts": "Best selling products",
+				"moreProducts": "More products",
+				"bestFromFarmers": "Best from farmers",
+				"ourCustomersSay": "Our customers say",
+				"button": "Button",
+				"sectionHeadline": "Section headline",
+				"readOurBlogPosts": "Read our blog posts",
+				"goToBlog": "Go to blog"
+			}
 		}
 	}
 }

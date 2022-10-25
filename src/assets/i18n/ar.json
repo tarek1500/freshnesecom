@@ -65,6 +65,22 @@
 				"farm": "المزرعة",
 				"freshness": "النضارة"
 			}
+		},
+		"pages": {
+			"home": {
+				"categoryMenu": "قائمة التصنيفات",
+				"moreCategories": "المزيد من التصنيفات",
+				"recipes": "الوصفات",
+				"goToRecipes": "انتقل إلى الوصفات",
+				"bestSellingProducts": "أفضل المنتجات مبيعًا",
+				"moreProducts": "المزيد من المنتجات",
+				"bestFromFarmers": "الأفضل من المزارعين",
+				"ourCustomersSay": "يقول عملاؤنا",
+				"button": "زر",
+				"sectionHeadline": "عنوان القسم",
+				"readOurBlogPosts": "اقرأ منشورات مدونتنا",
+				"goToBlog": "انتقل إلى المدونة"
+			}
 		}
 	}
 }
