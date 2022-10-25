@@ -2,6 +2,7 @@ import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../services/rtl/rtl.service';
 import { CartService } from '../../services/cart/cart.service';
 import { WishlistService } from '../../services/wishlist/wishlist.service';
 import { ChatService } from '../../services/chat/chat.service';
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	wishlist!: Wishlist;
 
 	constructor(
+		private rtlService: RtlService,
 		private translateService: TranslateService,
 		private cartService: CartService,
 		private wishlistService: WishlistService,
@@ -58,8 +60,67 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		let subscription = this.translateService.onLangChange.subscribe(event => {
-			this.rtl = event.translations.direction === 'rtl';
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
+
+			if (this.rtl)
+			{
+				this.categories = [
+					{
+						id: 0,
+						name: 'كل التصنيفات',
+						slug: '',
+						subcategories: []
+					},
+					{
+						id: 1,
+						name: 'تصنيف 1',
+						slug: 'category-1',
+						subcategories: []
+					},
+					{
+						id: 2,
+						name: 'تصنيف 2',
+						slug: 'category-2',
+						subcategories: []
+					},
+					{
+						id: 3,
+						name: 'تصنيف 3',
+						slug: 'category-3',
+						subcategories: []
+					}
+				];
+			}
+			else
+			{
+				this.categories = [
+					{
+						id: 0,
+						name: 'All categories',
+						slug: '',
+						subcategories: []
+					},
+					{
+						id: 1,
+						name: 'Category 1',
+						slug: 'category-1',
+						subcategories: []
+					},
+					{
+						id: 2,
+						name: 'Category 2',
+						slug: 'category-2',
+						subcategories: []
+					},
+					{
+						id: 3,
+						name: 'Category 3',
+						slug: 'category-3',
+						subcategories: []
+					}
+				];
+			}
 		});
 		this.subscriptions.push(subscription);
 
