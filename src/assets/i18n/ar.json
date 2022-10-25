@@ -48,6 +48,16 @@
 				"compare": "مقارنة",
 				"about": "معلومات عنا"
 			},
+			"product": {
+				"freshness": "النضارة",
+				"farm": "المزرعة",
+				"delivery": "التوصيل",
+				"stock": "المخزون",
+				"deliveryIn": "التوصيل في",
+				"days": "يوم/أيام",
+				"buy": "اشتري الآن",
+				"wishlist": "تمني"
+			},
 			"productTiny": {
 				"wishlist": "تمني",
 				"compare": "مقارنة",

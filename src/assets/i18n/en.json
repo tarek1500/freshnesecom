@@ -48,6 +48,16 @@
 				"compare": "Compare",
 				"about": "About us"
 			},
+			"product": {
+				"freshness": "Freshness",
+				"farm": "Farm",
+				"delivery": "Delivery",
+				"stock": "Stock",
+				"deliveryIn": "Delivery in",
+				"days": "day(s)",
+				"buy": "Buy now",
+				"wishlist": "Wishlist"
+			},
 			"productTiny": {
 				"wishlist": "Wishlist",
 				"compare": "Compare",
