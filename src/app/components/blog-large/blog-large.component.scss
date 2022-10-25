@@ -81,4 +81,32 @@
 			}
 		}
 	}
+
+	&.rtl {
+		.tag {
+			a {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.details {
+			.heading {
+				a {
+					font-family: 'NotoSansArabic';
+				}
+			}
+
+			.info {
+				font-family: 'Cairo';
+
+				.avatar-image {
+					margin: 0px 0px 0px 8px;
+				}
+
+				.author {
+					margin: auto 0px auto 16px;
+				}
+			}
+		}
+	}
 }

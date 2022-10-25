@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<img class="cover-image" src="{{ blog.image }}" alt="">
 	<div class="tag" *ngIf="blog.tags.length > 0">
 		<a [routerLink]="['/tags', blog.tags[0].slug, 'blogs']">{{ blog.tags[0].name }}</a>
