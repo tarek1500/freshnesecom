@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../../services/rtl/rtl.service';
 import { Quote } from '../../../interfaces/quote.interface';
 
 @Component({
@@ -7,10 +9,21 @@ import { Quote } from '../../../interfaces/quote.interface';
 	templateUrl: './quote.component.html',
 	styleUrls: ['./quote.component.scss']
 })
-export class QuoteComponent implements OnInit {
+export class QuoteComponent implements OnInit, OnDestroy {
 	@Input() quote!: Quote;
+	subscriptions: Subscription[] = [];
+	rtl: boolean = false;
 
-	constructor() { }
+	constructor(private rtlService: RtlService) { }
 
-	ngOnInit(): void { }
+	ngOnInit(): void {
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
+		});
+		this.subscriptions.push(subscription);
+	}
+
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
 }

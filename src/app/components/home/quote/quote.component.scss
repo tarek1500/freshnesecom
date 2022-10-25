@@ -37,4 +37,11 @@
 			border-radius: 50%;
 		}
 	}
+
+	&.rtl {
+		.quote,
+		.author {
+			font-family: 'NotoSansArabic';
+		}
+	}
 }

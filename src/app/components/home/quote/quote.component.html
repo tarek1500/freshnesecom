@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<p class="quote">{{ quote.content }}</p>
 	<h3 class="author">{{ quote.author.name }}</h3>
 	<div class="avatar-image">
