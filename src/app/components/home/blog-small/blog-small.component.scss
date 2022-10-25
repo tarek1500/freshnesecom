@@ -44,4 +44,20 @@
 			transform: translate(-50%, -50%);
 		}
 	}
+
+	&.rtl {
+		.heading {
+			a {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.info {
+			font-family: 'Cairo';
+
+			.author {
+				margin: 0px 0px 0px 16px;
+			}
+		}
+	}
 }

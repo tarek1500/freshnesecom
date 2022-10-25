@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div>
 		<div class="heading">
 			<a [routerLink]="['/blogs', blog.slug]">{{ blog.title }}</a>
