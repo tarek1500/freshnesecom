@@ -3,6 +3,9 @@
 	"direction": "ltr",
 	"translate": {
 		"components": {
+			"banner": {
+				"read": "Read recipe"
+			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
 				"close": "Close",

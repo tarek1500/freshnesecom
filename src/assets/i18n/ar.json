@@ -3,6 +3,9 @@
 	"direction": "rtl",
 	"translate": {
 		"components": {
+			"banner": {
+				"read": "اقرأ الوصفة"
+			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
 				"close": "أغلق",

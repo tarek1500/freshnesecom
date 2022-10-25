@@ -48,4 +48,24 @@
 			margin-left: 7px;
 		}
 	}
+
+	&.rtl {
+		.banner {
+			.subheading,
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.read-button {
+			left: unset;
+			right: 32px;
+			font-family: 'NotoSansArabic';
+
+			.right-arrow-icon {
+				margin: 0px 7px 0px 0px;
+				transform: scaleX(-1);
+			}
+		}
+	}
 }
