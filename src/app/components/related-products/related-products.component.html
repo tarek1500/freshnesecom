@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div class="header">
 		<h2 class="heading">{{ heading }}</h2>
 		<button class="btn goto-button">{{ gotoButton }} <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></button>

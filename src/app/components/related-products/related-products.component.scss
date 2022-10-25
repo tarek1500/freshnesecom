@@ -37,4 +37,20 @@
 			padding: 0px 16px;
 		}
 	}
+
+	&.rtl {
+		.header {
+			.heading,
+			.goto-button {
+				font-family: 'NotoSansArabic';
+			}
+
+			.goto-button {
+				.right-arrow-icon {
+					margin: 0px 7px 0px 0px;
+					transform: scaleX(-1);
+				}
+			}
+		}
+	}
 }
