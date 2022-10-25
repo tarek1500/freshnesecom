@@ -10,7 +10,7 @@ import { Message } from '../../interfaces/message.interface';
 	styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit, OnDestroy {
-	chatSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	isChatVisible: boolean = false;
 	isTyping: boolean = false;
 	messages!: Message[];
@@ -18,6 +18,11 @@ export class ChatComponent implements OnInit, OnDestroy {
 	constructor(private chatService: ChatService) { }
 
 	ngOnInit(): void {
+		let subscription = this.chatService.chatSubject$.subscribe(chat => {
+			this.isChatVisible = chat;
+		});
+		this.subscriptions.push(subscription);
+
 		this.messages = [
 			{
 				id: 1,
@@ -85,13 +90,10 @@ export class ChatComponent implements OnInit, OnDestroy {
 				content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
 			}
 		];
-		this.chatSubscription = this.chatService.chatSubject$.subscribe(chat => {
-			this.isChatVisible = chat;
-		});
 	}
 
 	ngOnDestroy(): void {
-		this.chatSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	onSent(event: string) { }

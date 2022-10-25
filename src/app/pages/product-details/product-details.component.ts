@@ -65,7 +65,7 @@ export class ProductDetailsComponent implements OnInit {
 			},
 			delivery: 'Czech republic',
 			selectedQuantity: {
-				id:0,
+				id: 0,
 				quantity: 0,
 				pack: ''
 			},
@@ -156,7 +156,7 @@ export class ProductDetailsComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -189,7 +189,7 @@ export class ProductDetailsComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -222,7 +222,7 @@ export class ProductDetailsComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -255,7 +255,7 @@ export class ProductDetailsComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},

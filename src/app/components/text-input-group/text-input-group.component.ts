@@ -26,7 +26,7 @@ export class TextInputGroupComponent implements OnInit, AfterViewInit {
 
 	setInputGroupWidth(input: ElementRef<HTMLInputElement>, sizeFixer: number = 0) {
 		let inputGroupPrepend = input.nativeElement.parentElement as HTMLDivElement;
-		
+
 		let inputGroup = inputGroupPrepend.parentElement as HTMLDivElement;
 		let inputGroupWidth = inputGroup.offsetWidth;
 

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../services/rtl/rtl.service';
 import { ProductPack } from '../../interfaces/product-pack.interface';
 import { Quantity } from '../../interfaces/quantity.interface';
 
@@ -16,16 +16,17 @@ export class StockInputGroupComponent implements OnInit, OnDestroy {
 	@Input() quantity!: Quantity;
 	@Input() readonly: boolean = false;
 	@Output() quantityChange: EventEmitter<Quantity> = new EventEmitter<Quantity>();
-	translateSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
 	selectedPack!: ProductPack;
 
-	constructor(private translateService: TranslateService) { }
+	constructor(private rtlService: RtlService) { }
 
 	ngOnInit(): void {
-		this.translateSubscription = this.translateService.onLangChange.subscribe(event => {
-			this.rtl = event.translations.direction === 'rtl';
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
 		});
+		this.subscriptions.push(subscription);
 
 		if (this.availablePacks.length > 1) {
 			this.selectedPack = this.availablePacks[0];
@@ -41,7 +42,7 @@ export class StockInputGroupComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy(): void {
-		this.translateSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	onPackSelected(pack: ProductPack) {

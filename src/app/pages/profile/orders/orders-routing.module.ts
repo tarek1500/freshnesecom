@@ -6,10 +6,12 @@ import { ListOrdersComponent } from './list-orders/list-orders.component';
 import { ShowOrderComponent } from './show-order/show-order.component';
 
 const routes: Routes = [
-	{ path: '', component: OrdersComponent, children: [
-		{ path: '', component: ListOrdersComponent },
-		{ path: ':order', component: ShowOrderComponent }
-	] }
+	{
+		path: '', component: OrdersComponent, children: [
+			{ path: '', component: ListOrdersComponent },
+			{ path: ':order', component: ShowOrderComponent }
+		]
+	}
 ];
 
 @NgModule({

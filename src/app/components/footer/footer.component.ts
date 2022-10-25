@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../services/rtl/rtl.service';
 import { ChatService } from '../../services/chat/chat.service';
 import { Tag } from '../../interfaces/tag.interface';
 
@@ -13,13 +13,13 @@ import { Tag } from '../../interfaces/tag.interface';
 export class FooterComponent implements OnInit, OnDestroy {
 	@Input('show-links') showLinks: boolean = true;
 	@Input('show-tags') showTags: boolean = true;
-	translateSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
 	tags: Tag[];
 	year: number;
 
 	constructor(
-		private translateService: TranslateService,
+		private rtlService: RtlService,
 		private chatService: ChatService
 	) {
 		this.tags = [
@@ -123,8 +123,8 @@ export class FooterComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		this.translateSubscription = this.translateService.onLangChange.subscribe(event => {
-			this.rtl = event.translations.direction === 'rtl';
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
 
 			if (this.rtl) {
 				this.tags = [
@@ -315,10 +315,11 @@ export class FooterComponent implements OnInit, OnDestroy {
 				];
 			}
 		});
+		this.subscriptions.push(subscription);
 	}
 
 	ngOnDestroy(): void {
-		this.translateSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	openChatWindow(event: MouseEvent) {

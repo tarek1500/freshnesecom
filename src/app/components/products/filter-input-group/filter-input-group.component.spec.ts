@@ -8,7 +8,7 @@ describe('FilterInputGroupComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ FilterInputGroupComponent ]
+			declarations: [FilterInputGroupComponent]
 		})
 			.compileComponents();
 	});

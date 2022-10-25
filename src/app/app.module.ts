@@ -42,7 +42,7 @@ import { MessageComponent } from './components/message/message.component';
 		AppComponent
 	]
 })
-export class AppModule {}
+export class AppModule { }
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {

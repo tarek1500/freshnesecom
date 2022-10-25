@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../services/rtl/rtl.service';
 import { Category } from '../../interfaces/category.interface';
 
 @Component({
@@ -10,12 +10,12 @@ import { Category } from '../../interfaces/category.interface';
 	styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit, OnDestroy {
-	translateSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
 	isMenuCollapsed: boolean = true;
 	categories: Category[];
 
-	constructor(private translateService: TranslateService) {
+	constructor(private rtlService: RtlService) {
 		this.categories = [
 			{
 				id: 1,
@@ -173,8 +173,8 @@ export class MenuComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		this.translateSubscription = this.translateService.onLangChange.subscribe(event => {
-			this.rtl = event.translations.direction === 'rtl';
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
 
 			if (this.rtl) {
 				this.categories = [
@@ -489,9 +489,10 @@ export class MenuComponent implements OnInit, OnDestroy {
 				];
 			}
 		});
+		this.subscriptions.push(subscription);
 	}
 
 	ngOnDestroy(): void {
-		this.translateSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 }

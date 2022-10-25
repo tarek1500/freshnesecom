@@ -71,7 +71,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -125,7 +125,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -179,7 +179,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -233,7 +233,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -287,7 +287,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -341,7 +341,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -395,7 +395,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -449,7 +449,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -503,7 +503,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -526,27 +526,27 @@ export class ProductsComponent implements OnInit, OnDestroy {
 					let slug: string = params['slug'];
 
 					switch (name) {
-					case 'categories.products':
-						// Fetch category and its products from server
-						this.category = {
-							id: 0,
-							name: 'Fruit and vegetables',
-							slug: slug,
-							subcategories: []
-						};
-						this.breadcrumb[1].text = this.category.name;
+						case 'categories.products':
+							// Fetch category and its products from server
+							this.category = {
+								id: 0,
+								name: 'Fruit and vegetables',
+								slug: slug,
+								subcategories: []
+							};
+							this.breadcrumb[1].text = this.category.name;
 
-						break;
-					case 'tags.products':
-						// Fetch tag and its products from server
-						this.tag = {
-							id: 0,
-							name: 'Vegetable',
-							slug: slug
-						};
-						this.breadcrumb[1].text = this.tag.name;
+							break;
+						case 'tags.products':
+							// Fetch tag and its products from server
+							this.tag = {
+								id: 0,
+								name: 'Vegetable',
+								slug: slug
+							};
+							this.breadcrumb[1].text = this.tag.name;
 
-						break;
+							break;
 					}
 				});
 

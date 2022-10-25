@@ -8,7 +8,7 @@ describe('TextInputGroupComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ TextInputGroupComponent ]
+			declarations: [TextInputGroupComponent]
 		})
 			.compileComponents();
 	});

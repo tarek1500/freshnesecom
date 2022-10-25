@@ -10,13 +10,13 @@ import { Order } from '../../../../interfaces/order.interface';
 	styleUrls: ['./show-order.component.scss']
 })
 export class ShowOrderComponent implements OnInit, OnDestroy {
-	routeSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	order!: Order;
 
 	constructor(private route: ActivatedRoute) { }
 
 	ngOnInit(): void {
-		this.routeSubscription = this.route.params.subscribe(params => {
+		let subscription = this.route.params.subscribe(params => {
 			let id = params['order'];
 
 			// Fetch order from server
@@ -62,7 +62,7 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 							},
 							delivery: 'Europe',
 							selectedQuantity: {
-								id:0,
+								id: 0,
 								quantity: 0,
 								pack: ''
 							},
@@ -106,7 +106,7 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 							},
 							delivery: 'Europe',
 							selectedQuantity: {
-								id:0,
+								id: 0,
 								quantity: 0,
 								pack: ''
 							},
@@ -135,9 +135,10 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 				date: new Date('2020-6-22')
 			};
 		});
+		this.subscriptions.push(subscription);
 	}
 
 	ngOnDestroy(): void {
-		this.routeSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 }

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../services/rtl/rtl.service';
 import { Cart } from '../../interfaces/cart.interface';
 
 @Component({
@@ -12,19 +12,20 @@ import { Cart } from '../../interfaces/cart.interface';
 export class CartComponent implements OnInit, OnDestroy {
 	@Input() cart!: Cart;
 	@Output() onClose = new EventEmitter<null>();
-	translateSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
 
-	constructor(private translateService: TranslateService) { }
+	constructor(private rtlService: RtlService) { }
 
 	ngOnInit(): void {
-		this.translateSubscription = this.translateService.onLangChange.subscribe(event => {
-			this.rtl = event.translations.direction === 'rtl';
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
 		});
+		this.subscriptions.push(subscription);
 	}
 
 	ngOnDestroy(): void {
-		this.translateSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	close(event: MouseEvent) {

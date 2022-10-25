@@ -140,7 +140,7 @@ export class HomeComponent implements OnInit {
 		this.bestSellingProducts = [
 			{
 				id: 1,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -160,7 +160,7 @@ export class HomeComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -173,7 +173,7 @@ export class HomeComponent implements OnInit {
 			},
 			{
 				id: 2,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -193,7 +193,7 @@ export class HomeComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -206,7 +206,7 @@ export class HomeComponent implements OnInit {
 			},
 			{
 				id: 3,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -226,7 +226,7 @@ export class HomeComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -275,55 +275,55 @@ export class HomeComponent implements OnInit {
 				id: 1,
 				author: {
 					id: 1,
-					name: 'Name and Surname',
+					name: 'Name and surname',
 					email: '',
 					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
-				content: '“ This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “'
+				content: '“This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here“'
 			},
 			{
 				id: 2,
 				author: {
 					id: 2,
-					name: 'Name and Surname',
+					name: 'Name and surname',
 					email: '',
 					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
-				content: '“ This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “'
+				content: '“This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here“'
 			},
 			{
 				id: 3,
 				author: {
 					id: 3,
-					name: 'Name and Surname',
+					name: 'Name and surname',
 					email: '',
 					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
-				content: '“ This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “'
+				content: '“This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here“'
 			},
 			{
 				id: 4,
 				author: {
 					id: 4,
-					name: 'Name and Surname',
+					name: 'Name and surname',
 					email: '',
 					phone: '',
 					role: '',
 					image: 'https://picsum.photos/id/237/40/40'
 				},
-				content: '“ This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here “'
+				content: '“This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here“'
 			}
 		];
 		this.sectionProducts = [
 			{
 				id: 1,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -343,7 +343,7 @@ export class HomeComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -356,7 +356,7 @@ export class HomeComponent implements OnInit {
 			},
 			{
 				id: 2,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -376,7 +376,7 @@ export class HomeComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -389,7 +389,7 @@ export class HomeComponent implements OnInit {
 			},
 			{
 				id: 3,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -409,7 +409,7 @@ export class HomeComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -422,7 +422,7 @@ export class HomeComponent implements OnInit {
 			},
 			{
 				id: 4,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -442,7 +442,7 @@ export class HomeComponent implements OnInit {
 				},
 				delivery: '',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},

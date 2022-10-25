@@ -51,7 +51,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 			{
 				id: 3,
 				name: 'Category 3',
-				slug: 'category-4',
+				slug: 'category-3',
 				subcategories: []
 			}
 		];

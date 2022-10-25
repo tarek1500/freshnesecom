@@ -8,7 +8,7 @@ describe('ReturnPolicyComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ ReturnPolicyComponent ]
+			declarations: [ReturnPolicyComponent]
 		})
 			.compileComponents();
 	});

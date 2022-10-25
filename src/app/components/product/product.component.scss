@@ -175,26 +175,26 @@
 						font-size: 14px;
 						overflow-wrap: break-word;
 
-						&.text {
-							padding: 0px 12px 0px 0px;
-
-							@media (max-width: 575.98px) {
-								padding-right: 4px;
-							}
-						}
-
-						&.value {
-							padding: 0px 0px 0px 12px;
-
-							@media (max-width: 575.98px) {
-								padding-left: 4px;
-							}
-						}
-
 						span {
 							&.green {
 								color: #6A983C;
 							}
+						}
+					}
+
+					.text {
+						padding: 0px 12px 0px 0px;
+
+						@media (max-width: 575.98px) {
+							padding-right: 4px;
+						}
+					}
+
+					.value {
+						padding: 0px 0px 0px 12px;
+
+						@media (max-width: 575.98px) {
+							padding-left: 4px;
 						}
 					}
 				}

@@ -6,11 +6,13 @@ import { ListAddressesComponent } from './list-addresses/list-addresses.componen
 import { CreateAddressComponent } from './create-address/create-address.component';
 
 const routes: Routes = [
-	{ path: '', component: AddressesComponent, children: [
-		{ path: '', component: ListAddressesComponent },
-		{ path: 'create', component: CreateAddressComponent },
-		{ path: ':address/edit', component: CreateAddressComponent }
-	] }
+	{
+		path: '', component: AddressesComponent, children: [
+			{ path: '', component: ListAddressesComponent },
+			{ path: 'create', component: CreateAddressComponent },
+			{ path: ':address/edit', component: CreateAddressComponent }
+		]
+	}
 ];
 
 @NgModule({

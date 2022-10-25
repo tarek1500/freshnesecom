@@ -206,14 +206,12 @@
 						}
 
 						.owl-prev {
-							border-top-right-radius: 12px;
-							border-bottom-right-radius: 12px;
+							border-radius: 0px 12px 12px 0px;
 							background-image: url('../../../assets/icons/left-arrow-white.svg');
 						}
 
 						.owl-next {
-							border-top-left-radius: 12px;
-							border-bottom-left-radius: 12px;
+							border-radius: 12px 0px 0px 12px;
 							background-image: url('../../../assets/icons/right-arrow-white.svg');
 
 							&::after {

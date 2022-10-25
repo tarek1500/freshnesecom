@@ -11,7 +11,7 @@ import { Wishlist } from '../../interfaces/wishlist.interface';
 	styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent implements OnInit, OnDestroy {
-	wishlistSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	breadcrumb: Breadcrumb[] = [
 		{ text: 'Homepage', link: '/' },
 		{ text: 'Wishlist', link: '' }
@@ -22,12 +22,13 @@ export class WishlistComponent implements OnInit, OnDestroy {
 	constructor(private wishlistService: WishlistService) { }
 
 	ngOnInit(): void {
-		this.wishlistSubscription = this.wishlistService.wishlistSubject$.subscribe(wishlist => {
+		let subscription = this.wishlistService.wishlistSubject$.subscribe(wishlist => {
 			this.wishlist = wishlist;
 		});
+		this.subscriptions.push(subscription);
 	}
 
 	ngOnDestroy(): void {
-		this.wishlistSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 }

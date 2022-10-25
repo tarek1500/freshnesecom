@@ -12,7 +12,7 @@ import { Cart } from '../../interfaces/cart.interface';
 	styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit, OnDestroy {
-	cartSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	breadcrumb: Breadcrumb[] = [
 		{ text: 'Homepage', link: '/' },
 		{ text: 'Checkout', link: '' },
@@ -40,13 +40,14 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		this.cartSubscription = this.cartService.cartSubject$.subscribe(cart => {
+		let subscription = this.cartService.cartSubject$.subscribe(cart => {
 			this.cart = cart;
 		});
+		this.subscriptions.push(subscription);
 	}
 
 	ngOnDestroy(): void {
-		this.cartSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	onPromoApplied(event: string) { }

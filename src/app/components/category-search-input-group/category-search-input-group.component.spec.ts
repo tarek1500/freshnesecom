@@ -8,7 +8,7 @@ describe('CategorySearchInputGroupComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ CategorySearchInputGroupComponent ]
+			declarations: [CategorySearchInputGroupComponent]
 		})
 			.compileComponents();
 	});

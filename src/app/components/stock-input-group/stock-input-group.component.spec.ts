@@ -8,7 +8,7 @@ describe('StockInputGroupComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ StockInputGroupComponent ]
+			declarations: [StockInputGroupComponent]
 		})
 			.compileComponents();
 	});

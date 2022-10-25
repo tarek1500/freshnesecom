@@ -62,7 +62,7 @@ export class CompareComponent implements OnInit {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -116,7 +116,7 @@ export class CompareComponent implements OnInit {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -170,7 +170,7 @@ export class CompareComponent implements OnInit {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},
@@ -224,7 +224,7 @@ export class CompareComponent implements OnInit {
 				},
 				delivery: 'Europe',
 				selectedQuantity: {
-					id:0,
+					id: 0,
 					quantity: 0,
 					pack: ''
 				},

@@ -11,7 +11,7 @@ import { Address } from '../../../../interfaces/address.interface';
 	styleUrls: ['./create-address.component.scss']
 })
 export class CreateAddressComponent implements OnInit, OnDestroy {
-	routeSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	title: string = 'Create';
 	address!: Address;
 	mapCenter!: { latitude: number, longitude: number };
@@ -19,7 +19,7 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 	constructor(private route: ActivatedRoute) { }
 
 	ngOnInit(): void {
-		this.routeSubscription = this.route.params.subscribe(params => {
+		let subscription = this.route.params.subscribe(params => {
 			let id = params['address'];
 
 			if (id) {
@@ -54,10 +54,11 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 				longitude: 29.996615
 			};
 		});
+		this.subscriptions.push(subscription);
 	}
 
 	ngOnDestroy(): void {
-		this.routeSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	mapClicked($event: MouseEvent) {

@@ -8,7 +8,7 @@ describe('ProductTinyComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ ProductTinyComponent ]
+			declarations: [ProductTinyComponent]
 		})
 			.compileComponents();
 	});

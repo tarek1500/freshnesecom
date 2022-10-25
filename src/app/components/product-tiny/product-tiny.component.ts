@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../services/rtl/rtl.service';
 import { Product } from '../../interfaces/product.interface';
 
 @Component({
@@ -11,18 +11,19 @@ import { Product } from '../../interfaces/product.interface';
 })
 export class ProductTinyComponent implements OnInit, OnDestroy {
 	@Input() product!: Product;
-	translateSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
 
-	constructor(private translateService: TranslateService) { }
+	constructor(private rtlService: RtlService) { }
 
 	ngOnInit(): void {
-		this.translateSubscription = this.translateService.onLangChange.subscribe(event => {
-			this.rtl = event.translations.direction === 'rtl';
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
 		});
+		this.subscriptions.push(subscription);
 	}
 
 	ngOnDestroy(): void {
-		this.translateSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 }

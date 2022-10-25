@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
+import { RtlService } from './services/rtl/rtl.service';
 import { LoaderService } from './services/loader/loader.service';
 import { CartService } from './services/cart/cart.service';
 import { WishlistService } from './services/wishlist/wishlist.service';
@@ -15,23 +16,30 @@ import { Wishlist } from './interfaces/wishlist.interface';
 })
 export class AppComponent implements OnInit, OnDestroy {
 	title = 'freshnesecom';
-	loaderSubscription!: Subscription;
+	subscriptions: Subscription[] = [];
 	showLoader: boolean = false;
 
 	constructor(
 		private translateService: TranslateService,
+		private rtlService: RtlService,
 		private loaderService: LoaderService,
 		private cartService: CartService,
 		private wishlistService: WishlistService
 	) { }
 
 	ngOnInit(): void {
-		this.translateService.setDefaultLang('en');
-		this.translateService.use('en');
+		let subscription = this.translateService.onLangChange.subscribe(event => {
+			this.rtlService.updateValue(event.translations.direction === 'rtl');
+		});
+		this.subscriptions.push(subscription);
 
-		this.loaderSubscription = this.loaderService.loaderSubject$.subscribe(showLoader => {
+		subscription = this.loaderService.loaderSubject$.subscribe(showLoader => {
 			this.showLoader = showLoader;
 		});
+		this.subscriptions.push(subscription);
+
+		this.translateService.setDefaultLang('en');
+		this.translateService.use('ar');
 
 		// Fetch cart and wishlist from server
 		let cart: Cart = {
@@ -485,6 +493,6 @@ export class AppComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy(): void {
-		this.loaderSubscription.unsubscribe();
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 }

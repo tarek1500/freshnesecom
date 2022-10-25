@@ -8,7 +8,7 @@ describe('TermsAndConditionsComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ TermsAndConditionsComponent ]
+			declarations: [TermsAndConditionsComponent]
 		})
 			.compileComponents();
 	});
