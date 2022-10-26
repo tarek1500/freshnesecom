@@ -11,8 +11,8 @@ import { About } from '../../interfaces/about.interface';
 })
 export class AboutComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'About Us', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'About Us', link: '' }
 	];
 	about!: About;
 	quotesOptions: OwlOptions = {

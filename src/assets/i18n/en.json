@@ -6,6 +6,10 @@
 			"banner": {
 				"read": "Read recipe"
 			},
+			"breadcrumb": {
+				"home": "Home",
+				"login": "Login"
+			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
 				"close": "Close",

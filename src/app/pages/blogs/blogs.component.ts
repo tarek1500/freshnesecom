@@ -17,8 +17,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 	category!: Category;
 	tag!: Tag;
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: '', link: '' },
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: '', link: '' },
 	];
 	largeBlogs: Blog[];
 	blogs: Blog[];

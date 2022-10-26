@@ -10,8 +10,8 @@ import { Contact } from '../../interfaces/contact.interface';
 })
 export class ContactComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Contact Us', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Contact Us', link: '' }
 	];
 	contact!: Contact;
 

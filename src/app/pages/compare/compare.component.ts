@@ -10,8 +10,8 @@ import { Product } from '../../interfaces/product.interface';
 })
 export class CompareComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Compare', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Compare', link: '' }
 	];
 	products!: Product[]
 

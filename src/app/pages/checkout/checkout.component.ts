@@ -14,8 +14,8 @@ import { Cart } from '../../interfaces/cart.interface';
 export class CheckoutComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Checkout', link: '' },
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Checkout', link: '' },
 	];
 	deliveries: Delivery[];
 	cart!: Cart;

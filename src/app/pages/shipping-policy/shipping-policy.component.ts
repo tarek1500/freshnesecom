@@ -10,8 +10,8 @@ import { ShippingPolicy } from '../../interfaces/shipping-policy.interface';
 })
 export class ShippingPolicyComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Shipping Policy', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Shipping Policy', link: '' }
 	];
 	shippingPolicy!: ShippingPolicy;
 

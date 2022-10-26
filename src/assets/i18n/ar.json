@@ -6,6 +6,10 @@
 			"banner": {
 				"read": "اقرأ الوصفة"
 			},
+			"breadcrumb": {
+				"home": "الرئيسية",
+				"login": "تسجيل الدخول"
+			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
 				"close": "أغلق",

@@ -10,8 +10,8 @@ import { Category } from '../../interfaces/category.interface';
 })
 export class CategoriesComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Categories', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Categories', link: '' }
 	];
 	categories!: Category[];
 

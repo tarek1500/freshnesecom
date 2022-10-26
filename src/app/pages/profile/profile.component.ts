@@ -12,8 +12,8 @@ import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 export class ProfileComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Profile', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Profile', link: '' }
 	];
 	url!: string;
 	active: string = 'info';

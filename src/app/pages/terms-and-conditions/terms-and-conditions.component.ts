@@ -10,8 +10,8 @@ import { TermsAndConditions } from '../../interfaces/terms-and-conditions.interf
 })
 export class TermsAndConditionsComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Terms and Conditions', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Terms and Conditions', link: '' }
 	];
 	termsAndConditions!: TermsAndConditions;
 

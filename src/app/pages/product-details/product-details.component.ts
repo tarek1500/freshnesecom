@@ -12,9 +12,9 @@ import { Review } from '../../interfaces/review.interface';
 })
 export class ProductDetailsComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Products', link: '/products' },
-		{ text: '', link: '' },
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Products', link: '/products' },
+		{ translate: '', text: '', link: '' },
 	];
 	product: Product;
 	discount: number = 0;

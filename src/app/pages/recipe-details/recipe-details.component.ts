@@ -13,9 +13,9 @@ export class RecipeDetailsComponent implements OnInit, AfterViewInit {
 	@ViewChild('ingredientsAccordion') ingredientsAccordion!: NgbAccordion;
 	@ViewChild('executionAccordion') executionAccordion!: NgbAccordion;
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Recipes', link: '/recipes' },
-		{ text: '', link: '' },
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Recipes', link: '/recipes' },
+		{ translate: '', text: '', link: '' },
 	];
 	recipe!: Recipe;
 

@@ -7,6 +7,12 @@
 			color: #D1D1D1;
 		}
 
+		& + .breadcrumb-item {
+			&::before {
+				content: '\\';
+			}
+		}
+
 		&:not(.active) {
 			font-family: 'OpenSans';
 			font-weight: 400;
@@ -24,6 +30,28 @@
 			font-family: 'OpenSans';
 			font-weight: 400;
 			font-size: 12px;
+		}
+	}
+
+	&.rtl {
+		.breadcrumb-item {
+			&::before {
+				float: right;
+			}
+
+			& + .breadcrumb-item {
+				padding: 0px 8px 0px 0px;
+
+				&::before {
+					padding: 0px 0px 0px 8px;
+					content: '/';
+				}
+			}
+
+			&:not(.active),
+			&.active {
+				font-family: 'Cairo';
+			}
 		}
 	}
 }

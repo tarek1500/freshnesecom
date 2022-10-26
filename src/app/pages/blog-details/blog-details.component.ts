@@ -10,9 +10,9 @@ import { Blog } from '../../interfaces/blog.interface';
 })
 export class BlogDetailsComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Blogs', link: '/blogs' },
-		{ text: '', link: '' },
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Blogs', link: '/blogs' },
+		{ translate: '', text: '', link: '' },
 	];
 	blog!: Blog;
 	relatedBlogs: Blog[];

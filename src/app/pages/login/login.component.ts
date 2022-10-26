@@ -9,8 +9,8 @@ import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 })
 export class LoginComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Login', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Login', link: '' }
 	];
 
 	constructor() { }

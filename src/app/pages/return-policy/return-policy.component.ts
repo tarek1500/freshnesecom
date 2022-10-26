@@ -10,8 +10,8 @@ import { ReturnPolicy } from '../../interfaces/return-policy.interface';
 })
 export class ReturnPolicyComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Return Policy', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Return Policy', link: '' }
 	];
 	returnPolicy!: ReturnPolicy;
 

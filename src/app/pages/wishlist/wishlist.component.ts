@@ -13,8 +13,8 @@ import { Wishlist } from '../../interfaces/wishlist.interface';
 export class WishlistComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Wishlist', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Wishlist', link: '' }
 	];
 	wishlist!: Wishlist;
 	isGridView: boolean = true;

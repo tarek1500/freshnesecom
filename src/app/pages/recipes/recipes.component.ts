@@ -10,8 +10,8 @@ import { Recipe } from '../../interfaces/recipe.interface';
 })
 export class RecipesComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Recipes', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Recipes', link: '' }
 	];
 	recipes!: Recipe[];
 

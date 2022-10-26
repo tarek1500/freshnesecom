@@ -10,8 +10,8 @@ import { PrivacyPolicy } from '../../interfaces/privacy-policy.interface';
 })
 export class PrivacyPolicyComponent implements OnInit {
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: 'Privacy Policy', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: 'Privacy Policy', link: '' }
 	];
 	privacyPolicy!: PrivacyPolicy;
 

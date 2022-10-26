@@ -17,8 +17,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
 	category!: Category;
 	tag!: Tag;
 	breadcrumb: Breadcrumb[] = [
-		{ text: 'Homepage', link: '/' },
-		{ text: '', link: '' }
+		{ translate: '', text: 'Home', link: '/' },
+		{ translate: '', text: '', link: '' }
 	];
 	products: Product[];
 	isGridView: boolean = true;

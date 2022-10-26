@@ -1,6 +1,6 @@
-<ol class="breadcrumb">
+<ol class="breadcrumb" [ngClass]="{ 'rtl': rtl }">
 	<ng-container *ngFor="let item of breadcrumb; last as isLast">
-		<li [class]="{ 'breadcrumb-item': true, 'active': isLast }">
+		<li class="breadcrumb-item" [ngClass]="{ 'active': isLast }">
 			<a *ngIf="!isLast else text" routerLink="{{ item.link }}">{{ item.text }}</a>
 			<ng-template #text>{{ item.text }}</ng-template>
 		</li>
