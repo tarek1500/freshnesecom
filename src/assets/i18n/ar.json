@@ -84,6 +84,15 @@
 				"sectionHeadline": "عنوان القسم",
 				"readOurBlogPosts": "اقرأ منشورات مدونتنا",
 				"goToBlog": "انتقل إلى المدونة"
+			},
+			"login" : {
+				"login": "تسجيل الدخول",
+				"noAccount": "ليس لديك حساب؟",
+				"register": "تسجيل",
+				"email": "البريد الالكترونى",
+				"password": "كلمة المرور",
+				"remember": "تذكرنى",
+				"logging": "دخول"
 			}
 		}
 	}

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../services/rtl/rtl.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 
 @Component({
@@ -7,13 +9,24 @@ import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 	templateUrl: './login.component.html',
 	styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
+	subscriptions: Subscription[] = [];
+	rtl: boolean = false;
 	breadcrumb: Breadcrumb[] = [
-		{ translate: '', text: 'Home', link: '/' },
-		{ translate: '', text: 'Login', link: '' }
+		{ translate: 'translate.components.breadcrumb.home', text: 'Home', link: '/' },
+		{ translate: 'translate.components.breadcrumb.login', text: 'Login', link: '' }
 	];
 
-	constructor() { }
+	constructor(private rtlService: RtlService) { }
 
-	ngOnInit(): void { }
+	ngOnInit(): void {
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
+		});
+		this.subscriptions.push(subscription);
+	}
+
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
 }

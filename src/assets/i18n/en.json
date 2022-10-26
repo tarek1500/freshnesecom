@@ -84,6 +84,15 @@
 				"sectionHeadline": "Section headline",
 				"readOurBlogPosts": "Read our blog posts",
 				"goToBlog": "Go to blog"
+			},
+			"login" : {
+				"login": "Login",
+				"noAccount": "Don't have an account?",
+				"register": "Register",
+				"email": "Email address",
+				"password": "Password",
+				"remember": "Remember me",
+				"logging": "Login"
 			}
 		}
 	}

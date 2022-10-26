@@ -1,33 +1,33 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Login</h2>
-		<div class="subheading">Don't have an account? <a routerLink="/register">Register</a>.</div>
+		<h2 class="heading">{{ 'translate.pages.login.login' | translate }}</h2>
+		<div class="subheading">{{ 'translate.pages.login.noAccount' | translate }} <a routerLink="/register">{{ 'translate.pages.login.register' | translate }}</a>.</div>
 	</div>
 
 	<div class="content">
 		<form>
 			<div class="row">
 				<div class="col-12 form-group">
-					<label for="email">Email address</label>
-					<input class="form-control" id="email" type="email" placeholder="Email address">
+					<label for="email">{{ 'translate.pages.login.email' | translate }}</label>
+					<input class="form-control" id="email" type="email" placeholder="{{ 'translate.pages.login.email' | translate }}">
 				</div>
 				<div class="col-12 form-group">
-					<label for="password">Password</label>
-					<input class="form-control" id="password" type="password" placeholder="Password">
+					<label for="password">{{ 'translate.pages.login.password' | translate }}</label>
+					<input class="form-control" id="password" type="password" placeholder="{{ 'translate.pages.login.password' | translate }}">
 				</div>
 				<div class="col-12 form-group">
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" id="remember">
-						<label class="form-check-label" for="remember">Remember me</label>
+						<label class="form-check-label" for="remember">{{ 'translate.pages.login.remember' | translate }}</label>
 					</div>
 				</div>
 				<div class="col-12 form-group">
-					<button class="btn login-button">Login</button>
+					<button class="btn login-button">{{ 'translate.pages.login.logging' | translate }}</button>
 				</div>
 			</div>
 		</form>

@@ -126,4 +126,47 @@
 			}
 		}
 	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+
+			.subheading {
+				font-family: 'Cairo';
+			}
+		}
+
+		.content {
+			form {
+				.form-group {
+					label {
+						font-family: 'NotoSansArabic';
+					}
+
+					input {
+						font-family: 'Cairo';
+
+						&[type=checkbox] {
+							margin: 1px 0px 0px 8px;
+							float: right;
+						}
+					}
+
+					.form-check {
+						label {
+							font-family: 'Cairo';
+						}
+					}
+
+					.login-button {
+						font-family: 'NotoSansArabic';
+					}
+				}
+			}
+		}
+	}
 }
