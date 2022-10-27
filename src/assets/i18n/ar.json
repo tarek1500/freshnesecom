@@ -100,7 +100,15 @@
 				"profile": "الملف الشخصي",
 				"info": "المعلومات",
 				"addresses": "العناوين",
-				"orders": "الطلبات"
+				"orders": "الطلبات",
+				"infoSection": {
+					"fullName": "الاسم الكامل",
+					"email": "البريد الالكترونى",
+					"password": "كلمة المرور",
+					"phone": "رقم الهاتف",
+					"avatar": "الصورة الرمزية",
+					"update": "تحديث"
+				}
 			},
 			"register" : {
 				"register": "التسجيل",

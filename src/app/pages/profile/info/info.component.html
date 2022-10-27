@@ -1,4 +1,4 @@
-<form>
+<form [ngClass]="{ 'rtl': rtl }">
 	<div class="row">
 		<div class="col-12 form-group">
 			<div class="avatar-image">
@@ -6,27 +6,27 @@
 			</div>
 		</div>
 		<div class="col-12 form-group">
-			<label for="name">Full name</label>
-			<input class="form-control" name="name" id="name" type="text" placeholder="Full name" [(ngModel)]="user.name">
+			<label for="name">{{ 'translate.pages.profile.infoSection.fullName' | translate }}</label>
+			<input class="form-control" name="name" id="name" type="text" placeholder="{{ 'translate.pages.profile.infoSection.fullName' | translate }}" [(ngModel)]="user.name">
 		</div>
 		<div class="col-12 form-group">
-			<label for="email">Email address</label>
-			<input class="form-control" name="email" id="email" type="email" placeholder="Email address" [(ngModel)]="user.email">
+			<label for="email">{{ 'translate.pages.profile.infoSection.email' | translate }}</label>
+			<input class="form-control" name="email" id="email" type="email" placeholder="{{ 'translate.pages.profile.infoSection.email' | translate }}" [(ngModel)]="user.email">
 		</div>
 		<div class="col-12 form-group">
-			<label for="password">Password</label>
-			<input class="form-control" name="password" id="password" type="password" placeholder="Password">
+			<label for="password">{{ 'translate.pages.profile.infoSection.password' | translate }}</label>
+			<input class="form-control" name="password" id="password" type="password" placeholder="{{ 'translate.pages.profile.infoSection.password' | translate }}">
 		</div>
 		<div class="col-12 form-group">
-			<label for="phone">Phone number</label>
-			<input class="form-control" name="phone" id="phone" type="text" placeholder="Phone number" [(ngModel)]="user.phone">
+			<label for="phone">{{ 'translate.pages.profile.infoSection.phone' | translate }}</label>
+			<input class="form-control" name="phone" id="phone" type="text" placeholder="{{ 'translate.pages.profile.infoSection.phone' | translate }}" [(ngModel)]="user.phone">
 		</div>
 		<div class="col-12 form-group">
-			<label class="form-label" for="avatar-image">Avatar image</label>
+			<label class="form-label" for="avatar-image">{{ 'translate.pages.profile.infoSection.avatar' | translate }}</label>
 			<input class="form-control" type="file" id="avatar-image">
 		</div>
 		<div class="col-12 form-group">
-			<button class="btn update-button">Update</button>
+			<button class="btn update-button">{{ 'translate.pages.profile.infoSection.update' | translate }}</button>
 		</div>
 	</div>
 </form>

@@ -100,7 +100,15 @@
 				"profile": "Profile",
 				"info": "Info",
 				"addresses": "Addresses",
-				"orders": "Orders"
+				"orders": "Orders",
+				"infoSection": {
+					"fullName": "Full name",
+					"email": "Email address",
+					"password": "Password",
+					"phone": "Phone number",
+					"avatar": "Avatar image",
+					"update": "Update"
+				}
 			},
 			"register" : {
 				"register": "Register",
