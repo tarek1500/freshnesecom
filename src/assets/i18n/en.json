@@ -108,6 +108,18 @@
 					"phone": "Phone number",
 					"avatar": "Avatar image",
 					"update": "Update"
+				},
+				"addressesSection": {
+					"list": {
+						"create": "Create address",
+						"title": "Title",
+						"address": "Address",
+						"options": "Options",
+						"deletion": "Address deletion",
+						"areYouSureToDelete": "Are you sure you want to delete this address?",
+						"cancel": "Cancel",
+						"delete": "Delete"
+					}
 				}
 			},
 			"register" : {

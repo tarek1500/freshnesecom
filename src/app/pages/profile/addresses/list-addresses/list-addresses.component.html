@@ -1,15 +1,15 @@
-<div class="create">
-	<a class="btn create-button" routerLink="/profile/addresses/create">Create address</a>
+<div class="create" [ngClass]="{ 'rtl': rtl }">
+	<a class="btn create-button" routerLink="/profile/addresses/create">{{ 'translate.pages.profile.addressesSection.list.create' | translate }}</a>
 </div>
 
-<div class="table-responsive">
+<div class="table-responsive" [ngClass]="{ 'rtl': rtl }">
 	<table class="table">
 		<thead>
 			<tr>
 				<th>#</th>
-				<th>Title</th>
-				<th>Address</th>
-				<th>Options</th>
+				<th>{{ 'translate.pages.profile.addressesSection.list.title' | translate }}</th>
+				<th>{{ 'translate.pages.profile.addressesSection.list.address' | translate }}</th>
+				<th>{{ 'translate.pages.profile.addressesSection.list.options' | translate }}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -28,14 +28,14 @@
 
 <ng-template #deleteModalContent let-deleteModal>
 	<div class="modal-header">
-		<h4 class="modal-title">Address deletion: {{ modalTitle }}</h4>
+		<h4 class="modal-title">{{ 'translate.pages.profile.addressesSection.list.deletion' | translate }}: {{ modalTitle }}</h4>
 		<button class="btn-close" (click)="deleteModal.dismiss('Cross click')"></button>
 	</div>
 	<div class="modal-body">
-		<div class="caution">Are you sure you want to delete <span class="red">{{ modalTitle }}</span> address?</div>
+		<div class="caution">{{ 'translate.pages.profile.addressesSection.list.areYouSureToDelete' | translate }} <span class="red">{{ modalTitle }}</span></div>
 	</div>
 	<div class="modal-footer">
-		<button class="btn close-button" ngbAutofocus (click)="deleteModal.dismiss('cancel click')">Cancel</button>
-		<button class="btn delete-button" (click)="deleteModal.close('Ok click')">Delete</button>
+		<button class="btn close-button" ngbAutofocus (click)="deleteModal.dismiss('cancel click')">{{ 'translate.pages.profile.addressesSection.list.cancel' | translate }}</button>
+		<button class="btn delete-button" (click)="deleteModal.close('Ok click')">{{ 'translate.pages.profile.addressesSection.list.delete' | translate }}</button>
 	</div>
 </ng-template>

@@ -12,56 +12,88 @@
 		font-weight: 700;
 		font-size: 15px;
 	}
+
+	&.rtl {
+		text-align: left;
+
+		.create-button {
+			font-family: "NotoSansArabic";
+		}
+	}
 }
 
-.table {
-	margin: 0px;
+.table-responsive {
+	.table {
+		margin: 0px;
 
-	thead {
-		tr {
-			color: #151515;
-			font-family: 'Poppins';
-			font-weight: 600;
-			font-size: 12px;
+		thead {
+			tr {
+				color: #151515;
+				font-family: 'Poppins';
+				font-weight: 600;
+				font-size: 12px;
 
-			th {
-				padding: 7px 0px;
-				border-color: #EBEBEB;
+				th {
+					padding: 7px 0px;
+					border-color: #EBEBEB;
+				}
+			}
+		}
+
+		tbody {
+			border-top: none;
+
+			tr {
+				color: #575757;
+				font-family: 'OpenSans';
+				font-weight: 400;
+				font-size: 14px;
+
+				&:nth-of-type(odd) {
+					background-color: #FDFDFD;
+				}
+
+				td {
+					padding: 10px 0px;
+					border: none;
+
+					a {
+						text-decoration: none;
+						color: #575757;
+						cursor: pointer;
+					}
+
+					.edit {
+						margin-right: 4px;
+					}
+
+					.edit-icon,
+					.delete-icon {
+						width: 20px;
+						height: 20px;
+					}
+				}
 			}
 		}
 	}
 
-	tbody {
-		border-top: none;
-
-		tr {
-			color: #575757;
-			font-family: 'OpenSans';
-			font-weight: 400;
-			font-size: 14px;
-
-			&:nth-of-type(odd) {
-				background-color: #FDFDFD;
+	&.rtl {
+		.table {
+			thead {
+				tr {
+					font-family: 'NotoSansArabic';
+				}
 			}
 
-			td {
-				padding: 10px 0px;
-				border: none;
+			tbody {
+				tr {
+					font-family: 'Cairo';
 
-				a {
-					text-decoration: none;
-					color: #575757;
-					cursor: pointer;
-				}
-
-				.edit {
-					margin-right: 4px;
-				}
-
-				.edit-icon,
-				.delete-icon {
-					width: 20px;
-					height: 20px;
+					td {
+						.edit {
+							margin: 0px 0px 0px 4px;
+						}
+					}
 				}
 			}
 		}
@@ -117,6 +149,41 @@
 						font-family: 'Poppins';
 						font-weight: 700;
 						font-size: 15px;
+					}
+				}
+			}
+		}
+
+		&.rtl {
+			direction: rtl;
+
+			.modal-dialog {
+				.modal-content {
+					.modal-header {
+						.modal-title {
+							font-family: 'NotoSansArabic';
+						}
+
+						.btn-close {
+							margin: -8px auto -8px -8px;
+						}
+					}
+
+					.modal-body {
+						.caution {
+							font-family: 'Cairo';
+
+							.red {
+								font-family: 'Cairo';
+							}
+						}
+					}
+
+					.modal-footer {
+						.close-button,
+						.delete-button {
+							font-family: 'NotoSansArabic';
+						}
 					}
 				}
 			}

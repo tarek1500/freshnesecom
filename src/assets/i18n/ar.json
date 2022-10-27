@@ -108,6 +108,18 @@
 					"phone": "رقم الهاتف",
 					"avatar": "الصورة الرمزية",
 					"update": "تحديث"
+				},
+				"addressesSection": {
+					"list": {
+						"create": "إنشاء عنوان",
+						"title": "الاسم",
+						"address": "العنوان",
+						"options": "خيارات",
+						"deletion": "حذف العنوان",
+						"areYouSureToDelete": "هل أنت متأكد أنك تريد حذف هذا العنوان؟",
+						"cancel": "إلغاء",
+						"delete": "حذف"
+					}
 				}
 			},
 			"register" : {
