@@ -9,7 +9,8 @@
 			"breadcrumb": {
 				"home": "الرئيسية",
 				"login": "تسجيل الدخول",
-				"register": "التسجيل"
+				"register": "التسجيل",
+				"profile": "الملف الشخصي"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -94,6 +95,12 @@
 				"password": "كلمة المرور",
 				"remember": "تذكرنى",
 				"logging": "دخول"
+			},
+			"profile": {
+				"profile": "الملف الشخصي",
+				"info": "المعلومات",
+				"addresses": "العناوين",
+				"orders": "الطلبات"
 			},
 			"register" : {
 				"register": "التسجيل",

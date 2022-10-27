@@ -95,4 +95,43 @@
 			padding: 0px;
 		}
 	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.content {
+			.menu-column {
+				.nav {
+					margin: 0px 0px 0px 32px;
+
+					.nav-item {
+						.form-check {
+							input {
+								margin: 2px 0px 0px 16px;
+								float: right;
+
+								@media (max-width: 991.98px) {
+									margin-left: 3px;
+								}
+
+								@media (max-width: 767.98px) {
+									margin-left: 16px;
+								}
+							}
+
+							label {
+								font-family: 'NotoSansArabic';
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -9,7 +9,8 @@
 			"breadcrumb": {
 				"home": "Home",
 				"login": "Login",
-				"register": "Register"
+				"register": "Register",
+				"profile": "Profile"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -94,6 +95,12 @@
 				"password": "Password",
 				"remember": "Remember me",
 				"logging": "Login"
+			},
+			"profile": {
+				"profile": "Profile",
+				"info": "Info",
+				"addresses": "Addresses",
+				"orders": "Orders"
 			},
 			"register" : {
 				"register": "Register",
