@@ -119,6 +119,19 @@
 						"areYouSureToDelete": "هل أنت متأكد أنك تريد حذف هذا العنوان؟",
 						"cancel": "إلغاء",
 						"delete": "حذف"
+					},
+					"create": {
+						"create": "إنشاء",
+						"update": "تحديث",
+						"lowercaseAddress": "عنوان",
+						"back": "الى الخلف",
+						"title": "الاسم",
+						"address": "العنوان",
+						"addressDetails": "العنوان بالتفصيل ...",
+						"city": "المدينة",
+						"country": "الدولة",
+						"selectCountry": "اختر الدولة",
+						"postal": "الرمز البريدي"
 					}
 				}
 			},

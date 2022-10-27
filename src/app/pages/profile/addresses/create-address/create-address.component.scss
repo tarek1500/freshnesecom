@@ -20,6 +20,19 @@
 		font-weight: 700;
 		font-size: 15px;
 	}
+
+	&.rtl {
+		.heading,
+		.back-button {
+			font-family: 'NotoSansArabic';
+		}
+
+		.back-button {
+			.back-icon {
+				transform: scaleX(-1);
+			}
+		}
+	}
 }
 
 form {
@@ -108,6 +121,22 @@ form {
 			font-family: 'Poppins';
 			font-weight: 700;
 			font-size: 15px;
+		}
+	}
+
+	&.rtl {
+		.form-group {
+			label,
+			.button {
+				font-family: 'NotoSansArabic';
+			}
+
+			input,
+			textarea,
+			select {
+				background-position: left 12px center;
+				font-family: 'Cairo';
+			}
 		}
 	}
 }

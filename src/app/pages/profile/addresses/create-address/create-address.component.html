@@ -1,34 +1,32 @@
-<div class="header">
-	<h3 class="heading">{{ title }} address</h3>
-	<a class="btn back-button" routerLink="/profile/addresses"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> Back</a>
+<div class="header" [ngClass]="{ 'rtl': rtl }">
+	<h3 class="heading">{{ title | translate }} {{ 'translate.pages.profile.addressesSection.create.lowercaseAddress' | translate }}</h3>
+	<a class="btn back-button" routerLink="/profile/addresses"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> {{ 'translate.pages.profile.addressesSection.create.back' | translate }}</a>
 </div>
 
-<form>
+<form [ngClass]="{ 'rtl': rtl }">
 	<div class="row">
 		<div class="col-12 form-group">
-			<label for="title">Title</label>
-			<input class="form-control" name="title" id="title" type="text" placeholder="Title" [(ngModel)]="address.title">
+			<label for="title">{{ 'translate.pages.profile.addressesSection.create.title' | translate }}</label>
+			<input class="form-control" name="title" id="title" type="text" placeholder="{{ 'translate.pages.profile.addressesSection.create.title' | translate }}" [(ngModel)]="address.title">
 		</div>
 		<div class="col-12 form-group">
-			<label for="address">Address</label>
-			<textarea class="form-control" name="address" id="address" rows="4" placeholder="Address in details ..." [(ngModel)]="address.address"></textarea>
+			<label for="address">{{ 'translate.pages.profile.addressesSection.create.address' | translate }}</label>
+			<textarea class="form-control" name="address" id="address" rows="4" placeholder="{{ 'translate.pages.profile.addressesSection.create.addressDetails' | translate }}" [(ngModel)]="address.address"></textarea>
 		</div>
 		<div class="col-12 form-group">
-			<label for="city">City</label>
-			<input class="form-control" name="city" id="city" type="text" placeholder="City" [(ngModel)]="address.city">
+			<label for="city">{{ 'translate.pages.profile.addressesSection.create.city' | translate }}</label>
+			<input class="form-control" name="city" id="city" type="text" placeholder="{{ 'translate.pages.profile.addressesSection.create.city' | translate }}" [(ngModel)]="address.city">
 		</div>
 		<div class="col-12 form-group">
-			<label for="country">Country</label>
+			<label for="country">{{ 'translate.pages.profile.addressesSection.create.country' | translate }}</label>
 			<select class="form-select" name="country" id="country" [(ngModel)]="address.country">
-				<option value="" selected>Select country</option>
-				<option value="Egypt">Egypt</option>
-				<option value="USA">USA</option>
-				<option value="UK">UK</option>
+				<option value="" selected>{{ 'translate.pages.profile.addressesSection.create.selectCountry' | translate }}</option>
+				<option *ngFor="let country of countries" [value]="country.key">{{ country.name }}</option>
 			</select>
 		</div>
 		<div class="col-12 form-group">
-			<label for="postal">Postal code</label>
-			<input class="form-control" name="postal" id="postal" type="text" placeholder="Postal code" [(ngModel)]="address.postal">
+			<label for="postal">{{ 'translate.pages.profile.addressesSection.create.postal' | translate }}</label>
+			<input class="form-control" name="postal" id="postal" type="text" placeholder="{{ 'translate.pages.profile.addressesSection.create.postal' | translate }}" [(ngModel)]="address.postal">
 		</div>
 		<div class="col-12 form-group">
 			<div class="maps">
@@ -38,7 +36,7 @@
 			</div>
 		</div>
 		<div class="col-12 form-group">
-			<button class="btn button">{{ title }}</button>
+			<button class="btn button">{{ title | translate }}</button>
 		</div>
 	</div>
 </form>

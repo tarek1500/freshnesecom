@@ -119,6 +119,19 @@
 						"areYouSureToDelete": "Are you sure you want to delete this address?",
 						"cancel": "Cancel",
 						"delete": "Delete"
+					},
+					"create": {
+						"create": "Create",
+						"update": "Update",
+						"lowercaseAddress": "address",
+						"back": "Back",
+						"title": "Title",
+						"address": "Address",
+						"addressDetails": "Address in details ...",
+						"city": "City",
+						"country": "Country",
+						"selectCountry": "Select country",
+						"postal": "Postal code"
 					}
 				}
 			},
