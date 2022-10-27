@@ -8,7 +8,8 @@
 			},
 			"breadcrumb": {
 				"home": "الرئيسية",
-				"login": "تسجيل الدخول"
+				"login": "تسجيل الدخول",
+				"register": "التسجيل"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -93,6 +94,17 @@
 				"password": "كلمة المرور",
 				"remember": "تذكرنى",
 				"logging": "دخول"
+			},
+			"register" : {
+				"register": "التسجيل",
+				"haveAccount": "هل لديك حساب؟",
+				"login": "تسجيل دخول",
+				"fullName": "الاسم الكامل",
+				"email": "البريد الالكترونى",
+				"password": "كلمة المرور",
+				"phone": "رقم الهاتف",
+				"avatar": "الصورة الرمزية",
+				"registering": "تسجيل"
 			}
 		}
 	}

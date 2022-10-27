@@ -1,39 +1,39 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Register</h2>
-		<div class="subheading">Already have an account? <a routerLink="/login">Login</a>.</div>
+		<h2 class="heading">{{ 'translate.pages.register.register' | translate }}</h2>
+		<div class="subheading">{{ 'translate.pages.register.haveAccount' | translate }} <a routerLink="/login">{{ 'translate.pages.register.login' | translate }}</a>.</div>
 	</div>
 
 	<div class="content">
 		<form>
 			<div class="row">
 				<div class="col-12 form-group">
-					<label for="name">Full name</label>
-					<input class="form-control" id="name" type="text" placeholder="Full name">
+					<label for="name">{{ 'translate.pages.register.fullName' | translate }}</label>
+					<input class="form-control" id="name" type="text" placeholder="{{ 'translate.pages.register.fullName' | translate }}">
 				</div>
 				<div class="col-12 form-group">
-					<label for="email">Email address</label>
-					<input class="form-control" id="email" type="email" placeholder="Email address">
+					<label for="email">{{ 'translate.pages.register.email' | translate }}</label>
+					<input class="form-control" id="email" type="email" placeholder="{{ 'translate.pages.register.email' | translate }}">
 				</div>
 				<div class="col-12 form-group">
-					<label for="password">Password</label>
-					<input class="form-control" id="password" type="password" placeholder="Password">
+					<label for="password">{{ 'translate.pages.register.password' | translate }}</label>
+					<input class="form-control" id="password" type="password" placeholder="{{ 'translate.pages.register.password' | translate }}">
 				</div>
 				<div class="col-12 form-group">
-					<label for="phone">Phone number</label>
-					<input class="form-control" id="phone" type="text" placeholder="Phone number">
+					<label for="phone">{{ 'translate.pages.register.phone' | translate }}</label>
+					<input class="form-control" id="phone" type="text" placeholder="{{ 'translate.pages.register.phone' | translate }}">
 				</div>
 				<div class="col-12 form-group">
-					<label class="form-label" for="avatar-image">Avatar image</label>
+					<label class="form-label" for="avatar-image">{{ 'translate.pages.register.avatar' | translate }}</label>
 					<input class="form-control" type="file" id="avatar-image">
 				</div>
 				<div class="col-12 form-group">
-					<button class="btn register-button">Register</button>
+					<button class="btn register-button">{{ 'translate.pages.register.registering' | translate }}</button>
 				</div>
 			</div>
 		</form>

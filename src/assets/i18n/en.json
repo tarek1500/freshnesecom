@@ -8,7 +8,8 @@
 			},
 			"breadcrumb": {
 				"home": "Home",
-				"login": "Login"
+				"login": "Login",
+				"register": "Register"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -93,6 +94,17 @@
 				"password": "Password",
 				"remember": "Remember me",
 				"logging": "Login"
+			},
+			"register" : {
+				"register": "Register",
+				"haveAccount": "Already have an account?",
+				"login": "Login",
+				"fullName": "Full name",
+				"email": "Email address",
+				"password": "Password",
+				"phone": "Phone number",
+				"avatar": "Avatar image",
+				"registering": "Register"
 			}
 		}
 	}

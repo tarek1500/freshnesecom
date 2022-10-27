@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { RegisterRoutingModule } from './register-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
@@ -12,6 +13,7 @@ import { RegisterComponent } from './register.component';
 	],
 	imports: [
 		CommonModule,
+		TranslateModule,
 		RegisterRoutingModule,
 		SharedModule,
 		BreadcrumbModule
