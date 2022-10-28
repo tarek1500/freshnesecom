@@ -20,6 +20,19 @@
 		font-weight: 700;
 		font-size: 15px;
 	}
+
+	&.rtl {
+		.heading,
+		.back-button {
+			font-family: 'NotoSansArabic';
+		}
+
+		.back-button {
+			.back-icon {
+				transform: scaleX(-1);
+			}
+		}
+	}
 }
 
 .details {
@@ -50,44 +63,74 @@
 			}
 		}
 	}
+
+	&.rtl {
+		.details-row {
+			.text {
+				font-family: 'Cairo';
+
+				.address {
+					font-family: 'Cairo';
+				}
+			}
+		}
+	}
 }
 
-.table {
-	thead {
-		tr {
-			color: #151515;
-			font-family: 'Poppins';
-			font-weight: 600;
-			font-size: 12px;
+.table-responsive {
+	.table {
+		thead {
+			tr {
+				color: #151515;
+				font-family: 'Poppins';
+				font-weight: 600;
+				font-size: 12px;
 
-			th {
-				padding: 7px 0px;
-				border-color: #EBEBEB;
+				th {
+					padding: 7px 0px;
+					border-color: #EBEBEB;
+				}
+			}
+		}
+
+		tbody {
+			border-top: none;
+
+			tr {
+				color: #575757;
+				font-family: 'OpenSans';
+				font-weight: 400;
+				font-size: 14px;
+
+				&:nth-of-type(odd) {
+					background-color: #FDFDFD;
+				}
+
+				td {
+					padding: 10px 0px;
+					border: none;
+
+					a {
+						text-decoration: none;
+						color: #575757;
+						cursor: pointer;
+					}
+				}
 			}
 		}
 	}
 
-	tbody {
-		border-top: none;
-
-		tr {
-			color: #575757;
-			font-family: 'OpenSans';
-			font-weight: 400;
-			font-size: 14px;
-
-			&:nth-of-type(odd) {
-				background-color: #FDFDFD;
+	&.rtl {
+		.table {
+			thead {
+				tr {
+					font-family: 'NotoSansArabic';
+				}
 			}
 
-			td {
-				padding: 10px 0px;
-				border: none;
-
-				a {
-					text-decoration: none;
-					color: #575757;
-					cursor: pointer;
+			tbody {
+				tr {
+					font-family: 'Cairo';
 				}
 			}
 		}

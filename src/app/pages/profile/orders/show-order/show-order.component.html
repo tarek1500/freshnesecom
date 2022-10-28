@@ -1,45 +1,45 @@
-<div class="header">
-	<h3 class="heading">Order details</h3>
-	<a class="btn back-button" routerLink="/profile/orders"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> Back</a>
+<div class="header" [ngClass]="{ 'rtl': rtl }">
+	<h3 class="heading">{{ 'translate.pages.profile.ordersSection.show.details' | translate }}</h3>
+	<a class="btn back-button" routerLink="/profile/orders"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> {{ 'translate.pages.profile.ordersSection.show.back' | translate }}</a>
 </div>
 
-<div class="details">
+<div class="details" [ngClass]="{ 'rtl': rtl }">
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="row details-row">
-				<div class="col-6 text">Number</div>
+				<div class="col-6 text">{{ 'translate.pages.profile.ordersSection.show.number' | translate }}</div>
 				<div class="col-6 text">{{ order.number }}</div>
 			</div>
 			<div class="row details-row">
-				<div class="col-6 text">Date</div>
+				<div class="col-6 text">{{ 'translate.pages.profile.ordersSection.show.date' | translate }}</div>
 				<div class="col-6 text">{{ order.date.toLocaleString() }}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="row details-row">
-				<div class="col-6 text">Total</div>
-				<div class="col-6 text">{{ order.total }}</div>
+				<div class="col-6 text">{{ 'translate.pages.profile.ordersSection.show.total' | translate }}</div>
+				<div class="col-6 text">{{ order.total }} {{ order.currency }}</div>
 			</div>
 			<div class="row details-row">
-				<div class="col-6 text">Address</div>
+				<div class="col-6 text">{{ 'translate.pages.profile.ordersSection.show.address' | translate }}</div>
 				<div class="col-6 text">
-					<button class="btn address" placement="top" ngbTooltip="{{ order.address.address + ', ' + order.address.city + ', ' + order.address.country + ', ' + order.address.postal }}">{{ order.address.title }}</button>
+					<button class="btn address" placement="top" ngbTooltip="{{ order.address.address + ', ' + order.address.city + ', ' + order.address.country.name + ', ' + order.address.postal }}">{{ order.address.title }}</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="table-responsive">
+<div class="table-responsive" [ngClass]="{ 'rtl': rtl }">
 	<table class="table">
 		<thead>
 			<tr>
 				<th>#</th>
-				<th>Product</th>
-				<th>Quantity</th>
-				<th>Price</th>
-				<th>Total</th>
-				<th>View</th>
+				<th>{{ 'translate.pages.profile.ordersSection.show.product' | translate }}</th>
+				<th>{{ 'translate.pages.profile.ordersSection.show.quantity' | translate }}</th>
+				<th>{{ 'translate.pages.profile.ordersSection.show.price' | translate }}</th>
+				<th>{{ 'translate.pages.profile.ordersSection.show.total' | translate }}</th>
+				<th>{{ 'translate.pages.profile.ordersSection.show.view' | translate }}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -47,9 +47,9 @@
 				<td>{{ index + 1 }}</td>
 				<td>{{ item.product.name }}</td>
 				<td>{{ item.quantity }}</td>
-				<td>{{ item.price }}</td>
-				<td>{{ (item.quantity * item.price) | number:'1.0-2' }}</td>
-				<td><a [routerLink]="['/products', item.product.slug]">View</a></td>
+				<td>{{ item.price }} {{ item.currency }}</td>
+				<td>{{ (item.quantity * item.price) | number:'1.0-2' }} {{ item.currency }}</td>
+				<td><a [routerLink]="['/products', item.product.slug]">{{ 'translate.pages.profile.ordersSection.show.view' | translate }}</a></td>
 			</tr>
 		</tbody>
 	</table>

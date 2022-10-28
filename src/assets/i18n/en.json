@@ -143,6 +143,18 @@
 						"date": "Date",
 						"view": "View",
 						"page": "Page"
+					},
+					"show": {
+						"details": "Order details",
+						"back": "Back",
+						"number": "Number",
+						"date": "Date",
+						"total": "Total",
+						"address": "Address",
+						"product": "Product",
+						"quantity": "Quantity",
+						"price": "Price",
+						"view": "View"
 					}
 				}
 			},
