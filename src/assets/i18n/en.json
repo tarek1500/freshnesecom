@@ -133,6 +133,17 @@
 						"selectCountry": "Select country",
 						"postal": "Postal code"
 					}
+				},
+				"ordersSection": {
+					"list": {
+						"number": "Number",
+						"count": "Items count",
+						"address": "Address",
+						"total": "Total",
+						"date": "Date",
+						"view": "View",
+						"page": "Page"
+					}
 				}
 			},
 			"register": {

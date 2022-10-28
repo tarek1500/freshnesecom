@@ -9,5 +9,6 @@ export interface Order {
 	items: OrderItem[],
 	address: Address,
 	total: number,
+	currency: string,
 	date: Date
 }

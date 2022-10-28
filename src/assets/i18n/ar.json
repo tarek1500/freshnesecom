@@ -133,6 +133,17 @@
 						"selectCountry": "اختر الدولة",
 						"postal": "الرمز البريدي"
 					}
+				},
+				"ordersSection": {
+					"list": {
+						"number": "الرقم",
+						"count": "عدد العناصر",
+						"address": "العنوان",
+						"total": "المجموع",
+						"date": "التاريخ",
+						"view": "مشاهدة",
+						"page": "صفحة"
+					}
 				}
 			},
 			"register": {

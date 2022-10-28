@@ -1,14 +1,14 @@
-<div class="table-responsive">
+<div class="table-responsive" [ngClass]="{ 'rtl': rtl }">
 	<table class="table">
 		<thead>
 			<tr>
 				<th>#</th>
-				<th>Number</th>
-				<th>Items count</th>
-				<th>Address</th>
-				<th>Total</th>
-				<th>Date</th>
-				<th>View</th>
+				<th>{{ 'translate.pages.profile.ordersSection.list.number' | translate }}</th>
+				<th>{{ 'translate.pages.profile.ordersSection.list.count' | translate }}</th>
+				<th>{{ 'translate.pages.profile.ordersSection.list.address' | translate }}</th>
+				<th>{{ 'translate.pages.profile.ordersSection.list.total' | translate }}</th>
+				<th>{{ 'translate.pages.profile.ordersSection.list.date' | translate }}</th>
+				<th>{{ 'translate.pages.profile.ordersSection.list.view' | translate }}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -17,19 +17,19 @@
 				<td>{{ order.number }}</td>
 				<td>{{ order.items.length }}</td>
 				<td>
-					<button class="btn address" placement="top" ngbTooltip="{{ order.address.address + ', ' + order.address.city + ', ' + order.address.country + ', ' + order.address.postal }}">{{ order.address.title }}</button>
+					<button class="btn address" placement="top" ngbTooltip="{{ order.address.address + ', ' + order.address.city + ', ' + order.address.country.name + ', ' + order.address.postal }}">{{ order.address.title }}</button>
 				</td>
-				<td>{{ order.total }}</td>
+				<td>{{ order.total }} {{ order.currency }}</td>
 				<td>{{ order.date.toLocaleString() }}</td>
-				<td><a [routerLink]="['/profile/orders', order.id]">View</a></td>
+				<td><a [routerLink]="['/profile/orders', order.id]">{{ 'translate.pages.profile.ordersSection.list.view' | translate }}</a></td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
-<div class="footer">
+<div class="footer" [ngClass]="{ 'rtl': rtl }">
 	<div class="pages">
-		<h3 class="title">Page:</h3>
+		<h3 class="title">{{ 'translate.pages.profile.ordersSection.list.page' | translate }}:</h3>
 		<a class="page" href="#">1</a>
 		<a class="page" href="#">2</a>
 		<a class="page active" href="#">3</a>
