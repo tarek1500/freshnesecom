@@ -25,6 +25,10 @@ export class ListOrdersComponent implements OnInit, OnDestroy {
 		this.subscriptions.push(subscription);
 	}
 
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
+
 	loadOrders() {
 		if (this.rtl) {
 			this.orders = [
@@ -514,9 +518,5 @@ export class ListOrdersComponent implements OnInit, OnDestroy {
 				}
 			];
 		}
-	}
-
-	ngOnDestroy(): void {
-		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 }

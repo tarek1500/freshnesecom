@@ -44,7 +44,7 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
 		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
-	flattenObject(o: any, prefix: string = '', result: Dictionary = {}, keepNull: boolean = true) {
+	flattenObject(o: any, prefix: string = '', result: Dictionary = {}, keepNull: boolean = true): Dictionary {
 		if (_.isString(o) || _.isNumber(o) || _.isBoolean(o) || (keepNull && _.isNull(o))) {
 			result[prefix] = o;
 

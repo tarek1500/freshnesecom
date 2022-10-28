@@ -30,6 +30,10 @@ export class ListAddressesComponent implements OnInit, OnDestroy {
 		this.subscriptions.push(subscription);
 	}
 
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
+
 	loadAddresses() {
 		if (this.rtl) {
 			this.addresses = [
@@ -97,9 +101,5 @@ export class ListAddressesComponent implements OnInit, OnDestroy {
 		this.modalTitle = address.title;
 
 		this.modalService.open(content, { centered: true, size: 'lg', windowClass: this.rtl ? 'rtl' : '' });
-	}
-
-	ngOnDestroy(): void {
-		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 }

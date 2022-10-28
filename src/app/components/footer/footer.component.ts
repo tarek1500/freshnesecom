@@ -32,6 +32,10 @@ export class FooterComponent implements OnInit, OnDestroy {
 		this.subscriptions.push(subscription);
 	}
 
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
+
 	loadTags() {
 		if (this.rtl) {
 			this.tags = [
@@ -221,10 +225,6 @@ export class FooterComponent implements OnInit, OnDestroy {
 				}
 			];
 		}
-	}
-
-	ngOnDestroy(): void {
-		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	openChatWindow(event: MouseEvent) {

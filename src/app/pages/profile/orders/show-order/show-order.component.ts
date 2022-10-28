@@ -68,6 +68,10 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 		this.subscriptions.push(subscription);
 	}
 
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
+
 	loadOrder(id: number) {
 		if (this.rtl) {
 			this.order = {
@@ -313,9 +317,5 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 				date: new Date('2020-6-22')
 			};
 		}
-	}
-
-	ngOnDestroy(): void {
-		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 }

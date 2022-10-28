@@ -17,6 +17,7 @@ import { Wishlist } from './interfaces/wishlist.interface';
 export class AppComponent implements OnInit, OnDestroy {
 	title = 'freshnesecom';
 	subscriptions: Subscription[] = [];
+	rtl: boolean = false;
 	showLoader: boolean = false;
 
 	constructor(
@@ -29,7 +30,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
 	ngOnInit(): void {
 		let subscription = this.translateService.onLangChange.subscribe(event => {
-			this.rtlService.updateValue(event.translations.direction === 'rtl');
+			this.rtl = event.translations.direction === 'rtl';
+
+			this.rtlService.updateValue(this.rtl);
+			this.loadCart();
+			this.loadWishlist();
 		});
 		this.subscriptions.push(subscription);
 
@@ -40,8 +45,13 @@ export class AppComponent implements OnInit, OnDestroy {
 
 		this.translateService.setDefaultLang('en');
 		this.translateService.use('ar');
+	}
 
-		// Fetch cart and wishlist from server
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
+
+	loadCart() {
 		let cart: Cart = {
 			id: 1,
 			products: [
@@ -267,6 +277,239 @@ export class AppComponent implements OnInit, OnDestroy {
 			shipping: 0,
 			currency: 'USD'
 		};
+
+		if (this.rtl) {
+			cart = {
+				id: 1,
+				products: [
+					{
+						id: 1,
+						name: 'عنوان المنتج',
+						slug: 'product-title',
+						description: '',
+						rating: 4.33,
+						price: 36.99,
+						oldPrice: 48.56,
+						currency: 'جنيه',
+						sku: '',
+						freshness: 'يوم واحد',
+						freshnessDescription: '',
+						farm: 'مزرعة تاراميس',
+						availablePacks: [
+							{
+								id: 1,
+								stock: 10,
+								pack: 'قِطَع'
+							},
+							{
+								id: 2,
+								stock: 20,
+								pack: 'كيلوجرام'
+							},
+							{
+								id: 3,
+								stock: 1,
+								pack: 'صندوق'
+							},
+							{
+								id: 4,
+								stock: 2,
+								pack: 'حزمة'
+							}
+						],
+						category: {
+							id: 0,
+							name: '',
+							slug: '',
+							subcategories: []
+						},
+						delivery: '',
+						selectedQuantity: {
+							id: 1,
+							quantity: 1,
+							pack: 'قِطَع'
+						},
+						shipping: '',
+						deliveryDays: 0,
+						info: '',
+						reviews: [],
+						questions: [],
+						images: ['https://picsum.photos/id/112/200/100']
+					},
+					{
+						id: 2,
+						name: 'عنوان المنتج',
+						slug: 'product-title',
+						description: '',
+						rating: 4.33,
+						price: 36.99,
+						oldPrice: 48.56,
+						currency: 'جنيه',
+						sku: '',
+						freshness: 'يوم واحد',
+						freshnessDescription: '',
+						farm: 'مزرعة تاراميس',
+						availablePacks: [
+							{
+								id: 1,
+								stock: 10,
+								pack: 'قِطَع'
+							},
+							{
+								id: 2,
+								stock: 20,
+								pack: 'كيلوجرام'
+							},
+							{
+								id: 3,
+								stock: 1,
+								pack: 'صندوق'
+							},
+							{
+								id: 4,
+								stock: 2,
+								pack: 'حزمة'
+							}
+						],
+						category: {
+							id: 0,
+							name: '',
+							slug: '',
+							subcategories: []
+						},
+						delivery: '',
+						selectedQuantity: {
+							id: 1,
+							quantity: 1,
+							pack: 'قِطَع'
+						},
+						shipping: '',
+						deliveryDays: 0,
+						info: '',
+						reviews: [],
+						questions: [],
+						images: ['https://picsum.photos/id/1080/200/100']
+					},
+					{
+						id: 3,
+						name: 'عنوان المنتج',
+						slug: 'product-title',
+						description: '',
+						rating: 4.33,
+						price: 36.99,
+						oldPrice: 0,
+						currency: 'جنيه',
+						sku: '',
+						freshness: 'يوم واحد',
+						freshnessDescription: '',
+						farm: 'مزرعة تاراميس',
+						availablePacks: [
+							{
+								id: 1,
+								stock: 10,
+								pack: 'قِطَع'
+							},
+							{
+								id: 2,
+								stock: 20,
+								pack: 'كيلوجرام'
+							},
+							{
+								id: 3,
+								stock: 1,
+								pack: 'صندوق'
+							},
+							{
+								id: 4,
+								stock: 2,
+								pack: 'حزمة'
+							}
+						],
+						category: {
+							id: 0,
+							name: '',
+							slug: '',
+							subcategories: []
+						},
+						delivery: '',
+						selectedQuantity: {
+							id: 0,
+							quantity: 1,
+							pack: 'قِطَع'
+						},
+						shipping: '',
+						deliveryDays: 0,
+						info: '',
+						reviews: [],
+						questions: [],
+						images: ['https://picsum.photos/id/102/300/100']
+					},
+					{
+						id: 4,
+						name: 'عنوان المنتج',
+						slug: 'product-title',
+						description: '',
+						rating: 4.33,
+						price: 36.99,
+						oldPrice: 48.56,
+						currency: 'جنيه',
+						sku: '',
+						freshness: 'يوم واحد',
+						freshnessDescription: '',
+						farm: 'مزرعة تاراميس',
+						availablePacks: [
+							{
+								id: 1,
+								stock: 10,
+								pack: 'قِطَع'
+							},
+							{
+								id: 2,
+								stock: 20,
+								pack: 'كيلوجرام'
+							},
+							{
+								id: 3,
+								stock: 1,
+								pack: 'صندوق'
+							},
+							{
+								id: 4,
+								stock: 2,
+								pack: 'حزمة'
+							}
+						],
+						category: {
+							id: 0,
+							name: '',
+							slug: '',
+							subcategories: []
+						},
+						delivery: '',
+						selectedQuantity: {
+							id: 1,
+							quantity: 1,
+							pack: 'قِطَع'
+						},
+						shipping: '',
+						deliveryDays: 0,
+						info: '',
+						reviews: [],
+						questions: [],
+						images: ['https://picsum.photos/id/107/200/100']
+					}
+				],
+				subtotal: 147.96,
+				tax: 16.53,
+				shipping: 0,
+				currency: 'جنيه'
+			};
+		}
+
+		this.cartService.updateValue(cart);
+	}
+
+	loadWishlist() {
 		let wishlist: Wishlist = {
 			id: 1,
 			products: [
@@ -488,11 +731,231 @@ export class AppComponent implements OnInit, OnDestroy {
 				}
 			]
 		};
-		this.cartService.updateValue(cart);
-		this.wishlistService.updateValue(wishlist);
-	}
 
-	ngOnDestroy(): void {
-		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+		if (this.rtl) {
+			wishlist = {
+				id: 1,
+				products: [
+					{
+						id: 1,
+						name: 'عنوان المنتج',
+						slug: 'product-title',
+						description: 'مساحة لوصف صغير للمنتج',
+						rating: 4.33,
+						price: 36.99,
+						oldPrice: 48.56,
+						currency: 'جنيه',
+						sku: '',
+						freshness: 'جديد',
+						freshnessDescription: 'طازج جدا',
+						farm: 'حقول مزرعة البقالة',
+						availablePacks: [
+							{
+								id: 1,
+								stock: 10,
+								pack: 'قِطَع'
+							},
+							{
+								id: 2,
+								stock: 20,
+								pack: 'كيلوجرام'
+							},
+							{
+								id: 3,
+								stock: 1,
+								pack: 'صندوق'
+							},
+							{
+								id: 4,
+								stock: 2,
+								pack: 'حزمة'
+							}
+						],
+						category: {
+							id: 0,
+							name: '',
+							slug: '',
+							subcategories: []
+						},
+						delivery: 'أوروبا',
+						selectedQuantity: {
+							id: 0,
+							quantity: 0,
+							pack: ''
+						},
+						shipping: 'الشحن مجانا',
+						deliveryDays: 1,
+						info: '',
+						reviews: [],
+						questions: [],
+						images: ['https://picsum.photos/id/112/600/300']
+					},
+					{
+						id: 2,
+						name: 'عنوان المنتج',
+						slug: 'product-title',
+						description: 'مساحة لوصف صغير للمنتج',
+						rating: 4.33,
+						price: 36.99,
+						oldPrice: 48.56,
+						currency: 'جنيه',
+						sku: '',
+						freshness: 'جديد',
+						freshnessDescription: 'طازج جدا',
+						farm: 'حقول مزرعة البقالة',
+						availablePacks: [
+							{
+								id: 1,
+								stock: 10,
+								pack: 'قِطَع'
+							},
+							{
+								id: 2,
+								stock: 20,
+								pack: 'كيلوجرام'
+							},
+							{
+								id: 3,
+								stock: 1,
+								pack: 'صندوق'
+							},
+							{
+								id: 4,
+								stock: 2,
+								pack: 'حزمة'
+							}
+						],
+						category: {
+							id: 0,
+							name: '',
+							slug: '',
+							subcategories: []
+						},
+						delivery: 'أوروبا',
+						selectedQuantity: {
+							id: 0,
+							quantity: 0,
+							pack: ''
+						},
+						shipping: 'الشحن مجانا',
+						deliveryDays: 1,
+						info: '',
+						reviews: [],
+						questions: [],
+						images: ['https://picsum.photos/id/1080/600/300']
+					},
+					{
+						id: 3,
+						name: 'عنوان المنتج',
+						slug: 'product-title',
+						description: 'مساحة لوصف صغير للمنتج',
+						rating: 4.33,
+						price: 36.99,
+						oldPrice: 0,
+						currency: 'جنيه',
+						sku: '',
+						freshness: 'جديد',
+						freshnessDescription: 'طازج جدا',
+						farm: 'حقول مزرعة البقالة',
+						availablePacks: [
+							{
+								id: 1,
+								stock: 10,
+								pack: 'قِطَع'
+							},
+							{
+								id: 2,
+								stock: 20,
+								pack: 'كيلوجرام'
+							},
+							{
+								id: 3,
+								stock: 1,
+								pack: 'صندوق'
+							},
+							{
+								id: 4,
+								stock: 2,
+								pack: 'حزمة'
+							}
+						],
+						category: {
+							id: 0,
+							name: '',
+							slug: '',
+							subcategories: []
+						},
+						delivery: 'أوروبا',
+						selectedQuantity: {
+							id: 0,
+							quantity: 0,
+							pack: ''
+						},
+						shipping: 'الشحن مجانا',
+						deliveryDays: 1,
+						info: '',
+						reviews: [],
+						questions: [],
+						images: ['https://picsum.photos/id/102/900/300']
+					},
+					{
+						id: 4,
+						name: 'عنوان المنتج',
+						slug: 'product-title',
+						description: 'مساحة لوصف صغير للمنتج',
+						rating: 4.33,
+						price: 36.99,
+						oldPrice: 48.56,
+						currency: 'جنيه',
+						sku: '',
+						freshness: 'جديد',
+						freshnessDescription: 'طازج جدا',
+						farm: 'حقول مزرعة البقالة',
+						availablePacks: [
+							{
+								id: 1,
+								stock: 10,
+								pack: 'قِطَع'
+							},
+							{
+								id: 2,
+								stock: 20,
+								pack: 'كيلوجرام'
+							},
+							{
+								id: 3,
+								stock: 1,
+								pack: 'صندوق'
+							},
+							{
+								id: 4,
+								stock: 2,
+								pack: 'حزمة'
+							}
+						],
+						category: {
+							id: 0,
+							name: '',
+							slug: '',
+							subcategories: []
+						},
+						delivery: 'أوروبا',
+						selectedQuantity: {
+							id: 0,
+							quantity: 0,
+							pack: ''
+						},
+						shipping: 'الشحن مجانا',
+						deliveryDays: 1,
+						info: '',
+						reviews: [],
+						questions: [],
+						images: ['https://picsum.photos/id/107/600/300']
+					}
+				]
+			};
+		}
+
+		this.wishlistService.updateValue(wishlist);
 	}
 }

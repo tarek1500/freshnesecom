@@ -32,6 +32,10 @@ export class InfoComponent implements OnInit, OnDestroy {
 		this.subscriptions.push(subscription);
 	}
 
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
+
 	loadInfo() {
 		if (this.rtl) {
 			this.user = {
@@ -53,9 +57,5 @@ export class InfoComponent implements OnInit, OnDestroy {
 				image: 'https://picsum.photos/id/237/150/150'
 			};
 		}
-	}
-
-	ngOnDestroy(): void {
-		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 }
