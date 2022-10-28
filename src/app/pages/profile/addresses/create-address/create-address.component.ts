@@ -1,4 +1,4 @@
-import { MouseEvent } from '@agm/core';
+import { MouseEvent as MapMouseEvent } from '@agm/core';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -15,230 +15,55 @@ import { Country } from '../../../../interfaces/country.interface';
 export class CreateAddressComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
-	title: string;
-	address!: Address;
-	countries: Country[];
-	mapCenter!: { latitude: number, longitude: number };
+	title: string = 'translate.pages.profile.addressesSection.create.create';
+	address: Address = {
+		id: 0,
+		title: '',
+		address: '',
+		city: '',
+		country: {
+			id: 0,
+			name: ''
+		},
+		postal: '',
+		latitude: 0,
+		longitude: 0
+	};
+	countries!: Country[];
+	mapCenter: { latitude: number, longitude: number } = {
+		latitude: 31.259672,
+		longitude: 29.996615
+	};
 
 	constructor(
 		private rtlService: RtlService,
 		private route: ActivatedRoute
-	) {
-		this.title = 'translate.pages.profile.addressesSection.create.create';
-		this.countries = [
-			{
-				id: 0,
-				name: 'Egypt',
-				key: 'Egypt'
-			},
-			{
-				id: 1,
-				name: 'USA',
-				key: 'USA'
-			},
-			{
-				id: 2,
-				name: 'UK',
-				key: 'UK'
-			}
-		];
-	}
+	) { }
 
 	ngOnInit(): void {
 		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
 			this.rtl = rtl;
 
-			if (this.rtl) {
-				if (this.address?.id) {
-					this.title = 'translate.pages.profile.addressesSection.create.update';
-					this.address = {
-						id: this.address.id,
-						title: 'العنوان الرئيسي',
-						address: '1234 شارع فريشنس كوم',
-						city: 'سان فرانسيسكو، كاليفورنيا',
-						country: 'USA',
-						postal: '12345',
-						latitude: 31.259672,
-						longitude: 29.996615
-					};
-				}
-				else {
-					this.address = {
-						id: 0,
-						title: '',
-						address: '',
-						city: '',
-						country: '',
-						postal: '',
-						latitude: 31.259672,
-						longitude: 29.996615
-					};
-				}
+			if (this.address.id !== 0) {
+				this.loadAddress(this.address.id);
 
-				this.countries = [
-					{
-						id: 0,
-						name: 'مصر',
-						key: 'Egypt'
-					},
-					{
-						id: 1,
-						name: 'الولايات المتحدة الأمريكية',
-						key: 'USA'
-					},
-					{
-						id: 2,
-						name: 'المملكة المتحدة',
-						key: 'UK'
-					}
-				];
+				this.title = 'translate.pages.profile.addressesSection.create.update';
 			}
-			else {
-				if (this.address?.id) {
-					this.title = 'translate.pages.profile.addressesSection.create.update';
-					this.address = {
-						id: this.address.id,
-						title: 'Main address',
-						address: '1234 Freshnesecom St',
-						city: 'San Francisco, CA',
-						country: 'USA',
-						postal: '12345',
-						latitude: 31.259672,
-						longitude: 29.996615
-					};
-				}
-				else {
-					this.address = {
-						id: 0,
-						title: '',
-						address: '',
-						city: '',
-						country: '',
-						postal: '',
-						latitude: 31.259672,
-						longitude: 29.996615
-					};
-				}
 
-				this.countries = [
-					{
-						id: 0,
-						name: 'Egypt',
-						key: 'Egypt'
-					},
-					{
-						id: 1,
-						name: 'USA',
-						key: 'USA'
-					},
-					{
-						id: 2,
-						name: 'UK',
-						key: 'UK'
-					}
-				];
-			}
+			this.loadCountries();
 		});
 		this.subscriptions.push(subscription);
 
 		subscription = this.route.params.subscribe(params => {
-			let id = params['address'];
+			let id = +params['address'] || 0;
 
-			if (this.rtl) {
-				if (id) {
-					this.title = 'translate.pages.profile.addressesSection.create.update';
-					this.address = {
-						id: id,
-						title: 'العنوان الرئيسي',
-						address: '1234 شارع فريشنس كوم',
-						city: 'سان فرانسيسكو، كاليفورنيا',
-						country: 'USA',
-						postal: '12345',
-						latitude: 31.259672,
-						longitude: 29.996615
-					};
-				}
-				else {
-					this.address = {
-						id: 0,
-						title: '',
-						address: '',
-						city: '',
-						country: '',
-						postal: '',
-						latitude: 31.259672,
-						longitude: 29.996615
-					};
-				}
+			if (id !== 0) {
+				this.loadAddress(id);
 
-				this.countries = [
-					{
-						id: 0,
-						name: 'مصر',
-						key: 'Egypt'
-					},
-					{
-						id: 1,
-						name: 'الولايات المتحدة الأمريكية',
-						key: 'USA'
-					},
-					{
-						id: 2,
-						name: 'المملكة المتحدة',
-						key: 'UK'
-					}
-				];
-			}
-			else {
-				if (id) {
-					this.title = 'translate.pages.profile.addressesSection.create.update';
-					this.address = {
-						id: id,
-						title: 'Main address',
-						address: '1234 Freshnesecom St',
-						city: 'San Francisco, CA',
-						country: 'USA',
-						postal: '12345',
-						latitude: 31.259672,
-						longitude: 29.996615
-					};
-				}
-				else {
-					this.address = {
-						id: 0,
-						title: '',
-						address: '',
-						city: '',
-						country: '',
-						postal: '',
-						latitude: 31.259672,
-						longitude: 29.996615
-					};
-				}
-
-				this.countries = [
-					{
-						id: 0,
-						name: 'Egypt',
-						key: 'Egypt'
-					},
-					{
-						id: 1,
-						name: 'USA',
-						key: 'USA'
-					},
-					{
-						id: 2,
-						name: 'UK',
-						key: 'UK'
-					}
-				];
+				this.title = 'translate.pages.profile.addressesSection.create.update';
 			}
 
-			this.mapCenter = {
-				latitude: 31.259672,
-				longitude: 29.996615
-			};
+			this.loadCountries();
 		});
 		this.subscriptions.push(subscription);
 	}
@@ -247,7 +72,88 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
-	mapClicked($event: MouseEvent) {
+	loadAddress(id: number) {
+		if (this.rtl) {
+			this.address = {
+				id: id,
+				title: 'العنوان الرئيسي',
+				address: '1234 شارع فريشنس كوم',
+				city: 'سان فرانسيسكو، كاليفورنيا',
+				country: {
+					id: 2,
+					name: 'الولايات المتحدة الأمريكية'
+				},
+				postal: '12345',
+				latitude: 31.259672,
+				longitude: 29.996615
+			};
+		}
+		else {
+			this.address = {
+				id: id,
+				title: 'Main address',
+				address: '1234 Freshnesecom St',
+				city: 'San Francisco, CA',
+				country: {
+					id: 2,
+					name: 'USA'
+				},
+				postal: '12345',
+				latitude: 31.259672,
+				longitude: 29.996615
+			};
+		}
+
+		this.mapCenter = {
+			latitude: this.address.latitude,
+			longitude: this.address.longitude
+		}
+	}
+
+	loadCountries() {
+		let countries = [
+			{
+				id: 1,
+				name: 'Egypt'
+			},
+			{
+				id: 2,
+				name: 'USA'
+			},
+			{
+				id: 3,
+				name: 'UK'
+			}
+		];
+
+		if (this.rtl) {
+			countries = [
+				{
+					id: 1,
+					name: 'مصر'
+				},
+				{
+					id: 2,
+					name: 'الولايات المتحدة الأمريكية'
+				},
+				{
+					id: 3,
+					name: 'المملكة المتحدة'
+				}
+			];
+		}
+
+		if (this.countries) {
+			this.countries.map(country => {
+				country.name = countries.find(localCountry => localCountry.id === country.id)!.name;
+			});
+		}
+		else {
+			this.countries = countries;
+		}
+	}
+
+	mapClicked($event: MapMouseEvent) {
 		this.address.latitude = $event.coords.lat;
 		this.address.longitude = $event.coords.lng;
 	}

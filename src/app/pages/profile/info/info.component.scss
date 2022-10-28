@@ -97,6 +97,13 @@ form {
 
 			input {
 				font-family: 'Cairo';
+
+				&[name=email],
+				&[name=phone] {
+					&::placeholder {
+						text-align: right;
+					}
+				}
 			}
 		}
 	}

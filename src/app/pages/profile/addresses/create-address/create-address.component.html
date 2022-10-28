@@ -19,9 +19,9 @@
 		</div>
 		<div class="col-12 form-group">
 			<label for="country">{{ 'translate.pages.profile.addressesSection.create.country' | translate }}</label>
-			<select class="form-select" name="country" id="country" [(ngModel)]="address.country">
-				<option value="" selected>{{ 'translate.pages.profile.addressesSection.create.selectCountry' | translate }}</option>
-				<option *ngFor="let country of countries" [value]="country.key">{{ country.name }}</option>
+			<select class="form-select" name="country" id="country" [(ngModel)]="address.country.id">
+				<option [value]="0">{{ 'translate.pages.profile.addressesSection.create.selectCountry' | translate }}</option>
+				<option *ngFor="let country of countries" [value]="country.id">{{ country.name }}</option>
 			</select>
 		</div>
 		<div class="col-12 form-group">

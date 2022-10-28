@@ -134,8 +134,11 @@ form {
 			input,
 			textarea,
 			select {
-				background-position: left 12px center;
 				font-family: 'Cairo';
+			}
+
+			select {
+				background-position: left 12px center;
 			}
 		}
 	}

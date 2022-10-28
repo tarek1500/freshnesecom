@@ -16,7 +16,7 @@
 			<tr *ngFor="let address of addresses; let index = index;">
 				<td>{{ index + 1 }}</td>
 				<td>{{ address.title }}</td>
-				<td>{{ address.address + ', ' + address.city + ', ' + address.country + ', ' + address.postal }}</td>
+				<td>{{ address.address + ', ' + address.city + ', ' + address.country.name + ', ' + address.postal }}</td>
 				<td>
 					<a class="edit" [routerLink]="['/profile/addresses', address.id, 'edit']"><img class="edit-icon" src="../../../../../assets/icons/edit.svg" alt=""></a>
 					<a class="delete" (click)="openDeleteModal(deleteModalContent, address)"><img class="delete-icon" src="../../../../../assets/icons/delete.svg" alt=""></a>
