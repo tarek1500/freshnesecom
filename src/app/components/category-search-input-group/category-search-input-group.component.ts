@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { RtlService } from '../../services/rtl/rtl.service';
@@ -9,13 +9,18 @@ import { Category } from '../../interfaces/category.interface';
 	templateUrl: './category-search-input-group.component.html',
 	styleUrls: ['./category-search-input-group.component.scss']
 })
-export class CategorySearchInputGroupComponent implements OnInit, OnDestroy {
+export class CategorySearchInputGroupComponent implements OnInit, OnChanges, OnDestroy {
 	@Input() categories: Category[] = [];
 	@Output() onSearch: EventEmitter<{ search: string, category: Category }> = new EventEmitter<{ search: string, category: Category }>();
 	@ViewChild('searchInput') searchInput!: ElementRef<HTMLInputElement>;
 	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
-	selectedCategory!: Category;
+	selectedCategory: Category = {
+		id: 0,
+		name: '',
+		slug: '',
+		subcategories: []
+	};
 
 	constructor(private rtlService: RtlService) { }
 
@@ -25,8 +30,14 @@ export class CategorySearchInputGroupComponent implements OnInit, OnDestroy {
 		});
 		this.subscriptions.push(subscription);
 
-		if (this.categories.length > 1) {
+		if (this.categories.length > 0) {
 			this.selectedCategory = this.categories[0];
+		}
+	}
+
+	ngOnChanges(changes: SimpleChanges) {
+		if (changes['categories'].currentValue !== changes['categories'].previousValue) {
+			this.selectedCategory = this.categories.find(category => category.id === this.selectedCategory.id)!;
 		}
 	}
 
