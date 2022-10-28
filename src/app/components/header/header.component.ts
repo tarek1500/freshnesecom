@@ -17,9 +17,9 @@ import { Wishlist } from '../../interfaces/wishlist.interface';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 	@Input('show-icons') showIcons: boolean = true;
-	rtl: boolean = false;
 	subscriptions: Subscription[] = [];
-	categories: Category[];
+	rtl: boolean = false;
+	categories!: Category[];
 	cart!: Cart;
 	isCartVisible: boolean = false;
 	wishlist!: Wishlist;
@@ -30,97 +30,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
 		private cartService: CartService,
 		private wishlistService: WishlistService,
 		private chatService: ChatService
-	) {
-		this.categories = [
-			{
-				id: 0,
-				name: 'All categories',
-				slug: '',
-				subcategories: []
-			},
-			{
-				id: 1,
-				name: 'Category 1',
-				slug: 'category-1',
-				subcategories: []
-			},
-			{
-				id: 2,
-				name: 'Category 2',
-				slug: 'category-2',
-				subcategories: []
-			},
-			{
-				id: 3,
-				name: 'Category 3',
-				slug: 'category-3',
-				subcategories: []
-			}
-		];
-	}
+	) { }
 
 	ngOnInit(): void {
 		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
 			this.rtl = rtl;
 
-			if (this.rtl)
-			{
-				this.categories = [
-					{
-						id: 0,
-						name: 'كل التصنيفات',
-						slug: '',
-						subcategories: []
-					},
-					{
-						id: 1,
-						name: 'تصنيف 1',
-						slug: 'category-1',
-						subcategories: []
-					},
-					{
-						id: 2,
-						name: 'تصنيف 2',
-						slug: 'category-2',
-						subcategories: []
-					},
-					{
-						id: 3,
-						name: 'تصنيف 3',
-						slug: 'category-3',
-						subcategories: []
-					}
-				];
-			}
-			else
-			{
-				this.categories = [
-					{
-						id: 0,
-						name: 'All categories',
-						slug: '',
-						subcategories: []
-					},
-					{
-						id: 1,
-						name: 'Category 1',
-						slug: 'category-1',
-						subcategories: []
-					},
-					{
-						id: 2,
-						name: 'Category 2',
-						slug: 'category-2',
-						subcategories: []
-					},
-					{
-						id: 3,
-						name: 'Category 3',
-						slug: 'category-3',
-						subcategories: []
-					}
-				];
-			}
+			this.loadCategories();
 		});
 		this.subscriptions.push(subscription);
 
@@ -137,6 +53,65 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
 	ngOnDestroy(): void {
 		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
+
+	loadCategories() {
+		if (this.rtl) {
+			this.categories = [
+				{
+					id: 0,
+					name: 'كل التصنيفات',
+					slug: '',
+					subcategories: []
+				},
+				{
+					id: 1,
+					name: 'تصنيف 1',
+					slug: 'category-1',
+					subcategories: []
+				},
+				{
+					id: 2,
+					name: 'تصنيف 2',
+					slug: 'category-2',
+					subcategories: []
+				},
+				{
+					id: 3,
+					name: 'تصنيف 3',
+					slug: 'category-3',
+					subcategories: []
+				}
+			];
+		}
+		else {
+			this.categories = [
+				{
+					id: 0,
+					name: 'All categories',
+					slug: '',
+					subcategories: []
+				},
+				{
+					id: 1,
+					name: 'Category 1',
+					slug: 'category-1',
+					subcategories: []
+				},
+				{
+					id: 2,
+					name: 'Category 2',
+					slug: 'category-2',
+					subcategories: []
+				},
+				{
+					id: 3,
+					name: 'Category 3',
+					slug: 'category-3',
+					subcategories: []
+				}
+			];
+		}
 	}
 
 	@HostListener('document:click', ['$event'])

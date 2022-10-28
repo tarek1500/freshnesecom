@@ -34,7 +34,7 @@ export class ProductDetailsComponent implements OnInit {
 			sku: '76645',
 			freshness: '1 days old',
 			freshnessDescription: '',
-			farm: 'Grocery Tarm Fields',
+			farm: 'Grocery Farm Fields',
 			availablePacks: [
 				{
 					id: 1,
@@ -136,7 +136,7 @@ export class ProductDetailsComponent implements OnInit {
 		this.relatedProducts = [
 			{
 				id: 1,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -169,7 +169,7 @@ export class ProductDetailsComponent implements OnInit {
 			},
 			{
 				id: 2,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -202,7 +202,7 @@ export class ProductDetailsComponent implements OnInit {
 			},
 			{
 				id: 3,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -235,7 +235,7 @@ export class ProductDetailsComponent implements OnInit {
 			},
 			{
 				id: 4,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,

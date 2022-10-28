@@ -21,7 +21,7 @@ export class CompareComponent implements OnInit {
 		this.products = [
 			{
 				id: 1,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -31,7 +31,7 @@ export class CompareComponent implements OnInit {
 				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
-				farm: 'Grocery Tarm Fields',
+				farm: 'Grocery Farm Fields',
 				availablePacks: [
 					{
 						id: 1,
@@ -75,7 +75,7 @@ export class CompareComponent implements OnInit {
 			},
 			{
 				id: 2,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -85,7 +85,7 @@ export class CompareComponent implements OnInit {
 				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
-				farm: 'Grocery Tarm Fields',
+				farm: 'Grocery Farm Fields',
 				availablePacks: [
 					{
 						id: 1,
@@ -129,7 +129,7 @@ export class CompareComponent implements OnInit {
 			},
 			{
 				id: 3,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -139,7 +139,7 @@ export class CompareComponent implements OnInit {
 				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
-				farm: 'Grocery Tarm Fields',
+				farm: 'Grocery Farm Fields',
 				availablePacks: [
 					{
 						id: 1,
@@ -183,7 +183,7 @@ export class CompareComponent implements OnInit {
 			},
 			{
 				id: 4,
-				name: 'Product Title',
+				name: 'Product title',
 				slug: 'product-title',
 				description: 'Space for a small product description',
 				rating: 4.33,
@@ -193,7 +193,7 @@ export class CompareComponent implements OnInit {
 				sku: '',
 				freshness: 'New',
 				freshnessDescription: 'Extra fresh',
-				farm: 'Grocery Tarm Fields',
+				farm: 'Grocery Farm Fields',
 				availablePacks: [
 					{
 						id: 1,

@@ -87,7 +87,7 @@
 				"readOurBlogPosts": "Read our blog posts",
 				"goToBlog": "Go to blog"
 			},
-			"login" : {
+			"login": {
 				"login": "Login",
 				"noAccount": "Don't have an account?",
 				"register": "Register",
@@ -135,7 +135,7 @@
 					}
 				}
 			},
-			"register" : {
+			"register": {
 				"register": "Register",
 				"haveAccount": "Already have an account?",
 				"login": "Login",

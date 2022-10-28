@@ -87,7 +87,7 @@
 				"readOurBlogPosts": "اقرأ منشورات مدونتنا",
 				"goToBlog": "انتقل إلى المدونة"
 			},
-			"login" : {
+			"login": {
 				"login": "تسجيل الدخول",
 				"noAccount": "ليس لديك حساب؟",
 				"register": "تسجيل",
@@ -135,7 +135,7 @@
 					}
 				}
 			},
-			"register" : {
+			"register": {
 				"register": "التسجيل",
 				"haveAccount": "هل لديك حساب؟",
 				"login": "تسجيل دخول",

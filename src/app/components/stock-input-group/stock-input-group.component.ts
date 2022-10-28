@@ -28,7 +28,7 @@ export class StockInputGroupComponent implements OnInit, OnDestroy {
 		});
 		this.subscriptions.push(subscription);
 
-		if (this.availablePacks.length > 1) {
+		if (this.availablePacks.length > 0) {
 			this.selectedPack = this.availablePacks[0];
 
 			if (this.readonly) {

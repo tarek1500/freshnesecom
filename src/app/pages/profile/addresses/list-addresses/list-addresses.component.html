@@ -29,13 +29,13 @@
 <ng-template #deleteModalContent let-deleteModal>
 	<div class="modal-header">
 		<h4 class="modal-title">{{ 'translate.pages.profile.addressesSection.list.deletion' | translate }}: {{ modalTitle }}</h4>
-		<button class="btn-close" (click)="deleteModal.dismiss('Cross click')"></button>
+		<button class="btn-close" (click)="deleteModal.dismiss()"></button>
 	</div>
 	<div class="modal-body">
 		<div class="caution">{{ 'translate.pages.profile.addressesSection.list.areYouSureToDelete' | translate }} <span class="red">{{ modalTitle }}</span></div>
 	</div>
 	<div class="modal-footer">
-		<button class="btn close-button" ngbAutofocus (click)="deleteModal.dismiss('cancel click')">{{ 'translate.pages.profile.addressesSection.list.cancel' | translate }}</button>
-		<button class="btn delete-button" (click)="deleteModal.close('Ok click')">{{ 'translate.pages.profile.addressesSection.list.delete' | translate }}</button>
+		<button class="btn close-button" ngbAutofocus (click)="deleteModal.dismiss()">{{ 'translate.pages.profile.addressesSection.list.cancel' | translate }}</button>
+		<button class="btn delete-button" (click)="deleteModal.close()">{{ 'translate.pages.profile.addressesSection.list.delete' | translate }}</button>
 	</div>
 </ng-template>

@@ -47,7 +47,7 @@ export class AppComponent implements OnInit, OnDestroy {
 			products: [
 				{
 					id: 1,
-					name: 'Product Title',
+					name: 'Product title',
 					slug: 'product-title',
 					description: '',
 					rating: 4.33,
@@ -101,7 +101,7 @@ export class AppComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 2,
-					name: 'Product Title',
+					name: 'Product title',
 					slug: 'product-title',
 					description: '',
 					rating: 4.33,
@@ -155,7 +155,7 @@ export class AppComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 3,
-					name: 'Product Title',
+					name: 'Product title',
 					slug: 'product-title',
 					description: '',
 					rating: 4.33,
@@ -209,7 +209,7 @@ export class AppComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 4,
-					name: 'Product Title',
+					name: 'Product title',
 					slug: 'product-title',
 					description: '',
 					rating: 4.33,
@@ -272,7 +272,7 @@ export class AppComponent implements OnInit, OnDestroy {
 			products: [
 				{
 					id: 1,
-					name: 'Product Title',
+					name: 'Product title',
 					slug: 'product-title',
 					description: 'Space for a small product description',
 					rating: 4.33,
@@ -282,7 +282,7 @@ export class AppComponent implements OnInit, OnDestroy {
 					sku: '',
 					freshness: 'New',
 					freshnessDescription: 'Extra fresh',
-					farm: 'Grocery Tarm Fields',
+					farm: 'Grocery Farm Fields',
 					availablePacks: [
 						{
 							id: 1,
@@ -326,7 +326,7 @@ export class AppComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 2,
-					name: 'Product Title',
+					name: 'Product title',
 					slug: 'product-title',
 					description: 'Space for a small product description',
 					rating: 4.33,
@@ -336,7 +336,7 @@ export class AppComponent implements OnInit, OnDestroy {
 					sku: '',
 					freshness: 'New',
 					freshnessDescription: 'Extra fresh',
-					farm: 'Grocery Tarm Fields',
+					farm: 'Grocery Farm Fields',
 					availablePacks: [
 						{
 							id: 1,
@@ -380,7 +380,7 @@ export class AppComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 3,
-					name: 'Product Title',
+					name: 'Product title',
 					slug: 'product-title',
 					description: 'Space for a small product description',
 					rating: 4.33,
@@ -390,7 +390,7 @@ export class AppComponent implements OnInit, OnDestroy {
 					sku: '',
 					freshness: 'New',
 					freshnessDescription: 'Extra fresh',
-					farm: 'Grocery Tarm Fields',
+					farm: 'Grocery Farm Fields',
 					availablePacks: [
 						{
 							id: 1,
@@ -434,7 +434,7 @@ export class AppComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 4,
-					name: 'Product Title',
+					name: 'Product title',
 					slug: 'product-title',
 					description: 'Space for a small product description',
 					rating: 4.33,
@@ -444,7 +444,7 @@ export class AppComponent implements OnInit, OnDestroy {
 					sku: '',
 					freshness: 'New',
 					freshnessDescription: 'Extra fresh',
-					farm: 'Grocery Tarm Fields',
+					farm: 'Grocery Farm Fields',
 					availablePacks: [
 						{
 							id: 1,
