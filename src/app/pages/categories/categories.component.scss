@@ -45,4 +45,26 @@
 			}
 		}
 	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.content {
+			.categories {
+				.category {
+					margin: 0px 0px 16px 16px;
+
+					a {
+						font-family: 'NotoSansArabic';
+					}
+				}
+			}
+		}
+	}
 }

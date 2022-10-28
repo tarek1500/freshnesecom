@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Categories</h2>
+		<h2 class="heading">{{ 'translate.pages.categories.categories' | translate }}</h2>
 	</div>
 
 	<div class="content">

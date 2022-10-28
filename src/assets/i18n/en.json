@@ -10,7 +10,8 @@
 				"home": "Home",
 				"login": "Login",
 				"register": "Register",
-				"profile": "Profile"
+				"profile": "Profile",
+				"categories": "Categories"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -73,6 +74,9 @@
 			}
 		},
 		"pages": {
+			"categories" : {
+				"categories": "Categories"
+			},
 			"home": {
 				"categoryMenu": "Category menu",
 				"moreCategories": "More categories",

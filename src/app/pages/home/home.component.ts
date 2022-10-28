@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 2,
-					name: 'فواكه و خضراوات',
+					name: 'فاكهة و خضراوات',
 					slug: 'fruit-and-vegetables',
 					subcategories: []
 				},

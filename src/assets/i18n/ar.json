@@ -10,7 +10,8 @@
 				"home": "الرئيسية",
 				"login": "تسجيل الدخول",
 				"register": "التسجيل",
-				"profile": "الملف الشخصي"
+				"profile": "الملف الشخصي",
+				"categories": "التصنيفات"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -73,6 +74,9 @@
 			}
 		},
 		"pages": {
+			"categories" : {
+				"categories": "التصنيفات"
+			},
 			"home": {
 				"categoryMenu": "قائمة التصنيفات",
 				"moreCategories": "المزيد من التصنيفات",
