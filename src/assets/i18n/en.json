@@ -11,7 +11,8 @@
 				"login": "Login",
 				"register": "Register",
 				"profile": "Profile",
-				"categories": "Categories"
+				"categories": "Categories",
+				"products": "Products"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -103,6 +104,28 @@
 				"password": "Password",
 				"remember": "Remember me",
 				"logging": "Login"
+			},
+			"products": {
+				"grid": "Grid view",
+				"list": "List view",
+				"products": "Products",
+				"filterText": "Filter text",
+				"filter": "Filter",
+				"nbm": "Nbm",
+				"appliedFilters": "Applied filters",
+				"selectedFilter": "Selected filter",
+				"categories": "Categories",
+				"categoryName": "Category name",
+				"brands": "Brands",
+				"filterBy": "Filter by brand item",
+				"rating": "Rating",
+				"price": "Price",
+				"min": "Min",
+				"max": "Max",
+				"apply": "Apply",
+				"reset": "Reset",
+				"page": "Page",
+				"showMore": "Show more products"
 			},
 			"profile": {
 				"profile": "Profile",

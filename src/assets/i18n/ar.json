@@ -11,7 +11,8 @@
 				"login": "تسجيل الدخول",
 				"register": "التسجيل",
 				"profile": "الملف الشخصي",
-				"categories": "التصنيفات"
+				"categories": "التصنيفات",
+				"products": "المنتجات"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -103,6 +104,28 @@
 				"password": "كلمة المرور",
 				"remember": "تذكرنى",
 				"logging": "دخول"
+			},
+			"products": {
+				"grid": "عرض الشبكة",
+				"list": "عرض القائمة",
+				"products": "منتجات",
+				"filterText": "نص الفلتر",
+				"filter": "الفلتر",
+				"nbm": "نبم",
+				"appliedFilters": "الفلترات المُطبَّقة",
+				"selectedFilter": "الفلتر المختار",
+				"categories": "التصنيفات",
+				"categoryName": "اسم التصنيف",
+				"brands": "العلامات التجارية",
+				"filterBy": "فلتر بواسطة عنصر العلامة التجارية",
+				"rating": "التقييم",
+				"price": "السعر",
+				"min": "الحد الأدنى",
+				"max": "الحد الأعلى",
+				"apply": "تطبيق",
+				"reset": "إعادة ضبط",
+				"page": "صفحة",
+				"showMore": "عرض المزيد من المنتجات"
 			},
 			"profile": {
 				"profile": "الملف الشخصي",
