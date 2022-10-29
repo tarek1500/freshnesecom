@@ -50,13 +50,15 @@ export class ProductsComponent implements OnInit, OnDestroy {
 			let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
 				this.rtl = rtl;
 
-				if (name && this.category.id !== 0) {
-					this.loadCategory(this.category.slug);
+				if (name) {
+					if (this.category.id !== 0) {
+						this.loadCategory(this.category.slug);
+					}
+					else if (this.tag.id !== 0) {
+						this.loadTag(this.tag.slug);
+					}
 				}
-				else if (name && this.tag.id !== 0) {
-					this.loadTag(this.tag.slug);
-				}
-				else if (!name) {
+				else {
 					this.title = 'translate.components.breadcrumb.products';
 
 					this.loadProducts();
