@@ -22,21 +22,21 @@
 						</div>
 						<div class="details" *ngIf="size === 'large'">
 							<div class="row details-row">
-								<div class="col-sm-5 col-4 text">{{ 'translate.components.product.freshness' | translate }}</div>
+								<div class="col-sm-5 col-4 text">{{ 'translate.components.product.freshness' | translate }}:</div>
 								<div class="col-sm-7 col-8 value">
 									<span class="green">{{ product.freshness }}</span><span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span>
 								</div>
 							</div>
 							<div class="row details-row">
-								<div class="col-sm-5 col-4 text">{{ 'translate.components.product.farm' | translate }}</div>
+								<div class="col-sm-5 col-4 text">{{ 'translate.components.product.farm' | translate }}:</div>
 								<div class="col-sm-7 col-8 value">{{ product.farm }}</div>
 							</div>
 							<div class="row details-row">
-								<div class="col-sm-5 col-4 text">{{ 'translate.components.product.delivery' | translate }}</div>
+								<div class="col-sm-5 col-4 text">{{ 'translate.components.product.delivery' | translate }}:</div>
 								<div class="col-sm-7 col-8 value">{{ product.delivery }}</div>
 							</div>
 							<div class="row details-row">
-								<div class="col-sm-5 col-4 text">{{ 'translate.components.product.stock' | translate }}</div>
+								<div class="col-sm-5 col-4 text">{{ 'translate.components.product.stock' | translate }}:</div>
 								<div class="col-sm-7 col-8 value">
 									<app-stock-input-group [availablePacks]="product.availablePacks" [readonly]="true"></app-stock-input-group>
 								</div>
