@@ -369,7 +369,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 
 			if (name) {
 				let subscription = this.route.params.subscribe(params => {
-					let slug: string = params['slug'];
+					let slug = params['slug'];
 
 					switch (name) {
 						case 'categories.blogs':
@@ -395,14 +395,12 @@ export class BlogsComponent implements OnInit, OnDestroy {
 							break;
 					}
 				});
-
 				this.subscriptions.push(subscription);
 			}
 			else {
 				this.breadcrumb[1].text = 'Blogs';
 			}
 		});
-
 		this.subscriptions.push(subscription);
 	}
 

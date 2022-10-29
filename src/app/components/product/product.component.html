@@ -3,7 +3,7 @@
 		<div [ngClass]="{ 'col-md-4': size === 'large' }">
 			<div class="cover-image">
 				<img src="{{ product.images[0] }}" alt="" *ngIf="product.images.length > 0">
-				<span class="discount" *ngIf="discount != 0">-{{ discount }} %</span>
+				<span class="discount" *ngIf="discount != 0">&#65293;{{ discount }} &#65285;</span>
 			</div>
 		</div>
 		<div [ngClass]="{ 'col-md-8': size === 'large' }">

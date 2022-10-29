@@ -82,7 +82,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 				{
 					id: 2,
 					name: 'فاكهة و خضراوات',
-					slug: 'fruit-and-vegetables',
+					slug: 'fruits-and-vegetables',
 					subcategories: []
 				},
 				{
@@ -620,8 +620,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 2,
-					name: 'Fruit and vegetables',
-					slug: 'fruit-and-vegetables',
+					name: 'Fruits and vegetables',
+					slug: 'fruits-and-vegetables',
 					subcategories: []
 				},
 				{

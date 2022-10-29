@@ -97,6 +97,7 @@
 
 			.buttons {
 				.buy-button {
+					width: 100%;
 					margin: 0px auto 12px auto;
 					display: block;
 					border-radius: 12px;
@@ -109,6 +110,7 @@
 				}
 
 				.wishlist-button {
+					width: 100%;
 					margin-left: auto;
 					display: block;
 					border-radius: 12px;
@@ -234,11 +236,6 @@
 					@media (min-width: 576px) {
 						position: absolute;
 						bottom: 0px;
-					}
-
-					.buy-button,
-					.wishlist-button {
-						width: 100%;
 					}
 				}
 			}

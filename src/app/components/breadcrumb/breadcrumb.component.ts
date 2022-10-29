@@ -33,7 +33,11 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
 				translation = this.flattenObject(translation);
 
 				this.breadcrumb.forEach(breadcrumb => {
-					breadcrumb.text = translation[breadcrumb.translate];
+					let text = translation[breadcrumb.translate];
+
+					if (text) {
+						breadcrumb.text = translation[breadcrumb.translate];
+					}
 				});
 			});
 		});
