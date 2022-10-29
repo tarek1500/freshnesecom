@@ -71,6 +71,10 @@
 				"remove": "إزالة",
 				"farm": "المزرعة",
 				"freshness": "النضارة"
+			},
+			"filterInputGroup": {
+				"filter": "الفلتر",
+				"select": "اختار"
 			}
 		},
 		"pages": {

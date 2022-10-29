@@ -71,6 +71,10 @@
 				"remove": "Remove",
 				"farm": "Farm",
 				"freshness": "Freshness"
+			},
+			"filterInputGroup": {
+				"filter": "Filter",
+				"select": "Select"
 			}
 		},
 		"pages": {

@@ -74,4 +74,39 @@
 			font-size: 12px;
 		}
 	}
+
+	&.rtl {
+		.form-check {
+			margin: 0px 0px 0px 8px;
+
+			input {
+				margin: 1px 0px 0px 8px;
+				float: right;
+			}
+
+			label {
+				font-family: 'Cairo';
+			}
+		}
+
+		.tag,
+		.dropdown-button {
+			font-family: 'NotoSansArabic';
+		}
+
+		.dropdown-button {
+			.down-arrow-icon {
+				margin: 0px 4px 0px 0px;
+			}
+		}
+
+		.dropdown-menu {
+			text-align: right;
+			right: 0px !important;
+
+			.dropdown-item {
+				font-family: 'NotoSansArabic';
+			}
+		}
+	}
 }
