@@ -66,4 +66,23 @@
 		font-weight: 400;
 		font-size: 14px;
 	}
+
+	&.rtl {
+		.header {
+			.info {
+				.author {
+					margin: 0px 0px 0px 6px;
+					font-family: 'NotoSansArabic';
+				}
+
+				.date {
+					font-family: 'Cairo';
+				}
+			}
+		}
+
+		.content {
+			font-family: 'Cairo';
+		}
+	}
 }
