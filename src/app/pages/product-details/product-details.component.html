@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
@@ -10,7 +10,7 @@
 				<div class="cover-image" *ngFor="let image of product.images; first as isFirst">
 					<img src="{{ image }}" alt="">
 					<div class="tags" *ngIf="isFirst">
-						<div class="tag" *ngIf="discount != 0"><span>-{{ discount }} %</span></div>
+						<div class="tag" *ngIf="discount != 0"><span>&#65293;{{ discount }} &#65285;</span></div>
 						<div class="tag"><span>{{ product.shipping }}</span></div>
 					</div>
 				</div>
@@ -25,28 +25,28 @@
 					</ng-template>
 					<ngb-rating [(rate)]="product.rating" [starTemplate]="starTemplate" [readonly]="true" [max]="5"></ngb-rating>
 					<div class="review">
-						<a (click)="scrollToReviews($event, info, infoNav)">({{ product.reviews.length }} customer review)</a>
+						<a (click)="scrollToReviews($event, info, infoNav)">({{ product.reviews.length }} {{ 'translate.pages.productDetails.customerReview' | translate }})</a>
 					</div>
 				</div>
 				<p class="description">{{ product.description }}</p>
 				<div class="row details">
 					<div class="col-lg-6 col-md-12 col-sm-6 details-column">
 						<div class="row details-row">
-							<div class="col-5 text gray">SKU:</div>
+							<div class="col-5 text gray">{{ 'translate.pages.productDetails.sku' | translate }}:</div>
 							<div class="col-7 value">{{ product.sku }}</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">Category</div>
+							<div class="col-5 text gray">{{ 'translate.pages.productDetails.category' | translate }}</div>
 							<div class="col-7 value">
 								<a [routerLink]="['/categories', product.category.slug, 'products']">{{ product.category.name }}</a>
 							</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">Farm:</div>
+							<div class="col-5 text gray">{{ 'translate.pages.productDetails.farm' | translate }}:</div>
 							<div class="col-7 value">{{ product.farm }}</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">Stock:</div>
+							<div class="col-5 text gray">{{ 'translate.pages.productDetails.stock' | translate }}:</div>
 							<div class="col-7 value">
 								<app-stock-input-group [availablePacks]="product.availablePacks" [readonly]="true"></app-stock-input-group>
 							</div>
@@ -54,17 +54,17 @@
 					</div>
 					<div class="col-lg-6 col-md-12 col-sm-6 details-column">
 						<div class="row details-row">
-							<div class="col-5 text gray">Freshness:</div>
+							<div class="col-5 text gray">{{ 'translate.pages.productDetails.freshness' | translate }}:</div>
 							<div class="col-7 value">
 								{{ product.freshness }}<span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span>
 							</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">Delivery:</div>
-							<div class="col-7 value">in {{ product.deliveryDays }} day(s)</div>
+							<div class="col-5 text gray">{{ 'translate.pages.productDetails.delivery' | translate }}:</div>
+							<div class="col-7 value">{{ 'translate.pages.productDetails.in' | translate }} {{ product.deliveryDays }} {{ 'translate.pages.productDetails.days' | translate }}</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">Delivery area</div>
+							<div class="col-5 text gray">{{ 'translate.pages.productDetails.deliveryArea' | translate }}</div>
 							<div class="col-7 value">{{ product.delivery }}</div>
 						</div>
 					</div>
@@ -78,36 +78,36 @@
 						<div class="quantity">
 							<app-stock-input-group [availablePacks]="product.availablePacks" [(quantity)]="product.selectedQuantity" [large]="true"></app-stock-input-group>
 						</div>
-						<button class="btn add-button"><img class="plus-icon" src="../../../assets/icons/plus.svg" alt=""> Add to cart</button>
+						<button class="btn add-button"><img class="plus-icon" src="../../../assets/icons/plus.svg" alt=""> {{ 'translate.pages.productDetails.addToCart' | translate }}</button>
 					</div>
 				</div>
 				<div class="options">
-					<div class="wishlist"><img class="heart-icon" src="../../../assets/icons/heart-orange.svg" alt=""> Add to my wish list</div>
-					<div class="compare"><img class="compare-icon" src="../../../assets/icons/compare.svg" alt=""> Compare</div>
+					<div class="wishlist"><img class="heart-icon" src="../../../assets/icons/heart-orange.svg" alt=""> {{ 'translate.pages.productDetails.addToWishlist' | translate }}</div>
+					<div class="compare"><img class="compare-icon" src="../../../assets/icons/compare.svg" alt=""> {{ 'translate.pages.productDetails.compare' | translate }}</div>
 				</div>
 				<div class="info" #info>
 					<nav ngbNav #infoNav="ngbNav" class="nav-tabs">
 						<ng-container ngbNavItem="description">
-							<a ngbNavLink>Description</a>
+							<a ngbNavLink>{{ 'translate.pages.productDetails.description' | translate }}</a>
 							<ng-template ngbNavContent>
 								<div [innerHtml]="product.info"></div>
 							</ng-template>
 						</ng-container>
 						<ng-container ngbNavItem="reviews">
 							<a ngbNavLink>
-								Reviews
+								{{ 'translate.pages.productDetails.reviews' | translate }}
 								<span class="tag">{{ product.reviews.length }}</span>
 							</a>
 							<ng-template ngbNavContent>
-								<h2 class="heading">Leave a review</h2>
+								<h2 class="heading">{{ 'translate.pages.productDetails.leaveReview' | translate }}</h2>
 								<form>
 									<div class="row">
 										<div class="form-group col-md-12">
-											<label for="name">Name</label>
-											<input class="form-control" id="name" name="name" type="text" placeholder="Name" [(ngModel)]="review.author">
+											<label for="name">{{ 'translate.pages.productDetails.name' | translate }}</label>
+											<input class="form-control" id="name" name="name" type="text" placeholder="{{ 'translate.pages.productDetails.name' | translate }}" [(ngModel)]="review.author">
 										</div>
 										<div class="form-group col-md-12">
-											<label for="rate">Rate</label>
+											<label for="rate">{{ 'translate.pages.productDetails.rate' | translate }}</label>
 											<div class="review-stars">
 												<ng-template #reviewTemplate let-fill="fill">
 													<span class="star" [class.full]="fill === 100">
@@ -118,15 +118,15 @@
 											</div>
 										</div>
 										<div class="form-group col-md-12">
-											<label for="comment">Review</label>
-											<textarea class="form-control" id="review" name="review" rows="4" placeholder="Space for your review" [(ngModel)]="review.content"></textarea>
+											<label for="comment">{{ 'translate.pages.productDetails.review' | translate }}</label>
+											<textarea class="form-control" id="review" name="review" rows="4" placeholder="{{ 'translate.pages.productDetails.spaceForReview' | translate }}" [(ngModel)]="review.content"></textarea>
 										</div>
 										<div class="form-group col-md-12 buttons">
-											<button class="btn add-button">Add a review</button>
+											<button class="btn add-button">{{ 'translate.pages.productDetails.addReview' | translate }}</button>
 										</div>
 									</div>
 								</form>
-								<h2 class="heading">Reviews</h2>
+								<h2 class="heading">{{ 'translate.pages.productDetails.reviews' | translate }}</h2>
 								<div class="reviews">
 									<div class="review" *ngFor="let review of product.reviews">
 										<app-review [review]="review"></app-review>
@@ -136,11 +136,11 @@
 						</ng-container>
 						<ng-container ngbNavItem="questions">
 							<a ngbNavLink>
-								Questions
+								{{ 'translate.pages.productDetails.questions' | translate }}
 								<span class="tag">{{ product.questions.length }}</span>
 							</a>
 							<ng-template ngbNavContent>
-								<h2 class="heading">Questions</h2>
+								<h2 class="heading">{{ 'translate.pages.productDetails.questions' | translate }}</h2>
 								<div class="questions">
 									<ngb-accordion>
 										<ngb-panel *ngFor="let question of product.questions">
@@ -158,6 +158,6 @@
 		</div>
 	</div>
 
-	<app-related-products [heading]="'Related products'" [goto-button]="'More products'" [products]="relatedProducts"></app-related-products>
+	<app-related-products [heading]="'translate.pages.productDetails.relatedProducts' | translate" [goto-button]="'translate.pages.productDetails.moreProducts' | translate" [products]="relatedProducts"></app-related-products>
 	<app-footer></app-footer>
 </div>

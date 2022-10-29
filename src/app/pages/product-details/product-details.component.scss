@@ -553,4 +553,210 @@
 			}
 		}
 	}
+
+	&.rtl {
+		direction: rtl;
+
+		.content {
+			.cover-images {
+				.cover-image {
+					.tags {
+						.tag {
+							margin: 0px 0px 8px 12px;
+
+							span {
+								font-family: 'NotoSansArabic';
+							}
+						}
+					}
+				}
+			}
+
+			.details {
+				.heading {
+					font-family: 'NotoSansArabic';
+				}
+
+				.stars {
+					.review {
+						margin: 0px 8px 0px 0px;
+
+						a {
+							font-family: 'Cairo';
+						}
+					}
+				}
+
+				.description {
+					font-family: 'Cairo';
+				}
+
+				.details {
+					.details-column {
+						.details-row {
+							.text,
+							.value {
+								font-family: 'Cairo';
+
+								&.text {
+									padding: 0px 0px 0px 12px;
+
+									@media (max-width: 575.98px) {
+										padding-left: 4px;
+									}
+								}
+
+								&.value {
+									padding: 0px 12px 0px 0px;
+
+									@media (max-width: 575.98px) {
+										padding-right: 4px;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.cart {
+					padding: 16px 16px 16px 24px;
+
+					.price {
+						.current-price,
+						.old-price {
+							font-family: 'NotoSansArabic';
+						}
+					}
+
+					.buttons {
+						.quantity {
+							margin: 0px 0px 0px 24px;
+
+							@media (max-width: 1199.98px) {
+								margin: 0px auto 12px auto;
+							}
+						}
+
+						.add-button {
+							font-family: 'NotoSansArabic';
+
+							.plus-icon {
+								margin: 0px 0px 0px 6px;
+							}
+						}
+					}
+				}
+
+				.options {
+					font-family: 'NotoSansArabic';
+
+					.wishlist {
+						margin: 0px 12px 0px 42px;
+
+						@media (max-width: 991.98px) {
+							margin: 0px 0px 8px 0px;
+						}
+
+						@media (max-width: 767.98px) {
+							margin-left: 42px;
+						}
+
+						@media (max-width: 575.98px) {
+							margin: 0px 0px 8px 0px;
+						}
+
+						.heart-icon {
+							margin: 0px 0px 0px 6px;
+						}
+					}
+
+					.compare {
+						.compare-icon {
+							margin: 0px 0px 0px 6px;
+						}
+					}
+				}
+
+				.info {
+					.nav {
+						.nav-link {
+							font-family: 'NotoSansArabic';
+
+							.tag {
+								margin: 0px 8px 0px 0px;
+								font-family: 'NotoSansArabic';
+							}
+						}
+					}
+
+					.tab-content {
+						::ng-deep {
+							.heading {
+								font-family: 'NotoSansArabic';
+							}
+
+							.details {
+								font-family: 'Cairo';
+							}
+
+							.table {
+								thead {
+									tr {
+										font-family: 'NotoSansArabic';
+									}
+								}
+
+								tbody {
+									tr {
+										font-family: 'Cairo';
+									}
+								}
+							}
+
+							form {
+								.form-group {
+									label {
+										font-family: 'NotoSansArabic';
+									}
+
+									input,
+									textarea {
+										font-family: 'Cairo';
+									}
+								}
+
+								.buttons {
+									.add-button {
+										font-family: 'NotoSansArabic';
+									}
+								}
+							}
+
+							.questions {
+								::ng-deep {
+									.accordion {
+										.accordion-item {
+											.accordion-header {
+												.accordion-button {
+													font-family: 'NotoSansArabic';
+
+													&::after {
+														margin: 0px auto 0px 0px;
+													}
+												}
+											}
+
+											.accordion-body {
+												font-family: 'Cairo';
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
