@@ -40,7 +40,7 @@ export class InfoComponent implements OnInit, OnDestroy {
 		if (this.rtl) {
 			this.user = {
 				id: 1,
-				name: 'المؤلف',
+				name: 'الكاتب',
 				email: 'author@domain.com',
 				phone: '+420336775664',
 				role: '',

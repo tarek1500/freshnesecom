@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { RtlService } from '../../services/rtl/rtl.service';
@@ -10,7 +10,7 @@ import { Quantity } from '../../interfaces/quantity.interface';
 	templateUrl: './stock-input-group.component.html',
 	styleUrls: ['./stock-input-group.component.scss']
 })
-export class StockInputGroupComponent implements OnInit, OnDestroy {
+export class StockInputGroupComponent implements OnInit, OnChanges, OnDestroy {
 	@Input() availablePacks!: ProductPack[];
 	@Input() large: boolean = false;
 	@Input() quantity!: Quantity;
@@ -38,6 +38,12 @@ export class StockInputGroupComponent implements OnInit, OnDestroy {
 					pack: this.selectedPack.pack
 				};
 			}
+		}
+	}
+
+	ngOnChanges(changes: SimpleChanges) {
+		if (changes['availablePacks'].currentValue !== changes['availablePacks'].previousValue) {
+			this.selectedPack = this.availablePacks.find(pack => pack.id === this.selectedPack.id)!;
 		}
 	}
 
