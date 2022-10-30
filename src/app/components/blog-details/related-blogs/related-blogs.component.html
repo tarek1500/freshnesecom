@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div class="header">
-		<h2 class="heading">Related topics</h2>
-		<button class="btn goto-button">Button <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></button>
+		<h2 class="heading">{{ 'translate.components.relatedBlogs.relatedTopics' | translate }}</h2>
+		<button class="btn goto-button">{{ 'translate.components.relatedBlogs.button' | translate }} <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></button>
 	</div>
 	<div class="row blogs">
 		<div class="col-xl-3 col-lg-4 col-md-6 blog" *ngFor="let blog of blogs">

@@ -6,6 +6,10 @@
 			"banner": {
 				"read": "Read recipe"
 			},
+			"relatedBlogs": {
+				"relatedTopics": "Related topics",
+				"button": "Button"
+			},
 			"breadcrumb": {
 				"home": "Home",
 				"login": "Login",

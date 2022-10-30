@@ -41,4 +41,21 @@
 			}
 		}
 	}
+
+	&.rtl {
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+
+			.goto-button {
+				font-family: 'NotoSansArabic';
+
+				.right-arrow-icon {
+					margin: 0px 7px 0px 0px;
+					transform: scaleX(-1);
+				}
+			}
+		}
+	}
 }

@@ -6,6 +6,10 @@
 			"banner": {
 				"read": "اقرأ الوصفة"
 			},
+			"relatedBlogs": {
+				"relatedTopics": "مواضيع ذات صلة",
+				"button": "زر"
+			},
 			"breadcrumb": {
 				"home": "الرئيسية",
 				"login": "تسجيل الدخول",
@@ -193,7 +197,7 @@
 						"create": "إنشاء",
 						"update": "تحديث",
 						"lowercaseAddress": "عنوان",
-						"back": "الى الخلف",
+						"back": "العودة",
 						"title": "الاسم",
 						"address": "العنوان",
 						"addressDetails": "العنوان بالتفصيل ...",
@@ -215,7 +219,7 @@
 					},
 					"show": {
 						"details": "تفاصيل الطلب",
-						"back": "الى الخلف",
+						"back": "العودة",
 						"number": "الرقم",
 						"date": "التاريخ",
 						"total": "المجموع",
