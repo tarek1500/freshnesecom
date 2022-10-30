@@ -18,7 +18,11 @@ export class StockInputGroupComponent implements OnInit, OnChanges, OnDestroy {
 	@Output() quantityChange: EventEmitter<Quantity> = new EventEmitter<Quantity>();
 	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
-	selectedPack!: ProductPack;
+	selectedPack: ProductPack = {
+		id: 0,
+		stock: 0,
+		pack: ''
+	};
 
 	constructor(private rtlService: RtlService) { }
 

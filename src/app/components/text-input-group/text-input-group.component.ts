@@ -1,22 +1,36 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
+
+import { RtlService } from '../../services/rtl/rtl.service';
 
 @Component({
 	selector: 'app-text-input-group',
 	templateUrl: './text-input-group.component.html',
 	styleUrls: ['./text-input-group.component.scss']
 })
-export class TextInputGroupComponent implements OnInit, AfterViewInit {
+export class TextInputGroupComponent implements OnInit, AfterViewInit, OnDestroy {
 	@Input() placeholder!: string;
 	@Input() button!: string;
 	@Output() onApply: EventEmitter<string> = new EventEmitter<string>();
 	@ViewChild('input') input!: ElementRef<HTMLInputElement>;
+	subscriptions: Subscription[] = [];
+	rtl: boolean = false;
 
-	constructor() { }
+	constructor(private rtlService: RtlService) { }
 
-	ngOnInit(): void { }
+	ngOnInit(): void {
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
+		});
+		this.subscriptions.push(subscription);
+	}
 
 	ngAfterViewInit() {
 		this.setInputGroupWidth(this.input, 0);
+	}
+
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
 	}
 
 	@HostListener('window:resize', ['$event'])

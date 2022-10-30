@@ -1,4 +1,4 @@
-<div class="input-group">
+<div class="input-group" [ngClass]="{ 'rtl': rtl }">
 	<div class="input-group-prepend">
 		<input class="form-control" type="text" [placeholder]="placeholder" #input (keypress)="onInputKeyPressed($event)">
 	</div>

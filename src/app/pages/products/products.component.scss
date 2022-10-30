@@ -156,6 +156,10 @@
 		.filters {
 			padding-left: 0px;
 
+			@media (max-width: 991.98px) {
+				padding: 0px;
+			}
+
 			.filter-group {
 				margin-bottom: 48px;
 
@@ -337,6 +341,10 @@
 		.products {
 			padding-right: 0px;
 
+			@media (max-width: 991.98px) {
+				padding: 0px;
+			}
+
 			.product {
 				margin-bottom: 48px;
 			}
@@ -512,6 +520,10 @@
 			.filters {
 				padding: 0px 0px 0px 12px;
 
+				@media (max-width: 991.98px) {
+					padding: 0px;
+				}
+
 				.filter-group {
 					.heading {
 						font-family: 'NotoSansArabic';
@@ -579,6 +591,10 @@
 
 			.products {
 				padding: 0px 12px 0px 0px;
+
+				@media (max-width: 991.98px) {
+					padding: 0px;
+				}
 			}
 		}
 
@@ -590,6 +606,7 @@
 				.page {
 					margin: auto 0px auto 8px;
 					font-family: 'Cairo';
+					unicode-bidi: bidi-override;
 				}
 			}
 

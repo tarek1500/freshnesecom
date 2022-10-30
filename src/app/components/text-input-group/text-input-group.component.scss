@@ -19,7 +19,7 @@
 
 	button {
 		padding: 8px 16px;
-		border-radius: 0px 12px 12px 0px;
+		border-radius: 0px 12px 12px 0px !important;
 		border: 1px solid #D1D1D1;
 		border-left: none;
 		background-color: #F9F9F9;
@@ -27,5 +27,23 @@
 		font-family: 'Poppins';
 		font-weight: 700;
 		font-size: 15px;
+	}
+
+	&.rtl {
+		.input-group-prepend {
+			input {
+				border-radius: 0px 12px 12px 0px;
+				border: 1px solid #D1D1D1;
+				border-left: none;
+				font-family: 'Cairo';
+			}
+		}
+
+		button {
+			border-radius: 12px 0px 0px 12px !important;
+			border: 1px solid #D1D1D1;
+			border-right: none;
+			font-family: 'NotoSansArabic';
+		}
 	}
 }
