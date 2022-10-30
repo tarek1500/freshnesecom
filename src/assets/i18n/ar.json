@@ -17,7 +17,8 @@
 				"profile": "الملف الشخصي",
 				"categories": "التصنيفات",
 				"products": "المنتجات",
-				"blogs": "المدونات"
+				"blogs": "المدونات",
+				"recipes": "الوصفات"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -253,6 +254,11 @@
 						"view": "مشاهدة"
 					}
 				}
+			},
+			"recipes": {
+				"recipes": "وصفات",
+				"page": "صفحة",
+				"nextPage": "الصفحة التالية"
 			},
 			"register": {
 				"register": "التسجيل",

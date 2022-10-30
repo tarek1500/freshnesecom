@@ -9,7 +9,7 @@
 		justify-content: space-between;
 
 		.heading {
-			margin-bottom: 12px;
+			margin: auto 0px;
 			color: #151515;
 			font-family: 'Poppins';
 			font-weight: 600;
@@ -38,10 +38,6 @@
 				font-family: 'OpenSans';
 				font-weight: 400;
 				font-size: 12px;
-
-				@media (max-width: 991.98px) {
-					margin-bottom: 8px;
-				}
 
 				.count {
 					margin-right: 4px;
@@ -128,6 +124,7 @@
 					width: 8px;
 					height: 9px;
 					margin-left: 6px;
+					vertical-align: unset;
 				}
 			}
 		}
@@ -157,6 +154,73 @@
 				font-family: 'OpenSans';
 				font-weight: 400;
 				font-size: 12px;
+			}
+		}
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+
+			.view {
+				@media (max-width: 991.98px) {
+					text-align: left;
+				}
+
+				.item {
+					margin: 0px 24px 0px 0px;
+					font-family: 'Cairo';
+
+					.count {
+						margin: 0px 0px 0px 4px;
+						font-family: 'NotoSansArabic';
+					}
+				}
+			}
+		}
+
+		.footer {
+			.pages {
+				padding: 0px 0px 0px 12px;
+
+				.title,
+				.page {
+					margin: auto 0px auto 8px;
+					font-family: 'Cairo';
+				}
+
+				.page {
+					unicode-bidi: bidi-override;
+				}
+			}
+
+			.more {
+				.more-button {
+					font-family: 'NotoSansArabic';
+
+					.down-arrow-icon {
+						margin: 0px 6px 0px 0px;
+						transform: scaleX(-1);
+					}
+				}
+			}
+
+			.recipes {
+				padding: 0px 12px 0px 0px;
+				text-align: left;
+
+				.count {
+					margin: 0px 0px 0px 4px;
+					font-family: 'NotoSansArabic';
+				}
+
+				.text {
+					font-family: 'Cairo';
+				}
 			}
 		}
 	}

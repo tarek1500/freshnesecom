@@ -17,7 +17,8 @@
 				"profile": "Profile",
 				"categories": "Categories",
 				"products": "Products",
-				"blogs": "Blogs"
+				"blogs": "Blogs",
+				"recipes": "Recipes"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -253,6 +254,11 @@
 						"view": "View"
 					}
 				}
+			},
+			"recipes": {
+				"recipes": "Recipes",
+				"page": "Page",
+				"nextPage": "Next page"
 			},
 			"register": {
 				"register": "Register",

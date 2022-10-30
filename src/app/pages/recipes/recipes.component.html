@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Recipes</h2>
+		<h2 class="heading">{{ 'translate.components.breadcrumb.recipes' | translate }}</h2>
 		<div class="view">
 			<div class="item">
 				<span class="count">{{ recipes.length }}</span>
-				<span class="text">Recipes</span>
+				<span class="text">{{ 'translate.pages.recipes.recipes' | translate }}</span>
 			</div>
 		</div>
 	</div>
@@ -26,18 +26,18 @@
 
 	<div class="row footer">
 		<div class="col-3 pages">
-			<h3 class="title">Page:</h3>
+			<h3 class="title">{{ 'translate.pages.recipes.page' | translate }}:</h3>
 			<a class="page active" href="#">1</a>
 			<a class="page" href="#">2</a>
 			<a class="page" href="#">3</a>
 			<a class="page" href="#">4</a>
 		</div>
 		<div class="col-6 more">
-			<button class="btn more-button">Next page <img class="down-arrow-icon" src="../../../assets/icons/right-arrow-white.svg" alt=""></button>
+			<button class="btn more-button">{{ 'translate.pages.recipes.nextPage' | translate }} <img class="down-arrow-icon" src="../../../assets/icons/right-arrow-white.svg" alt=""></button>
 		</div>
 		<div class="col-3 recipes">
 			<span class="count">{{ recipes.length }}</span>
-			<span class="text">Recipes</span>
+			<span class="text">{{ 'translate.pages.recipes.recipes' | translate }}</span>
 		</div>
 	</div>
 

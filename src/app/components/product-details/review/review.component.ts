@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import * as moment from 'moment';
 import { Subscription } from 'rxjs';
+import * as moment from 'moment';
 
 import { RtlService } from '../../../services/rtl/rtl.service';
 import { Review } from '../../../interfaces/review.interface';
