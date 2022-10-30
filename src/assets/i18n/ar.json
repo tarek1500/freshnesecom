@@ -12,7 +12,8 @@
 				"register": "التسجيل",
 				"profile": "الملف الشخصي",
 				"categories": "التصنيفات",
-				"products": "المنتجات"
+				"products": "المنتجات",
+				"blogs": "المدونات"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -79,6 +80,17 @@
 			}
 		},
 		"pages": {
+			"blogs": {
+				"blogs": "مدونات",
+				"archives": "أرشيف",
+				"categories": "التصنيفات",
+				"join": "انضم إلى قائمتنا",
+				"signupToBeFirst": "اشترك لتكون أول من يسمع عن العروض الحصرية والعروض الخاصة والوصفات من خبرائنا وغيرهم.",
+				"yourEmail": "بريدك  الإلكتروني",
+				"subscribe": "إشترك",
+				"page": "صفحة",
+				"nextPage": "الصفحة التالية"
+			},
 			"categories" : {
 				"categories": "التصنيفات"
 			},

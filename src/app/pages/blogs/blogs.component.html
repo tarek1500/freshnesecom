@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Blogs</h2>
+		<h2 class="heading">{{ title | translate }}</h2>
 		<div class="view">
 			<div class="item">
 				<span class="count">{{ largeBlogs.length + blogs.length }}</span>
-				<span class="text">Blogs</span>
+				<span class="text">{{ 'translate.pages.blogs.blogs' | translate }}</span>
 			</div>
 		</div>
 	</div>
@@ -23,23 +23,21 @@
 		<div class="row small-blogs">
 			<div class="col-lg-3 widgets">
 				<div class="widget">
-					<h3 class="heading">Archives</h3>
-					<div class="link"><a href="#">March 2020</a></div>
-					<div class="link"><a href="#">February 2020</a></div>
-					<div class="link"><a href="#">January 2020</a></div>
-					<div class="link"><a href="#">November 2019</a></div>
-					<div class="link"><a href="#">December 2019</a></div>
+					<h3 class="heading">{{ 'translate.pages.blogs.archives' | translate }}</h3>
+					<div class="link" *ngFor="let archive of archives">
+						<a href="#">{{ archive }}</a>
+					</div>
 				</div>
 				<div class="widget">
-					<h3 class="heading">Category</h3>
+					<h3 class="heading">{{ 'translate.pages.blogs.categories' | translate }}</h3>
 					<div class="link" *ngFor="let category of categories">
 						<a class="gray" [routerLink]="['/categories', category.slug, 'blogs']">{{ category.name }}</a>
 					</div>
 				</div>
 				<div class="widget">
-					<h3 class="heading join">Join our list</h3>
-					<p class="description">Signup to be the first to hear about exclusive deals, special offers, recepies from our masters and others.</p>
-					<app-text-input-group [placeholder]="'Your email address'" [button]="'Subscribe'" (onApply)="onSubscribed($event)"></app-text-input-group>
+					<h3 class="heading join">{{ 'translate.pages.blogs.join' | translate }}</h3>
+					<p class="description">{{ 'translate.pages.blogs.signupToBeFirst' | translate }}</p>
+					<app-text-input-group [placeholder]="'translate.pages.blogs.yourEmail' | translate" [button]="'translate.pages.blogs.subscribe' | translate" (onApply)="onSubscribed($event)"></app-text-input-group>
 				</div>
 			</div>
 			<div class="col-lg-9 blogs">
@@ -54,18 +52,18 @@
 
 	<div class="row footer">
 		<div class="col-3 pages">
-			<h3 class="title">Page:</h3>
+			<h3 class="title">{{ 'translate.pages.blogs.page' | translate }}:</h3>
 			<a class="page active" href="#">1</a>
 			<a class="page" href="#">2</a>
 			<a class="page" href="#">3</a>
 			<a class="page" href="#">4</a>
 		</div>
 		<div class="col-6 more">
-			<button class="btn more-button">Next page <img class="down-arrow-icon" src="../../../assets/icons/right-arrow-white.svg" alt=""></button>
+			<button class="btn more-button">{{ 'translate.pages.blogs.nextPage' | translate }} <img class="down-arrow-icon" src="../../../assets/icons/right-arrow-white.svg" alt=""></button>
 		</div>
 		<div class="col-3 blogs">
 			<span class="count">{{ largeBlogs.length + blogs.length }}</span>
-			<span class="text">Blogs</span>
+			<span class="text">{{ 'translate.pages.blogs.blogs' | translate }}</span>
 		</div>
 	</div>
 

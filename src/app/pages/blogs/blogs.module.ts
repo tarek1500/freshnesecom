@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { BlogsRoutingModule } from './blogs-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
@@ -14,6 +15,7 @@ import { BlogsComponent } from './blogs.component';
 	],
 	imports: [
 		CommonModule,
+		TranslateModule,
 		BlogsRoutingModule,
 		SharedModule,
 		BreadcrumbModule,

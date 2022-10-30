@@ -12,7 +12,8 @@
 				"register": "Register",
 				"profile": "Profile",
 				"categories": "Categories",
-				"products": "Products"
+				"products": "Products",
+				"blogs": "Blogs"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -79,6 +80,17 @@
 			}
 		},
 		"pages": {
+			"blogs": {
+				"blogs": "Blogs",
+				"archives": "Archives",
+				"categories": "Categories",
+				"join": "Join our list",
+				"signupToBeFirst": "Signup to be the first to hear about exclusive deals, special offers, recipes from our experts and others.",
+				"yourEmail": "Your email address",
+				"subscribe": "Subscribe",
+				"page": "Page",
+				"nextPage": "Next page"
+			},
 			"categories" : {
 				"categories": "Categories"
 			},
