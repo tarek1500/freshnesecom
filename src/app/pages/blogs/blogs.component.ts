@@ -63,8 +63,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 					this.loadBlogs();
 				}
 
-				this.loadArchives();
-				this.loadCategories();
+				this.loadData();
 			});
 			this.subscriptions.push(subscription);
 
@@ -754,6 +753,11 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				}
 			];
 		}
+	}
+
+	loadData() {
+		this.loadArchives();
+		this.loadCategories();
 	}
 
 	loadArchives() {

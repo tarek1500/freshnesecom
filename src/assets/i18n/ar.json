@@ -84,6 +84,29 @@
 			}
 		},
 		"pages": {
+			"blogDetails": {
+				"date": "التاريخ",
+				"category": "التصنيف",
+				"author": "المؤلف",
+				"tags": "الوسوم",
+				"back": "العودة إلى المدونة",
+				"share": "مشاركة",
+				"facebook": "فيسبوك",
+				"pinterest": "بينتيريست",
+				"twitter": "تويتر",
+				"linkedIn": "لينكد إن",
+				"leaveReply": "اترك رد",
+				"haveAccount": "هل لديك حساب؟",
+				"login": "تسجيل دخول",
+				"toLeaveReply": "لترك رد.",
+				"name": "الاسم",
+				"email": "البريد الالكترونى",
+				"saveMyNameAndEmail": "احفظ اسمي والبريد الإلكتروني في هذا المتصفح للتعليق في المرة القادمة.",
+				"comment": "التعليق",
+				"spaceForComments": "مساحة لتعليقاتكم",
+				"sendComment": "إرسال تعليق",
+				"comments": "التعليقات"
+			},
 			"blogs": {
 				"blogs": "مدونات",
 				"archives": "أرشيف",

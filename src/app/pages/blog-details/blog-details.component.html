@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
@@ -11,17 +11,17 @@
 			<div class="row info">
 				<div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 info-column">
 					<div class="row info-row">
-						<div class="col-5 text">Date:</div>
+						<div class="col-5 text">{{ 'translate.pages.blogDetails.date' | translate }}:</div>
 						<div class="col-7 value">{{ blog.date | date:'dd. MM. yyyy' }}</div>
 					</div>
 					<div class="row info-row">
-						<div class="col-5 text">Category:</div>
+						<div class="col-5 text">{{ 'translate.pages.blogDetails.category' | translate }}:</div>
 						<div class="col-7 value">
 							<a [routerLink]="['/categories', blog.category.slug, 'blogs']">{{ blog.category.name }}</a>
 						</div>
 					</div>
 					<div class="row info-row">
-						<div class="col-5 text">Author:</div>
+						<div class="col-5 text">{{ 'translate.pages.blogDetails.author' | translate }}:</div>
 						<div class="col-7 value">
 							<a href="#">{{ blog.author.name }}</a>
 						</div>
@@ -38,61 +38,61 @@
 		<div class="row details">
 			<div class="col-xl-2 col-lg-4 col-md-4">
 				<div class="tags">
-					<h3 class="heading">Tags</h3>
+					<h3 class="heading">{{ 'translate.pages.blogDetails.tags' | translate }}</h3>
 					<div class="tag" *ngFor="let tag of blog.tags">
 						<a [routerLink]="['/tags', tag.slug, 'blogs']">{{ tag.name }}</a>
 					</div>
 				</div>
-				<a class="btn back-button" routerLink="/blogs"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> Back to Blog</a>
+				<a class="btn back-button" routerLink="/blogs"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> {{ 'translate.pages.blogDetails.back' | translate }}</a>
 			</div>
 			<div class="col-xl-6 col-lg-8 col-md-8">
 				<div [innerHtml]="blog.content"></div>
 				<div class="share">
-					<div class="heading">Share</div>
+					<div class="heading">{{ 'translate.pages.blogDetails.share' | translate }}</div>
 					<div class="social">
-						<a class="facebook" href="#"><img class="social-icon" src="../../../assets/icons/facebook.svg" alt=""> Facebook</a>
+						<a class="facebook" href="#"><img class="social-icon" src="../../../assets/icons/facebook.svg" alt=""> {{ 'translate.pages.blogDetails.facebook' | translate }}</a>
 					</div>
 					<div class="social">
-						<a class="pinterest" href="#"><img class="social-icon" src="../../../assets/icons/pinterest.svg" alt=""> Pinterest</a>
+						<a class="pinterest" href="#"><img class="social-icon" src="../../../assets/icons/pinterest.svg" alt=""> {{ 'translate.pages.blogDetails.pinterest' | translate }}</a>
 					</div>
 					<div class="social">
-						<a class="twitter" href="#"><img class="social-icon" src="../../../assets/icons/twitter.svg" alt=""> Twitter</a>
+						<a class="twitter" href="#"><img class="social-icon" src="../../../assets/icons/twitter.svg" alt=""> {{ 'translate.pages.blogDetails.twitter' | translate }}</a>
 					</div>
 					<div class="social">
-						<a class="linkedin" href="#"><img class="social-icon" src="../../../assets/icons/linkedin.svg" alt=""> LinkedIn</a>
+						<a class="linkedin" href="#"><img class="social-icon" src="../../../assets/icons/linkedin.svg" alt=""> {{ 'translate.pages.blogDetails.linkedIn' | translate }}</a>
 					</div>
 				</div>
 				<div class="reply">
-					<h3 class="heading">Leave a reply</h3>
-					<div class="subheading">Already have an account? <a routerLink="/login">Login</a> to leave a reply.</div>
+					<h3 class="heading">{{ 'translate.pages.blogDetails.leaveReply' | translate }}</h3>
+					<div class="subheading">{{ 'translate.pages.blogDetails.haveAccount' | translate }} <a routerLink="/login">{{ 'translate.pages.blogDetails.login' | translate }}</a> {{ 'translate.pages.blogDetails.toLeaveReply' | translate }}</div>
 					<form>
 						<div class="row">
 							<div class="form-group col-md-6 col-sm-6">
-								<label for="name">Name</label>
-								<input class="form-control" id="name" type="text" placeholder="Name">
+								<label for="name">{{ 'translate.pages.blogDetails.name' | translate }}</label>
+								<input class="form-control" id="name" type="text" placeholder="{{ 'translate.pages.blogDetails.name' | translate }}">
 							</div>
 							<div class="form-group col-md-6 col-sm-6">
-								<label for="email">Email address</label>
-								<input class="form-control" id="email" type="email" placeholder="Email address">
+								<label for="email">{{ 'translate.pages.blogDetails.email' | translate }}</label>
+								<input class="form-control" id="email" type="email" placeholder="{{ 'translate.pages.blogDetails.email' | translate }}">
 							</div>
 							<div class="form-group col-md-12">
 								<div class="form-check">
 									<input class="form-check-input" type="checkbox" id="save">
-									<label class="form-check-label" for="save">Save my name and email in this browser for a next time comment.</label>
+									<label class="form-check-label" for="save">{{ 'translate.pages.blogDetails.saveMyNameAndEmail' | translate }}</label>
 								</div>
 							</div>
 							<div class="form-group col-md-12">
-								<label for="comment">Comment</label>
-								<textarea class="form-control" id="comment" rows="4" placeholder="Space for your comments"></textarea>
+								<label for="comment">{{ 'translate.pages.blogDetails.comment' | translate }}</label>
+								<textarea class="form-control" id="comment" rows="4" placeholder="{{ 'translate.pages.blogDetails.spaceForComments' | translate }}"></textarea>
 							</div>
 							<div class="form-group col-md-12 buttons">
-								<button class="btn send-button">Send a comment</button>
+								<button class="btn send-button">{{ 'translate.pages.blogDetails.sendComment' | translate }}</button>
 							</div>
 						</div>
 					</form>
 				</div>
 				<div class="comments">
-					<h3 class="heading">Comments</h3>
+					<h3 class="heading">{{ 'translate.pages.blogDetails.comments' | translate }}</h3>
 					<div class="comment" *ngFor="let comment of blog.comments">
 						<app-comment [comment]="comment"></app-comment>
 					</div>

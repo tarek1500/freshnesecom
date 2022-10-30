@@ -84,6 +84,29 @@
 			}
 		},
 		"pages": {
+			"blogDetails": {
+				"date": "Date",
+				"category": "Category",
+				"author": "Author",
+				"tags": "Tags",
+				"back": "Back to blog",
+				"share": "Share",
+				"facebook": "Facebook",
+				"pinterest": "Pinterest",
+				"twitter": "Twitter",
+				"linkedIn": "LinkedIn",
+				"leaveReply": "Leave a reply",
+				"haveAccount": "Already have an account?",
+				"login": "Login",
+				"toLeaveReply": "to leave a reply.",
+				"name": "Name",
+				"email": "Email address",
+				"saveMyNameAndEmail": "Save my name and email in this browser for a next time comment.",
+				"comment": "Comment",
+				"spaceForComments": "Space for your comments",
+				"sendComment": "Send a comment",
+				"comments": "Comments"
+			},
 			"blogs": {
 				"blogs": "Blogs",
 				"archives": "Archives",

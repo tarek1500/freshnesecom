@@ -356,4 +356,136 @@
 			}
 		}
 	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.background {
+				.info {
+					.info-column,
+					.heading-column {
+						.info-row {
+							.text {
+								padding: 0px 0px 0px 12px;
+								font-family: 'NotoSansArabic';
+							}
+
+							.value {
+								padding: 0px 12px 0px 0px;
+								font-family: 'NotoSansArabic';
+							}
+						}
+
+						.heading {
+							font-family: 'NotoSansArabic';
+						}
+					}
+				}
+			}
+		}
+
+		.content {
+			.details {
+				.tags {
+					.heading {
+						font-family: 'NotoSansArabic';
+					}
+
+					.tag {
+						margin: 0px 0px 8px 8px;
+
+						a {
+							font-family: 'NotoSansArabic';
+						}
+					}
+				}
+
+				.back-button {
+					font-family: 'NotoSansArabic';
+
+					.back-icon {
+						margin: 0px 0px 0px 6px;
+						transform: scaleX(-1);
+					}
+				}
+
+				::ng-deep {
+					.section {
+						.heading {
+							font-family: 'NotoSansArabic';
+						}
+
+						.paragraph {
+							font-family: 'Cairo';
+						}
+					}
+				}
+
+				.share {
+					.heading {
+						margin: 0px 0px 16px 16px;
+						font-family: 'NotoSansArabic';
+					}
+
+					.social {
+						margin: 0px 0px 28px 16px;
+
+						a {
+							font-family: 'NotoSansArabic';
+						}
+					}
+				}
+
+				.reply {
+					.heading {
+						font-family: 'NotoSansArabic';
+					}
+
+					.subheading {
+						font-family: 'Cairo';
+					}
+
+					form {
+						.form-group {
+							label {
+								font-family: 'NotoSansArabic';
+							}
+
+							input {
+								font-family: 'Cairo';
+
+								&[type=checkbox] {
+									margin: 1px 0px 0px 8px;
+									float: right;
+								}
+							}
+
+							textarea {
+								font-family: 'Cairo';
+							}
+
+							.form-check {
+								label {
+									font-family: 'Cairo';
+								}
+							}
+						}
+
+						.buttons {
+							.send-button {
+								font-family: 'NotoSansArabic';
+							}
+						}
+					}
+				}
+
+				.comments {
+					.heading {
+						font-family: 'NotoSansArabic';
+					}
+				}
+			}
+		}
+	}
 }
