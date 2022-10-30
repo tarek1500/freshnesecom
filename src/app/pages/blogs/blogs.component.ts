@@ -146,7 +146,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 			this.largeBlogs = [
 				{
 					id: 1,
-					title: 'هذه مساحة لعنوان مدونتك ، يمكن أن يكون طويل لا تقلق بشأن ذلك',
+					title: 'هذه مساحة لعنوان مدونتك، يمكن أن يكون طويل لا تقلق بشأن ذلك',
 					slug: 'this-is-a-space-for-your-blog-headline-it-can-be-long-dont-worry-about-that',
 					author: {
 						id: 1,
@@ -176,7 +176,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 2,
-					title: 'هذه مساحة لعنوان مدونتك ، يمكن أن يكون طويل لا تقلق بشأن ذلك',
+					title: 'هذه مساحة لعنوان مدونتك، يمكن أن يكون طويل لا تقلق بشأن ذلك',
 					slug: 'this-is-a-space-for-your-blog-headline-it-can-be-long-dont-worry-about-that',
 					author: {
 						id: 2,
@@ -208,7 +208,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 			this.blogs = [
 				{
 					id: 1,
-					title: 'مساحة لعنوانك هنا ، اكتب ما تحتاجه',
+					title: 'مساحة لعنوانك هنا، اكتب ما تحتاجه',
 					slug: 'space-for-your-heading-is-here-write-what-you-need',
 					author: {
 						id: 1,
@@ -238,7 +238,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 2,
-					title: 'مساحة لعنوانك هنا ، اكتب ما تحتاجه',
+					title: 'مساحة لعنوانك هنا، اكتب ما تحتاجه',
 					slug: 'space-for-your-heading-is-here-write-what-you-need',
 					author: {
 						id: 2,
@@ -268,7 +268,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 3,
-					title: 'مساحة لعنوانك هنا ، اكتب ما تحتاجه',
+					title: 'مساحة لعنوانك هنا، اكتب ما تحتاجه',
 					slug: 'space-for-your-heading-is-here-write-what-you-need',
 					author: {
 						id: 3,
@@ -298,7 +298,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 4,
-					title: 'مساحة لعنوانك هنا ، اكتب ما تحتاجه',
+					title: 'مساحة لعنوانك هنا، اكتب ما تحتاجه',
 					slug: 'space-for-your-heading-is-here-write-what-you-need',
 					author: {
 						id: 4,
@@ -328,7 +328,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 5,
-					title: 'مساحة لعنوانك هنا ، اكتب ما تحتاجه',
+					title: 'مساحة لعنوانك هنا، اكتب ما تحتاجه',
 					slug: 'space-for-your-heading-is-here-write-what-you-need',
 					author: {
 						id: 5,
@@ -358,7 +358,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 6,
-					title: 'مساحة لعنوانك هنا ، اكتب ما تحتاجه',
+					title: 'مساحة لعنوانك هنا، اكتب ما تحتاجه',
 					slug: 'space-for-your-heading-is-here-write-what-you-need',
 					author: {
 						id: 6,
@@ -388,7 +388,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 7,
-					title: 'مساحة لعنوانك هنا ، اكتب ما تحتاجه',
+					title: 'مساحة لعنوانك هنا، اكتب ما تحتاجه',
 					slug: 'space-for-your-heading-is-here-write-what-you-need',
 					author: {
 						id: 7,
@@ -418,7 +418,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 				},
 				{
 					id: 8,
-					title: 'مساحة لعنوانك هنا ، اكتب ما تحتاجه',
+					title: 'مساحة لعنوانك هنا، اكتب ما تحتاجه',
 					slug: 'space-for-your-heading-is-here-write-what-you-need',
 					author: {
 						id: 8,

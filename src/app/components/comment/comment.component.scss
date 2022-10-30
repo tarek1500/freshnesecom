@@ -93,4 +93,41 @@
 			margin-left: 50px;
 		}
 	}
+
+	&.rtl {
+		.container {
+			.header {
+				.avatar-image {
+					margin: 0px 0px 0px 12px;
+				}
+
+				.info {
+					.author {
+						margin: 0px 0px 0px 6px;
+						font-family: 'NotoSansArabic';
+					}
+
+					.date {
+						font-family: 'Cairo';
+					}
+				}
+			}
+
+			.content {
+				font-family: 'Cairo';
+			}
+		}
+
+		.reply {
+			margin: 0px 100px 0px 0px;
+
+			@media (max-width: 991.98px) {
+				margin-right: 70px;
+			}
+
+			@media (max-width: 575.98px) {
+				margin-right: 50px;
+			}
+		}
+	}
 }
