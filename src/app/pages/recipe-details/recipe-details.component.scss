@@ -330,4 +330,123 @@
 			}
 		}
 	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading,
+			.date {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.content {
+			.recipe {
+				.ingredients,
+				.execution {
+					.heading {
+						font-family: 'NotoSansArabic';
+					}
+
+					.groups {
+						::ng-deep {
+							.accordion {
+								.accordion-item {
+									.accordion-header {
+										.accordion-button {
+											font-family: 'NotoSansArabic';
+										}
+									}
+
+									.accordion-body {
+										font-family: 'Cairo';
+
+										.form-check {
+											input {
+												margin: 1px 0px 0px 8px;
+												float: right;
+											}
+
+											label {
+												font-family: 'Cairo';
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.ingredients,
+				.execution {
+					.groups {
+						::ng-deep {
+							.accordion {
+								.accordion-item {
+									.accordion-header {
+										.accordion-button {
+											&::after {
+												margin: 0px auto 0px 0px;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.reply {
+				.heading {
+					font-family: 'NotoSansArabic';
+				}
+
+				.subheading {
+					font-family: 'Cairo';
+				}
+
+				form {
+					.form-group {
+						label {
+							font-family: 'NotoSansArabic';
+						}
+
+						input {
+							font-family: 'Cairo';
+
+							&[type=checkbox] {
+								margin: 1px 0px 0px 8px;
+								float: right;
+							}
+						}
+
+						textarea {
+							font-family: 'Cairo';
+						}
+
+						.form-check {
+							label {
+								font-family: 'Cairo';
+							}
+						}
+					}
+
+					.buttons {
+						.send-button {
+							font-family: 'NotoSansArabic';
+						}
+					}
+				}
+			}
+
+			.comments {
+				.heading {
+					font-family: 'NotoSansArabic';
+				}
+			}
+		}
+	}
 }

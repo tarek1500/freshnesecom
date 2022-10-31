@@ -255,6 +255,22 @@
 					}
 				}
 			},
+			"recipeDetails": {
+				"created": "Created",
+				"ingredients": "Ingredients",
+				"executionMethod": "Execution method",
+				"leaveReply": "Leave a reply",
+				"haveAccount": "Already have an account?",
+				"login": "Login",
+				"toLeaveReply": "to leave a reply.",
+				"name": "Name",
+				"email": "Email address",
+				"saveMyNameAndEmail": "Save my name and email in this browser for a next time comment.",
+				"comment": "Comment",
+				"spaceForComments": "Space for your comments",
+				"sendComment": "Send a comment",
+				"comments": "Comments"
+			},
 			"recipes": {
 				"recipes": "Recipes",
 				"page": "Page",

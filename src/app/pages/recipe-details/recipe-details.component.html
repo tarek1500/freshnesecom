@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
@@ -6,7 +6,7 @@
 
 	<div class="header">
 		<h2 class="heading">{{ recipe.title }}</h2>
-		<div class="date">Created {{ recipe.date.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+		<div class="date">{{ 'translate.pages.recipeDetails.created' | translate }} {{ recipe.date.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
 	</div>
 
 	<div class="content">
@@ -15,7 +15,7 @@
 		</div>
 		<div class="row recipe">
 			<div class="col-md-4 ingredients">
-				<h3 class="heading">Ingredients</h3>
+				<h3 class="heading">{{ 'translate.pages.recipeDetails.ingredients' | translate }}</h3>
 				<div class="groups">
 					<ngb-accordion #ingredientsAccordion="ngbAccordion">
 						<ngb-panel [title]="group.title" *ngFor="let group of recipe.ingredientGroups">
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 			<div class="col-md-8 execution">
-				<h3 class="heading">Execution Method</h3>
+				<h3 class="heading">{{ 'translate.pages.recipeDetails.executionMethod' | translate }}</h3>
 				<div class="groups">
 					<ngb-accordion #executionAccordion="ngbAccordion">
 						<ngb-panel [title]="group.title" *ngFor="let group of recipe.executionGroups">
@@ -46,36 +46,36 @@
 			</div>
 		</div>
 		<div class="reply">
-			<h3 class="heading">Leave a reply</h3>
-			<div class="subheading">Already have an account? <a routerLink="/login">Login</a> to leave a reply.</div>
+			<h3 class="heading">{{ 'translate.pages.recipeDetails.leaveReply' | translate }}</h3>
+			<div class="subheading">{{ 'translate.pages.recipeDetails.haveAccount' | translate }} <a routerLink="/login">{{ 'translate.pages.recipeDetails.login' | translate }}</a> {{ 'translate.pages.recipeDetails.toLeaveReply' | translate }}</div>
 			<form>
 				<div class="row">
 					<div class="form-group col-md-6 col-sm-6">
-						<label for="name">Name</label>
-						<input class="form-control" id="name" type="text" placeholder="Name">
+						<label for="name">{{ 'translate.pages.recipeDetails.name' | translate }}</label>
+						<input class="form-control" id="name" type="text" placeholder="{{ 'translate.pages.recipeDetails.name' | translate }}">
 					</div>
 					<div class="form-group col-md-6 col-sm-6">
-						<label for="email">Email address</label>
-						<input class="form-control" id="email" type="email" placeholder="Email address">
+						<label for="email">{{ 'translate.pages.recipeDetails.email' | translate }}</label>
+						<input class="form-control" id="email" type="email" placeholder="{{ 'translate.pages.recipeDetails.email' | translate }}">
 					</div>
 					<div class="form-group col-md-12">
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" id="save">
-							<label class="form-check-label" for="save">Save my name and email in this browser for a next time comment.</label>
+							<label class="form-check-label" for="save">{{ 'translate.pages.recipeDetails.saveMyNameAndEmail' | translate }}</label>
 						</div>
 					</div>
 					<div class="form-group col-md-12">
-						<label for="comment">Comment</label>
-						<textarea class="form-control" id="comment" rows="4" placeholder="Space for your comments"></textarea>
+						<label for="comment">{{ 'translate.pages.recipeDetails.comment' | translate }}</label>
+						<textarea class="form-control" id="comment" rows="4" placeholder="{{ 'translate.pages.recipeDetails.spaceForComments' | translate }}"></textarea>
 					</div>
 					<div class="form-group col-md-12 buttons">
-						<button class="btn send-button">Send a comment</button>
+						<button class="btn send-button">{{ 'translate.pages.recipeDetails.sendComment' | translate }}</button>
 					</div>
 				</div>
 			</form>
 		</div>
 		<div class="comments">
-			<h3 class="heading">Comments</h3>
+			<h3 class="heading">{{ 'translate.pages.recipeDetails.comments' | translate }}</h3>
 			<div class="comment" *ngFor="let comment of recipe.comments">
 				<app-comment [comment]="comment"></app-comment>
 			</div>

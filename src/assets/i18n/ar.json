@@ -255,6 +255,22 @@
 					}
 				}
 			},
+			"recipeDetails": {
+				"created": "انشأت",
+				"ingredients": "المكونات",
+				"executionMethod": "طريقة التنفيذ",
+				"leaveReply": "اترك رد",
+				"haveAccount": "هل لديك حساب؟",
+				"login": "تسجيل دخول",
+				"toLeaveReply": "لترك رد.",
+				"name": "الاسم",
+				"email": "البريد الالكترونى",
+				"saveMyNameAndEmail": "احفظ اسمي والبريد الإلكتروني في هذا المتصفح للتعليق في المرة القادمة.",
+				"comment": "التعليق",
+				"spaceForComments": "مساحة لتعليقاتكم",
+				"sendComment": "إرسال تعليق",
+				"comments": "التعليقات"
+			},
 			"recipes": {
 				"recipes": "وصفات",
 				"page": "صفحة",

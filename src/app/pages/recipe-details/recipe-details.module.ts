@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { RecipeDetailsRoutingModule } from './recipe-details-routing.module';
@@ -15,6 +16,7 @@ import { RecipeDetailsComponent } from './recipe-details.component';
 	],
 	imports: [
 		CommonModule,
+		TranslateModule,
 		RecipeDetailsRoutingModule,
 		NgbModule,
 		SharedModule,
