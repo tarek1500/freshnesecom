@@ -194,6 +194,7 @@
 					}
 
 					.data {
+						margin: auto 0px;
 						text-align: center;
 
 						@media (max-width: 767.98px) {
@@ -220,7 +221,13 @@
 					}
 
 					.icon {
+						margin: auto 0px;
 						text-align: right;
+
+						.shipping-icon {
+							max-width: 100%;
+							height: auto;
+						}
 					}
 				}
 			}
@@ -288,15 +295,19 @@
 							.accordion-body {
 								.card-holder-column {
 									@media (min-width: 768px) {
+										margin: 0px
+									}
+
+									@media (min-width: 992px) {
+										margin-bottom: 32px;
+									}
+
+									@media (min-width: 1200px) {
 										margin: 0px;
 									}
 								}
 
 								.expiration-date-column {
-									@media (min-width: 768px) {
-										margin: 0px;
-									}
-
 									@media (min-width: 576px) {
 										margin: 0px;
 									}
@@ -441,6 +452,180 @@
 
 							@media (max-width: 575.98px) {
 								font-size: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.content {
+			.billing {
+				padding: 0px 0px 0px 12px;
+
+				@media (max-width: 991.98px) {
+					padding: 0px;
+				}
+
+				.billing-info,
+				.shipping-method,
+				.payment-method,
+				.additional,
+				.confirm {
+					.heading {
+						font-family: 'NotoSansArabic';
+					}
+
+					.subheading {
+						h3,
+						.step {
+							font-family: 'Cairo';
+						}
+					}
+
+					.form-group {
+						label {
+							font-family: 'NotoSansArabic';
+						}
+
+						input {
+							font-family: 'Cairo';
+
+							&[type=checkbox] {
+								margin: 1px 0px 0px 8px;
+								float: right;
+							}
+						}
+
+						select,
+						textarea {
+							font-family: 'Cairo';
+						}
+
+						select {
+							background-position: left 12px center;
+						}
+
+						.form-check {
+							label {
+								font-family: 'Cairo';
+							}
+						}
+					}
+				}
+
+				.shipping-method {
+					.shipping {
+						.name {
+							.form-check {
+								input {
+									margin: 2px 0px 0px 16px;
+									float: right;
+								}
+
+								label {
+									font-family: 'NotoSansArabic';
+								}
+							}
+						}
+
+						.data {
+							.text,
+							.tag {
+								font-family: 'NotoSansArabic';
+							}
+
+							.text {
+								margin: 0px 0px 0px 4px;
+							}
+						}
+
+						.icon {
+							text-align: left;
+						}
+					}
+				}
+
+				.payment-method {
+					::ng-deep {
+						.accordion {
+							.accordion-item {
+								.accordion-header {
+									.accordion-button {
+										.credit-card,
+										.paypal,
+										.bitcoin {
+											.form-check {
+												input {
+													margin: 2px 0px 0px 16px;
+													float: right;
+												}
+
+												label {
+													font-family: 'NotoSansArabic';
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.confirm {
+					.button {
+						.complete-button {
+							font-family: 'NotoSansArabic';
+						}
+					}
+
+					.safe {
+						.paragraph {
+							font-family: 'Cairo';
+						}
+					}
+				}
+			}
+
+			.summary {
+				padding: 0px 12px 0px 0px;
+
+				.summary-content {
+					.heading {
+						font-family: 'NotoSansArabic';
+					}
+
+					.subheading {
+						font-family: 'Cairo';
+					}
+
+					.price {
+						font-family: 'NotoSansArabic';
+
+						.value-column {
+							text-align: left;
+						}
+					}
+
+					.total {
+						.text {
+							font-family: 'NotoSansArabic';
+						}
+
+						.delivery {
+							font-family: 'Cairo';
+						}
+
+						.price-column {
+							text-align: left;
+
+							.price {
+								font-family: 'NotoSansArabic';
 							}
 						}
 					}

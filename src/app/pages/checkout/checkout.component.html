@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
@@ -7,58 +7,56 @@
 	<div class="content row">
 		<div class="col-xl-7 col-lg-6 col-md-12 billing">
 			<div class="billing-info">
-				<h2 class="heading">Billing info</h2>
+				<h2 class="heading">{{ 'translate.pages.checkout.billingInfo' | translate }}</h2>
 				<div class="subheading">
-					<h3>Please enter your billing info</h3>
-					<div class="step">Step 1 of 5</div>
+					<h3>{{ 'translate.pages.checkout.enterBillingInfo' | translate }}</h3>
+					<div class="step">{{ 'translate.pages.checkout.step1' | translate }}</div>
 				</div>
 				<div class="row">
 					<div class="col-md-6 form-group">
-						<label for="name">Full name</label>
-						<input class="form-control" id="name" type="text" placeholder="Full name">
+						<label for="name">{{ 'translate.pages.checkout.fullName' | translate }}</label>
+						<input class="form-control" id="name" type="text" placeholder="{{ 'translate.pages.checkout.fullName' | translate }}">
 					</div>
 					<div class="col-md-6 form-group">
-						<label for="email">Email address</label>
-						<input class="form-control" id="email" type="email" placeholder="Email address">
+						<label for="email">{{ 'translate.pages.checkout.email' | translate }}</label>
+						<input class="form-control" id="email" type="email" placeholder="{{ 'translate.pages.checkout.email' | translate }}">
 					</div>
 					<div class="col-md-12 form-group">
-						<label for="address">Address</label>
-						<input class="form-control" id="address" type="text" placeholder="Address">
+						<label for="address">{{ 'translate.pages.checkout.address' | translate }}</label>
+						<input class="form-control" id="address" type="text" placeholder="{{ 'translate.pages.checkout.address' | translate }}">
 					</div>
 					<div class="col-md-6 form-group">
-						<label for="phone">Phone number</label>
-						<input class="form-control" id="phone" type="text" placeholder="Phone number">
+						<label for="phone">{{ 'translate.pages.checkout.phone' | translate }}</label>
+						<input class="form-control" id="phone" type="text" placeholder="{{ 'translate.pages.checkout.phone' | translate }}">
 					</div>
 					<div class="col-md-6 form-group">
-						<label for="city">City</label>
-						<input class="form-control" id="city" type="text" placeholder="City">
+						<label for="city">{{ 'translate.pages.checkout.city' | translate }}</label>
+						<input class="form-control" id="city" type="text" placeholder="{{ 'translate.pages.checkout.city' | translate }}">
 					</div>
 					<div class="col-md-6 form-group">
-						<label for="country">Country</label>
-						<select class="form-select" id="country">
-							<option value="" selected>Select country</option>
-							<option value="Egypt">Egypt</option>
-							<option value="USA">USA</option>
-							<option value="UK">UK</option>
+						<label for="country">{{ 'translate.pages.profile.addressesSection.create.country' | translate }}</label>
+						<select class="form-select" name="country" id="country">
+							<option [value]="0">{{ 'translate.pages.profile.addressesSection.create.selectCountry' | translate }}</option>
+							<option *ngFor="let country of countries" [value]="country.id">{{ country.name }}</option>
 						</select>
 					</div>
 					<div class="col-md-6 form-group">
-						<label for="zip">ZIP / Postal code</label>
-						<input class="form-control" id="zip" type="text" placeholder="ZIP / Postal code">
+						<label for="postal">{{ 'translate.pages.checkout.postal' | translate }}</label>
+						<input class="form-control" id="postal" type="text" placeholder="{{ 'translate.pages.checkout.postal' | translate }}">
 					</div>
 					<div class="col-md-6 form-group">
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" id="different-address">
-							<label class="form-check-label" for="different-address">Ship to a different address?</label>
+							<label class="form-check-label" for="different-address">{{ 'translate.pages.checkout.shipDifferentAddress' | translate }}</label>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="shipping-method">
-				<h2 class="heading">Shipping method</h2>
+				<h2 class="heading">{{ 'translate.pages.checkout.shippingMethod' | translate }}</h2>
 				<div class="subheading">
-					<h3>Please enter your shipping method</h3>
-					<div class="step">Step 2 of 5</div>
+					<h3>{{ 'translate.pages.checkout.enterShippingMethod' | translate }}</h3>
+					<div class="step">{{ 'translate.pages.checkout.step2' | translate }}</div>
 				</div>
 				<div class="row shipping" *ngFor="let delivery of deliveries">
 					<div class="col-md-2 col-6 name">
@@ -68,8 +66,9 @@
 						</div>
 					</div>
 					<div class="col-md-8 col-12 data">
-						<span class="text">+{{ delivery.price }} {{ delivery.currency }}</span>
-						<span class="tag">Additional price</span>
+						<!-- Space is required for arabic words to not connect with each others -->
+						<span class="text">+{{ delivery.price }} {{ delivery.currency }}</span>&nbsp;
+						<span class="tag">{{ 'translate.pages.checkout.additionalPrice' | translate }}</span>
 					</div>
 					<div class="col-md-2 col-6 icon">
 						<img class="shipping-icon" src="{{ delivery.logo }}" alt="">
@@ -77,10 +76,10 @@
 				</div>
 			</div>
 			<div class="payment-method">
-				<h2 class="heading">Payment method</h2>
+				<h2 class="heading">{{ 'translate.pages.checkout.paymentMethod' | translate }}</h2>
 				<div class="subheading">
-					<h3>Please enter your payment method</h3>
-					<div class="step">Step 3 of 5</div>
+					<h3>{{ 'translate.pages.checkout.enterPaymentMethod' | translate }}</h3>
+					<div class="step">{{ 'translate.pages.checkout.step3' | translate }}</div>
 				</div>
 				<ngb-accordion [closeOthers]="true" activeIds="credit-card" #accordion="ngbAccordion">
 					<ngb-panel id="credit-card" #creditCard>
@@ -88,7 +87,7 @@
 							<div class="credit-card">
 								<div class="form-check">
 									<input class="form-check-input" type="radio" id="credit-card-button" [checked]="accordion.isExpanded('credit-card')">
-									<label class="form-check-label" for="credit-card-button" (click)="accordion.toggle('credit-card')">Credit card</label>
+									<label class="form-check-label" for="credit-card-button" (click)="accordion.toggle('credit-card')">{{ 'translate.pages.checkout.creditCard' | translate }}</label>
 								</div>
 								<div class="icons">
 									<img class="visa-icon" src="../../../assets/icons/visa.svg" alt="">
@@ -99,20 +98,20 @@
 						<ng-template ngbPanelContent>
 							<div class="row">
 								<div class="col-md-12 form-group">
-									<label for="card-number">Card number</label>
-									<input class="form-control" id="card-number" type="text" placeholder="Card number">
+									<label for="card-number">{{ 'translate.pages.checkout.cardNumber' | translate }}</label>
+									<input class="form-control" id="card-number" type="text" placeholder="{{ 'translate.pages.checkout.cardNumber' | translate }}">
 								</div>
-								<div class="col-md-6 form-group card-holder-column">
-									<label for="card-holder">Card holder</label>
-									<input class="form-control" id="card-holder" type="text" placeholder="Card holder">
+								<div class="col-xl-6 col-lg-12 col-md-6 form-group card-holder-column">
+									<label for="card-holder">{{ 'translate.pages.checkout.cardHolder' | translate }}</label>
+									<input class="form-control" id="card-holder" type="text" placeholder="{{ 'translate.pages.checkout.cardHolder' | translate }}">
 								</div>
-								<div class="col-md-3 col-sm-6 form-group expiration-date-column">
-									<label for="expiration-date">Expiration date</label>
-									<input class="form-control" id="expiration-date" type="text" placeholder="DD/MM/YY">
+								<div class="col-xl-3 col-lg-6 col-md-3 col-sm-6 form-group expiration-date-column">
+									<label for="expiration-date">{{ 'translate.pages.checkout.expirationDate' | translate }}</label>
+									<input class="form-control" id="expiration-date" type="text" placeholder="{{ 'translate.pages.checkout.dateFormat' | translate }}">
 								</div>
-								<div class="col-md-3 col-sm-6 form-group cvc-column">
-									<label for="cvc">CVC</label>
-									<input class="form-control" id="cvc" type="text" placeholder="CVC">
+								<div class="col-xl-3 col-lg-6 col-md-3 col-sm-6 form-group cvc-column">
+									<label for="cvc">{{ 'translate.pages.checkout.cvc' | translate }}</label>
+									<input class="form-control" id="cvc" type="text" placeholder="{{ 'translate.pages.checkout.cvc' | translate }}">
 								</div>
 							</div>
 						</ng-template>
@@ -122,76 +121,76 @@
 							<div class="paypal">
 								<div class="form-check">
 									<input class="form-check-input" type="radio" id="paypal-button" [checked]="accordion.isExpanded('paypal')">
-									<label class="form-check-label" for="paypal-button" (click)="accordion.toggle('paypal')">PayPal</label>
+									<label class="form-check-label" for="paypal-button" (click)="accordion.toggle('paypal')">{{ 'translate.pages.checkout.payPal' | translate }}</label>
 								</div>
 								<div class="icons">
 									<img class="dhl-icon" src="../../../assets/icons/paypal.svg" alt="">
 								</div>
 							</div>
 						</ng-template>
-						<ng-template ngbPanelContent>PayPal</ng-template>
+						<ng-template ngbPanelContent>{{ 'translate.pages.checkout.payPal' | translate }}</ng-template>
 					</ngb-panel>
 					<ngb-panel id="bitcoin">
 						<ng-template ngbPanelTitle>
 							<div class="bitcoin">
 								<div class="form-check">
 									<input class="form-check-input" type="radio" id="bitcoin-button" [checked]="accordion.isExpanded('bitcoin')">
-									<label class="form-check-label" for="bitcoin-button" (click)="accordion.toggle('bitcoin')">Bitcoin</label>
+									<label class="form-check-label" for="bitcoin-button" (click)="accordion.toggle('bitcoin')">{{ 'translate.pages.checkout.bitcoin' | translate }}</label>
 								</div>
 								<div class="icons">
 									<img class="bitcoin-icon" src="../../../assets/icons/bitcoin.svg" alt="">
 								</div>
 							</div>
 						</ng-template>
-						<ng-template ngbPanelContent>Bitcoin</ng-template>
+						<ng-template ngbPanelContent>{{ 'translate.pages.checkout.bitcoin' | translate }}</ng-template>
 					</ngb-panel>
 				</ngb-accordion>
 			</div>
 			<div class="additional">
-				<h2 class="heading">Additional information</h2>
+				<h2 class="heading">{{ 'translate.pages.checkout.additionalInfo' | translate }}</h2>
 				<div class="subheading">
-					<h3>Need something else? We will make it for you!</h3>
-					<div class="step">Step 4 of 5</div>
+					<h3>{{ 'translate.pages.checkout.needSomething' | translate }}</h3>
+					<div class="step">{{ 'translate.pages.checkout.step4' | translate }}</div>
 				</div>
 				<div class="form-group">
-					<label for="notes">Order notes</label>
-					<textarea class="form-control" id="notes" rows="4" placeholder="Need a specific delivery day? Sending a gift? Let’s say ..."></textarea>
+					<label for="notes">{{ 'translate.pages.checkout.orderNotes' | translate }}</label>
+					<textarea class="form-control" id="notes" rows="4" placeholder="{{ 'translate.pages.checkout.needSpecificDeliveryDay' | translate }}"></textarea>
 				</div>
 			</div>
 			<div class="confirm">
-				<h2 class="heading">Confirmation</h2>
+				<h2 class="heading">{{ 'translate.pages.checkout.confirmation' | translate }}</h2>
 				<div class="subheading">
-					<h3>We are getting to the end. Just few clicks and your order si ready!</h3>
-					<div class="step">Step 5 of 5</div>
+					<h3>{{ 'translate.pages.checkout.gettingEnd' | translate }}</h3>
+					<div class="step">{{ 'translate.pages.checkout.step5' | translate }}</div>
 				</div>
 				<div class="form-group">
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" id="newsletter">
-						<label class="form-check-label" for="newsletter">I agree with sending an Marketing and newsletter emails. No spam, promised!</label>
+						<label class="form-check-label" for="newsletter">{{ 'translate.pages.checkout.agreeSendingEmails' | translate }}</label>
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" id="terms">
-						<label class="form-check-label" for="terms">I agree with our terms and conditions and privacy policy.</label>
+						<label class="form-check-label" for="terms">{{ 'translate.pages.checkout.agreeTerms' | translate }}</label>
 					</div>
 				</div>
 				<div class="button">
-					<button class="btn complete-button">Complete order</button>
+					<button class="btn complete-button">{{ 'translate.pages.checkout.completeOrder' | translate }}</button>
 				</div>
 				<div class="safe">
 					<div class="icon">
 						<img class="safe-icon" src="../../../assets/icons/safe.svg" alt="">
 					</div>
-					<h3 class="heading">All your data are safe</h3>
-					<p class="paragraph">We are using the most advanced security to provide you the best experience ever.</p>
+					<h3 class="heading">{{ 'translate.pages.checkout.allDataSafe' | translate }}</h3>
+					<p class="paragraph">{{ 'translate.pages.checkout.usingMostSecurity' | translate }}</p>
 				</div>
 			</div>
 		</div>
 		<div class="col-xl-5 col-lg-6 col-md-12 summary">
 			<div class="summary-content">
-				<h2 class="heading">Order Summary</h2>
-				<h3 class="subheading">Price can change depending on shipping method and taxes of your country.</h3>
+				<h2 class="heading">{{ 'translate.pages.checkout.orderSummary' | translate }}</h2>
+				<h3 class="subheading">{{ 'translate.pages.checkout.priceChange' | translate }}</h3>
 				<div class="products">
 					<div class="product" *ngFor="let product of cart.products">
 						<app-product-tiny [product]="product"></app-product-tiny>
@@ -199,23 +198,23 @@
 				</div>
 				<div class="row price">
 					<div class="col-6 text-column">
-						<div class="text">Subtotal</div>
-						<div class="text">Tax</div>
-						<div class="text">Shipping</div>
+						<div class="text">{{ 'translate.pages.checkout.subtotal' | translate }}:</div>
+						<div class="text">{{ 'translate.pages.checkout.tax' | translate }}: ({{ (cart.tax / cart.subtotal * 100) | number:'1.0-0' }}&#65285;)</div>
+						<div class="text">{{ 'translate.pages.checkout.shipping' | translate }}:</div>
 					</div>
 					<div class="col-6 value-column">
 						<div class="value">{{ cart.subtotal }} {{ cart.currency }}</div>
-						<div class="value">{{ (cart.tax / cart.subtotal * 100) | number:'1.0-0' }}% {{ cart.tax }} {{ cart.currency }}</div>
+						<div class="value">{{ cart.tax }} {{ cart.currency }}</div>
 						<div class="value">{{ cart.shipping }} {{ cart.currency }}</div>
 					</div>
 				</div>
 				<div class="promo">
-					<app-text-input-group [placeholder]="'Apply promo code'" [button]="'Apply now'" (onApply)="onPromoApplied($event)"></app-text-input-group>
+					<app-text-input-group [placeholder]="'translate.pages.checkout.applyPromo' | translate" [button]="'translate.pages.checkout.apply' | translate" (onApply)="onPromoApplied($event)"></app-text-input-group>
 				</div>
 				<div class="row total">
 					<div class="col-6">
-						<div class="text">Total Order</div>
-						<div class="delivery">Guaranteed delivery day: June 12, 2020</div>
+						<div class="text">{{ 'translate.pages.checkout.totalOrder' | translate }}</div>
+						<div class="delivery">{{ 'translate.pages.checkout.guaranteedDeliveryDay' | translate }}: {{ deliveryDate.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
 					</div>
 					<div class="col-6 price-column">
 						<div class="price">{{ (cart.subtotal + cart.tax + cart.shipping) | number:'1.0-2' }} {{ cart.currency }}</div>
