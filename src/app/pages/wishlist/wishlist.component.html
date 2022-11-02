@@ -1,25 +1,25 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Wishlist</h2>
+		<h2 class="heading">{{ 'translate.pages.wishlist.wishlist' | translate }}</h2>
 		<div class="view">
-			<div [class]="{ 'item': true, 'grid-view': true, 'active': isGridView }" (click)="isGridView = true">
+			<div class="item grid-view" [ngClass]="{ 'active': isGridView }" (click)="isGridView = true">
 				<img class="grid-icon" src="../../../assets/icons/grid-view-green.svg" alt="" *ngIf="isGridView">
 				<img class="grid-icon" src="../../../assets/icons/grid-view-gray.svg" alt="" *ngIf="!isGridView">
-				<span class="text">Grid view</span>
+				<span class="text">{{ 'translate.pages.wishlist.grid' | translate }}</span>
 			</div>
-			<div [class]="{ 'item': true, 'list-view': true, 'active': !isGridView }" (click)="isGridView = false">
+			<div class="item list-view" [ngClass]="{ 'active': !isGridView }" (click)="isGridView = false">
 				<img class="list-icon" src="../../../assets/icons/list-view-green.svg" alt="" *ngIf="!isGridView">
 				<img class="list-icon" src="../../../assets/icons/list-view-gray.svg" alt="" *ngIf="isGridView">
-				<span class="text">List view</span>
+				<span class="text">{{ 'translate.pages.wishlist.list' | translate }}</span>
 			</div>
 			<div class="item products">
 				<span class="count">{{ wishlist.products.length }}</span>
-				<span class="text">Products</span>
+				<span class="text">{{ 'translate.pages.wishlist.products' | translate }}</span>
 			</div>
 		</div>
 	</div>
@@ -27,7 +27,7 @@
 	<div class="content">
 		<div class="products">
 			<div class="row">
-				<div [class]="{ 'col-xl-3': isGridView, 'col-lg-4': isGridView, 'col-md-6': isGridView, 'product': true }" *ngFor="let product of wishlist.products">
+				<div class="product" [ngClass]="{ 'col-xl-3': isGridView, 'col-lg-4': isGridView, 'col-md-6': isGridView }" *ngFor="let product of wishlist.products">
 					<app-product [size]="isGridView ? 'small' : 'large'" [product]="product" [show-wishlist]="false"></app-product>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 	<div class="footer">
 		<div class="products">
 			<span class="count">{{ wishlist.products.length }}</span>
-			<span class="text">Products</span>
+			<span class="text">{{ 'translate.pages.wishlist.products' | translate }}</span>
 		</div>
 	</div>
 

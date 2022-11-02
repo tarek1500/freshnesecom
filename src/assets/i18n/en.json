@@ -19,7 +19,8 @@
 				"products": "Products",
 				"blogs": "Blogs",
 				"recipes": "Recipes",
-				"checkout": "Checkout"
+				"checkout": "Checkout",
+				"wishlist": "Wishlist"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -338,6 +339,12 @@
 				"phone": "Phone number",
 				"avatar": "Avatar image",
 				"registering": "Register"
+			},
+			"wishlist": {
+				"wishlist": "Wishlist",
+				"grid": "Grid view",
+				"list": "List view",
+				"products": "Products"
 			}
 		}
 	}

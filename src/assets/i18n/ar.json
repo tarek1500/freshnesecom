@@ -19,7 +19,8 @@
 				"products": "المنتجات",
 				"blogs": "المدونات",
 				"recipes": "الوصفات",
-				"checkout": "الدفع"
+				"checkout": "الدفع",
+				"wishlist": "قائمة الامنيات"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -338,6 +339,12 @@
 				"phone": "رقم الهاتف",
 				"avatar": "الصورة الرمزية",
 				"registering": "تسجيل"
+			},
+			"wishlist": {
+				"wishlist": "قائمة الامنيات",
+				"grid": "عرض الشبكة",
+				"list": "عرض القائمة",
+				"products": "منتجات"
 			}
 		}
 	}

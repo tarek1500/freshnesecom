@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../services/rtl/rtl.service';
 import { WishlistService } from '../../services/wishlist/wishlist.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Wishlist } from '../../interfaces/wishlist.interface';
@@ -12,17 +13,26 @@ import { Wishlist } from '../../interfaces/wishlist.interface';
 })
 export class WishlistComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
+	rtl: boolean = false;
 	breadcrumb: Breadcrumb[] = [
-		{ translate: '', text: 'Home', link: '/' },
-		{ translate: '', text: 'Wishlist', link: '' }
+		{ translate: 'translate.components.breadcrumb.home', text: 'Home', link: '/' },
+		{ translate: 'translate.components.breadcrumb.wishlist', text: 'Wishlist', link: '' }
 	];
 	wishlist!: Wishlist;
 	isGridView: boolean = true;
 
-	constructor(private wishlistService: WishlistService) { }
+	constructor(
+		private rtlService: RtlService,
+		private wishlistService: WishlistService
+	) { }
 
 	ngOnInit(): void {
-		let subscription = this.wishlistService.wishlistSubject$.subscribe(wishlist => {
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
+		});
+		this.subscriptions.push(subscription);
+
+		subscription = this.wishlistService.wishlistSubject$.subscribe(wishlist => {
 			this.wishlist = wishlist;
 		});
 		this.subscriptions.push(subscription);
