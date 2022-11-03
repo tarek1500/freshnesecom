@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
+import { RtlService } from '../../services/rtl/rtl.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Product } from '../../interfaces/product.interface';
 
@@ -8,233 +10,470 @@ import { Product } from '../../interfaces/product.interface';
 	templateUrl: './compare.component.html',
 	styleUrls: ['./compare.component.scss']
 })
-export class CompareComponent implements OnInit {
+export class CompareComponent implements OnInit, OnDestroy {
+	subscriptions: Subscription[] = [];
+	rtl: boolean = false;
 	breadcrumb: Breadcrumb[] = [
-		{ translate: '', text: 'Home', link: '/' },
-		{ translate: '', text: 'Compare', link: '' }
+		{ translate: 'translate.components.breadcrumb.home', text: 'Home', link: '/' },
+		{ translate: 'translate.components.breadcrumb.compare', text: 'Compare', link: '' }
 	];
 	products!: Product[]
 
-	constructor() { }
+	constructor(private rtlService: RtlService) { }
 
 	ngOnInit(): void {
-		this.products = [
-			{
-				id: 1,
-				name: 'Product title',
-				slug: 'product-title',
-				description: 'Space for a small product description',
-				rating: 4.33,
-				price: 36.99,
-				oldPrice: 48.56,
-				currency: 'USD',
-				sku: '',
-				freshness: 'New',
-				freshnessDescription: 'Extra fresh',
-				farm: 'Grocery Farm Fields',
-				availablePacks: [
-					{
-						id: 1,
-						stock: 10,
-						pack: 'pcs'
+		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
+			this.rtl = rtl;
+
+			this.loadProducts();
+		});
+		this.subscriptions.push(subscription);
+	}
+
+	ngOnDestroy(): void {
+		this.subscriptions.forEach(subscription => subscription.unsubscribe());
+	}
+
+	loadProducts() {
+		if (this.rtl) {
+			this.products = [
+				{
+					id: 1,
+					name: 'عنوان المنتج',
+					slug: 'product-title',
+					description: 'مساحة لوصف صغير للمنتج',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'جنيه',
+					sku: '',
+					freshness: 'جديد',
+					freshnessDescription: 'طازج جدا',
+					farm: 'حقول مزرعة البقالة',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'قِطَع'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'كيلوجرام'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'صندوق'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'حزمة'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
 					},
-					{
-						id: 2,
-						stock: 20,
-						pack: 'kgs'
+					delivery: 'أوروبا',
+					selectedQuantity: {
+						id: 0,
+						quantity: 0,
+						pack: ''
 					},
-					{
-						id: 3,
-						stock: 1,
-						pack: 'box'
-					},
-					{
-						id: 4,
-						stock: 2,
-						pack: 'pack'
-					}
-				],
-				category: {
-					id: 0,
-					name: '',
-					slug: '',
-					subcategories: []
+					shipping: 'الشحن مجانا',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/112/600/300']
 				},
-				delivery: 'Europe',
-				selectedQuantity: {
-					id: 0,
-					quantity: 0,
-					pack: ''
+				{
+					id: 2,
+					name: 'عنوان المنتج',
+					slug: 'product-title',
+					description: 'مساحة لوصف صغير للمنتج',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'جنيه',
+					sku: '',
+					freshness: 'جديد',
+					freshnessDescription: 'طازج جدا',
+					farm: 'حقول مزرعة البقالة',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'قِطَع'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'كيلوجرام'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'صندوق'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'حزمة'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
+					},
+					delivery: 'أوروبا',
+					selectedQuantity: {
+						id: 0,
+						quantity: 0,
+						pack: ''
+					},
+					shipping: 'الشحن مجانا',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/1080/600/300']
 				},
-				shipping: 'Free Shipping',
-				deliveryDays: 1,
-				info: '',
-				reviews: [],
-				questions: [],
-				images: ['https://picsum.photos/id/112/600/300']
-			},
-			{
-				id: 2,
-				name: 'Product title',
-				slug: 'product-title',
-				description: 'Space for a small product description',
-				rating: 4.33,
-				price: 36.99,
-				oldPrice: 48.56,
-				currency: 'USD',
-				sku: '',
-				freshness: 'New',
-				freshnessDescription: 'Extra fresh',
-				farm: 'Grocery Farm Fields',
-				availablePacks: [
-					{
-						id: 1,
-						stock: 10,
-						pack: 'pcs'
+				{
+					id: 3,
+					name: 'عنوان المنتج',
+					slug: 'product-title',
+					description: 'مساحة لوصف صغير للمنتج',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 0,
+					currency: 'جنيه',
+					sku: '',
+					freshness: 'جديد',
+					freshnessDescription: 'طازج جدا',
+					farm: 'حقول مزرعة البقالة',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'قِطَع'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'كيلوجرام'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'صندوق'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'حزمة'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
 					},
-					{
-						id: 2,
-						stock: 20,
-						pack: 'kgs'
+					delivery: 'أوروبا',
+					selectedQuantity: {
+						id: 0,
+						quantity: 0,
+						pack: ''
 					},
-					{
-						id: 3,
-						stock: 1,
-						pack: 'box'
-					},
-					{
-						id: 4,
-						stock: 2,
-						pack: 'pack'
-					}
-				],
-				category: {
-					id: 0,
-					name: '',
-					slug: '',
-					subcategories: []
+					shipping: 'الشحن مجانا',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/102/900/300']
 				},
-				delivery: 'Europe',
-				selectedQuantity: {
-					id: 0,
-					quantity: 0,
-					pack: ''
+				{
+					id: 4,
+					name: 'عنوان المنتج',
+					slug: 'product-title',
+					description: 'مساحة لوصف صغير للمنتج',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'جنيه',
+					sku: '',
+					freshness: 'جديد',
+					freshnessDescription: 'طازج جدا',
+					farm: 'حقول مزرعة البقالة',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'قِطَع'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'كيلوجرام'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'صندوق'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'حزمة'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
+					},
+					delivery: 'أوروبا',
+					selectedQuantity: {
+						id: 0,
+						quantity: 0,
+						pack: ''
+					},
+					shipping: 'الشحن مجانا',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/107/600/300']
+				}
+			];
+		}
+		else {
+			this.products = [
+				{
+					id: 1,
+					name: 'Product title',
+					slug: 'product-title',
+					description: 'Space for a small product description',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'USD',
+					sku: '',
+					freshness: 'New',
+					freshnessDescription: 'Extra fresh',
+					farm: 'Grocery Farm Fields',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
+					},
+					delivery: 'Europe',
+					selectedQuantity: {
+						id: 0,
+						quantity: 0,
+						pack: ''
+					},
+					shipping: 'Free Shipping',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/112/600/300']
 				},
-				shipping: 'Free Shipping',
-				deliveryDays: 1,
-				info: '',
-				reviews: [],
-				questions: [],
-				images: ['https://picsum.photos/id/1080/600/300']
-			},
-			{
-				id: 3,
-				name: 'Product title',
-				slug: 'product-title',
-				description: 'Space for a small product description',
-				rating: 4.33,
-				price: 36.99,
-				oldPrice: 0,
-				currency: 'USD',
-				sku: '',
-				freshness: 'New',
-				freshnessDescription: 'Extra fresh',
-				farm: 'Grocery Farm Fields',
-				availablePacks: [
-					{
-						id: 1,
-						stock: 10,
-						pack: 'pcs'
+				{
+					id: 2,
+					name: 'Product title',
+					slug: 'product-title',
+					description: 'Space for a small product description',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'USD',
+					sku: '',
+					freshness: 'New',
+					freshnessDescription: 'Extra fresh',
+					farm: 'Grocery Farm Fields',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
 					},
-					{
-						id: 2,
-						stock: 20,
-						pack: 'kgs'
+					delivery: 'Europe',
+					selectedQuantity: {
+						id: 0,
+						quantity: 0,
+						pack: ''
 					},
-					{
-						id: 3,
-						stock: 1,
-						pack: 'box'
-					},
-					{
-						id: 4,
-						stock: 2,
-						pack: 'pack'
-					}
-				],
-				category: {
-					id: 0,
-					name: '',
-					slug: '',
-					subcategories: []
+					shipping: 'Free Shipping',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/1080/600/300']
 				},
-				delivery: 'Europe',
-				selectedQuantity: {
-					id: 0,
-					quantity: 0,
-					pack: ''
-				},
-				shipping: 'Free Shipping',
-				deliveryDays: 1,
-				info: '',
-				reviews: [],
-				questions: [],
-				images: ['https://picsum.photos/id/102/900/300']
-			},
-			{
-				id: 4,
-				name: 'Product title',
-				slug: 'product-title',
-				description: 'Space for a small product description',
-				rating: 4.33,
-				price: 36.99,
-				oldPrice: 48.56,
-				currency: 'USD',
-				sku: '',
-				freshness: 'New',
-				freshnessDescription: 'Extra fresh',
-				farm: 'Grocery Farm Fields',
-				availablePacks: [
-					{
-						id: 1,
-						stock: 10,
-						pack: 'pcs'
+				{
+					id: 3,
+					name: 'Product title',
+					slug: 'product-title',
+					description: 'Space for a small product description',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 0,
+					currency: 'USD',
+					sku: '',
+					freshness: 'New',
+					freshnessDescription: 'Extra fresh',
+					farm: 'Grocery Farm Fields',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
 					},
-					{
-						id: 2,
-						stock: 20,
-						pack: 'kgs'
+					delivery: 'Europe',
+					selectedQuantity: {
+						id: 0,
+						quantity: 0,
+						pack: ''
 					},
-					{
-						id: 3,
-						stock: 1,
-						pack: 'box'
+					shipping: 'Free Shipping',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/102/900/300']
+				},
+				{
+					id: 4,
+					name: 'Product title',
+					slug: 'product-title',
+					description: 'Space for a small product description',
+					rating: 4.33,
+					price: 36.99,
+					oldPrice: 48.56,
+					currency: 'USD',
+					sku: '',
+					freshness: 'New',
+					freshnessDescription: 'Extra fresh',
+					farm: 'Grocery Farm Fields',
+					availablePacks: [
+						{
+							id: 1,
+							stock: 10,
+							pack: 'pcs'
+						},
+						{
+							id: 2,
+							stock: 20,
+							pack: 'kgs'
+						},
+						{
+							id: 3,
+							stock: 1,
+							pack: 'box'
+						},
+						{
+							id: 4,
+							stock: 2,
+							pack: 'pack'
+						}
+					],
+					category: {
+						id: 0,
+						name: '',
+						slug: '',
+						subcategories: []
 					},
-					{
-						id: 4,
-						stock: 2,
-						pack: 'pack'
-					}
-				],
-				category: {
-					id: 0,
-					name: '',
-					slug: '',
-					subcategories: []
-				},
-				delivery: 'Europe',
-				selectedQuantity: {
-					id: 0,
-					quantity: 0,
-					pack: ''
-				},
-				shipping: 'Free Shipping',
-				deliveryDays: 1,
-				info: '',
-				reviews: [],
-				questions: [],
-				images: ['https://picsum.photos/id/107/600/300']
-			}
-		];
+					delivery: 'Europe',
+					selectedQuantity: {
+						id: 0,
+						quantity: 0,
+						pack: ''
+					},
+					shipping: 'Free Shipping',
+					deliveryDays: 1,
+					info: '',
+					reviews: [],
+					questions: [],
+					images: ['https://picsum.photos/id/107/600/300']
+				}
+			];
+		}
 	}
 }

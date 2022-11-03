@@ -20,7 +20,8 @@
 				"blogs": "Blogs",
 				"recipes": "Recipes",
 				"checkout": "Checkout",
-				"wishlist": "Wishlist"
+				"wishlist": "Wishlist",
+				"compare": "Compare"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -174,6 +175,25 @@
 				"apply": "Apply now",
 				"totalOrder": "Total order",
 				"guaranteedDeliveryDay": "Guaranteed delivery day"
+			},
+			"compare": {
+				"compare": "Compare",
+				"products": "Products",
+				"name": "Name",
+				"image": "Image",
+				"description": "Description",
+				"rating": "Rating",
+				"price": "Price",
+				"oldPrice": "Old price",
+				"sku": "SKU",
+				"freshness": "Freshness",
+				"farm": "Farm",
+				"category": "Category",
+				"delivery": "Delivery",
+				"shipping": "Shipping",
+				"deliveryDays": "Delivery days",
+				"days": "day(s)",
+				"remove": "Remove"
 			},
 			"home": {
 				"categoryMenu": "Category menu",

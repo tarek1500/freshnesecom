@@ -20,7 +20,8 @@
 				"blogs": "المدونات",
 				"recipes": "الوصفات",
 				"checkout": "الدفع",
-				"wishlist": "قائمة الامنيات"
+				"wishlist": "قائمة الامنيات",
+				"compare": "المقارنة"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -174,6 +175,25 @@
 				"apply": "طبق الآن",
 				"totalOrder": "إجمالي الطلب",
 				"guaranteedDeliveryDay": "يوم التسليم المضمون"
+			},
+			"compare": {
+				"compare": "المقارنة",
+				"products": "منتجات",
+				"name": "الاسم",
+				"image": "الصورة",
+				"description": "الوصف",
+				"rating": "التقييم",
+				"price": "السعر",
+				"oldPrice": "السعر القديم",
+				"sku": "وحدة حفظ المخزون",
+				"freshness": "النضارة",
+				"farm": "المزرعة",
+				"category": "التصنيف",
+				"delivery": "التوصيل",
+				"shipping": "الشحن",
+				"deliveryDays": "أيام التسليم",
+				"days": "يوم/أيام",
+				"remove": "إزالة"
 			},
 			"home": {
 				"categoryMenu": "قائمة التصنيفات",

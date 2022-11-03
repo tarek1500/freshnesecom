@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Compare</h2>
+		<h2 class="heading">{{ 'translate.pages.compare.compare' | translate }}</h2>
 		<div class="view">
 			<div class="item products">
 				<span class="count">{{ products.length }}</span>
-				<span class="text">Products</span>
+				<span class="text">{{ 'translate.pages.compare.products' | translate }}</span>
 			</div>
 		</div>
 	</div>
@@ -19,7 +19,7 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th>Name</th>
+						<th>{{ 'translate.pages.compare.name' | translate }}</th>
 						<th *ngFor="let product of products">
 							<a [routerLink]="['/products', product.slug]">{{ product.name }}</a>
 						</th>
@@ -27,17 +27,17 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td class="title">Image</td>
+						<td class="title">{{ 'translate.pages.compare.image' | translate }}</td>
 						<td *ngFor="let product of products">
 							<img class="product-image" src="{{ product.images[0] }}" alt="" *ngIf="product.images.length > 0">
 						</td>
 					</tr>
 					<tr>
-						<td class="title">Description</td>
+						<td class="title">{{ 'translate.pages.compare.description' | translate }}</td>
 						<td *ngFor="let product of products">{{ product.description }}</td>
 					</tr>
 					<tr>
-						<td class="title">Rating</td>
+						<td class="title">{{ 'translate.pages.compare.rating' | translate }}</td>
 						<td *ngFor="let product of products">
 							<div class="stars">
 								<ng-template #starTemplate let-fill="fill">
@@ -50,45 +50,45 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="title">Price</td>
+						<td class="title">{{ 'translate.pages.compare.price' | translate }}</td>
 						<td *ngFor="let product of products">{{ product.price }} {{ product.currency }}</td>
 					</tr>
 					<tr>
-						<td class="title">Old price</td>
+						<td class="title">{{ 'translate.pages.compare.oldPrice' | translate }}</td>
 						<td *ngFor="let product of products"><span *ngIf="product.oldPrice != 0">{{ product.oldPrice }} {{ product.currency }}</span></td>
 					</tr>
 					<tr>
-						<td class="title">SKU</td>
+						<td class="title">{{ 'translate.pages.compare.sku' | translate }}</td>
 						<td *ngFor="let product of products">{{ product.sku }}</td>
 					</tr>
 					<tr>
-						<td class="title">Freshness</td>
+						<td class="title">{{ 'translate.pages.compare.freshness' | translate }}</td>
 						<td *ngFor="let product of products">{{ product.freshness }}<span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span></td>
 					</tr>
 					<tr>
-						<td class="title">Farm</td>
+						<td class="title">{{ 'translate.pages.compare.farm' | translate }}</td>
 						<td *ngFor="let product of products">{{ product.farm }}</td>
 					</tr>
 					<tr>
-						<td class="title">Category</td>
+						<td class="title">{{ 'translate.pages.compare.category' | translate }}</td>
 						<td *ngFor="let product of products">{{ product.category.name }}</td>
 					</tr>
 					<tr>
-						<td class="title">Delivery</td>
+						<td class="title">{{ 'translate.pages.compare.delivery' | translate }}</td>
 						<td *ngFor="let product of products">{{ product.delivery }}</td>
 					</tr>
 					<tr>
-						<td class="title">Shipping</td>
+						<td class="title">{{ 'translate.pages.compare.shipping' | translate }}</td>
 						<td *ngFor="let product of products">{{ product.shipping }}</td>
 					</tr>
 					<tr>
-						<td class="title">Delivery days</td>
-						<td *ngFor="let product of products">{{ product.deliveryDays }} day(s)</td>
+						<td class="title">{{ 'translate.pages.compare.deliveryDays' | translate }}</td>
+						<td *ngFor="let product of products">{{ product.deliveryDays }} {{ 'translate.pages.compare.days' | translate }}</td>
 					</tr>
 					<tr>
 						<td class="title"></td>
 						<td *ngFor="let product of products">
-							<div class="remove"><img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""> Remove</div>
+							<div class="remove"><img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""> {{ 'translate.pages.compare.remove' | translate }}</div>
 						</td>
 					</tr>
 				</tbody>
@@ -99,7 +99,7 @@
 	<div class="footer">
 		<div class="products">
 			<span class="count">{{ products.length }}</span>
-			<span class="text">Products</span>
+			<span class="text">{{ 'translate.pages.compare.products' | translate }}</span>
 		</div>
 	</div>
 

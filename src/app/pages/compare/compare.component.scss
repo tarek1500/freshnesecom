@@ -9,7 +9,7 @@
 		justify-content: space-between;
 
 		.heading {
-			margin-bottom: 12px;
+			margin: auto 0px;
 			color: #151515;
 			font-family: 'Poppins';
 			font-weight: 600;
@@ -32,16 +32,12 @@
 			}
 
 			.item {
-				margin-left: 24px;
+				margin: 8px 0px 8px 24px;
 				display: inline-block;
 				color: #A9A9A9;
 				font-family: 'OpenSans';
 				font-weight: 400;
 				font-size: 12px;
-
-				@media (max-width: 991.98px) {
-					margin-bottom: 8px;
-				}
 
 				.count {
 					margin-right: 4px;
@@ -172,6 +168,77 @@
 				font-family: 'OpenSans';
 				font-weight: 400;
 				font-size: 12px;
+			}
+		}
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+
+			.view {
+				@media (max-width: 991.98px) {
+					text-align: left;
+				}
+
+				.item {
+					margin: 0px 24px 0px 0px;
+					font-family: 'Cairo';
+
+					.count {
+						margin: 0px 0px 0px 4px;
+						font-family: 'NotoSansArabic';
+					}
+				}
+			}
+		}
+
+		.content {
+			.table {
+				thead {
+					tr {
+						font-family: 'NotoSansArabic';
+					}
+				}
+
+				tbody {
+					tr {
+						font-family: 'Cairo';
+
+						td {
+							&.title {
+								font-family: 'NotoSansArabic';
+							}
+
+							.remove {
+								font-family: 'Cairo';
+
+								.close-icon {
+									margin: 0px 0px 0px 8px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.footer {
+			.products {
+				text-align: left;
+
+				.count {
+					margin: 0px 0px 0px 4px;
+					font-family: 'NotoSansArabic';
+				}
+
+				.text {
+					font-family: 'Cairo';
+				}
 			}
 		}
 	}
