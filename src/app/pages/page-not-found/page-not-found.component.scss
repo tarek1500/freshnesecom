@@ -76,4 +76,31 @@
 			}
 		}
 	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.content {
+			.subheading {
+				font-family: 'NotoSansArabic';
+			}
+
+			.buttons {
+				.home-button,
+				.contact-button {
+					font-family: 'NotoSansArabic';
+				}
+
+				.home-button {
+					margin: 0px 0px 0px 16px;
+				}
+			}
+		}
+	}
 }

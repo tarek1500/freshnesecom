@@ -227,6 +227,12 @@
 				"remember": "Remember me",
 				"logging": "Login"
 			},
+			"pageNotFound": {
+				"contentDoesNotExist": "Sorry. The content you’re looking for doesn’t exist.",
+				"wasRemoved": "Either it was removed, or you mistyped the link.",
+				"goToHome": "Go to home",
+				"contact": "Contact us"
+			},
 			"productDetails": {
 				"customerReview": "customer review(s)",
 				"sku": "SKU",

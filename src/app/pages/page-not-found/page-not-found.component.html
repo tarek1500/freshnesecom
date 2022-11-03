@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<img class="background-image" src="../../../assets/images/page-not-found-background.svg" alt="">
 	<app-header [show-icons]="false"></app-header>
 
 	<div class="content">
 		<h2 class="heading">404</h2>
-		<h3 class="subheading">Sorry. the content you’re looking for doesn’t exist.<br>Either it was removed, or you mistyped the link.</h3>
+		<h3 class="subheading">{{ 'translate.pages.pageNotFound.contentDoesNotExist' | translate }}<br>{{ 'translate.pages.pageNotFound.wasRemoved' | translate }}</h3>
 		<div class="buttons">
-			<a class="btn home-button" routerLink="/">Go to home</a>
-			<a class="btn contact-button" routerLink="/contact">Contact Us</a>
+			<a class="btn home-button" routerLink="/">{{ 'translate.pages.pageNotFound.goToHome' | translate }}</a>
+			<a class="btn contact-button" routerLink="/contact">{{ 'translate.pages.pageNotFound.contact' | translate }}</a>
 		</div>
 	</div>
 </div>

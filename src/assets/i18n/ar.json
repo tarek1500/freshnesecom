@@ -227,6 +227,12 @@
 				"remember": "تذكرنى",
 				"logging": "دخول"
 			},
+			"pageNotFound": {
+				"contentDoesNotExist": "عذراً. المحتوى الذي تبحث عنه غير موجود.",
+				"wasRemoved": "إما أنه تمت إزالته أو أخطأت في كتابة الرابط.",
+				"goToHome": "انتقل إلى الرئيسية",
+				"contact": "اتصل بنا"
+			},
 			"productDetails": {
 				"customerReview": "مراجعات العملاء",
 				"sku": "وحدة حفظ المخزون",
