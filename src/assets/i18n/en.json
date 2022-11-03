@@ -21,7 +21,8 @@
 				"recipes": "Recipes",
 				"checkout": "Checkout",
 				"wishlist": "Wishlist",
-				"compare": "Compare"
+				"compare": "Compare",
+				"contact": "Contact us"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -194,6 +195,14 @@
 				"deliveryDays": "Delivery days",
 				"days": "day(s)",
 				"remove": "Remove"
+			},
+			"contact": {
+				"contact": "Contact us",
+				"name": "Name",
+				"email": "Email address",
+				"message": "Message",
+				"messageBody": "Message ...",
+				"submit": "Submit"
 			},
 			"home": {
 				"categoryMenu": "Category menu",

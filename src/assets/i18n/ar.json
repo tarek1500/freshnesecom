@@ -21,7 +21,8 @@
 				"recipes": "الوصفات",
 				"checkout": "الدفع",
 				"wishlist": "قائمة الامنيات",
-				"compare": "المقارنة"
+				"compare": "المقارنة",
+				"contact": "اتصل بنا"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -194,6 +195,14 @@
 				"deliveryDays": "أيام التسليم",
 				"days": "يوم/أيام",
 				"remove": "إزالة"
+			},
+			"contact": {
+				"contact": "اتصل بنا",
+				"name": "الاسم",
+				"email": "البريد الالكترونى",
+				"message": "الرسالة",
+				"messageBody": "الرسالة ...",
+				"submit": "إرسال"
 			},
 			"home": {
 				"categoryMenu": "قائمة التصنيفات",

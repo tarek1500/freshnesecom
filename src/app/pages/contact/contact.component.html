@@ -1,18 +1,18 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Contact Us</h2>
+		<h2 class="heading">{{ 'translate.pages.contact.contact' | translate }}</h2>
 	</div>
 
 	<div class="content">
 		<div class="contacts">
 			<div class="row contacts-row">
-				<div class="col-lg-4 col-sm-5 contact" *ngFor="let contact of contact.contactsInfo">
-					<img class="contact-icon" src="{{ contact.icon }}" alt=""> {{ contact.info }}
+				<div class="col-lg-4 col-sm-5 contact" [ngClass]="contact.class" *ngFor="let contact of contact.contactsInfo">
+					<img class="contact-icon" src="{{ contact.icon }}" alt=""><span class="contact-info">{{ contact.info }}</span>
 				</div>
 			</div>
 		</div>
@@ -24,19 +24,19 @@
 		<form class="form">
 			<div class="row">
 				<div class="col-12 form-group">
-					<label for="name">Name</label>
-					<input class="form-control" id="name" type="text" placeholder="Name">
+					<label for="name">{{ 'translate.pages.contact.name' | translate }}</label>
+					<input class="form-control" id="name" type="text" placeholder="{{ 'translate.pages.contact.name' | translate }}">
 				</div>
 				<div class="col-12 form-group">
-					<label for="email">Email address</label>
-					<input class="form-control" id="email" type="email" placeholder="Email address">
+					<label for="email">{{ 'translate.pages.contact.email' | translate }}</label>
+					<input class="form-control" id="email" type="email" placeholder="{{ 'translate.pages.contact.email' | translate }}">
 				</div>
 				<div class="col-12 form-group">
-					<label for="message">Message</label>
-					<textarea class="form-control" id="message" rows="4" placeholder="Message ..."></textarea>
+					<label for="message">{{ 'translate.pages.contact.message' | translate }}</label>
+					<textarea class="form-control" id="message" rows="4" placeholder="{{ 'translate.pages.contact.messageBody' | translate }}"></textarea>
 				</div>
 				<div class="col-12 form-group">
-					<button class="btn submit-button">Submit</button>
+					<button class="btn submit-button">{{ 'translate.pages.contact.submit' | translate }}</button>
 				</div>
 			</div>
 		</form>

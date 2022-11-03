@@ -24,7 +24,7 @@
 	}
 
 	.content {
-		padding: 30px 0px;
+		padding: 30px 0px 2px;
 
 		.contacts {
 			margin-bottom: 60px;
@@ -35,17 +35,28 @@
 				margin: 0px;
 				justify-content: space-around;
 
-				.contact {
+				.phone,
+				.address,
+				.email {
 					margin-bottom: 16px;
-					color: #151515;
-					font-family: 'Poppins';
-					font-weight: 500;
-					font-size: 16px;
 
 					.contact-icon {
 						width: 24px;
 						height: 24px;
 						margin-right: 12px;
+					}
+
+					.contact-info {
+						color: #151515;
+						font-family: 'Poppins';
+						font-weight: 500;
+						font-size: 16px;
+					}
+				}
+
+				.phone {
+					.contact-info {
+						direction: ltr;
 					}
 				}
 			}
@@ -142,7 +153,7 @@
 			transform: translateX(-50%);
 
 			.social {
-				margin-right: 16px;
+				margin: 0px 16px 28px 0px;
 				display: inline-block;
 
 				a {
@@ -155,6 +166,66 @@
 						height: 20px;
 						vertical-align: text-top;
 					}
+				}
+			}
+		}
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.content {
+			.contacts {
+				.contacts-row {
+					.phone,
+					.address,
+					.email {
+						.contact-icon {
+							margin: 0px 0px 0px 12px;
+						}
+					}
+
+					.phone {
+						.contact-info {
+							unicode-bidi: bidi-override;
+						}
+					}
+
+					.address {
+						.contact-info {
+							font-family: 'NotoSansArabic';
+						}
+					}
+				}
+			}
+
+			.form {
+				.form-group {
+					label,
+					.submit-button {
+						font-family: 'NotoSansArabic';
+					}
+
+					input,
+					textarea {
+						font-family: 'Cairo';
+					}
+				}
+			}
+
+			.socials {
+				left: unset;
+				right: 50%;
+				transform: translateX(50%);
+
+				.social {
+					margin: 0px 0px 28px 16px;
 				}
 			}
 		}
