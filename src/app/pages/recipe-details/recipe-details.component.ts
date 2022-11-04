@@ -102,7 +102,7 @@ export class RecipeDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
 						]
 					},
 					{
-						id: 1,
+						id: 2,
 						title: 'للطبقة الخارجية',
 						ingredients: [
 							{
@@ -123,7 +123,7 @@ export class RecipeDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
 						]
 					},
 					{
-						id: 1,
+						id: 3,
 						title: 'للتقديم',
 						ingredients: [
 							{
@@ -300,7 +300,7 @@ export class RecipeDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
 						]
 					},
 					{
-						id: 1,
+						id: 2,
 						title: 'For the coating',
 						ingredients: [
 							{
@@ -321,7 +321,7 @@ export class RecipeDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
 						]
 					},
 					{
-						id: 1,
+						id: 3,
 						title: 'To serve',
 						ingredients: [
 							{

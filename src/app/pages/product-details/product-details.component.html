@@ -143,7 +143,7 @@
 								<h2 class="heading">{{ 'translate.pages.productDetails.questions' | translate }}</h2>
 								<div class="questions">
 									<ngb-accordion>
-										<ngb-panel *ngFor="let question of product.questions">
+										<ngb-panel [id]="'question-' + question.id" *ngFor="let question of product.questions">
 											<ng-template ngbPanelTitle>{{ question.content }}</ng-template>
 											<ng-template ngbPanelContent>{{ question.answer }}</ng-template>
 										</ngb-panel>

@@ -18,7 +18,7 @@
 				<h3 class="heading">{{ 'translate.pages.recipeDetails.ingredients' | translate }}</h3>
 				<div class="groups">
 					<ngb-accordion #ingredientsAccordion="ngbAccordion">
-						<ngb-panel [title]="group.title" *ngFor="let group of recipe.ingredientGroups">
+						<ngb-panel [title]="group.title" [id]="'ingredient-group-' + group.id" *ngFor="let group of recipe.ingredientGroups">
 							<ng-template ngbPanelContent>
 								<div class="form-check" *ngFor="let ingredient of group.ingredients">
 									<input class="form-check-input" type="checkbox" id="ingredient-{{ ingredient.id }}">
@@ -33,7 +33,7 @@
 				<h3 class="heading">{{ 'translate.pages.recipeDetails.executionMethod' | translate }}</h3>
 				<div class="groups">
 					<ngb-accordion #executionAccordion="ngbAccordion">
-						<ngb-panel [title]="group.title" *ngFor="let group of recipe.executionGroups">
+						<ngb-panel [title]="group.title" [id]="'execution-group-' + group.id" *ngFor="let group of recipe.executionGroups">
 							<ng-template ngbPanelContent>
 								<div class="form-check" *ngFor="let execution of group.executions">
 									<input class="form-check-input" type="radio" name="execution-{{ execution.id }}" id="execution-{{ execution.id }}" (click)="onExecutionClicked($event)">
