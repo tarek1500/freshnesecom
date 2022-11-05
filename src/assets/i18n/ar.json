@@ -23,7 +23,8 @@
 				"wishlist": "قائمة الامنيات",
 				"compare": "المقارنة",
 				"about": "معلومات عنا",
-				"contact": "اتصل بنا"
+				"contact": "اتصل بنا",
+				"returnPolicy": "سياسة الإرجاع"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -382,6 +383,10 @@
 				"phone": "رقم الهاتف",
 				"avatar": "الصورة الرمزية",
 				"registering": "تسجيل"
+			},
+			"returnPolicy": {
+				"returnPolicy": "سياسة الإرجاع",
+				"lastUpdated": "آخر تحديث"
 			},
 			"wishlist": {
 				"wishlist": "قائمة الامنيات",

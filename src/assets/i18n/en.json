@@ -23,7 +23,8 @@
 				"wishlist": "Wishlist",
 				"compare": "Compare",
 				"about": "About us",
-				"contact": "Contact us"
+				"contact": "Contact us",
+				"returnPolicy": "Return Policy"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -382,6 +383,10 @@
 				"phone": "Phone number",
 				"avatar": "Avatar image",
 				"registering": "Register"
+			},
+			"returnPolicy": {
+				"returnPolicy": "Return Policy",
+				"lastUpdated": "Last updated"
 			},
 			"wishlist": {
 				"wishlist": "Wishlist",

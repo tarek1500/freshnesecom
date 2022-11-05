@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ReturnPolicyRoutingModule } from './return-policy-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
@@ -12,6 +13,7 @@ import { ReturnPolicyComponent } from './return-policy.component';
 	],
 	imports: [
 		CommonModule,
+		TranslateModule,
 		ReturnPolicyRoutingModule,
 		SharedModule,
 		BreadcrumbModule

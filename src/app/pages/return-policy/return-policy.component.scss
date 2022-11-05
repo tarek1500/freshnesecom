@@ -34,6 +34,7 @@
 			font-family: 'Poppins';
 			font-weight: 500;
 			font-size: 36px;
+			direction: ltr;
 		}
 	}
 
@@ -77,6 +78,39 @@
 
 						.address {
 							margin-bottom: 8px;
+						}
+
+						.phone {
+							direction: ltr;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading,
+			.date,
+			.caution {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.content {
+			.contents {
+				.section {
+					.heading,
+					.table-content {
+						font-family: 'Cairo';
+
+						::ng-deep {
+							.phone {
+								text-align: right;
+							}
 						}
 					}
 				}
