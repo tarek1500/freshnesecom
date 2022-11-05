@@ -24,7 +24,8 @@
 				"compare": "المقارنة",
 				"about": "معلومات عنا",
 				"contact": "اتصل بنا",
-				"returnPolicy": "سياسة الإرجاع"
+				"returnPolicy": "سياسة الإرجاع",
+				"shippingPolicy": "سياسة الشحن"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -386,6 +387,10 @@
 			},
 			"returnPolicy": {
 				"returnPolicy": "سياسة الإرجاع",
+				"lastUpdated": "آخر تحديث"
+			},
+			"shippingPolicy": {
+				"shippingPolicy": "سياسة الشحن",
 				"lastUpdated": "آخر تحديث"
 			},
 			"wishlist": {

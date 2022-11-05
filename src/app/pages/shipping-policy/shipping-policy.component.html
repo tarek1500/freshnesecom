@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Shipping Policy</h2>
-		<div class="date">Last updated {{ shippingPolicy.date.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+		<h2 class="heading">{{ 'translate.pages.shippingPolicy.shippingPolicy' | translate }}</h2>
+		<div class="date">{{ 'translate.pages.shippingPolicy.lastUpdated' | translate }} {{ shippingPolicy.date.toLocaleDateString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
 		<!-- Remove caution on production -->
 		<div class="caution">THIS PAGE FOR DEVELOPMENT PURPOSE ONLY!</div>
 	</div>

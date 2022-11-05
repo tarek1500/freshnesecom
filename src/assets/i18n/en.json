@@ -24,7 +24,8 @@
 				"compare": "Compare",
 				"about": "About us",
 				"contact": "Contact us",
-				"returnPolicy": "Return Policy"
+				"returnPolicy": "Return Policy",
+				"shippingPolicy": "Shipping Policy"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -386,6 +387,10 @@
 			},
 			"returnPolicy": {
 				"returnPolicy": "Return Policy",
+				"lastUpdated": "Last updated"
+			},
+			"shippingPolicy": {
+				"shippingPolicy": "Shipping Policy",
 				"lastUpdated": "Last updated"
 			},
 			"wishlist": {

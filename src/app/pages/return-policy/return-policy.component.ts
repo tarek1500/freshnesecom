@@ -94,7 +94,7 @@ export class ReturnPolicyComponent implements OnInit, OnDestroy {
 					},
 					{
 						name: 'Questions',
-						content: '<p>If you have any questions concerning our return policy, please contact us at:</p><div><div>+420 336 775 664</div><div>info@freshnesecom.com</div></div>'
+						content: '<p>If you have any questions concerning our return policy, please contact us at:</p><div><div class="phone">+420 336 775 664</div><div class="email">info@freshnesecom.com</div></div>'
 					}
 				]
 			};
