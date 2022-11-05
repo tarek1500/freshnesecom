@@ -1,4 +1,4 @@
-<div [class]="{ 'container': true, 'right-position': rightPosition }">
+<div class="container" [ngClass]="{ 'right-position': rightPosition, 'rtl': rtl }">
 	<div class="avatar-image" *ngIf="!rightPosition">
 		<img src="{{ message.author.image }}" alt="">
 	</div>

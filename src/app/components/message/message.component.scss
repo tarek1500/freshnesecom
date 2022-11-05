@@ -64,4 +64,29 @@
 			}
 		}
 	}
+
+	&.rtl {
+		.avatar-image {
+			margin: 0px 0px 0px 12px;
+		}
+
+		.message {
+			.content {
+				font-family: 'Cairo';
+			}
+
+			.date {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		&.right-position {
+			.message {
+				.content,
+				.date {
+					margin: 0px auto 0px 0px;
+				}
+			}
+		}
+	}
 }
