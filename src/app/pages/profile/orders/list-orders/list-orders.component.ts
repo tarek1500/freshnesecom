@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../../../services/rtl/rtl.service';
+import { LanguageService } from '../../../../services/language/language.service';
 import { Order } from '../../../../interfaces/order.interface';
 
 @Component({
@@ -14,11 +14,11 @@ export class ListOrdersComponent implements OnInit, OnDestroy {
 	rtl: boolean = false;
 	orders!: Order[];
 
-	constructor(private rtlService: RtlService) { }
+	constructor(private languageService: LanguageService) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			this.loadOrders();
 		});

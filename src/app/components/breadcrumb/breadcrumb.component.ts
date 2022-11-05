@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Subscription, take } from 'rxjs';
 import * as _ from 'lodash';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 
 interface Dictionary {
@@ -22,12 +22,12 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
 
 	constructor(
 		private translateService: TranslateService,
-		private rtlService: RtlService
+		private languageService: LanguageService
 	) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			this.translateService.getTranslation(this.translateService.currentLang).pipe(take(1)).subscribe(translation => {
 				translation = this.flattenObject(translation);

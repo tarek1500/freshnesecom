@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgbNav } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Product } from '../../interfaces/product.interface';
 import { Review } from '../../interfaces/review.interface';
@@ -31,11 +31,11 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
 	}
 	relatedProducts!: Product[];
 
-	constructor(private rtlService: RtlService) { }
+	constructor(private languageService: LanguageService) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			this.loadData();
 		});

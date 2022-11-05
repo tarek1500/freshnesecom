@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular
 import { NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Recipe } from '../../interfaces/recipe.interface';
 
@@ -23,11 +23,11 @@ export class RecipeDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
 	];
 	recipe!: Recipe;
 
-	constructor(private rtlService: RtlService) { }
+	constructor(private languageService: LanguageService) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			this.loadRecipe();
 		});

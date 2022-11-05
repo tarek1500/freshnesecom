@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { RtlService } from 'src/app/services/rtl/rtl.service';
+import { LanguageService } from 'src/app/services/language/language.service';
 
 import { Order } from '../../../../interfaces/order.interface';
 
@@ -44,13 +44,13 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 	};
 
 	constructor(
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private route: ActivatedRoute
 	) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			if (this.order.id !== 0) {
 				this.loadOrder(this.order.id);

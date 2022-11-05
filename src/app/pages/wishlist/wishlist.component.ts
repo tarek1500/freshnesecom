@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { WishlistService } from '../../services/wishlist/wishlist.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Wishlist } from '../../interfaces/wishlist.interface';
@@ -22,13 +22,13 @@ export class WishlistComponent implements OnInit, OnDestroy {
 	isGridView: boolean = true;
 
 	constructor(
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private wishlistService: WishlistService
 	) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 		});
 		this.subscriptions.push(subscription);
 

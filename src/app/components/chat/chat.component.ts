@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { ChatService } from '../../services/chat/chat.service';
 import { Message } from '../../interfaces/message.interface';
 
@@ -18,13 +18,13 @@ export class ChatComponent implements OnInit, OnDestroy {
 	messages!: Message[];
 
 	constructor(
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private chatService: ChatService
 	) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			this.loadMessages();
 		});

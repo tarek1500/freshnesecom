@@ -2,7 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from './services/rtl/rtl.service';
+import { LocalStorageService } from './services/local-storage/local-storage.service';
+import { LanguageService } from './services/language/language.service';
 import { LoaderService } from './services/loader/loader.service';
 import { CartService } from './services/cart/cart.service';
 import { WishlistService } from './services/wishlist/wishlist.service';
@@ -19,10 +20,12 @@ export class AppComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
 	showLoader: boolean = false;
+	defaultLanguage: string = 'en';
 
 	constructor(
+		private localStorageService: LocalStorageService,
 		private translateService: TranslateService,
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private loaderService: LoaderService,
 		private cartService: CartService,
 		private wishlistService: WishlistService
@@ -32,7 +35,8 @@ export class AppComponent implements OnInit, OnDestroy {
 		let subscription = this.translateService.onLangChange.subscribe(event => {
 			this.rtl = event.translations.direction === 'rtl';
 
-			this.rtlService.updateValue(this.rtl);
+			this.localStorageService.setItem('language', event.lang);
+			this.languageService.updateValue(event.lang, this.rtl);
 			this.loadCart();
 			this.loadWishlist();
 		});
@@ -43,8 +47,8 @@ export class AppComponent implements OnInit, OnDestroy {
 		});
 		this.subscriptions.push(subscription);
 
-		this.translateService.setDefaultLang('en');
-		this.translateService.use('ar');
+		this.translateService.setDefaultLang(this.defaultLanguage);
+		this.translateService.use(this.localStorageService.getItem('language') || this.defaultLanguage);
 	}
 
 	ngOnDestroy(): void {

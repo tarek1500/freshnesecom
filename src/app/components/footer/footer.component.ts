@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { ChatService } from '../../services/chat/chat.service';
 import { Tag } from '../../interfaces/tag.interface';
 
@@ -19,13 +19,13 @@ export class FooterComponent implements OnInit, OnDestroy {
 	year: number = new Date().getFullYear();
 
 	constructor(
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private chatService: ChatService
 	) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			this.loadTags();
 		});

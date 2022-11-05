@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Category } from '../../interfaces/category.interface';
 
@@ -19,11 +19,11 @@ export class CategoriesComponent implements OnInit {
 	];
 	categories!: Category[];
 
-	constructor(private rtlService: RtlService) { }
+	constructor(private languageService: LanguageService) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			this.loadCategories();
 		});

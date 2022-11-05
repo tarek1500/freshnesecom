@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Blog } from '../../interfaces/blog.interface';
 import { Category } from '../../interfaces/category.interface';
@@ -38,7 +38,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 	categories!: Category[];
 
 	constructor(
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private route: ActivatedRoute
 	) { }
 
@@ -46,8 +46,8 @@ export class BlogsComponent implements OnInit, OnDestroy {
 		let subscription = this.route.data.subscribe(data => {
 			let name = data['name'];
 
-			let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-				this.rtl = rtl;
+			let subscription = this.languageService.languageSubject$.subscribe(language => {
+				this.rtl = language.rtl;
 
 				if (name) {
 					if (this.category.id !== 0) {

@@ -3,7 +3,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../../../services/rtl/rtl.service';
+import { LanguageService } from '../../../../services/language/language.service';
 import { Address } from '../../../../interfaces/address.interface';
 import { Country } from '../../../../interfaces/country.interface';
 
@@ -36,13 +36,13 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 	};
 
 	constructor(
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private route: ActivatedRoute
 	) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			if (this.address.id !== 0) {
 				this.loadAddress(this.address.id);

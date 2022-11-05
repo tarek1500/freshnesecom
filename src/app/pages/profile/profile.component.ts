@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 
 @Component({
@@ -21,13 +21,13 @@ export class ProfileComponent implements OnInit, OnDestroy {
 	active: string = 'info';
 
 	constructor(
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private router: Router
 	) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 		});
 		this.subscriptions.push(subscription);
 

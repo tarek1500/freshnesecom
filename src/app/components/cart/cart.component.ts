@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Cart } from '../../interfaces/cart.interface';
 
 @Component({
@@ -15,11 +15,11 @@ export class CartComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
 
-	constructor(private rtlService: RtlService) { }
+	constructor(private languageService: LanguageService) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 		});
 		this.subscriptions.push(subscription);
 	}

@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Category } from '../../interfaces/category.interface';
 import { Tag } from '../../interfaces/tag.interface';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
@@ -39,7 +39,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 	priceValue: number[] = [0, 1000];
 
 	constructor(
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private route: ActivatedRoute
 	) { }
 
@@ -47,8 +47,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
 		let subscription = this.route.data.subscribe(data => {
 			let name = data['name'];
 
-			let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-				this.rtl = rtl;
+			let subscription = this.languageService.languageSubject$.subscribe(language => {
+				this.rtl = language.rtl;
 
 				if (name) {
 					if (this.category.id !== 0) {

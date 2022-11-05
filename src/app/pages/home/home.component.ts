@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Category } from '../../interfaces/category.interface';
 import { Recipe } from '../../interfaces/recipe.interface';
 import { Product } from '../../interfaces/product.interface';
@@ -54,11 +54,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 	mediumBlog!: Blog;
 	smallBlogs!: Blog[];
 
-	constructor(private rtlService: RtlService) { }
+	constructor(private languageService: LanguageService) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 			this.quotesOptions = {
 				...this.quotesOptions,
 				rtl: this.rtl

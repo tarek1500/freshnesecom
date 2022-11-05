@@ -2,7 +2,7 @@ import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../services/rtl/rtl.service';
+import { LanguageService } from '../../services/language/language.service';
 import { CartService } from '../../services/cart/cart.service';
 import { WishlistService } from '../../services/wishlist/wishlist.service';
 import { ChatService } from '../../services/chat/chat.service';
@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	wishlist!: Wishlist;
 
 	constructor(
-		private rtlService: RtlService,
+		private languageService: LanguageService,
 		private translateService: TranslateService,
 		private cartService: CartService,
 		private wishlistService: WishlistService,
@@ -52,8 +52,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 			this.selectedLanguage = this.languages[0];
 		}
 
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			this.loadCategories();
 		});

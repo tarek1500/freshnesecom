@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { RtlService } from '../../../services/rtl/rtl.service';
+import { LanguageService } from '../../../services/language/language.service';
 import { User } from '../../../interfaces/user.interface';
 
 @Component({
@@ -21,11 +21,11 @@ export class InfoComponent implements OnInit, OnDestroy {
 		image: ''
 	};
 
-	constructor(private rtlService: RtlService) { }
+	constructor(private languageService: LanguageService) { }
 
 	ngOnInit(): void {
-		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
-			this.rtl = rtl;
+		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.rtl = language.rtl;
 
 			this.loadInfo();
 		});
