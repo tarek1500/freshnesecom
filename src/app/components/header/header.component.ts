@@ -6,6 +6,7 @@ import { RtlService } from '../../services/rtl/rtl.service';
 import { CartService } from '../../services/cart/cart.service';
 import { WishlistService } from '../../services/wishlist/wishlist.service';
 import { ChatService } from '../../services/chat/chat.service';
+import { Language } from '../../interfaces/language.interface';
 import { Category } from '../../interfaces/category.interface';
 import { Cart } from '../../interfaces/cart.interface';
 import { Wishlist } from '../../interfaces/wishlist.interface';
@@ -19,6 +20,20 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	@Input('show-icons') showIcons: boolean = true;
 	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
+	languages: Language[] = [
+		{
+			code: 'en',
+			name: 'English'
+		},
+		{
+			code: 'ar',
+			name: 'العربية'
+		}
+	]
+	selectedLanguage: Language = {
+		code: '',
+		name: ''
+	};
 	categories!: Category[];
 	cart!: Cart;
 	isCartVisible: boolean = false;
@@ -33,6 +48,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	) { }
 
 	ngOnInit(): void {
+		if (this.languages.length > 0) {
+			this.selectedLanguage = this.languages[0];
+		}
+
 		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
 			this.rtl = rtl;
 
@@ -126,6 +145,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
 	openChatWindow(event: MouseEvent) {
 		this.chatService.updateValue(true);
+	}
+
+	onLanguageSelected(language: Language) {
+		this.selectedLanguage = language;
+		this.translateService.use(this.selectedLanguage.code);
 	}
 
 	onCategorySearch(event: { search: string, category: Category }) { }

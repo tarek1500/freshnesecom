@@ -6,6 +6,14 @@
 			</div>
 			<div class="phone">+420 336 775 664</div>
 			<div class="email">info@freshnesecom.com</div>
+			<div class="language">
+				<div ngbDropdown class="d-inline-block">
+					<button ngbDropdownToggle class="btn dropdown-button">{{ selectedLanguage.name }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
+					<div ngbDropdownMenu class="dropdown-menu">
+						<button ngbDropdownItem class="dropdown-item" (click)="onLanguageSelected(language)" *ngFor="let language of languages">{{ language.name }}</button>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="links">
 			<div class="link">

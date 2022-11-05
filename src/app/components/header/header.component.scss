@@ -26,7 +26,8 @@
 		.info {
 			.chat,
 			.phone,
-			.email {
+			.email,
+			.language {
 				margin-right: 33px;
 				display: inline-block;
 				overflow-wrap: break-word;
@@ -43,6 +44,31 @@
 
 			.phone {
 				direction: ltr;
+			}
+
+			.language {
+				.dropdown-button {
+					padding: 0px;
+					font-size: 12px;
+
+					&::after {
+						display: none;
+					}
+
+					.down-arrow-icon {
+						width: 7px;
+						height: 4.2px;
+					}
+				}
+
+				.dropdown-menu {
+					background-color: #F9F9F9;
+
+					.dropdown-item {
+						font-family: 'OpenSans', 'Cairo';
+						font-size: 12px;
+					}
+				}
 			}
 		}
 
@@ -183,7 +209,8 @@
 			.info {
 				.chat,
 				.phone,
-				.email {
+				.email,
+				.language {
 					margin: 0px 0px 0px 33px;
 
 					@media (max-width: 991.98px) {
@@ -198,6 +225,13 @@
 
 				.phone {
 					text-align: right;
+				}
+
+				.language {
+					.dropdown-menu {
+						text-align: right;
+						right: 0px !important;
+					}
 				}
 			}
 
