@@ -7,7 +7,7 @@
 			<div class="info">
 				<div class="author">{{ comment.author.name }}</div>
 				<div class="tag" [ngClass]="{ 'green': comment.author.role.toLowerCase() === 'admin' }">{{ comment.author.role }}</div>
-				<button class="btn date" placement="bottom" ngbTooltip="{{ comment.date.toLocaleString() }}">{{ moment(comment.date).fromNow() }}</button>
+				<button class="btn date" placement="bottom" ngbTooltip="{{ comment.date.toLocaleString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }) }}">{{ moment(comment.date).fromNow() }}</button>
 			</div>
 		</div>
 		<div class="content">{{ comment.content }}</div>
@@ -20,7 +20,7 @@
 			<div class="info">
 				<div class="author">{{ reply.author.name }}</div>
 				<div class="tag" [ngClass]="{ 'green': reply.author.role.toLowerCase() === 'admin' }">{{ reply.author.role }}</div>
-				<button class="btn date" placement="bottom" ngbTooltip="{{ reply.date.toLocaleString() }}">{{ moment(reply.date).fromNow() }}</button>
+				<button class="btn date" placement="bottom" ngbTooltip="{{ reply.date.toLocaleString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }) }}">{{ moment(reply.date).fromNow() }}</button>
 			</div>
 		</div>
 		<div class="content">{{ reply.content }}</div>

@@ -15,6 +15,7 @@ import { Cart } from '../../interfaces/cart.interface';
 })
 export class CheckoutComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
+	language: string = 'en';
 	rtl: boolean = false;
 	breadcrumb: Breadcrumb[] = [
 		{ translate: 'translate.components.breadcrumb.home', text: 'Home', link: '/' },
@@ -32,6 +33,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 
 	ngOnInit(): void {
 		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.language = language.language;
 			this.rtl = language.rtl;
 
 			this.loadCountries();

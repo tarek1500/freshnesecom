@@ -10,7 +10,7 @@
 				</ng-template>
 				<ngb-rating [(rate)]="review.rating" [starTemplate]="starTemplate" [readonly]="true" [max]="5"></ngb-rating>
 			</div>
-			<button class="btn date" placement="bottom" ngbTooltip="{{ review.date.toLocaleString() }}">{{ moment(review.date).fromNow() }}</button>
+			<button class="btn date" placement="bottom" ngbTooltip="{{ review.date.toLocaleString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }) }}">{{ moment(review.date).fromNow() }}</button>
 		</div>
 	</div>
 	<div class="content">{{ review.content }}</div>

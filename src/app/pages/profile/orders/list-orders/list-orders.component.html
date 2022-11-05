@@ -20,7 +20,7 @@
 					<button class="btn address" placement="top" ngbTooltip="{{ order.address.address + ', ' + order.address.city + ', ' + order.address.country.name + ', ' + order.address.postal }}">{{ order.address.title }}</button>
 				</td>
 				<td>{{ order.total }} {{ order.currency }}</td>
-				<td>{{ order.date.toLocaleString() }}</td>
+				<td>{{ order.date.toLocaleString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }) }}</td>
 				<td><a [routerLink]="['/profile/orders', order.id]">{{ 'translate.pages.profile.ordersSection.list.view' | translate }}</a></td>
 			</tr>
 		</tbody>

@@ -214,7 +214,7 @@
 				<div class="row total">
 					<div class="col-6">
 						<div class="text">{{ 'translate.pages.checkout.totalOrder' | translate }}</div>
-						<div class="delivery">{{ 'translate.pages.checkout.guaranteedDeliveryDay' | translate }}: {{ deliveryDate.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+						<div class="delivery">{{ 'translate.pages.checkout.guaranteedDeliveryDay' | translate }}: {{ deliveryDate.toLocaleDateString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
 					</div>
 					<div class="col-6 price-column">
 						<div class="price">{{ (cart.subtotal + cart.tax + cart.shipping) | number:'1.0-2' }} {{ cart.currency }}</div>

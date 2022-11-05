@@ -6,7 +6,7 @@
 
 	<div class="header">
 		<h2 class="heading">{{ recipe.title }}</h2>
-		<div class="date">{{ 'translate.pages.recipeDetails.created' | translate }} {{ recipe.date.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+		<div class="date">{{ 'translate.pages.recipeDetails.created' | translate }} {{ recipe.date.toLocaleDateString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
 	</div>
 
 	<div class="content">

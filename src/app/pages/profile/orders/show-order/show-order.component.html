@@ -12,7 +12,7 @@
 			</div>
 			<div class="row details-row">
 				<div class="col-6 text">{{ 'translate.pages.profile.ordersSection.show.date' | translate }}</div>
-				<div class="col-6 text">{{ order.date.toLocaleString() }}</div>
+				<div class="col-6 text">{{ order.date.toLocaleString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }) }}</div>
 			</div>
 		</div>
 		<div class="col-sm-6">

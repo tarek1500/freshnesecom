@@ -15,6 +15,7 @@ export class RecipeDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
 	@ViewChild('ingredientsAccordion') ingredientsAccordion!: NgbAccordion;
 	@ViewChild('executionAccordion') executionAccordion!: NgbAccordion;
 	subscriptions: Subscription[] = [];
+	language: string = 'en';
 	rtl: boolean = false;
 	breadcrumb: Breadcrumb[] = [
 		{ translate: 'translate.components.breadcrumb.home', text: 'Home', link: '/' },
@@ -27,6 +28,7 @@ export class RecipeDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
 
 	ngOnInit(): void {
 		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.language = language.language;
 			this.rtl = language.rtl;
 
 			this.loadRecipe();

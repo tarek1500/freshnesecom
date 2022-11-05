@@ -11,6 +11,7 @@ import { Order } from '../../../../interfaces/order.interface';
 })
 export class ListOrdersComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
+	language: string = 'en';
 	rtl: boolean = false;
 	orders!: Order[];
 
@@ -18,6 +19,7 @@ export class ListOrdersComponent implements OnInit, OnDestroy {
 
 	ngOnInit(): void {
 		let subscription = this.languageService.languageSubject$.subscribe(language => {
+			this.language = language.language;
 			this.rtl = language.rtl;
 
 			this.loadOrders();
