@@ -22,6 +22,7 @@
 				"checkout": "Checkout",
 				"wishlist": "Wishlist",
 				"compare": "Compare",
+				"about": "About us",
 				"contact": "Contact us"
 			},
 			"cart": {
@@ -89,6 +90,9 @@
 			}
 		},
 		"pages": {
+			"about": {
+				"about": "About us"
+			},
 			"blogDetails": {
 				"date": "Date",
 				"category": "Category",

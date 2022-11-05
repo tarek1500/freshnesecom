@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">About Us</h2>
+		<h2 class="heading">{{ 'translate.pages.about.about' | translate }}</h2>
 	</div>
 
 	<div class="content">
@@ -16,7 +16,7 @@
 			<div class="intro">{{ about.intro }}</div>
 		</div>
 		<div class="carousel">
-			<owl-carousel-o [options]="quotesOptions">
+			<owl-carousel-o [options]="carouselOptions">
 				<ng-template carouselSlide *ngFor="let image of about.images">
 					<img src="{{ image }}" alt="">
 				</ng-template>
@@ -48,8 +48,8 @@
 		</div>
 		<div class="contacts">
 			<div class="row contacts-row">
-				<div class="col-lg-4 col-sm-5 contact" *ngFor="let contact of about.contactsInfo">
-					<img class="contact-icon" src="{{ contact.icon }}" alt=""> {{ contact.info }}
+				<div class="col-lg-4 col-sm-5 contact" [ngClass]="contact.class" *ngFor="let contact of about.contactsInfo">
+					<img class="contact-icon" src="{{ contact.icon }}" alt=""><span class="contact-info">{{ contact.info }}</span>
 				</div>
 			</div>
 		</div>

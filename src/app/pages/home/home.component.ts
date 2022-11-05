@@ -59,7 +59,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 	ngOnInit(): void {
 		let subscription = this.rtlService.rtlSubject$.subscribe(rtl => {
 			this.rtl = rtl;
-			this.quotesOptions.rtl = this.rtl;
+			this.quotesOptions = {
+				...this.quotesOptions,
+				rtl: this.rtl
+			};
 
 			this.loadData();
 		});

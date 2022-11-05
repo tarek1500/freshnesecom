@@ -22,6 +22,7 @@
 				"checkout": "الدفع",
 				"wishlist": "قائمة الامنيات",
 				"compare": "المقارنة",
+				"about": "معلومات عنا",
 				"contact": "اتصل بنا"
 			},
 			"cart": {
@@ -89,6 +90,9 @@
 			}
 		},
 		"pages": {
+			"about": {
+				"about": "معلومات عنا"
+			},
 			"blogDetails": {
 				"date": "التاريخ",
 				"category": "التصنيف",

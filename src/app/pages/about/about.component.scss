@@ -78,11 +78,10 @@
 
 		.services {
 			margin: 0px 0px 60px 0px;
-			padding: 30px 45px;
+			padding: 30px;
 
 			.service {
 				margin-bottom: 16px;
-				padding: 0px;
 
 				.heading {
 					color: #151515;
@@ -190,24 +189,120 @@
 		}
 
 		.contacts {
-			padding: 0px 45px;
+			padding: 0px 30px;
 			text-align: center;
 
 			.contacts-row {
 				margin: 0px;
 				justify-content: space-around;
 
-				.contact {
+				.phone,
+				.address,
+				.email {
 					margin-bottom: 16px;
-					color: #151515;
-					font-family: 'Poppins';
-					font-weight: 500;
-					font-size: 16px;
 
 					.contact-icon {
 						width: 24px;
 						height: 24px;
 						margin-right: 12px;
+					}
+
+					.contact-info {
+						color: #151515;
+						font-family: 'Poppins';
+						font-weight: 500;
+						font-size: 16px;
+					}
+				}
+
+				.phone {
+					.contact-info {
+						direction: ltr;
+					}
+				}
+			}
+		}
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.content {
+			.history {
+				.subheading,
+				.heading,
+				.year {
+					font-family: 'NotoSansArabic';
+				}
+
+				.intro {
+					font-family: 'Cairo';
+				}
+			}
+
+			.services {
+				.service {
+					.heading,
+					.paragraph {
+						font-family: 'Cairo';
+					}
+				}
+			}
+
+			.statistics {
+				.shadow-box {
+					background: linear-gradient(-120deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+				}
+
+				.data {
+					.data-column {
+						.heading {
+							font-family: 'NotoSansArabic';
+						}
+
+						.subheading {
+							font-family: 'Cairo';
+						}
+
+						.statistic {
+							.count {
+								font-family: 'NotoSansArabic';
+							}
+
+							.name {
+								font-family: 'Cairo';
+							}
+						}
+					}
+				}
+			}
+
+			.contacts {
+				.contacts-row {
+					.phone,
+					.address,
+					.email {
+						.contact-icon {
+							margin: 0px 0px 0px 12px;
+						}
+					}
+
+					.phone {
+						.contact-info {
+							unicode-bidi: bidi-override;
+						}
+					}
+
+					.address {
+						.contact-info {
+							font-family: 'NotoSansArabic';
+						}
 					}
 				}
 			}
