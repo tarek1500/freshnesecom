@@ -35,6 +35,10 @@
 			"categorySearchInputGroup": {
 				"placeholder": "Search products, categories ..."
 			},
+			"chat": {
+				"message": "Message",
+				"send": "Send"
+			},
 			"footer": {
 				"getInTouch": "Get in touch",
 				"about": "About us",

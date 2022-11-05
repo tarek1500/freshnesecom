@@ -35,6 +35,10 @@
 			"categorySearchInputGroup": {
 				"placeholder": "البحث عن المنتجات، التصنيفات ..."
 			},
+			"chat": {
+				"message": "الرسالة",
+				"send": "إرسال"
+			},
 			"footer": {
 				"getInTouch": "ابقى على تواصل",
 				"about": "معلومات عنا",

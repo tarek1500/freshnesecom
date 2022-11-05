@@ -1,9 +1,9 @@
-<div class="container">
-	<div class="chat" [class]="{ 'visible': isChatVisible }">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
+	<div class="chat" [ngClass]="{ 'visible': isChatVisible }">
 		<div class="header">
 			<img class="close-icon" src="../../../assets/icons/close-black.svg" alt="" (click)="isChatVisible = false">
 		</div>
-		<ng-scrollbar [autoHeightDisabled]="false">
+		<ng-scrollbar [autoHeightDisabled]="false" [position]="rtl ? 'invertY' : 'native'">
 			<div class="content">
 				<div class="messages">
 					<div class="message" *ngFor="let message of messages; let isOdd = odd">
@@ -18,7 +18,7 @@
 			</div>
 		</ng-scrollbar>
 		<div class="footer">
-			<app-text-input-group [placeholder]="'Message'" [button]="'Send'" (onApply)="onSent($event)"></app-text-input-group>
+			<app-text-input-group [placeholder]="'translate.components.chat.message' | translate" [button]="'translate.components.chat.send' | translate" (onApply)="onSent($event)"></app-text-input-group>
 		</div>
 	</div>
 	<div class="icon" (click)="isChatVisible = !isChatVisible">

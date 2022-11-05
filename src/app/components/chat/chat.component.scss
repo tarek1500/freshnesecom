@@ -118,5 +118,36 @@
 		border-radius: 50%;
 		border: 2px solid #46760A;
 		cursor: pointer;
+		z-index: 5;
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.chat {
+			right: unset;
+			left: 90px;
+
+			@media (max-width: 575.98px) {
+				right: 0px;
+				left: 0px;
+			}
+
+			.content {
+				padding: 12px 12px 12px 20px;
+				direction: rtl;
+
+				.typing {
+					.circle {
+						margin: 0px 0px 0px 3px;
+					}
+				}
+			}
+		}
+
+		.icon {
+			right: unset;
+			left: 30px;
+		}
 	}
 }
