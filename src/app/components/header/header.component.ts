@@ -48,12 +48,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	) { }
 
 	ngOnInit(): void {
-		if (this.languages.length > 0) {
-			this.selectedLanguage = this.languages[0];
-		}
-
 		let subscription = this.languageService.languageSubject$.subscribe(language => {
 			this.rtl = language.rtl;
+
+			if (this.languages.length > 0) {
+				this.selectedLanguage = this.languages.find(languageItem => languageItem.code === language.language) ?? this.languages[0];
+			}
 
 			this.loadCategories();
 		});
