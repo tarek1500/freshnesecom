@@ -305,7 +305,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 						role: '',
 						image: 'https://picsum.photos/id/237/40/40'
 					},
-					content: '“هذه مساحة فائقة لعرض اقتباس عملائك. لا تقلق، فهي تعمل بسلاسة. ستحصل على كل ما تحتاجه بكتابة نص هنا“'
+					content: '"هذه مساحة فائقة لعرض اقتباس عملائك. لا تقلق، فهي تعمل بسلاسة. ستحصل على كل ما تحتاجه بكتابة نص هنا"'
 				},
 				{
 					id: 2,
@@ -317,7 +317,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 						role: '',
 						image: 'https://picsum.photos/id/237/40/40'
 					},
-					content: '“هذه مساحة فائقة لعرض اقتباس عملائك. لا تقلق، فهي تعمل بسلاسة. ستحصل على كل ما تحتاجه بكتابة نص هنا“'
+					content: '"هذه مساحة فائقة لعرض اقتباس عملائك. لا تقلق، فهي تعمل بسلاسة. ستحصل على كل ما تحتاجه بكتابة نص هنا"'
 				},
 				{
 					id: 3,
@@ -329,7 +329,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 						role: '',
 						image: 'https://picsum.photos/id/237/40/40'
 					},
-					content: '“هذه مساحة فائقة لعرض اقتباس عملائك. لا تقلق، فهي تعمل بسلاسة. ستحصل على كل ما تحتاجه بكتابة نص هنا“'
+					content: '"هذه مساحة فائقة لعرض اقتباس عملائك. لا تقلق، فهي تعمل بسلاسة. ستحصل على كل ما تحتاجه بكتابة نص هنا"'
 				},
 				{
 					id: 4,
@@ -341,7 +341,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 						role: '',
 						image: 'https://picsum.photos/id/237/40/40'
 					},
-					content: '“هذه مساحة فائقة لعرض اقتباس عملائك. لا تقلق، فهي تعمل بسلاسة. ستحصل على كل ما تحتاجه بكتابة نص هنا“'
+					content: '"هذه مساحة فائقة لعرض اقتباس عملائك. لا تقلق، فهي تعمل بسلاسة. ستحصل على كل ما تحتاجه بكتابة نص هنا"'
 				}
 			];
 			this.sectionProducts = [
@@ -844,7 +844,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 						role: '',
 						image: 'https://picsum.photos/id/237/40/40'
 					},
-					content: '“This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here“'
+					content: '"This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here"'
 				},
 				{
 					id: 2,
@@ -856,7 +856,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 						role: '',
 						image: 'https://picsum.photos/id/237/40/40'
 					},
-					content: '“This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here“'
+					content: '"This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here"'
 				},
 				{
 					id: 3,
@@ -868,7 +868,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 						role: '',
 						image: 'https://picsum.photos/id/237/40/40'
 					},
-					content: '“This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here“'
+					content: '"This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here"'
 				},
 				{
 					id: 4,
@@ -880,7 +880,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 						role: '',
 						image: 'https://picsum.photos/id/237/40/40'
 					},
-					content: '“This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here“'
+					content: '"This is an super space for your customers quote. Don’t worry it works smooth as pie. You will get all what you need by writing a text here"'
 				}
 			];
 			this.sectionProducts = [

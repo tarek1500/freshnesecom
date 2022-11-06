@@ -34,6 +34,7 @@
 			font-family: 'Poppins';
 			font-weight: 500;
 			font-size: 36px;
+			direction: ltr;
 		}
 	}
 
@@ -100,21 +101,25 @@
 							.bold {
 								font-weight: 700;
 							}
+
+							.phone {
+								direction: ltr;
+							}
 						}
 
 						ul {
 							margin: 0px 0px 8px 36px;
-							padding-left: 0px;
+							padding: 0px;
 						}
 
 						.contact {
 							color: #575757;
+							font-weight: 700;
 
-							.heading,
 							.phone,
-							.fax,
-							.email {
-								font-weight: 700;
+							.fax {
+								display: inline-block;
+								direction: ltr;
 							}
 
 							.heading {
@@ -122,6 +127,65 @@
 								padding-bottom: 16px;
 								display: inline-block;
 								border-bottom: 1px solid #575757;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading,
+			.date {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.content {
+			.table-of-contents {
+				.heading {
+					font-family: 'Cairo';
+				}
+
+				.list {
+					.list-item {
+						a {
+							font-family: 'Cairo';
+						}
+					}
+				}
+			}
+
+			.contents {
+				.section {
+					.heading {
+						font-family: 'Cairo';
+					}
+
+					.table-content {
+						font-family: 'Cairo';
+
+						::ng-deep {
+							p {
+								.phone {
+									unicode-bidi: bidi-override;
+								}
+							}
+
+							ul {
+								margin: 0px 36px 8px 0px;
+							}
+
+							.contact {
+								.phone,
+								.fax {
+									text-align: right;
+									unicode-bidi: bidi-override;
+								}
 							}
 						}
 					}

@@ -192,11 +192,11 @@ export class RecipeDetailsComponent implements OnInit, AfterViewInit, OnDestroy 
 						executions: [
 							{
 								id: 8,
-								execution: 'في وعاء ، أضيف الماء والبيض والسكر واخلطهم جيدًا.'
+								execution: 'في وعاء، أضيف الماء والبيض والسكر واخلطهم جيدًا.'
 							},
 							{
 								id: 9,
-								execution: 'باستخدام فرشاة المعجنات ، وزعها على سطح فطيرة الحليب بالكامل واخبزها لمدة 40-45 دقيقة.'
+								execution: 'باستخدام فرشاة المعجنات، وزعها على سطح فطيرة الحليب بالكامل واخبزها لمدة 40-45 دقيقة.'
 							},
 							{
 								id: 10,

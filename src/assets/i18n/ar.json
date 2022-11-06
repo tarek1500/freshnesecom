@@ -26,7 +26,8 @@
 				"contact": "اتصل بنا",
 				"privacyPolicy": "سياسة الخصوصية",
 				"returnPolicy": "سياسة الإرجاع",
-				"shippingPolicy": "سياسة الشحن"
+				"shippingPolicy": "سياسة الشحن",
+				"termsAndConditions": "الأحكام و الشروط"
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
@@ -55,7 +56,7 @@
 				"linkedIn": "لينكد إن",
 				"policies": "السياسات",
 				"privacy": "سياسة الخصوصية",
-				"terms": "الأحكام والشروط",
+				"terms": "الأحكام و الشروط",
 				"return": "سياسة الإرجاع",
 				"shipping": "سياسة الشحن",
 				"account": "الحساب",
@@ -173,8 +174,8 @@
 				"confirmation": "تأكيد",
 				"gettingEnd": "نحن نقترب من النهاية. نقرات قليلة وطلبك جاهز!",
 				"step5": "الخطوة 5 من 5",
-				"agreeSendingEmails": "أوافق على إرسال رسائل بريد إلكتروني تسويقية وإخبارية. لا بريد مزعج ، نوعدك!",
-				"agreeTerms": "أوافق على الشروط والأحكام وسياسة الخصوصية الخاصة بكم.",
+				"agreeSendingEmails": "أوافق على إرسال رسائل بريد إلكتروني تسويقية وإخبارية. لا بريد مزعج، نوعدك!",
+				"agreeTerms": "أوافق على الأحكام و الشروط وسياسة الخصوصية الخاصة بكم.",
 				"completeOrder": "اكمل الطلب",
 				"allDataSafe": "جميع بياناتك آمنة",
 				"usingMostSecurity": "نحن نستخدم أحدث وسائل الأمان لنوفر لك أفضل تجربة على الإطلاق.",
@@ -398,6 +399,11 @@
 			"shippingPolicy": {
 				"shippingPolicy": "سياسة الشحن",
 				"lastUpdated": "آخر تحديث"
+			},
+			"termsAndConditions": {
+				"termsAndConditions": "الأحكام و الشروط",
+				"lastUpdated": "آخر تحديث",
+				"tableOfContents": "جدول المحتويات"
 			},
 			"wishlist": {
 				"wishlist": "قائمة الامنيات",

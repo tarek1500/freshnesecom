@@ -26,7 +26,8 @@
 				"contact": "Contact us",
 				"privacyPolicy": "Privacy Policy",
 				"returnPolicy": "Return Policy",
-				"shippingPolicy": "Shipping Policy"
+				"shippingPolicy": "Shipping Policy",
+				"termsAndConditions": "Terms and Conditions"
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
@@ -398,6 +399,11 @@
 			"shippingPolicy": {
 				"shippingPolicy": "Shipping Policy",
 				"lastUpdated": "Last updated"
+			},
+			"termsAndConditions": {
+				"termsAndConditions": "Terms and Conditions",
+				"lastUpdated": "Last updated",
+				"tableOfContents": "Table of contents"
 			},
 			"wishlist": {
 				"wishlist": "Wishlist",
