@@ -24,6 +24,7 @@
 				"compare": "Compare",
 				"about": "About us",
 				"contact": "Contact us",
+				"privacyPolicy": "Privacy Policy",
 				"returnPolicy": "Return Policy",
 				"shippingPolicy": "Shipping Policy"
 			},
@@ -242,6 +243,11 @@
 				"wasRemoved": "Either it was removed, or you mistyped the link.",
 				"goToHome": "Go to home",
 				"contact": "Contact us"
+			},
+			"privacyPolicy": {
+				"privacyPolicy": "Privacy Policy",
+				"lastUpdated": "Last updated",
+				"tableOfContents": "Table of contents"
 			},
 			"productDetails": {
 				"customerReview": "customer review(s)",

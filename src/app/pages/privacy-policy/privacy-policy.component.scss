@@ -34,6 +34,7 @@
 			font-family: 'Poppins';
 			font-weight: 500;
 			font-size: 36px;
+			direction: ltr;
 		}
 	}
 
@@ -62,7 +63,7 @@
 
 				ul {
 					margin: 0px 0px 8px 36px;
-					padding-left: 0px;
+					padding: 0px;
 				}
 			}
 		}
@@ -182,7 +183,7 @@
 
 						ul {
 							margin: 0px 0px 8px 36px;
-							padding-left: 0px;
+							padding: 0px;
 
 							&.remove-dots {
 								list-style: none;
@@ -226,6 +227,90 @@
 										border: none;
 									}
 								}
+							}
+						}
+
+						.phone {
+							direction: ltr;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.rtl {
+		direction: rtl;
+
+		.header {
+			.heading,
+			.date {
+				font-family: 'NotoSansArabic';
+			}
+		}
+
+		.content {
+			.intro {
+				font-family: 'Cairo';
+
+				::ng-deep {
+					ul {
+						margin: 0px 36px 8px 0px;
+					}
+				}
+			}
+
+			.summary {
+				.heading,
+				.table-content {
+					font-family: 'Cairo';
+				}
+			}
+
+			.table-of-contents {
+				.heading {
+					font-family: 'Cairo';
+				}
+
+				.list {
+					.list-item {
+						a {
+							font-family: 'Cairo';
+						}
+					}
+				}
+			}
+
+			.contents {
+				.section {
+					.heading {
+						font-family: 'Cairo';
+					}
+
+					.table-content {
+						font-family: 'Cairo';
+
+						::ng-deep {
+							ul {
+								margin: 0px 36px 8px 0px;
+							}
+
+							.table {
+								thead {
+									tr {
+										font-family: 'NotoSansArabic';
+									}
+								}
+
+								tbody {
+									tr {
+										font-family: 'Cairo';
+									}
+								}
+							}
+
+							.phone {
+								unicode-bidi: bidi-override;
 							}
 						}
 					}

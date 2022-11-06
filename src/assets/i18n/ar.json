@@ -24,6 +24,7 @@
 				"compare": "المقارنة",
 				"about": "معلومات عنا",
 				"contact": "اتصل بنا",
+				"privacyPolicy": "سياسة الخصوصية",
 				"returnPolicy": "سياسة الإرجاع",
 				"shippingPolicy": "سياسة الشحن"
 			},
@@ -242,6 +243,11 @@
 				"wasRemoved": "إما أنه تمت إزالته أو أخطأت في كتابة الرابط.",
 				"goToHome": "انتقل إلى الرئيسية",
 				"contact": "اتصل بنا"
+			},
+			"privacyPolicy": {
+				"privacyPolicy": "سياسة الخصوصية",
+				"lastUpdated": "آخر تحديث",
+				"tableOfContents": "جدول المحتويات"
 			},
 			"productDetails": {
 				"customerReview": "مراجعات العملاء",

@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': rtl }">
 	<app-header></app-header>
 	<app-menu></app-menu>
 
 	<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
 	<div class="header">
-		<h2 class="heading">Privacy Policy</h2>
-		<div class="date">Last updated {{ privacyPolicy.date.toLocaleDateString('en-UK', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+		<h2 class="heading">{{ 'translate.pages.privacyPolicy.privacyPolicy' | translate }}</h2>
+		<div class="date">{{ 'translate.pages.privacyPolicy.lastUpdated' | translate }} {{ privacyPolicy.date.toLocaleDateString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
 		<!-- Remove caution on production -->
 		<div class="caution">THIS PAGE FOR DEVELOPMENT PURPOSE ONLY!</div>
 	</div>
@@ -18,7 +18,7 @@
 			<div class="table-content" [innerHtml]="privacyPolicy.summary.content"></div>
 		</div>
 		<div class="table-of-contents">
-			<h3 class="heading">Table of contents</h3>
+			<h3 class="heading">{{ 'translate.pages.privacyPolicy.tableOfContents' | translate }}</h3>
 			<ul class="list">
 				<li class="list-item" *ngFor="let content of privacyPolicy.tableOfContents; let index = index;">
 					<a href="privacy-policy#{{ content.link }}" (click)="scrollToContent($event, contents)">{{ index + 1 }}. {{ content.name }}</a>

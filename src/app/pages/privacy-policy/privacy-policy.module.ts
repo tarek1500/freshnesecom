@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { PrivacyPolicyRoutingModule } from './privacy-policy-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
@@ -12,6 +13,7 @@ import { PrivacyPolicyComponent } from './privacy-policy.component';
 	],
 	imports: [
 		CommonModule,
+		TranslateModule,
 		PrivacyPolicyRoutingModule,
 		SharedModule,
 		BreadcrumbModule
