@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, EventEmitter, HostListener, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { LanguageService } from '../../services/language/language.service';
@@ -8,7 +8,7 @@ import { LanguageService } from '../../services/language/language.service';
 	templateUrl: './text-input-group.component.html',
 	styleUrls: ['./text-input-group.component.scss']
 })
-export class TextInputGroupComponent implements OnInit, AfterViewInit, OnDestroy {
+export class TextInputGroupComponent implements OnInit, AfterViewChecked, OnDestroy {
 	@Input() placeholder!: string;
 	@Input() button!: string;
 	@Output() onApply: EventEmitter<string> = new EventEmitter<string>();
@@ -25,8 +25,8 @@ export class TextInputGroupComponent implements OnInit, AfterViewInit, OnDestroy
 		this.subscriptions.push(subscription);
 	}
 
-	ngAfterViewInit() {
-		this.setInputGroupWidth(this.input, 0);
+	ngAfterViewChecked() {
+		this.setInputGroupWidth(this.input);
 	}
 
 	ngOnDestroy(): void {
