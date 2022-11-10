@@ -1,5 +1,5 @@
-<div class="container" [ngClass]="{ 'right-position': rightPosition, 'rtl': rtl }">
-	<div class="avatar-image" *ngIf="!rightPosition">
+<div class="container" [ngClass]="{ 'from-other': fromOther, 'rtl': rtl }">
+	<div class="avatar-image" *ngIf="!fromOther">
 		<img src="{{ message.author.image }}" alt="">
 	</div>
 	<div class="message">

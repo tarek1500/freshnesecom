@@ -12,7 +12,7 @@ import { Message } from '../../interfaces/message.interface';
 })
 export class MessageComponent implements OnInit, OnDestroy {
 	@Input() message!: Message;
-	@Input('right-position') rightPosition: boolean = false;
+	@Input('from-other') fromOther: boolean = false;
 	moment: any = moment;
 	subscriptions: Subscription[] = [];
 	language: string = 'en';

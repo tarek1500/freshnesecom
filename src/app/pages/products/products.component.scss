@@ -1,7 +1,9 @@
+@import '../../../variables';
+
 .container {
 	padding: 0px;
-	background-color: #FFF;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	background-color: $page-background-color;
+	box-shadow: $page-box-shadow;
 
 	.header {
 		padding: 8px 45px;
@@ -10,8 +12,8 @@
 
 		.heading {
 			margin: auto 0px;
-			color: #151515;
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 600;
 			font-size: 32px;
 
@@ -34,8 +36,8 @@
 			.item {
 				margin: 8px 0px 8px 24px;
 				display: inline-block;
-				color: #A9A9A9;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 
@@ -44,7 +46,7 @@
 					cursor: pointer;
 				}
 				&.active {
-					color: #151515;
+					color: $dark-color;
 				}
 
 				.grid-icon,
@@ -55,10 +57,10 @@
 				.count {
 					margin-right: 4px;
 					padding: 0px 8px;
-					border-radius: 12px;
-					background-color: #F4F8EC;
-					color: #6A983C;
-					font-family: 'Poppins';
+					border-radius: $default-border-radius;
+					background-color: $tag-background-color;
+					color: $primary-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 12px;
 				}
@@ -74,9 +76,9 @@
 				margin: 0px 16px 16px 0px;
 				padding: 11px 16px;
 				display: inline-block;
-				border-radius: 12px;
-				border: 1px solid #D1D1D1;
-				background-color: #F9F9F9;
+				border-radius: $default-border-radius;
+				border: 1px solid $secondary-border-color;
+				background-color: $input-background-color;
 
 				.form-check {
 					margin: 0px 16px 0px 0px;
@@ -91,20 +93,23 @@
 						width: 22px;
 						height: 22px;
 						margin: 1px 8px 0px 0px;
-						border: 1.5px solid #D1D1D1;
+						border: 1.5px solid $secondary-border-color;
 						cursor: pointer;
 
 						&[type=radio]:checked,
 						&[type=checkbox]:checked {
-							background-color: #6A983C;
-							border-color: #46760A;
+							background-color: $primary-color;
+							border-color: $primary-border-color;
+						}
+						&:focus {
+							box-shadow: 0 0 0 4px $primary-box-shadow-color;
 						}
 					}
 
 					label {
 						display: inline;
-						color: #151515;
-						font-family: 'OpenSans';
+						color: $dark-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 14px;
 						cursor: pointer;
@@ -114,11 +119,11 @@
 				.tag {
 					margin-left: -8px;
 					padding: 0px 8px;
-					border-radius: 12px;
-					border: 1px solid #EBEBEB;
+					border-radius: $default-border-radius;
+					border: 1px solid $secondary-border-color;
 					vertical-align: text-bottom;
-					color: #151515;
-					font-family: 'Poppins';
+					color: $dark-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 12px;
 				}
@@ -126,21 +131,21 @@
 		}
 
 		.tags {
-			font-family: 'Poppins';
+			font-family: $primary-english-font;
 			font-weight: 600;
 			font-size: 12px;
 
 			.heading {
 				margin-right: 12px;
-				color: #A9A9A9;
+				color: $input-text-color;
 			}
 
 			.tag {
 				margin-right: 12px;
 				padding: 0px 8px;
-				border-radius: 12px;
-				background-color: #F4F8EC;
-				color: #6A983C;
+				border-radius: $default-border-radius;
+				background-color: $tag-background-color;
+				color: $primary-color;
 
 				.close-icon {
 					cursor: pointer;
@@ -165,8 +170,8 @@
 
 				.heading {
 					margin-bottom: 16px;
-					color: #151515;
-					font-family: 'Poppins';
+					color: $dark-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 18px;
 				}
@@ -180,8 +185,8 @@
 					}
 
 					.category {
-						color: #151515;
-						font-family: 'OpenSans';
+						color: $dark-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 14px;
 					}
@@ -189,10 +194,10 @@
 					.count {
 						margin: auto 0px;
 						padding: 0px 8px;
-						border-radius: 12px;
-						background-color: #F4F8EC;
-						color: #6A983C;
-						font-family: 'Poppins';
+						border-radius: $default-border-radius;
+						background-color: $tag-background-color;
+						color: $primary-color;
+						font-family: $primary-english-font;
 						font-weight: 600;
 						font-size: 12px;
 					}
@@ -205,19 +210,22 @@
 							width: 22px;
 							height: 22px;
 							margin: 0px 8px 0px 0px;
-							border: 1.5px solid #D1D1D1;
+							border: 1.5px solid $secondary-border-color;
 							cursor: pointer;
 
 							&[type=checkbox]:checked {
-								background-color: #6A983C;
-								border-color: #46760A;
+								background-color: $primary-color;
+								border-color: $primary-border-color;
+							}
+							&:focus {
+								box-shadow: 0 0 0 4px $primary-box-shadow-color;
 							}
 						}
 
 						label {
 							vertical-align: top;
-							color: #151515;
-							font-family: 'OpenSans';
+							color: $dark-color;
+							font-family: $secondary-english-font;
 							font-weight: 400;
 							font-size: 14px;
 							cursor: pointer;
@@ -247,18 +255,18 @@
 
 							.slider-track-low,
 							.slider-track-high {
-								background-color: #EBEBEB;
+								background-color: $input-placeholder-color;
 							}
 
 							.slider-selection {
-								background: #6A983C;
+								background: $primary-color;
 							}
 						}
 
 						.slider-handle {
-							background: #FFF;
-							border: 1px solid #D1D1D1;
-							box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+							background: $light-color;
+							border: 1px solid $secondary-border-color;
+							box-shadow: 0px 2px 4px $primary-shadow;
 						}
 					}
 				}
@@ -274,60 +282,74 @@
 							width: 44%;
 						}
 						&.horizontal-splitter {
-							color: #A9A9A9;
+							color: $input-text-color;
 							margin: 0px 14px;
-							font-family: 'OpenSans';
+							font-family: $secondary-english-font;
 							font-weight: 400;
 							font-size: 14px;
 						}
 
 						label {
-							color: #151515;
-							font-family: 'Poppins';
+							color: $dark-color;
+							font-family: $primary-english-font;
 							font-weight: 600;
 							font-size: 12px;
 						}
 
 						input {
 							padding: 11px 20px;
-							border-radius: 12px;
-							border: 1px solid #D1D1D1;
-							background-color: #F9F9F9;
-							color: #A9A9A9;
-							font-family: 'OpenSans';
+							border-radius: $default-border-radius;
+							border: 1px solid $secondary-border-color;
+							background-color: $input-background-color;
+							color: $input-text-color;
+							font-family: $secondary-english-font;
 							font-weight: 400;
 							font-size: 14px;
 
 							&::placeholder {
-								color: #A9A9A9;
+								color: $input-placeholder-color;
+							}
+							&:focus {
+								box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 							}
 						}
 					}
 				}
 
 				.buttons {
-					font-family: 'Poppins';
-					font-weight: 700;
-					font-size: 15px;
-
 					.apply-button {
 						margin-right: 34px;
 						padding: 12px 16px;
-						border-radius: 12px;
-						border: 2px solid #46760A;
-						background-color: #6A983C;
-						color: #FFF;
+						border-radius: $default-border-radius;
+						border: 2px solid $primary-border-color;
+						background-color: $primary-color;
+						color: $light-color;
+						font-family: $primary-english-font;
+						font-weight: 700;
+						font-size: 15px;
 
 						@media (max-width: 1199.98px) {
 							margin-bottom: 8px;
+						}
+
+						&:focus {
+							box-shadow: 0 0 0 4px $primary-box-shadow-color;
 						}
 					}
 
 					.reset-button {
 						padding: 12px 16px;
-						border-radius: 12px;
+						border-radius: $default-border-radius;
 						border: 2px solid transparent;
-						color: #A9A9A9;
+						background-color: $secondary-color;
+						color: $dark-color;
+						font-family: $primary-english-font;
+						font-weight: 700;
+						font-size: 15px;
+
+						&:focus {
+							box-shadow: 0 0 0 4px $secondary-box-shadow-color;
+						}
 
 						.left-arrow-icon {
 							margin-right: 6px;
@@ -368,8 +390,8 @@
 			.title {
 				margin: auto 8px auto 0px;
 				display: inline-block;
-				color: #A9A9A9;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 			}
@@ -377,14 +399,14 @@
 			.page {
 				margin: auto 8px auto 0px;
 				text-decoration: none;
-				color: #151515;
-				font-family: 'OpenSans';
+				color: $dark-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 				cursor: pointer;
 
 				&.active {
-					color: #6A983C;
+					color: $primary-color;
 				}
 			}
 		}
@@ -400,13 +422,17 @@
 
 			.more-button {
 				padding: 12px 16px;
-				border-radius: 12px;
-				border: 2px solid #46760A;
-				background-color: #6A983C;
-				color: #FFF;
-				font-family: 'Poppins';
+				border-radius: $default-border-radius;
+				border: 2px solid $primary-border-color;
+				background-color: $primary-color;
+				color: $light-color;
+				font-family: $primary-english-font;
 				font-weight: 700;
 				font-size: 15px;
+
+				&:focus {
+					box-shadow: 0 0 0 4px $primary-box-shadow-color;
+				}
 
 				.down-arrow-icon {
 					margin-left: 6px;
@@ -426,17 +452,17 @@
 			.count {
 				margin-right: 4px;
 				padding: 0px 8px;
-				border-radius: 12px;
-				background-color: #F4F8EC;
-				color: #6A983C;
-				font-family: 'Poppins';
+				border-radius: $default-border-radius;
+				background-color: $tag-background-color;
+				color: $primary-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 12px;
 			}
 
 			.text {
-				color: #A9A9A9;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 			}
@@ -448,7 +474,7 @@
 
 		.header {
 			.heading {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 
 			.view {
@@ -458,7 +484,7 @@
 
 				.item {
 					margin: 8px 24px 8px 0px;
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 
 					.grid-icon,
 					.list-icon {
@@ -467,7 +493,7 @@
 
 					.count {
 						margin: 0px 0px 0px 4px;
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 				}
 			}
@@ -495,19 +521,19 @@
 						}
 
 						label {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 						}
 					}
 
 					.tag {
 						margin: 0px -8px 0px 0px;
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 				}
 			}
 
 			.tags {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 
 				.heading,
 				.tag {
@@ -526,16 +552,16 @@
 
 				.filter-group {
 					.heading {
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 
 					.item {
 						.category {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 						}
 
 						.count {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 						}
 
 						.form-check {
@@ -548,7 +574,7 @@
 							}
 
 							label {
-								font-family: 'Cairo';
+								font-family: $secondary-arabic-font;
 							}
 						}
 
@@ -563,23 +589,24 @@
 						div {
 							&.horizontal-splitter,
 							input {
-								font-family: 'Cairo';
+								font-family: $secondary-arabic-font;
 							}
 
 							label {
-								font-family: 'NotoSansArabic';
+								font-family: $primary-arabic-font;
 							}
 						}
 					}
 
 					.buttons {
-						font-family: 'NotoSansArabic';
-
 						.apply-button {
 							margin: 0px 0px 0px 34px;
+							font-family: $primary-arabic-font;
 						}
 
 						.reset-button {
+							font-family: $primary-arabic-font;
+
 							.left-arrow-icon {
 								margin: 0px 0px 0px 6px;
 								transform: scaleX(-1);
@@ -605,14 +632,14 @@
 				.title,
 				.page {
 					margin: auto 0px auto 8px;
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 					unicode-bidi: bidi-override;
 				}
 			}
 
 			.more {
 				.more-button {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 
 					.down-arrow-icon {
 						margin: 0px 6px 0px 0px;
@@ -626,11 +653,11 @@
 
 				.count {
 					margin: 0px 0px 0px 4px;
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 
 				.text {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 			}
 		}

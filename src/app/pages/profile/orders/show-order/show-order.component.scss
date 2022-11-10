@@ -1,3 +1,5 @@
+@import '../../../../../variables';
+
 .header {
 	margin-bottom: 16px;
 	display: flex;
@@ -5,26 +7,30 @@
 
 	.heading {
 		margin: auto 0px;
-		color: #151515;
-		font-family: 'Poppins';
+		color: $dark-color;
+		font-family: $primary-english-font;
 		font-weight: 600;
 		font-size: 24px;
 	}
 
 	.back-button {
 		padding: 6px 0px;
-		border-radius: 12px;
-		background-color: #FFF;
-		color: #151515;
-		font-family: 'Poppins';
+		border-radius: $default-border-radius;
+		background-color: $light-color;
+		color: $dark-color;
+		font-family: $primary-english-font;
 		font-weight: 700;
 		font-size: 15px;
+
+		&:focus {
+			box-shadow: 0 0 0 4px $secondary-box-shadow-color;
+		}
 	}
 
 	&.rtl {
 		.heading,
 		.back-button {
-			font-family: 'NotoSansArabic';
+			font-family: $primary-arabic-font;
 		}
 
 		.back-button {
@@ -41,19 +47,27 @@
 	.details-row {
 		margin-bottom: 12px;
 
-		.text {
+		.text,
+		.value {
 			margin: auto;
-			color: #575757;
-			font-family: 'OpenSans';
+			font-family: $secondary-english-font;
 			font-weight: 400;
 			font-size: 14px;
 			overflow-wrap: break-word;
+		}
+
+		.text {
+			color: $input-text-color;
+		}
+
+		.value {
+			color: $dark-color;
 
 			.address {
 				padding: 0px;
 				border: none;
-				color: #575757;
-				font-family: 'OpenSans';
+				color: $dark-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 14px;
 
@@ -66,11 +80,14 @@
 
 	&.rtl {
 		.details-row {
-			.text {
-				font-family: 'Cairo';
+			.text,
+			.value {
+				font-family: $secondary-arabic-font;
+			}
 
+			.value {
 				.address {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 			}
 		}
@@ -81,14 +98,14 @@
 	.table {
 		thead {
 			tr {
-				color: #151515;
-				font-family: 'Poppins';
+				color: $dark-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 12px;
 
 				th {
 					padding: 7px 0px;
-					border-color: #EBEBEB;
+					border-color: $table-border-color;
 				}
 			}
 		}
@@ -97,13 +114,13 @@
 			border-top: none;
 
 			tr {
-				color: #575757;
-				font-family: 'OpenSans';
+				color: $table-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 14px;
 
 				&:nth-of-type(odd) {
-					background-color: #FDFDFD;
+					background-color: $input-background-color;
 				}
 
 				td {
@@ -112,7 +129,7 @@
 
 					a {
 						text-decoration: none;
-						color: #575757;
+						color: $table-text-color;
 						cursor: pointer;
 					}
 				}
@@ -124,13 +141,13 @@
 		.table {
 			thead {
 				tr {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 			}
 
 			tbody {
 				tr {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 			}
 		}

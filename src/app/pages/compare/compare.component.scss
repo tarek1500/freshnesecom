@@ -1,7 +1,9 @@
+@import '../../../variables';
+
 .container {
 	padding: 0px;
-	background-color: #FFF;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	background-color: $page-background-color;
+	box-shadow: $page-box-shadow;
 
 	.header {
 		padding: 8px 45px;
@@ -10,8 +12,8 @@
 
 		.heading {
 			margin: auto 0px;
-			color: #151515;
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 600;
 			font-size: 32px;
 
@@ -34,18 +36,18 @@
 			.item {
 				margin: 8px 0px 8px 24px;
 				display: inline-block;
-				color: #A9A9A9;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 
 				.count {
 					margin-right: 4px;
 					padding: 0px 8px;
-					border-radius: 12px;
-					background-color: #F4F8EC;
-					color: #6A983C;
-					font-family: 'Poppins';
+					border-radius: $default-border-radius;
+					background-color: $tag-background-color;
+					color: $primary-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 12px;
 				}
@@ -61,18 +63,18 @@
 
 			thead {
 				tr {
-					color: #151515;
-					font-family: 'Poppins';
+					color: $dark-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 12px;
 
 					th {
 						padding: 7px 0px;
-						border-color: #EBEBEB;
+						border-color: $table-border-color;
 						vertical-align: middle;
 
 						a {
-							color: #151515;
+							color: $dark-color;
 						}
 					}
 				}
@@ -82,13 +84,13 @@
 				border-top: none;
 
 				tr {
-					color: #575757;
-					font-family: 'OpenSans';
+					color: $table-text-color;
+					font-family: $secondary-english-font;
 					font-weight: 400;
 					font-size: 14px;
 
 					&:nth-of-type(odd) {
-						background-color: #FDFDFD;
+						background-color: $input-background-color;
 					}
 
 					td {
@@ -97,8 +99,8 @@
 						vertical-align: middle;
 
 						&.title {
-							color: #151515;
-							font-family: 'Poppins';
+							color: $dark-color;
+							font-family: $primary-english-font;
 							font-weight: 600;
 							font-size: 12px;
 						}
@@ -113,25 +115,25 @@
 								position: relative;
 								display: inline-block;
 								font-size: 20px;
-								color: #D1D1D1;
+								color: $secondary-border-color;
 
 								&.full {
-									color: #FDBC15;
+									color: $star-color;
 								}
 
 								.half {
 									position: absolute;
 									display: inline-block;
 									overflow: hidden;
-									color: #FDBC15;
+									color: $star-color;
 								}
 							}
 						}
 
 						.remove {
 							vertical-align: initial;
-							color: #A9A9A9;
-							font-family: 'OpenSans';
+							color: $input-text-color;
+							font-family: $secondary-english-font;
 							font-weight: 400;
 							font-size: 12px;
 							cursor: pointer;
@@ -155,17 +157,17 @@
 			.count {
 				margin-right: 4px;
 				padding: 0px 8px;
-				border-radius: 12px;
-				background-color: #F4F8EC;
-				color: #6A983C;
-				font-family: 'Poppins';
+				border-radius: $default-border-radius;
+				background-color: $tag-background-color;
+				color: $primary-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 12px;
 			}
 
 			.text {
-				color: #A9A9A9;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 			}
@@ -177,7 +179,7 @@
 
 		.header {
 			.heading {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 
 			.view {
@@ -187,11 +189,11 @@
 
 				.item {
 					margin: 0px 24px 0px 0px;
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 
 					.count {
 						margin: 0px 0px 0px 4px;
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 				}
 			}
@@ -201,21 +203,21 @@
 			.table {
 				thead {
 					tr {
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 				}
 
 				tbody {
 					tr {
-						font-family: 'Cairo';
+						font-family: $secondary-arabic-font;
 
 						td {
 							&.title {
-								font-family: 'NotoSansArabic';
+								font-family: $primary-arabic-font;
 							}
 
 							.remove {
-								font-family: 'Cairo';
+								font-family: $secondary-arabic-font;
 
 								.close-icon {
 									margin: 0px 0px 0px 8px;
@@ -233,11 +235,11 @@
 
 				.count {
 					margin: 0px 0px 0px 4px;
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 
 				.text {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 			}
 		}

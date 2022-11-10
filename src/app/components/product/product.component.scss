@@ -1,15 +1,17 @@
+@import '../../../variables';
+
 .container {
 	padding: 16px;
-	border-radius: 12px;
-	border: 1px solid #D1D1D1;
+	border-radius: $default-border-radius;
+	border: 1px solid $secondary-border-color;
 
 	.cover-image {
 		position: relative;
 		padding: 12px;
 		height: 180px;
 		margin-bottom: 16px;
-		border-radius: 12px;
-		background-color: #F9F9F9;
+		border-radius: $default-border-radius;
+		background-color: $image-background-color;
 		overflow: hidden;
 
 		img {
@@ -22,10 +24,10 @@
 		.discount {
 			position: absolute;
 			padding: 0px 8px;
-			border-radius: 12px;
-			background-color: #F4F8EC;
-			color: #6A983C;
-			font-family: 'Poppins';
+			border-radius: $default-border-radius;
+			background-color: $tag-background-color;
+			color: $primary-color;
+			font-family: $primary-english-font;
 			font-weight: 600;
 			font-size: 12px;
 		}
@@ -35,16 +37,16 @@
 		.heading {
 			margin-bottom: 4px;
 			text-decoration: none;
-			color: #151515;
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 500;
 			font-size: 15px;
 		}
 
 		.description {
 			margin: 0px;
-			color: #575757;
-			font-family: 'OpenSans';
+			color: $input-text-color;
+			font-family: $secondary-english-font;
 			font-weight: 400;
 			font-size: 12px;
 		}
@@ -56,17 +58,17 @@
 				position: relative;
 				display: inline-block;
 				font-size: 24px;
-				color: #D1D1D1;
+				color: $secondary-border-color;
 
 				&.full {
-					color: #FDBC15;
+					color: $star-color;
 				}
 
 				.half {
 					position: absolute;
 					display: inline-block;
 					overflow: hidden;
-					color: #FDBC15;
+					color: $star-color;
 				}
 			}
 		}
@@ -80,16 +82,16 @@
 				margin: auto 0px;
 
 				.current-price {
-					color: #151515;
-					font-family: 'Poppins';
+					color: $dark-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 18px;
 				}
 
 				.old-price {
 					text-decoration: line-through;
-					color: #A9A9A9;
-					font-family: 'Poppins';
+					color: $input-text-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 12px;
 				}
@@ -100,26 +102,34 @@
 					width: 100%;
 					margin: 0px auto 12px auto;
 					display: block;
-					border-radius: 12px;
-					border: 2px solid #46760A;
-					background-color: #6A983C;
-					color: #FFF;
-					font-family: 'Poppins';
+					border-radius: $default-border-radius;
+					border: 2px solid $primary-border-color;
+					background-color: $primary-color;
+					color: $light-color;
+					font-family: $primary-english-font;
 					font-weight: 700;
 					font-size: 15px;
+
+					&:focus {
+						box-shadow: 0 0 0 4px $primary-box-shadow-color;
+					}
 				}
 
 				.wishlist-button {
 					width: 100%;
 					margin-left: auto;
 					display: block;
-					border-radius: 12px;
+					border-radius: $default-border-radius;
 					border: 2px solid transparent;
-					background-color: #F5F5F5;
-					color: #151515;
-					font-family: 'Poppins';
+					background-color: $secondary-color;
+					color: $dark-color;
+					font-family: $primary-english-font;
 					font-weight: 700;
 					font-size: 15px;
+
+					&:focus {
+						box-shadow: 0 0 0 4px $secondary-box-shadow-color;
+					}
 				}
 			}
 		}
@@ -171,15 +181,15 @@
 					.text,
 					.value {
 						margin: auto;
-						color: #A9A9A9;
-						font-family: 'OpenSans';
+						color: $input-text-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 14px;
 						overflow-wrap: break-word;
 
 						span {
-							&.green {
-								color: #6A983C;
+							&.freshness {
+								color: $primary-color;
 							}
 						}
 					}
@@ -218,15 +228,15 @@
 					margin-bottom: 26px;
 
 					.type {
-						color: #A9A9A9;
-						font-family: 'Poppins';
+						color: $input-text-color;
+						font-family: $primary-english-font;
 						font-weight: 600;
 						font-size: 12px;
 					}
 
 					.days {
-						color: #A9A9A9;
-						font-family: 'OpenSans';
+						color: $input-text-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 12px;
 					}
@@ -245,31 +255,31 @@
 	&.rtl {
 		.cover-image {
 			.discount {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 		}
 
 		.content {
 			.heading {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 
 			.description {
-				font-family: 'Cairo';
+				font-family: $secondary-arabic-font;
 			}
 
 			.footer {
 				.price {
 					.current-price,
 					.old-price {
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 				}
 
 				.buttons {
 					.buy-button,
 					.wishlist-button {
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 
 					.wishlist-button {
@@ -285,7 +295,7 @@
 					.details-row {
 						.text,
 						.value {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 						}
 
 						.text {
@@ -309,11 +319,11 @@
 				.footer {
 					.shipping {
 						.type {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 						}
 
 						.days {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 						}
 					}
 				}

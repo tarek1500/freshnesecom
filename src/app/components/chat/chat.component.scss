@@ -1,3 +1,5 @@
+@import '../../../variables';
+
 .container {
 	max-width: initial;
 
@@ -7,9 +9,9 @@
 		right: 90px;
 		width: 300px;
 		height: 400px;
-		border-radius: 12px;
-		border: 2px solid #46760A;
-		background-color: #F5F5F5;
+		border-radius: $default-border-radius;
+		border: 2px solid $primary-border-color;
+		background-color: $input-background-color;
 		overflow: hidden;
 		opacity: 0;
 		z-index: -1;
@@ -33,8 +35,8 @@
 			display: flex;
 			padding: 12px 10px;
 			justify-content: flex-end;
-			border-bottom: 2px solid #46760A;
-			background-color: #6A983C;
+			border-bottom: 2px solid $primary-border-color;
+			background-color: $primary-color;
 
 			img {
 				width: 14px;
@@ -61,8 +63,8 @@
 				margin-top: 8px;
 				padding: 10px;
 				display: inline-block;
-				border-radius: 16px;
-				background-color: #EBEBEB;
+				border-radius: $secondary-border-radius;
+				background-color: $tag-background-color;
 
 				@keyframes typing {
 					0% {
@@ -84,8 +86,8 @@
 					height: 8px;
 					margin-right: 3px;
 					display: inline-block;
-					border-radius: 50%;
-					background-color: #6A983C;
+					border-radius: $circle-border-radius;
+					background-color: $primary-color;
 
 					&:nth-of-type(1) {
 						animation: typing 1s linear 0s infinite normal none;
@@ -115,8 +117,8 @@
 		right: 30px;
 		width: 40px;
 		height: 40px;
-		border-radius: 50%;
-		border: 2px solid #46760A;
+		border-radius: $circle-border-radius;
+		border: 2px solid $primary-border-color;
 		cursor: pointer;
 		z-index: 5;
 	}

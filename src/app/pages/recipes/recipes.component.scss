@@ -1,7 +1,9 @@
+@import '../../../variables';
+
 .container {
 	padding: 0px;
-	background-color: #FFF;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	background-color: $page-background-color;
+	box-shadow: $page-box-shadow;
 
 	.header {
 		padding: 8px 45px;
@@ -10,8 +12,8 @@
 
 		.heading {
 			margin: auto 0px;
-			color: #151515;
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 600;
 			font-size: 32px;
 
@@ -34,18 +36,18 @@
 			.item {
 				margin-left: 24px;
 				display: inline-block;
-				color: #A9A9A9;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 
 				.count {
 					margin-right: 4px;
 					padding: 0px 8px;
-					border-radius: 12px;
-					background-color: #F4F8EC;
-					color: #6A983C;
-					font-family: 'Poppins';
+					border-radius: $default-border-radius;
+					background-color: $tag-background-color;
+					color: $primary-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 12px;
 				}
@@ -80,8 +82,8 @@
 			.title {
 				margin: auto 8px auto 0px;
 				display: inline-block;
-				color: #A9A9A9;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 			}
@@ -89,14 +91,14 @@
 			.page {
 				margin: auto 8px auto 0px;
 				text-decoration: none;
-				color: #151515;
-				font-family: 'OpenSans';
+				color: $dark-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 				cursor: pointer;
 
 				&.active {
-					color: #6A983C;
+					color: $primary-color;
 				}
 			}
 		}
@@ -112,13 +114,17 @@
 
 			.more-button {
 				padding: 12px 16px;
-				border-radius: 12px;
-				border: 2px solid #46760A;
-				background-color: #6A983C;
-				color: #FFF;
-				font-family: 'Poppins';
+				border-radius: $default-border-radius;
+				border: 2px solid $primary-border-color;
+				background-color: $primary-color;
+				color: $light-color;
+				font-family: $primary-english-font;
 				font-weight: 700;
 				font-size: 15px;
+
+				&:focus {
+					box-shadow: 0 0 0 4px $primary-box-shadow-color;
+				}
 
 				.down-arrow-icon {
 					width: 8px;
@@ -141,17 +147,17 @@
 			.count {
 				margin-right: 4px;
 				padding: 0px 8px;
-				border-radius: 12px;
-				background-color: #F4F8EC;
-				color: #6A983C;
-				font-family: 'Poppins';
+				border-radius: $default-border-radius;
+				background-color: $tag-background-color;
+				color: $primary-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 12px;
 			}
 
 			.text {
-				color: #A9A9A9;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 			}
@@ -163,7 +169,7 @@
 
 		.header {
 			.heading {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 
 			.view {
@@ -173,11 +179,11 @@
 
 				.item {
 					margin: 0px 24px 0px 0px;
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 
 					.count {
 						margin: 0px 0px 0px 4px;
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 				}
 			}
@@ -190,7 +196,7 @@
 				.title,
 				.page {
 					margin: auto 0px auto 8px;
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 
 				.page {
@@ -200,7 +206,7 @@
 
 			.more {
 				.more-button {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 
 					.down-arrow-icon {
 						margin: 0px 6px 0px 0px;
@@ -215,11 +221,11 @@
 
 				.count {
 					margin: 0px 0px 0px 4px;
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 
 				.text {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 			}
 		}

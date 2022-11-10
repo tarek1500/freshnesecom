@@ -1,3 +1,5 @@
+@import '../../../variables';
+
 .container {
 	padding: 0px;
 
@@ -16,8 +18,8 @@
 				position: relative;
 				height: 67px;
 				margin-bottom: 12px;
-				border-radius: 12px;
-				background-color: #F9F9F9;
+				border-radius: $default-border-radius;
+				background-color: $image-background-color;
 				overflow: hidden;
 
 				@media (max-width: 991.98px) {
@@ -36,8 +38,8 @@
 			.compare,
 			.remove {
 				margin-bottom: 8px;
-				color: #A9A9A9;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 				cursor: pointer;
@@ -81,8 +83,8 @@
 			.heading {
 				margin-bottom: 4px;
 				text-decoration: none;
-				color: #151515;
-				font-family: 'Poppins';
+				color: $dark-color;
+				font-family: $primary-english-font;
 				font-weight: 500;
 				font-size: 15px;
 			}
@@ -98,8 +100,8 @@
 					.text {
 						margin: auto;
 						padding-left: 0px;
-						color: #A9A9A9;
-						font-family: 'OpenSans';
+						color: $input-text-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 12px;
 						overflow-wrap: break-word;
@@ -108,8 +110,8 @@
 					.value {
 						margin: auto;
 						padding-right: 0px;
-						color: #151515;
-						font-family: 'OpenSans';
+						color: $dark-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 12px;
 					}
@@ -123,17 +125,17 @@
 					position: relative;
 					display: inline-block;
 					font-size: 20px;
-					color: #D1D1D1;
+					color: $secondary-border-color;
 
 					&.full {
-						color: #FDBC15;
+						color: $star-color;
 					}
 
 					.half {
 						position: absolute;
 						display: inline-block;
 						overflow: hidden;
-						color: #FDBC15;
+						color: $star-color;
 					}
 				}
 			}
@@ -152,16 +154,16 @@
 					}
 
 					.current-price {
-						color: #6A983C;
-						font-family: 'Poppins';
+						color: $primary-color;
+						font-family: $primary-english-font;
 						font-weight: 600;
 						font-size: 18px;
 					}
 
 					.old-price {
 						text-decoration: line-through;
-						color: #A9A9A9;
-						font-family: 'Poppins';
+						color: $input-text-color;
+						font-family: $primary-english-font;
 						font-weight: 600;
 						font-size: 12px;
 					}
@@ -186,7 +188,7 @@
 				.wishlist,
 				.compare,
 				.remove {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 
 				.wishlist {
@@ -216,14 +218,14 @@
 				padding: 0px 8px 0px 0px;
 
 				.heading {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 
 				.details {
 					.details-row {
 						.text,
 						.value {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 						}
 
 						.text {
@@ -240,7 +242,7 @@
 					.price-column {
 						.current-price,
 						.old-price {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 						}
 					}
 				}

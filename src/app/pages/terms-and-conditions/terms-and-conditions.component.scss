@@ -1,15 +1,17 @@
+@import '../../../variables';
+
 .container {
 	padding: 0px;
-	background-color: #FFF;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	background-color: $page-background-color;
+	box-shadow: $page-box-shadow;
 
 	.header {
 		padding: 8px 45px;
 
 		.heading {
 			margin-bottom: 12px;
-			color: #151515;
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 600;
 			font-size: 32px;
 
@@ -23,15 +25,15 @@
 		}
 
 		.date {
-			color: #575757;
-			font-family: 'Poppins';
+			color: $input-text-color;
+			font-family: $primary-english-font;
 			font-weight: 500;
 			font-size: 14px;
 		}
 
 		.caution {
-			color: #151515;
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 500;
 			font-size: 36px;
 			direction: ltr;
@@ -46,8 +48,8 @@
 
 			.heading {
 				margin-bottom: 20px;
-				color: #151515;
-				font-family: 'OpenSans';
+				color: $dark-color;
+				font-family: $secondary-english-font;
 				font-weight: 500;
 				font-size: 26px;
 			}
@@ -59,8 +61,8 @@
 
 				.list-item {
 					a {
-						color: #151515;
-						font-family: 'OpenSans';
+						color: $dark-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 14px;
 					}
@@ -78,15 +80,15 @@
 
 				.heading {
 					margin-bottom: 20px;
-					color: #151515;
-					font-family: 'OpenSans';
+					color: $dark-color;
+					font-family: $secondary-english-font;
 					font-weight: 500;
 					font-size: 26px;
 				}
 
 				.table-content {
-					color: #151515;
-					font-family: 'OpenSans';
+					color: $dark-color;
+					font-family: $secondary-english-font;
 					font-weight: 400;
 					font-size: 14px;
 
@@ -113,7 +115,7 @@
 						}
 
 						.contact {
-							color: #575757;
+							color: $table-text-color;
 							font-weight: 700;
 
 							.phone,
@@ -126,7 +128,7 @@
 								margin-bottom: 4px;
 								padding-bottom: 16px;
 								display: inline-block;
-								border-bottom: 1px solid #575757;
+								border-bottom: 1px solid $table-text-color;
 							}
 						}
 					}
@@ -141,20 +143,20 @@
 		.header {
 			.heading,
 			.date {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 		}
 
 		.content {
 			.table-of-contents {
 				.heading {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 
 				.list {
 					.list-item {
 						a {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 						}
 					}
 				}
@@ -163,11 +165,11 @@
 			.contents {
 				.section {
 					.heading {
-						font-family: 'Cairo';
+						font-family: $secondary-arabic-font;
 					}
 
 					.table-content {
-						font-family: 'Cairo';
+						font-family: $secondary-arabic-font;
 
 						::ng-deep {
 							p {

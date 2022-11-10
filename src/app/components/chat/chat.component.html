@@ -7,7 +7,7 @@
 			<div class="content">
 				<div class="messages">
 					<div class="message" *ngFor="let message of messages; let isOdd = odd">
-						<app-message [message]="message" [right-position]="isOdd"></app-message>
+						<app-message [message]="message" [from-other]="isOdd"></app-message>
 					</div>
 				</div>
 				<div class="typing" *ngIf="isTyping">

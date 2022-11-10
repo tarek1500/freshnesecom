@@ -1,18 +1,23 @@
+@import '../../../variables';
+
 .input-group {
 	input {
 		width: 45px;
 		padding: 5px 6px;
-		border-radius: 12px 0px 0px 12px;
-		border: 1px solid #D1D1D1;
+		border-radius: $default-border-radius 0px 0px $default-border-radius;
+		border: 1px solid $secondary-border-color;
 		border-right: none;
-		background-color: #F9F9F9;
-		color: #D1D1D1;
-		font-family: 'OpenSans';
+		background-color: $input-background-color;
+		color: $input-text-color;
+		font-family: $secondary-english-font;
 		font-weight: 400;
 		font-size: 14px;
 
 		&::placeholder {
-			color: #D1D1D1;
+			color: $input-placeholder-color;
+		}
+		&:focus {
+			box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 		}
 
 		@media (max-width: 575.98px) {
@@ -23,23 +28,26 @@
 	.vertical-splitter {
 		width: 1px;
 		margin: 6px 0px;
-		background-color: #D1D1D1;
+		background-color: $secondary-border-color;
 		z-index: 4;
 	}
 
 	.dropdown-button {
 		padding: 6.5px 6px;
-		border-radius: 0px 12px 12px 0px;
-		border: 1px solid #D1D1D1;
+		border-radius: 0px $default-border-radius $default-border-radius 0px;
+		border: 1px solid $secondary-border-color;
 		border-left: none;
-		background-color: #F9F9F9;
-		color: #151515;
-		font-family: 'Poppins';
+		background-color: $input-background-color;
+		color: $dark-color;
+		font-family: $primary-english-font;
 		font-weight: 600;
 		font-size: 12px;
 
 		&::after {
 			display: none;
+		}
+		&:focus {
+			box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 		}
 
 		.down-arrow-icon {
@@ -48,12 +56,20 @@
 	}
 
 	.dropdown-menu {
-		background-color: #F9F9F9;
+		background-color: $input-background-color;
 
 		.dropdown-item {
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 400;
 			font-size: 12px;
+
+			&:hover,
+			&:focus
+			&.active,
+			&:active {
+				background-color: $dropdown-item-background-color;
+			}
 		}
 	}
 
@@ -70,17 +86,17 @@
 
 	&.rtl {
 		input {
-			border-radius: 0px 12px 12px 0px;
-			border: 1px solid #D1D1D1;
+			border-radius: 0px $default-border-radius $default-border-radius 0px;
+			border: 1px solid $secondary-border-color;
 			border-left: none;
-			font-family: 'Cairo';
+			font-family: $secondary-arabic-font;
 		}
 
 		.dropdown-button {
-			border-radius: 12px 0px 0px 12px;
-			border: 1px solid #D1D1D1;
+			border-radius: $default-border-radius 0px 0px $default-border-radius;
+			border: 1px solid $secondary-border-color;
 			border-right: none;
-			font-family: 'NotoSansArabic';
+			font-family: $primary-arabic-font;
 
 			.down-arrow-icon {
 				margin: 0px 4px 0px 0px;
@@ -91,7 +107,7 @@
 			text-align: right;
 
 			.dropdown-item {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 		}
 	}

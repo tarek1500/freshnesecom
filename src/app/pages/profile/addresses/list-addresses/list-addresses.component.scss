@@ -1,23 +1,29 @@
+@import '../../../../../variables';
+
 .create {
 	margin-bottom: 16px;
 	text-align: right;
 
 	.create-button {
 		padding: 12px 16px;
-		border-radius: 12px;
-		border: 2px solid #46760A;
-		background-color: #6A983C;
-		color: #FFF;
-		font-family: "Poppins";
+		border-radius: $default-border-radius;
+		border: 2px solid $primary-border-color;
+		background-color: $primary-color;
+		color: $light-color;
+		font-family: 'Poppins';
 		font-weight: 700;
 		font-size: 15px;
+
+		&:focus {
+			box-shadow: 0 0 0 4px $primary-box-shadow-color;
+		}
 	}
 
 	&.rtl {
 		text-align: left;
 
 		.create-button {
-			font-family: "NotoSansArabic";
+			font-family: 'NotoSansArabic';
 		}
 	}
 }
@@ -28,14 +34,14 @@
 
 		thead {
 			tr {
-				color: #151515;
-				font-family: 'Poppins';
+				color: $dark-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 12px;
 
 				th {
 					padding: 7px 0px;
-					border-color: #EBEBEB;
+					border-color: $table-border-color;
 				}
 			}
 		}
@@ -44,13 +50,13 @@
 			border-top: none;
 
 			tr {
-				color: #575757;
-				font-family: 'OpenSans';
+				color: $table-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 14px;
 
 				&:nth-of-type(odd) {
-					background-color: #FDFDFD;
+					background-color: $input-background-color;
 				}
 
 				td {
@@ -58,8 +64,6 @@
 					border: none;
 
 					a {
-						text-decoration: none;
-						color: #575757;
 						cursor: pointer;
 					}
 
@@ -81,13 +85,13 @@
 		.table {
 			thead {
 				tr {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 			}
 
 			tbody {
 				tr {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 
 					td {
 						.edit {
@@ -104,27 +108,33 @@
 	.modal {
 		.modal-dialog {
 			.modal-content {
-				border-radius: 12px;
+				border-radius: $default-border-radius;
 
 				.modal-header {
 					.modal-title {
-						color: #151515;
-						font-family: 'Poppins';
+						color: $dark-color;
+						font-family: $primary-english-font;
 						font-weight: 600;
 						font-size: 26px;
+					}
+
+					.btn-close {
+						&:focus {
+							box-shadow: none;
+						}
 					}
 				}
 
 				.modal-body {
 					.caution {
-						color: #151515;
-						font-family: 'OpenSans';
+						color: $dark-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 15px;
 
-						.red {
-							color: #E6704B;
-							font-family: 'OpenSans';
+						.danger {
+							color: $danger-color;
+							font-family: $secondary-english-font;
 							font-weight: 500;
 						}
 					}
@@ -133,22 +143,31 @@
 				.modal-footer {
 					.close-button {
 						padding: 12px 16px;
-						border-radius: 12px;
-						color: #151515;
-						font-family: 'Poppins';
+						border-radius: $default-border-radius;
+						background-color: $secondary-color;
+						color: $dark-color;
+						font-family: $primary-english-font;
 						font-weight: 700;
 						font-size: 15px;
+
+						&:focus {
+							box-shadow: 0 0 0 4px $secondary-box-shadow-color;
+						}
 					}
 
 					.delete-button {
 						padding: 12px 16px;
-						border-radius: 12px;
-						border: 2px solid #C7522D;
-						background-color: #E6704B;
-						color: #FFF;
-						font-family: 'Poppins';
+						border-radius: $default-border-radius;
+						border: 2px solid $danger-background-color;
+						background-color: $danger-color;
+						color: $light-color;
+						font-family: $primary-english-font;
 						font-weight: 700;
 						font-size: 15px;
+
+						&:focus {
+							box-shadow: 0 0 0 4px $danger-box-shadow-color;
+						}
 					}
 				}
 			}
@@ -161,7 +180,7 @@
 				.modal-content {
 					.modal-header {
 						.modal-title {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 						}
 
 						.btn-close {
@@ -171,10 +190,10 @@
 
 					.modal-body {
 						.caution {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 
-							.red {
-								font-family: 'Cairo';
+							.danger {
+								font-family: $secondary-arabic-font;
 							}
 						}
 					}
@@ -182,7 +201,7 @@
 					.modal-footer {
 						.close-button,
 						.delete-button {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 						}
 					}
 				}

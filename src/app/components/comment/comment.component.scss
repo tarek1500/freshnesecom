@@ -1,9 +1,11 @@
+@import '../../../variables';
+
 .comment {
 	.container {
 		margin-bottom: 24px;
 		padding: 16px;
-		border-radius: 12px;
-		border: 1px solid #D1D1D1;
+		border-radius: $default-border-radius;
+		border: 1px solid $secondary-border-color;
 
 		&:last-of-type {
 			margin-bottom: 0px;
@@ -18,15 +20,15 @@
 				width: 40px;
 				height: 40px;
 				margin-right: 12px;
-				border-radius: 50%;
-				background-color: #F9F9F9;
+				border-radius: $circle-border-radius;
+				background-color: $image-background-color;
 
 				img {
 					position: absolute;
 					top: 50%;
 					width: 100%;
 					height: auto;
-					border-radius: 50%;
+					border-radius: $circle-border-radius;
 					transform: translateY(-50%);
 				}
 			}
@@ -35,8 +37,8 @@
 				.author {
 					margin-right: 6px;
 					display: inline-block;
-					color: #151515;
-					font-family: 'Poppins';
+					color: $dark-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 12px;
 				}
@@ -44,16 +46,16 @@
 				.tag {
 					padding: 0px 8px;
 					display: inline-block;
-					border-radius: 12px;
-					background-color: #F5F5F5;
-					color: #151515;
-					font-family: 'Poppins';
+					border-radius: $default-border-radius;
+					background-color: $image-background-color;
+					color: $dark-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 12px;
 
-					&.green {
-						background-color: #F4F8EC;
-						color: #6A983C;
+					&.admin {
+						background-color: $tag-background-color;
+						color: $primary-color;
 					}
 				}
 
@@ -61,8 +63,8 @@
 					padding: 0px;
 					display: block;
 					border: none;
-					color: #D1D1D1;
-					font-family: 'OpenSans';
+					color: $input-text-color;
+					font-family: $secondary-english-font;
 					font-weight: 400;
 					font-size: 12px;
 
@@ -74,8 +76,8 @@
 		}
 
 		.content {
-			color: #151515;
-			font-family: 'OpenSans';
+			color: $dark-color;
+			font-family: $secondary-english-font;
 			font-weight: 400;
 			font-size: 14px;
 		}
@@ -104,17 +106,17 @@
 				.info {
 					.author {
 						margin: 0px 0px 0px 6px;
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 
 					.date {
-						font-family: 'Cairo';
+						font-family: $secondary-arabic-font;
 					}
 				}
 			}
 
 			.content {
-				font-family: 'Cairo';
+				font-family: $secondary-arabic-font;
 			}
 		}
 

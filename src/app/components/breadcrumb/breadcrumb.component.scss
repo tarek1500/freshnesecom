@@ -1,10 +1,12 @@
+@import '../../../variables';
+
 .breadcrumb {
 	margin: 0px;
 	padding: 16px 45px;
 
 	.breadcrumb-item {
 		&::before {
-			color: #D1D1D1;
+			color: $input-text-color;
 		}
 
 		& + .breadcrumb-item {
@@ -14,20 +16,20 @@
 		}
 
 		&:not(.active) {
-			font-family: 'OpenSans';
+			font-family: $secondary-english-font;
 			font-weight: 400;
 			font-size: 12px;
 
 			a {
 				text-decoration: none;
-				color: #A9A9A9;
+				color: $input-text-color;
 			}
 		}
 
 		&.active {
 			margin-top: auto;
-			color: #151515;
-			font-family: 'OpenSans';
+			color: $dark-color;
+			font-family: $secondary-english-font;
 			font-weight: 400;
 			font-size: 12px;
 		}
@@ -50,7 +52,7 @@
 
 			&:not(.active),
 			&.active {
-				font-family: 'Cairo';
+				font-family: $secondary-arabic-font;
 			}
 		}
 	}

@@ -1,15 +1,17 @@
+@import '../../../../../variables';
+
 .table-responsive {
 	.table {
 		thead {
 			tr {
-				color: #151515;
-				font-family: 'Poppins';
+				color: $dark-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 12px;
 
 				th {
 					padding: 7px 0px;
-					border-color: #EBEBEB;
+					border-color: $table-border-color;
 				}
 			}
 		}
@@ -18,13 +20,13 @@
 			border-top: none;
 
 			tr {
-				color: #575757;
-				font-family: 'OpenSans';
+				color: $table-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 14px;
 
 				&:nth-of-type(odd) {
-					background-color: #FDFDFD;
+					background-color: $input-background-color;
 				}
 
 				td {
@@ -34,8 +36,8 @@
 					.address {
 						padding: 0px;
 						border: none;
-						color: #575757;
-						font-family: 'OpenSans';
+						color: $table-text-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 14px;
 
@@ -46,7 +48,7 @@
 
 					a {
 						text-decoration: none;
-						color: #575757;
+						color: $table-text-color;
 						cursor: pointer;
 					}
 				}
@@ -58,17 +60,17 @@
 		.table {
 			thead {
 				tr {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 			}
 
 			tbody {
 				tr {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 
 					td {
 						.address {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 						}
 					}
 				}
@@ -82,8 +84,8 @@
 		.title {
 			margin: auto 8px auto 0px;
 			display: inline-block;
-			color: #A9A9A9;
-			font-family: 'OpenSans';
+			color: $input-text-color;
+			font-family: $secondary-english-font;
 			font-weight: 400;
 			font-size: 12px;
 		}
@@ -91,14 +93,14 @@
 		.page {
 			margin: auto 8px auto 0px;
 			text-decoration: none;
-			color: #151515;
-			font-family: 'OpenSans';
+			color: $dark-color;
+			font-family: $secondary-english-font;
 			font-weight: 400;
 			font-size: 12px;
 			cursor: pointer;
 
 			&.active {
-				color: #6A983C;
+				color: $primary-color;
 			}
 		}
 	}
@@ -108,7 +110,8 @@
 			.title,
 			.page {
 				margin: auto 0px auto 8px;
-				font-family: 'Cairo';
+				font-family: $secondary-arabic-font;
+				unicode-bidi: bidi-override;
 			}
 		}
 	}

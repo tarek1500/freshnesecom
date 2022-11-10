@@ -1,3 +1,5 @@
+@import '../../../variables';
+
 .container {
 	padding: 0px 45px;
 
@@ -6,14 +8,14 @@
 		padding: 16px 0px;
 		display: flex;
 		justify-content: space-between;
-		color: #151515;
-		font-family: 'OpenSans';
+		color: $dark-color;
+		font-family: $secondary-english-font;
 		font-weight: 400;
 		font-size: 12px;
 
 		a {
 			text-decoration: none;
-			color: #6A983C;
+			color: $primary-color;
 		}
 
 		.info,
@@ -49,10 +51,14 @@
 			.language {
 				.dropdown-button {
 					padding: 0px;
+					color: $primary-color;
 					font-size: 12px;
 
 					&::after {
 						display: none;
+					}
+					&:focus {
+						box-shadow: none;
 					}
 
 					.down-arrow-icon {
@@ -62,11 +68,19 @@
 				}
 
 				.dropdown-menu {
-					background-color: #F9F9F9;
+					background-color: $light-color;
 
 					.dropdown-item {
-						font-family: 'OpenSans', 'Cairo';
+						color: $primary-color;
+						font-family: $secondary-english-font, $secondary-arabic-font;
 						font-size: 12px;
+
+						&:hover,
+						&:focus
+						&.active,
+						&:active {
+							background-color: $dropdown-item-background-color;
+						}
 					}
 				}
 			}
@@ -90,7 +104,7 @@
 	.horizontal-splitter {
 		height: 1px;
 		margin: 0px;
-		background-color: #151515;
+		background-color: $dark-color;
 		opacity: 0.05;
 	}
 
@@ -104,8 +118,8 @@
 			max-width: 400px;
 			max-height: 780px;
 			padding: 0px;
-			border-radius: 12px;
-			box-shadow: 0px 2px 32px rgba(0, 0, 0, 0.15);
+			border-radius: $default-border-radius;
+			box-shadow: 0px 2px 32px $primary-shadow;
 			overflow: hidden;
 			opacity: 0;
 			z-index: -1;
@@ -178,18 +192,18 @@
 
 				.icon-badge {
 					position: absolute;
-					left: -6px;
 					bottom: -8px;
+					left: -6px;
 					width: 16px;
 					height: 16px;
-					border-radius: 50%;
+					border-radius: $circle-border-radius;
 					text-align: center;
-					background-color: #E6704B;
-					color: #FFF;
-					font-family: 'Poppins';
+					background-color: $danger-color;
+					color: $light-color;
+					font-family: $primary-english-font;
 					font-weight: 600;
 					font-size: 12px;
-					box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+					box-shadow: 0px 2px 4px $primary-shadow;
 				}
 			}
 
@@ -204,7 +218,7 @@
 
 	&.rtl {
 		.header {
-			font-family: 'Cairo';
+			font-family: $secondary-arabic-font;
 
 			.info {
 				.chat,
@@ -220,7 +234,7 @@
 
 				.phone,
 				.email {
-					font-family: 'OpenSans';
+					font-family: $secondary-english-font;
 				}
 
 				.phone {
@@ -250,8 +264,8 @@
 
 		.content {
 			.cart {
-				left: 50px;
 				right: initial;
+				left: 50px;
 
 				@media (max-width: 575.98px) {
 					left: initial;
@@ -278,9 +292,9 @@
 				.wishlist,
 				.basket {
 					.icon-badge {
-						left: initial;
 						right: -6px;
-						font-family: 'NotoSansArabic';
+						left: initial;
+						font-family: $primary-arabic-font;
 					}
 				}
 			}

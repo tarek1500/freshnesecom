@@ -31,7 +31,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/_variables.scss"
             ],
             "scripts": [
               "node_modules/bootstrap-slider/dist/bootstrap-slider.min.js"
@@ -101,7 +102,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/_variables.scss"
             ],
             "scripts": []
           }

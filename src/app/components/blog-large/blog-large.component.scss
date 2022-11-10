@@ -1,8 +1,10 @@
+@import '../../../variables';
+
 .container {
 	position: relative;
 	min-height: 400px;
 	padding: 0px;
-	border-radius: 12px;
+	border-radius: $default-border-radius;
 	overflow: hidden;
 
 	.cover-image {
@@ -18,11 +20,11 @@
 
 		a {
 			padding: 0px 8px;
-			border-radius: 12px;
+			border-radius: $default-border-radius;
 			text-decoration: none;
-			background-color: #F4F8EC;
-			color: #6A983C;
-			font-family: 'Poppins';
+			background-color: $tag-background-color;
+			color: $primary-color;
+			font-family: $primary-english-font;
 			font-weight: 600;
 			font-size: 12px;
 		}
@@ -33,15 +35,15 @@
 		bottom: 0px;
 		padding: 76px 24px 24px;
 		width: 100%;
-		background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+		background: linear-gradient(0deg, $gradient-dark-start 0%, $gradient-dark-end 100%);
 
 		.heading {
 			margin-bottom: 8px;
 
 			a {
 				text-decoration: none;
-				color: #FFF;
-				font-family: 'Poppins';
+				color: $light-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 22px;
 			}
@@ -49,8 +51,8 @@
 
 		.info {
 			display: flex;
-			color: #FFF;
-			font-family: 'OpenSans';
+			color: $light-color;
+			font-family: $secondary-english-font;
 			font-weight: 400;
 			font-size: 12px;
 
@@ -59,15 +61,15 @@
 				width: 32px;
 				height: 32px;
 				margin-right: 8px;
-				border-radius: 50%;
-				background-color: #F9F9F9;
+				border-radius: $circle-border-radius;
+				background-color: $image-background-color;
 
 				img {
 					position: absolute;
 					top: 50%;
 					width: 100%;
 					height: auto;
-					border-radius: 50%;
+					border-radius: $circle-border-radius;
 					transform: translateY(-50%);
 				}
 			}
@@ -85,19 +87,19 @@
 	&.rtl {
 		.tag {
 			a {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 		}
 
 		.details {
 			.heading {
 				a {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 			}
 
 			.info {
-				font-family: 'Cairo';
+				font-family: $secondary-arabic-font;
 
 				.avatar-image {
 					margin: 0px 0px 0px 8px;

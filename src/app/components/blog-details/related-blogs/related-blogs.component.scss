@@ -1,3 +1,5 @@
+@import '../../../../variables';
+
 .container {
 	padding: 53px 0px 16px;
 
@@ -9,18 +11,22 @@
 
 		.heading {
 			margin: auto 0px;
-			color: #151515;
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 600;
 			font-size: 18px;
 		}
 
 		.goto-button {
-			border-radius: 12px;
-			color: #151515;
-			font-family: 'Poppins';
+			border-radius: $default-border-radius;
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 700;
 			font-size: 15px;
+
+			&:focus {
+				box-shadow: 0 0 0 4px $secondary-box-shadow-color;
+			}
 
 			.right-arrow-icon {
 				margin-left: 7px;
@@ -45,11 +51,11 @@
 	&.rtl {
 		.header {
 			.heading {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 
 			.goto-button {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 
 				.right-arrow-icon {
 					margin: 0px 7px 0px 0px;

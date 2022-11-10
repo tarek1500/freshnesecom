@@ -1,7 +1,9 @@
+@import '../../../variables';
+
 .container {
 	padding: 0px;
-	background-color: #FFF;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	background-color: $page-background-color;
+	box-shadow: $page-box-shadow;
 
 	.content {
 		padding: 16px 45px;
@@ -12,8 +14,8 @@
 				margin-bottom: 32px;
 				padding: 16px;
 				height: 436px;
-				border-radius: 12px;
-				background-color: #F9F9F9;
+				border-radius: $default-border-radius;
+				background-color: $image-background-color;
 				overflow: hidden;
 
 				@media (max-width: 991.98px) {
@@ -36,10 +38,10 @@
 
 						span {
 							padding: 4px 10px;
-							border-radius: 12px;
-							background-color: #F4F8EC;
-							color: #6A983C;
-							font-family: 'Poppins';
+							border-radius: $default-border-radius;
+							background-color: $tag-background-color;
+							color: $primary-color;
+							font-family: $primary-english-font;
 							font-weight: 600;
 							font-size: 12px;
 						}
@@ -51,8 +53,8 @@
 		.details {
 			.heading {
 				margin-bottom: 4px;
-				color: #151515;
-				font-family: 'Poppins';
+				color: $dark-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 32px;
 			}
@@ -64,17 +66,17 @@
 					position: relative;
 					display: inline-block;
 					font-size: 24px;
-					color: #D1D1D1;
+					color: $secondary-border-color;
 
 					&.full {
-						color: #FDBC15;
+						color: $star-color;
 					}
 
 					.half {
 						position: absolute;
 						display: inline-block;
 						overflow: hidden;
-						color: #FDBC15;
+						color: $star-color;
 					}
 				}
 
@@ -85,8 +87,8 @@
 
 					a {
 						text-decoration: underline;
-						color: #A9A9A9;
-						font-family: 'OpenSans';
+						color: $input-text-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 12px;
 						cursor: pointer;
@@ -96,8 +98,8 @@
 
 			.description {
 				margin-bottom: 40px;
-				color: #151515;
-				font-family: 'OpenSans';
+				color: $dark-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 17px;
 			}
@@ -123,33 +125,30 @@
 						.text,
 						.value {
 							margin: auto;
-							color: #151515;
-							font-family: 'OpenSans';
+							font-family: $secondary-english-font;
 							font-weight: 400;
 							font-size: 14px;
+						}
 
-							&.text {
-								padding: 0px 12px 0px 0px;
+						.text {
+							padding: 0px 12px 0px 0px;
+							color: $input-text-color;
 
-								@media (max-width: 575.98px) {
-									padding-right: 4px;
-								}
+							@media (max-width: 575.98px) {
+								padding-right: 4px;
 							}
+						}
 
-							&.value {
-								padding: 0px 0px 0px 12px;
+						.value {
+							padding: 0px 0px 0px 12px;
+							color: $dark-color;
 
-								@media (max-width: 575.98px) {
-									padding-left: 4px;
-								}
-							}
-
-							&.gray {
-								color: #A9A9A9;
+							@media (max-width: 575.98px) {
+								padding-left: 4px;
 							}
 
 							a {
-								color: #151515;
+								color: $dark-color;
 							}
 						}
 					}
@@ -161,8 +160,8 @@
 				padding: 16px 24px 16px 16px;
 				display: flex;
 				justify-content: space-between;
-				border-radius: 12px;
-				border: 1px solid #F5F5F5;
+				border-radius: $default-border-radius;
+				border: 1px solid $secondary-border-color;
 
 				@media (max-width: 991.98px) {
 					display: block;
@@ -195,16 +194,16 @@
 					}
 
 					.current-price {
-						color: #6A983C;
-						font-family: 'Poppins';
+						color: $primary-color;
+						font-family: $primary-english-font;
 						font-weight: 600;
 						font-size: 26px;
 					}
 
 					.old-price {
 						text-decoration: line-through;
-						color: #A9A9A9;
-						font-family: 'Poppins';
+						color: $input-text-color;
+						font-family: $primary-english-font;
 						font-weight: 600;
 						font-size: 12px;
 					}
@@ -228,11 +227,11 @@
 
 					.add-button {
 						padding: 12px 16px;
-						border-radius: 12px;
-						border: 2px solid #46760A;
-						background-color: #6A983C;
-						color: #FFF;
-						font-family: 'Poppins';
+						border-radius: $default-border-radius;
+						border: 2px solid $primary-border-color;
+						background-color: $primary-color;
+						color: $light-color;
+						font-family: $primary-english-font;
 						font-weight: 700;
 						font-size: 15px;
 
@@ -244,6 +243,10 @@
 							margin: auto;
 						}
 
+						&:focus {
+							box-shadow: 0 0 0 4px $primary-box-shadow-color;
+						}
+
 						.plus-icon {
 							margin-right: 6px;
 						}
@@ -253,8 +256,8 @@
 
 			.options {
 				margin-bottom: 62px;
-				color: #151515;
-				font-family: 'Poppins';
+				color: $dark-color;
+				font-family: $primary-english-font;
 				font-weight: 700;
 				font-size: 15px;
 
@@ -316,9 +319,9 @@
 						margin-bottom: 0px;
 						padding: 0px 0px 16px 0px;
 						border: none;
-						border-bottom: 1px solid #F5F5F5;
-						color: #151515;
-						font-family: 'Poppins';
+						border-bottom: 1px solid $secondary-border-color;
+						color: $dark-color;
+						font-family: $primary-english-font;
 						font-weight: 600;
 						font-size: 18px;
 						overflow-wrap: break-word;
@@ -328,17 +331,17 @@
 						}
 
 						&.active {
-							border-bottom-color: #6A983C;
+							border-bottom-color: $primary-color;
 						}
 
 						.tag {
 							margin-left: 8px;
 							padding: 0px 8px;
-							border-radius: 12px;
+							border-radius: $default-border-radius;
 							vertical-align: middle;
-							background-color: #F4F8EC;
-							color: #6A983C;
-							font-family: 'Poppins';
+							background-color: $tag-background-color;
+							color: $primary-color;
+							font-family: $primary-english-font;
 							font-weight: 600;
 							font-size: 12px;
 						}
@@ -350,8 +353,8 @@
 
 					::ng-deep {
 						.heading {
-							color: #151515;
-							font-family: 'Poppins';
+							color: $dark-color;
+							font-family: $primary-english-font;
 							font-weight: 500;
 							font-size: 15px;
 
@@ -362,8 +365,8 @@
 
 						.details {
 							margin-bottom: 32px;
-							color: #151515;
-							font-family: 'OpenSans';
+							color: $dark-color;
+							font-family: $secondary-english-font;
 							font-weight: 400;
 							font-size: 14px;
 						}
@@ -373,14 +376,14 @@
 
 							thead {
 								tr {
-									color: #151515;
-									font-family: 'Poppins';
+									color: $dark-color;
+									font-family: $primary-english-font;
 									font-weight: 600;
 									font-size: 12px;
 
 									th {
 										padding: 7px 0px;
-										border-color: #EBEBEB;
+										border-color: $table-border-color;
 									}
 								}
 							}
@@ -389,13 +392,13 @@
 								border-top: none;
 
 								tr {
-									color: #575757;
-									font-family: 'OpenSans';
+									color: $table-text-color;
+									font-family: $secondary-english-font;
 									font-weight: 400;
 									font-size: 14px;
 
 									&:nth-of-type(odd) {
-										background-color: #FDFDFD;
+										background-color: $input-background-color;
 									}
 
 									td {
@@ -417,43 +420,49 @@
 								}
 
 								label {
-									color: #151515;
-									font-family: 'Poppins';
+									color: $dark-color;
+									font-family: $primary-english-font;
 									font-weight: 600;
 									font-size: 12px;
 								}
 
 								input {
-									font-family: 'OpenSans';
+									font-family: $secondary-english-font;
 									font-weight: 400;
 									font-size: 14px;
 
 									&[type=text] {
 										padding: 11px 20px;
-										border-radius: 12px;
-										border: 1px solid #D1D1D1;
-										background-color: #F9F9F9;
-										color: #A9A9A9;
+										border-radius: $default-border-radius;
+										border: 1px solid $secondary-border-color;
+										background-color: $input-background-color;
+										color: $input-text-color;
 									}
 
 									&::placeholder {
-										color: #A9A9A9;
+										color: $input-placeholder-color;
+									}
+									&:focus {
+										box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 									}
 								}
 
 								textarea {
 									padding: 11px 20px;
-									border-radius: 12px;
-									border: 1px solid #D1D1D1;
+									border-radius: $default-border-radius;
+									border: 1px solid $secondary-border-color;
 									resize: none;
-									background-color: #F9F9F9;
-									color: #A9A9A9;
-									font-family: 'OpenSans';
+									background-color: $input-background-color;
+									color: $input-text-color;
+									font-family: $secondary-english-font;
 									font-weight: 400;
 									font-size: 14px;
 
 									&::placeholder {
-										color: #A9A9A9;
+										color: $input-placeholder-color;
+									}
+									&:focus {
+										box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 									}
 								}
 
@@ -462,17 +471,17 @@
 										position: relative;
 										display: inline-block;
 										font-size: 24px;
-										color: #D1D1D1;
+										color: $secondary-border-color;
 
 										&.full {
-											color: #FDBC15;
+											color: $star-color;
 										}
 
 										.half {
 											position: absolute;
 											display: inline-block;
 											overflow: hidden;
-											color: #FDBC15;
+											color: $star-color;
 										}
 									}
 								}
@@ -486,13 +495,17 @@
 								.add-button {
 									padding: 12px 48px;
 									display: inline-block;
-									border-radius: 12px;
-									border: 2px solid #46760A;
-									background-color: #6A983C;
-									color: #FFF;
-									font-family: 'Poppins';
+									border-radius: $default-border-radius;
+									border: 2px solid $primary-border-color;
+									background-color: $primary-color;
+									color: $light-color;
+									font-family: $primary-english-font;
 									font-weight: 700;
 									font-size: 15px;
+
+									&:focus {
+										box-shadow: 0 0 0 4px $primary-box-shadow-color;
+									}
 								}
 							}
 						}
@@ -512,8 +525,8 @@
 								.accordion {
 									.accordion-item {
 										margin-bottom: 16px;
-										border-radius: 12px;
-										border: 1px solid #D1D1D1;
+										border-radius: $default-border-radius;
+										border: 1px solid $secondary-border-color;
 										overflow: hidden;
 
 										&:last-of-type {
@@ -523,9 +536,9 @@
 										.accordion-header {
 											.accordion-button {
 												padding: 16px;
-												background-color: #FFF;
-												color: #000;
-												font-family: 'Poppins';
+												background-color: $light-color;
+												color: $dark-color;
+												font-family: $primary-english-font;
 												font-weight: 600;
 												font-size: 12px;
 												box-shadow: none;
@@ -540,7 +553,7 @@
 
 										.accordion-body {
 											padding: 8px 16px;
-											font-family: 'OpenSans';
+											font-family: $secondary-english-font;
 											font-weight: 400;
 											font-size: 14px;
 										}
@@ -565,7 +578,7 @@
 							margin: 0px 0px 8px 12px;
 
 							span {
-								font-family: 'NotoSansArabic';
+								font-family: $primary-arabic-font;
 							}
 						}
 					}
@@ -574,7 +587,7 @@
 
 			.details {
 				.heading {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 
 				.stars {
@@ -582,13 +595,13 @@
 						margin: 0px 8px 0px 0px;
 
 						a {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 						}
 					}
 				}
 
 				.description {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 
 				.details {
@@ -596,7 +609,7 @@
 						.details-row {
 							.text,
 							.value {
-								font-family: 'Cairo';
+								font-family: $secondary-arabic-font;
 
 								&.text {
 									padding: 0px 0px 0px 12px;
@@ -624,7 +637,7 @@
 					.price {
 						.current-price,
 						.old-price {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 						}
 					}
 
@@ -638,7 +651,7 @@
 						}
 
 						.add-button {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 
 							.plus-icon {
 								margin: 0px 0px 0px 6px;
@@ -648,7 +661,7 @@
 				}
 
 				.options {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 
 					.wishlist {
 						margin: 0px 12px 0px 42px;
@@ -680,11 +693,11 @@
 				.info {
 					.nav {
 						.nav-link {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 
 							.tag {
 								margin: 0px 8px 0px 0px;
-								font-family: 'NotoSansArabic';
+								font-family: $primary-arabic-font;
 							}
 						}
 					}
@@ -692,23 +705,23 @@
 					.tab-content {
 						::ng-deep {
 							.heading {
-								font-family: 'NotoSansArabic';
+								font-family: $primary-arabic-font;
 							}
 
 							.details {
-								font-family: 'Cairo';
+								font-family: $secondary-arabic-font;
 							}
 
 							.table {
 								thead {
 									tr {
-										font-family: 'NotoSansArabic';
+										font-family: $primary-arabic-font;
 									}
 								}
 
 								tbody {
 									tr {
-										font-family: 'Cairo';
+										font-family: $secondary-arabic-font;
 									}
 								}
 							}
@@ -716,18 +729,18 @@
 							form {
 								.form-group {
 									label {
-										font-family: 'NotoSansArabic';
+										font-family: $primary-arabic-font;
 									}
 
 									input,
 									textarea {
-										font-family: 'Cairo';
+										font-family: $secondary-arabic-font;
 									}
 								}
 
 								.buttons {
 									.add-button {
-										font-family: 'NotoSansArabic';
+										font-family: $primary-arabic-font;
 									}
 								}
 							}
@@ -738,7 +751,7 @@
 										.accordion-item {
 											.accordion-header {
 												.accordion-button {
-													font-family: 'NotoSansArabic';
+													font-family: $primary-arabic-font;
 
 													&::after {
 														margin: 0px auto 0px 0px;
@@ -747,7 +760,7 @@
 											}
 
 											.accordion-body {
-												font-family: 'Cairo';
+												font-family: $secondary-arabic-font;
 											}
 										}
 									}

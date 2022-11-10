@@ -1,8 +1,10 @@
+@import '../../../../variables';
+
 .container {
 	margin-bottom: 24px;
 	padding: 16px;
-	border-radius: 12px;
-	border: 1px solid #D1D1D1;
+	border-radius: $default-border-radius;
+	border: 1px solid $secondary-border-color;
 
 	&:last-of-type {
 		margin-bottom: 0px;
@@ -16,8 +18,8 @@
 				margin-right: 6px;
 				display: inline-block;
 				vertical-align: text-top;
-				color: #151515;
-				font-family: 'Poppins';
+				color: $dark-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 12px;
 			}
@@ -29,17 +31,17 @@
 					position: relative;
 					display: inline-block;
 					font-size: 24px;
-					color: #D1D1D1;
+					color: $secondary-border-color;
 
 					&.full {
-						color: #FDBC15;
+						color: $star-color;
 					}
 
 					.half {
 						position: absolute;
 						display: inline-block;
 						overflow: hidden;
-						color: #FDBC15;
+						color: $star-color;
 					}
 				}
 			}
@@ -48,8 +50,8 @@
 				padding: 0px;
 				display: block;
 				border: none;
-				color: #D1D1D1;
-				font-family: 'OpenSans';
+				color: $input-text-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 12px;
 
@@ -61,8 +63,8 @@
 	}
 
 	.content {
-		color: #151515;
-		font-family: 'OpenSans';
+		color: $dark-color;
+		font-family: $secondary-english-font;
 		font-weight: 400;
 		font-size: 14px;
 	}
@@ -72,17 +74,17 @@
 			.info {
 				.author {
 					margin: 0px 0px 0px 6px;
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 
 				.date {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 			}
 		}
 
 		.content {
-			font-family: 'Cairo';
+			font-family: $secondary-arabic-font;
 		}
 	}
 }

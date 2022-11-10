@@ -32,21 +32,21 @@
 				<div class="row details">
 					<div class="col-lg-6 col-md-12 col-sm-6 details-column">
 						<div class="row details-row">
-							<div class="col-5 text gray">{{ 'translate.pages.productDetails.sku' | translate }}:</div>
+							<div class="col-5 text">{{ 'translate.pages.productDetails.sku' | translate }}:</div>
 							<div class="col-7 value">{{ product.sku }}</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">{{ 'translate.pages.productDetails.category' | translate }}:</div>
+							<div class="col-5 text">{{ 'translate.pages.productDetails.category' | translate }}:</div>
 							<div class="col-7 value">
 								<a [routerLink]="['/categories', product.category.slug, 'products']">{{ product.category.name }}</a>
 							</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">{{ 'translate.pages.productDetails.farm' | translate }}:</div>
+							<div class="col-5 text">{{ 'translate.pages.productDetails.farm' | translate }}:</div>
 							<div class="col-7 value">{{ product.farm }}</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">{{ 'translate.pages.productDetails.stock' | translate }}:</div>
+							<div class="col-5 text">{{ 'translate.pages.productDetails.stock' | translate }}:</div>
 							<div class="col-7 value">
 								<app-stock-input-group [availablePacks]="product.availablePacks" [readonly]="true"></app-stock-input-group>
 							</div>
@@ -54,17 +54,17 @@
 					</div>
 					<div class="col-lg-6 col-md-12 col-sm-6 details-column">
 						<div class="row details-row">
-							<div class="col-5 text gray">{{ 'translate.pages.productDetails.freshness' | translate }}:</div>
+							<div class="col-5 text">{{ 'translate.pages.productDetails.freshness' | translate }}:</div>
 							<div class="col-7 value">
 								{{ product.freshness }}<span *ngIf="product.freshnessDescription"> ({{ product.freshnessDescription }})</span>
 							</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">{{ 'translate.pages.productDetails.delivery' | translate }}:</div>
+							<div class="col-5 text">{{ 'translate.pages.productDetails.delivery' | translate }}:</div>
 							<div class="col-7 value">{{ 'translate.pages.productDetails.in' | translate }} {{ product.deliveryDays }} {{ 'translate.pages.productDetails.days' | translate }}</div>
 						</div>
 						<div class="row details-row">
-							<div class="col-5 text gray">{{ 'translate.pages.productDetails.deliveryArea' | translate }}:</div>
+							<div class="col-5 text">{{ 'translate.pages.productDetails.deliveryArea' | translate }}:</div>
 							<div class="col-7 value">{{ product.delivery }}</div>
 						</div>
 					</div>

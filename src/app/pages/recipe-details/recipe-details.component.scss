@@ -1,15 +1,17 @@
+@import '../../../variables';
+
 .container {
 	padding: 0px;
-	background-color: #FFF;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	background-color: $page-background-color;
+	box-shadow: $page-box-shadow;
 
 	.header {
 		padding: 8px 45px;
 
 		.heading {
 			margin-bottom: 12px;
-			color: #151515;
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 600;
 			font-size: 32px;
 
@@ -23,8 +25,8 @@
 		}
 
 		.date {
-			color: #575757;
-			font-family: 'Poppins';
+			color: $input-text-color;
+			font-family: $primary-english-font;
 			font-weight: 500;
 			font-size: 14px;
 		}
@@ -59,8 +61,8 @@
 			.execution {
 				.heading {
 					margin-bottom: 16px;
-					color: #151515;
-					font-family: 'Poppins';
+					color: $dark-color;
+					font-family: $primary-english-font;
 					font-weight: 500;
 					font-size: 24px;
 				}
@@ -70,7 +72,7 @@
 						.accordion {
 							.accordion-item {
 								margin-bottom: 16px;
-								border-radius: 12px;
+								border-radius: $default-border-radius;
 								overflow: hidden;
 
 								&:last-of-type {
@@ -80,9 +82,9 @@
 								.accordion-header {
 									.accordion-button {
 										padding: 14px;
-										background-color: #FFF;
-										color: #000;
-										font-family: 'Poppins';
+										background-color: $light-color;
+										color: $dark-color;
+										font-family: $primary-english-font;
 										font-weight: 400;
 										font-size: 16px;
 										box-shadow: none;
@@ -91,7 +93,7 @@
 
 								.accordion-body {
 									padding: 8px 14px;
-									font-family: 'OpenSans';
+									font-family: $secondary-english-font;
 									font-weight: 400;
 									font-size: 14px;
 
@@ -107,20 +109,23 @@
 											width: 22px;
 											height: 22px;
 											margin: 1px 8px 0px 0px;
-											border: 1.5px solid #D1D1D1;
+											border: 1.5px solid $secondary-border-color;
 											cursor: pointer;
 
 											&[type=radio]:checked,
 											&[type=checkbox]:checked {
-												background-color: #6A983C;
-												border-color: #46760A;
+												background-color: $primary-color;
+												border-color: $primary-border-color;
+											}
+											&:focus {
+												box-shadow: 0 0 0 4px $primary-box-shadow-color;
 											}
 										}
 
 										label {
 											display: flex;
-											color: #151515;
-											font-family: 'OpenSans';
+											color: $dark-color;
+											font-family: $secondary-english-font;
 											font-weight: 400;
 											font-size: 14px;
 											cursor: pointer;
@@ -146,7 +151,7 @@
 					::ng-deep {
 						.accordion {
 							.accordion-item {
-								border: 1px solid #D1D1D1;
+								border: 1px solid $secondary-border-color;
 
 								.accordion-header {
 									.accordion-button {
@@ -172,8 +177,8 @@
 
 								.accordion-header {
 									.accordion-button {
-										background-color: #6A983C;
-										color: #FFF;
+										background-color: $primary-color;
+										color: $light-color;
 
 										&::after {
 											background-image: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\' fill=\'%23FFFFFF\'%3e%3cpath fill-rule=\'evenodd\' d=\'M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z\'/%3e%3c/svg%3e');
@@ -192,21 +197,21 @@
 
 			.heading {
 				margin-bottom: 12px;
-				color: #151515;
-				font-family: 'Poppins';
+				color: $dark-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 22px;
 			}
 
 			.subheading {
 				margin-bottom: 16px;
-				color: #151515;
-				font-family: 'OpenSans';
+				color: $dark-color;
+				font-family: $secondary-english-font;
 				font-weight: 400;
 				font-size: 17px;
 
 				a {
-					color: #151515;
+					color: $dark-color;
 				}
 			}
 
@@ -219,24 +224,24 @@
 					}
 
 					label {
-						color: #151515;
-						font-family: 'Poppins';
+						color: $dark-color;
+						font-family: $primary-english-font;
 						font-weight: 600;
 						font-size: 12px;
 					}
 
 					input {
-						font-family: 'OpenSans';
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 14px;
 
 						&[type=text],
 						&[type=email] {
 							padding: 11px 20px;
-							border-radius: 12px;
-							border: 1px solid #D1D1D1;
-							background-color: #F9F9F9;
-							color: #A9A9A9;
+							border-radius: $default-border-radius;
+							border: 1px solid $secondary-border-color;
+							background-color: $input-background-color;
+							color: $input-text-color;
 						}
 
 						&[type=checkbox] {
@@ -244,33 +249,42 @@
 							height: 22px;
 							margin: 1px 8px 0px 0px;
 							padding: 0px;
-							border: 1.5px solid #D1D1D1;
+							border: 1.5px solid $secondary-border-color;
 							cursor: pointer;
 
-							&[type=checkbox]:checked {
-								background-color: #6A983C;
-								border-color: #46760A;
+							&:checked {
+								background-color: $primary-color;
+								border-color: $primary-border-color;
+							}
+							&:focus {
+								box-shadow: 0 0 0 4px $primary-box-shadow-color;
 							}
 						}
 
 						&::placeholder {
-							color: #A9A9A9;
+							color: $input-placeholder-color;
+						}
+						&:focus {
+							box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 						}
 					}
 
 					textarea {
 						padding: 11px 20px;
-						border-radius: 12px;
-						border: 1px solid #D1D1D1;
+						border-radius: $default-border-radius;
+						border: 1px solid $secondary-border-color;
 						resize: none;
-						background-color: #F9F9F9;
-						color: #A9A9A9;
-						font-family: 'OpenSans';
+						background-color: $input-background-color;
+						color: $input-text-color;
+						font-family: $secondary-english-font;
 						font-weight: 400;
 						font-size: 14px;
 
 						&::placeholder {
-							color: #A9A9A9;
+							color: $input-placeholder-color;
+						}
+						&:focus {
+							box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 						}
 					}
 
@@ -278,13 +292,13 @@
 						margin: 0px;
 						padding: 8px 16px;
 						display: inline-block;
-						border-radius: 12px;
-						border: 1px solid #D1D1D1;
-						background-color: #F9F9F9;
+						border-radius: $default-border-radius;
+						border: 1px solid $secondary-border-color;
+						background-color: $input-background-color;
 
 						label {
 							display: inline;
-							font-family: 'OpenSans';
+							font-family: $secondary-english-font;
 							font-weight: 400;
 							font-size: 14px;
 							cursor: pointer;
@@ -300,13 +314,17 @@
 					.send-button {
 						padding: 12px 48px;
 						display: inline-block;
-						border-radius: 12px;
-						border: 2px solid #46760A;
-						background-color: #6A983C;
-						color: #FFF;
-						font-family: 'Poppins';
+						border-radius: $default-border-radius;
+						border: 2px solid $primary-border-color;
+						background-color: $primary-color;
+						color: $light-color;
+						font-family: $primary-english-font;
 						font-weight: 700;
 						font-size: 15px;
+
+						&:focus {
+							box-shadow: 0 0 0 4px $primary-box-shadow-color;
+						}
 					}
 				}
 			}
@@ -315,8 +333,8 @@
 		.comments {
 			.heading {
 				margin-bottom: 16px;
-				color: #151515;
-				font-family: 'Poppins';
+				color: $dark-color;
+				font-family: $primary-english-font;
 				font-weight: 600;
 				font-size: 22px;
 			}
@@ -337,7 +355,7 @@
 		.header {
 			.heading,
 			.date {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 		}
 
@@ -346,7 +364,7 @@
 				.ingredients,
 				.execution {
 					.heading {
-						font-family: 'NotoSansArabic';
+						font-family: $primary-arabic-font;
 					}
 
 					.groups {
@@ -355,12 +373,12 @@
 								.accordion-item {
 									.accordion-header {
 										.accordion-button {
-											font-family: 'NotoSansArabic';
+											font-family: $primary-arabic-font;
 										}
 									}
 
 									.accordion-body {
-										font-family: 'Cairo';
+										font-family: $secondary-arabic-font;
 
 										.form-check {
 											input {
@@ -369,7 +387,7 @@
 											}
 
 											label {
-												font-family: 'Cairo';
+												font-family: $secondary-arabic-font;
 											}
 										}
 									}
@@ -401,21 +419,21 @@
 
 			.reply {
 				.heading {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 
 				.subheading {
-					font-family: 'Cairo';
+					font-family: $secondary-arabic-font;
 				}
 
 				form {
 					.form-group {
 						label {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 						}
 
 						input {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 
 							&[type=checkbox] {
 								margin: 1px 0px 0px 8px;
@@ -424,19 +442,19 @@
 						}
 
 						textarea {
-							font-family: 'Cairo';
+							font-family: $secondary-arabic-font;
 						}
 
 						.form-check {
 							label {
-								font-family: 'Cairo';
+								font-family: $secondary-arabic-font;
 							}
 						}
 					}
 
 					.buttons {
 						.send-button {
-							font-family: 'NotoSansArabic';
+							font-family: $primary-arabic-font;
 						}
 					}
 				}
@@ -444,7 +462,7 @@
 
 			.comments {
 				.heading {
-					font-family: 'NotoSansArabic';
+					font-family: $primary-arabic-font;
 				}
 			}
 		}

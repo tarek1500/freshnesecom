@@ -4,8 +4,12 @@
 			<div class="chat">
 				<a (click)="openChatWindow($event)">{{ 'translate.components.header.chat' | translate }}</a>
 			</div>
-			<div class="phone">+420 336 775 664</div>
-			<div class="email">info@freshnesecom.com</div>
+			<div class="phone">
+				<a href="tel:+420 336 775 664">+420 336 775 664</a>
+			</div>
+			<div class="email">
+				<a href="mailto:info@freshnesecom.com">info@freshnesecom.com</a>
+			</div>
 			<div class="language">
 				<div ngbDropdown class="d-inline-block">
 					<button ngbDropdownToggle class="btn dropdown-button">{{ selectedLanguage.name }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
@@ -37,7 +41,9 @@
 			</ng-scrollbar>
 		</div>
 		<div class="col-3 brand">
-			<img class="brand-image" src="../../../assets/images/brand.svg" alt="">
+			<a routerLink="/">
+				<img class="brand-image" src="../../../assets/images/brand.svg" alt="">
+			</a>
 		</div>
 		<div class="col-6 search">
 			<app-category-search-input-group [categories]="categories" (onSearch)="onCategorySearch($event)"></app-category-search-input-group>

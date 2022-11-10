@@ -1,49 +1,58 @@
+@import '../../../variables';
+
 .input-group {
 	.input-group-prepend {
 		input {
 			padding: 9px 20px;
-			border-radius: 12px 0px 0px 12px;
-			border: 1px solid #D1D1D1;
+			border-radius: $default-border-radius 0px 0px $default-border-radius;
+			border: 1px solid $secondary-border-color;
 			border-right: none;
-			background-color: #F9F9F9;
-			color: #A9A9A9;
-			font-family: 'OpenSans';
+			background-color: $input-background-color;
+			color: $input-text-color;
+			font-family: $secondary-english-font;
 			font-weight: 400;
 			font-size: 14px;
 
 			&::placeholder {
-				color: #A9A9A9;
+				color: $input-placeholder-color;
+			}
+			&:focus {
+				box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 			}
 		}
 	}
 
 	button {
 		padding: 8px 16px;
-		border-radius: 0px 12px 12px 0px !important;
-		border: 1px solid #D1D1D1;
+		border-radius: 0px $default-border-radius $default-border-radius 0px !important;
+		border: 1px solid $secondary-border-color;
 		border-left: none;
-		background-color: #F9F9F9;
-		color: #151515;
-		font-family: 'Poppins';
+		background-color: $input-background-color;
+		color: $dark-color;
+		font-family: $primary-english-font;
 		font-weight: 700;
 		font-size: 15px;
+
+		&:focus {
+			box-shadow: 0 0 0 4px $secondary-box-shadow-color;
+		}
 	}
 
 	&.rtl {
 		.input-group-prepend {
 			input {
-				border-radius: 0px 12px 12px 0px;
-				border: 1px solid #D1D1D1;
+				border-radius: 0px $default-border-radius $default-border-radius 0px;
+				border: 1px solid $secondary-border-color;
 				border-left: none;
-				font-family: 'Cairo';
+				font-family: $secondary-arabic-font;
 			}
 		}
 
 		button {
-			border-radius: 12px 0px 0px 12px !important;
-			border: 1px solid #D1D1D1;
+			border-radius: $default-border-radius 0px 0px $default-border-radius !important;
+			border: 1px solid $secondary-border-color;
 			border-right: none;
-			font-family: 'NotoSansArabic';
+			font-family: $primary-arabic-font;
 		}
 	}
 }

@@ -1,19 +1,24 @@
+@import '../../../variables';
+
 .input-group {
 	position: relative;
 
 	.dropdown-button {
 		padding: 11px 24px 11px 16px;
-		border-radius: 12px 0px 0px 12px;
-		border: 1px solid #D1D1D1;
+		border-radius: $default-border-radius 0px 0px $default-border-radius;
+		border: 1px solid $secondary-border-color;
 		border-right: none;
-		background-color: #F9F9F9;
-		color: #151515;
-		font-family: 'Poppins';
+		background-color: $input-background-color;
+		color: $dark-color;
+		font-family: $primary-english-font;
 		font-weight: 700;
 		font-size: 15px;
 
 		&::after {
 			display: none;
+		}
+		&:focus {
+			box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 		}
 
 		@media (max-width: 575.98px) {
@@ -31,15 +36,23 @@
 	}
 
 	.dropdown-menu {
-		background-color: #F9F9F9;
+		background-color: $input-background-color;
 
 		.dropdown-item {
-			font-family: 'Poppins';
+			color: $dark-color;
+			font-family: $primary-english-font;
 			font-weight: 400;
 			font-size: 15px;
 
 			@media (max-width: 575.98px) {
 				font-size: 12px;
+			}
+
+			&:hover,
+			&:focus
+			&.active,
+			&:active {
+				background-color: $dropdown-item-background-color;
 			}
 		}
 	}
@@ -47,23 +60,26 @@
 	.vertical-splitter {
 		width: 1px;
 		margin: 11px 0px;
-		background-color: #D1D1D1;
+		background-color: $secondary-border-color;
 		z-index: 4;
 	}
 
 	input {
 		padding: 12px 44px 12px 24px;
-		border-radius: 0px 12px 12px 0px !important;
-		border: 1px solid #D1D1D1;
+		border-radius: 0px $default-border-radius $default-border-radius 0px !important;
+		border: 1px solid $secondary-border-color;
 		border-left: none;
-		background-color: #F9F9F9;
-		color: #A9A9A9;
-		font-family: 'OpenSans';
+		background-color: $input-background-color;
+		color: $input-text-color;
+		font-family: $secondary-english-font;
 		font-weight: 400;
 		font-size: 14px;
 
 		&::placeholder {
-			color: #A9A9A9;
+			color: $input-placeholder-color;
+		}
+		&:focus {
+			box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 		}
 
 		@media (max-width: 575.98px) {
@@ -86,10 +102,10 @@
 	&.rtl {
 		.dropdown-button {
 			padding: 11px 16px 11px 24px;
-			border-radius: 0px 12px 12px 0px;
+			border-radius: 0px $default-border-radius $default-border-radius 0px;
+			border: 1px solid $secondary-border-color;
 			border-left: none;
-			border-right: 1px solid #D1D1D1;
-			font-family: 'NotoSansArabic';
+			font-family: $primary-arabic-font;
 
 			@media (max-width: 575.98px) {
 				padding: 8px 13px 8px 21px;
@@ -109,16 +125,16 @@
 			right: 0px !important;
 
 			.dropdown-item {
-				font-family: 'NotoSansArabic';
+				font-family: $primary-arabic-font;
 			}
 		}
 
 		input {
 			padding: 12px 24px 12px 44px;
-			border-radius: 12px 0px 0px 12px !important;
-			border-left: 1px solid #D1D1D1;
+			border-radius: $default-border-radius 0px 0px $default-border-radius !important;
+			border: 1px solid $secondary-border-color;
 			border-right: none;
-			font-family: 'Cairo';
+			font-family: $secondary-arabic-font;
 
 			@media (max-width: 575.98px) {
 				padding: 9px 21px 9px 41px;
@@ -126,8 +142,8 @@
 		}
 
 		.search-icon {
-			left: 16px;
 			right: initial;
+			left: 16px;
 			transform: translateY(-50%) scaleX(-1);
 		}
 	}

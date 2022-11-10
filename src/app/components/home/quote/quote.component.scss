@@ -1,22 +1,24 @@
+@import '../../../../variables';
+
 .container {
 	position: relative;
 	padding: 24px 32px 40px 32px;
-	border-radius: 12px;
-	border: 1px solid #F1F1F1;
+	border-radius: $default-border-radius;
+	border: 1px solid $secondary-border-color;
 
 	.quote {
 		margin-bottom: 24px;
 		text-align: center;
-		color: #151515;
-		font-family: 'Poppins';
+		color: $dark-color;
+		font-family: $primary-english-font;
 		font-weight: 500;
 		font-size: 15px;
 	}
 
 	.author {
 		text-align: center;
-		color: #A9A9A9;
-		font-family: 'Poppins';
+		color: $input-text-color;
+		font-family: $primary-english-font;
 		font-weight: 600;
 		font-size: 12px;
 	}
@@ -27,21 +29,21 @@
 		left: 50%;
 		width: 48px;
 		height: 48px;
-		border-radius: 50%;
-		background-color: #F5F5F5;
+		border-radius: $circle-border-radius;
+		background-color: $image-background-color;
 		transform: translateX(-50%);
 
 		img {
 			width: 100%;
 			height: auto;
-			border-radius: 50%;
+			border-radius: $circle-border-radius;
 		}
 	}
 
 	&.rtl {
 		.quote,
 		.author {
-			font-family: 'NotoSansArabic';
+			font-family: $primary-arabic-font;
 		}
 	}
 }
