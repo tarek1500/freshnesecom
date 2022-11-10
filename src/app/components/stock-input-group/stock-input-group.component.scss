@@ -50,8 +50,18 @@
 			box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 		}
 
+		.selected-item {
+			max-width: 60px;
+			display: inline-block;
+			vertical-align: top;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
 		.down-arrow-icon {
 			margin-left: 4px;
+			display: inline-block;
 		}
 	}
 

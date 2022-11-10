@@ -118,7 +118,7 @@
 
 		.dropdown-menu {
 			text-align: right;
-			right: 0px !important;
+			inset: 0px 0px auto auto !important;
 
 			.dropdown-item {
 				font-family: $primary-arabic-font;
