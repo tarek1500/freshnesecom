@@ -4,16 +4,16 @@
 		<button class="btn close-button" (click)="close($event)">{{ 'translate.components.cart.close' | translate }} <img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""></button>
 	</div>
 
-	<ng-scrollbar [autoHeightDisabled]="false" [position]="rtl ? 'invertY' : 'native'">
-		<div class="products" *ngIf="cart.products.length > 0; else noProducts">
+	<ng-scrollbar [autoHeightDisabled]="false" [position]="rtl ? 'invertY' : 'native'" *ngIf="cart.products.length > 0; else noProducts">
+		<div class="products">
 			<div class="product" *ngFor="let product of cart.products">
 				<app-product-tiny [product]="product"></app-product-tiny>
 			</div>
 		</div>
-		<ng-template #noProducts>
-			<div class="no-products">{{ 'translate.components.cart.noProducts' | translate }}</div>
-		</ng-template>
 	</ng-scrollbar>
+	<ng-template #noProducts>
+		<div class="no-products">{{ 'translate.components.cart.noProducts' | translate }}</div>
+	</ng-template>
 
 	<div class="subtotal">
 		<h3 class="heading">{{ 'translate.components.cart.subtotal' | translate }}</h3>

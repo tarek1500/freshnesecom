@@ -42,8 +42,7 @@
 	ng-scrollbar {
 		margin-bottom: 16px;
 
-		.products,
-		.no-products {
+		.products {
 			padding: 0px 24px 0px 16px;
 		}
 
@@ -63,14 +62,16 @@
 				}
 			}
 		}
+	}
 
-		.no-products {
-			min-height: 40px;
-			color: $input-text-color;
-			font-family: $primary-english-font;
-			font-weight: 500;
-			font-size: 22px;
-		}
+	.no-products {
+		min-height: 40px;
+		margin-bottom: 16px;
+		padding: 0px 24px 0px 16px;
+		color: $input-text-color;
+		font-family: $primary-english-font;
+		font-weight: 500;
+		font-size: 22px;
 	}
 
 	.subtotal {
@@ -147,15 +148,16 @@
 		}
 
 		ng-scrollbar {
-			.products,
-			.no-products {
+			.products {
 				padding: 0px 16px 0px 24px;
 				direction: rtl;
 			}
+		}
 
-			.no-products {
-				font-family: $primary-arabic-font;
-			}
+		.no-products {
+			padding: 0px 16px 0px 24px;
+			font-family: $primary-arabic-font;
+			direction: rtl;
 		}
 
 		.subtotal {
