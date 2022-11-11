@@ -46,6 +46,14 @@
 						}
 					}
 
+					::ng-deep {
+						.tooltip {
+							.tooltip-inner {
+								font-family: $secondary-english-font;
+							}
+						}
+					}
+
 					a {
 						text-decoration: none;
 						color: $table-text-color;
@@ -71,6 +79,14 @@
 					td {
 						.address {
 							font-family: $secondary-arabic-font;
+						}
+
+						::ng-deep {
+							.tooltip {
+								.tooltip-inner {
+									font-family: $secondary-arabic-font;
+								}
+							}
 						}
 					}
 				}

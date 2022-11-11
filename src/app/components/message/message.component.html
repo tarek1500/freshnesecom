@@ -4,6 +4,6 @@
 	</div>
 	<div class="message">
 		<div class="content">{{ message.content }}</div>
-		<button class="btn date" placement="top" ngbTooltip="{{ message.date.toLocaleString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }) }}">{{ moment(message.date).fromNow() }}</button>
+		<button class="btn date" [placement]="(rtl && fromOther) || (!rtl && !fromOther) ? 'right' : 'left'" ngbTooltip="{{ message.date.toLocaleString(language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }) }}">{{ moment(message.date).fromNow() }}</button>
 	</div>
 </div>

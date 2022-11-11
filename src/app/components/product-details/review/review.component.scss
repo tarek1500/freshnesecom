@@ -47,7 +47,7 @@
 			}
 
 			.date {
-				padding: 0px;
+				padding: 6px 0px;
 				display: block;
 				border: none;
 				color: $input-text-color;
@@ -57,6 +57,14 @@
 
 				&:focus {
 					box-shadow: none;
+				}
+			}
+
+			::ng-deep {
+				.tooltip {
+					.tooltip-inner {
+						font-family: $secondary-english-font;
+					}
 				}
 			}
 		}
@@ -79,6 +87,14 @@
 
 				.date {
 					font-family: $secondary-arabic-font;
+				}
+
+				::ng-deep {
+					.tooltip {
+						.tooltip-inner {
+							font-family: $secondary-arabic-font;
+						}
+					}
 				}
 			}
 		}

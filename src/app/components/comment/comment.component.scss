@@ -19,7 +19,7 @@
 				position: relative;
 				width: 40px;
 				height: 40px;
-				margin-right: 12px;
+				margin: auto 12px auto 0px;
 				border-radius: $circle-border-radius;
 				background-color: $image-background-color;
 
@@ -60,7 +60,7 @@
 				}
 
 				.date {
-					padding: 0px;
+					padding: 6px 0px;
 					display: block;
 					border: none;
 					color: $input-text-color;
@@ -70,6 +70,14 @@
 
 					&:focus {
 						box-shadow: none;
+					}
+				}
+
+				::ng-deep {
+					.tooltip {
+						.tooltip-inner {
+							font-family: $secondary-english-font;
+						}
 					}
 				}
 			}
@@ -100,7 +108,7 @@
 		.container {
 			.header {
 				.avatar-image {
-					margin: 0px 0px 0px 12px;
+					margin: auto 0px auto 12px;
 				}
 
 				.info {
@@ -111,6 +119,14 @@
 
 					.date {
 						font-family: $secondary-arabic-font;
+					}
+
+					::ng-deep {
+						.tooltip {
+							.tooltip-inner {
+								font-family: $secondary-arabic-font;
+							}
+						}
 					}
 				}
 			}

@@ -75,6 +75,14 @@
 					box-shadow: none;
 				}
 			}
+
+			::ng-deep {
+				.tooltip {
+					.tooltip-inner {
+						font-family: $secondary-english-font;
+					}
+				}
+			}
 		}
 	}
 
@@ -88,6 +96,14 @@
 			.value {
 				.address {
 					font-family: $secondary-arabic-font;
+				}
+
+				::ng-deep {
+					.tooltip {
+						.tooltip-inner {
+							font-family: $secondary-arabic-font;
+						}
+					}
 				}
 			}
 		}
