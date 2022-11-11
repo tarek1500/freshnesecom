@@ -36,9 +36,7 @@
 
 	<div class="row content">
 		<div class="cart" [ngClass]="{ 'visible': isCartVisible }">
-			<ng-scrollbar style="height: 780px;" [position]="rtl ? 'invertY' : 'native'">
-				<app-cart [cart]="cart" (onClose)="onCartClosed()"></app-cart>
-			</ng-scrollbar>
+			<app-cart [cart]="cart" (onClose)="onCartClosed()"></app-cart>
 		</div>
 		<div class="col-3 brand">
 			<a routerLink="/">

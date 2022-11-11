@@ -1,11 +1,13 @@
 @import '../../../variables';
 
 .container {
-	padding: 24px 24px 16px 16px;
+	padding: 16px 0px;
 	border-radius: $default-border-radius;
 	background-color: $page-background-color;
 
 	.header {
+		margin-bottom: 24px;
+		padding: 0px 16px;
 		display: flex;
 		justify-content: space-between;
 
@@ -19,6 +21,7 @@
 
 		.close-button {
 			margin: auto 0px;
+			padding: 0px;
 			color: $input-text-color;
 			font-family: $secondary-english-font;
 			font-weight: 400;
@@ -36,17 +39,43 @@
 		}
 	}
 
-	.products {
-		margin-bottom: 40px;
+	ng-scrollbar {
+		margin-bottom: 16px;
 
-		.product {
-			padding: 32px 0px 16px 0px;
-			border-bottom: 1px solid $input-background-color;
+		.products,
+		.no-products {
+			padding: 0px 24px 0px 16px;
+		}
+
+		.products {
+			max-height: $cart-products-max-height;
+
+			.product {
+				padding: 32px 0px 16px 0px;
+				border-bottom: 1px solid $input-background-color;
+
+				&:first-of-type {
+					padding-top: 0px;
+				}
+				&:last-of-type {
+					padding-bottom: 0px;
+					border-bottom: none;
+				}
+			}
+		}
+
+		.no-products {
+			min-height: 40px;
+			color: $input-text-color;
+			font-family: $primary-english-font;
+			font-weight: 500;
+			font-size: 22px;
 		}
 	}
 
 	.subtotal {
 		margin-bottom: 24px;
+		padding: 0px 16px;
 
 		.heading {
 			margin-bottom: 8px;
@@ -65,7 +94,7 @@
 	}
 
 	.footer {
-		padding: 16px 0px;
+		padding: 16px 16px 0px;
 		display: flex;
 		border-top: 1px solid $secondary-border-color;
 		justify-content: space-between;
@@ -101,7 +130,6 @@
 	}
 
 	&.rtl {
-		padding: 24px 16px 16px 24px;
 		direction: rtl;
 
 		.header {
@@ -115,6 +143,18 @@
 				.close-icon {
 					margin: 0px 4px 0px 0px;
 				}
+			}
+		}
+
+		ng-scrollbar {
+			.products,
+			.no-products {
+				padding: 0px 16px 0px 24px;
+				direction: rtl;
+			}
+
+			.no-products {
+				font-family: $primary-arabic-font;
 			}
 		}
 

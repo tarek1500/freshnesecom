@@ -115,12 +115,11 @@
 		.cart {
 			position: absolute;
 			right: 50px;
-			max-width: 400px;
-			max-height: 780px;
+			max-width: $cart-max-width;
+			max-height: $cart-max-height;
 			padding: 0px;
 			border-radius: $default-border-radius;
 			box-shadow: 0px 2px 32px $primary-shadow;
-			overflow: hidden;
 			opacity: 0;
 			z-index: -1;
 			transition: all 0.2s ease-out;

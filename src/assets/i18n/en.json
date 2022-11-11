@@ -32,6 +32,7 @@
 			"cart": {
 				"shoppingCart": "Shopping cart",
 				"close": "Close",
+				"noProducts": "No products in cart",
 				"subtotal": "Subtotal",
 				"continue": "Continue shopping",
 				"checkout": "Go to checkout"
