@@ -22,8 +22,11 @@
 			<input class="form-control" name="phone" id="phone" type="text" placeholder="{{ 'translate.pages.profile.infoSection.phone' | translate }}" [(ngModel)]="user.phone">
 		</div>
 		<div class="col-12 form-group">
-			<label class="form-label" for="avatar-image">{{ 'translate.pages.profile.infoSection.avatar' | translate }}</label>
-			<input class="form-control" type="file" id="avatar-image">
+			<label class="form-label" for="avatar-image">{{ 'translate.pages.register.avatar' | translate }}</label>
+			<div class="input-group custom-file-button">
+				<label class="input-group-text" for="avatar-image">{{ 'translate.pages.profile.infoSection.chooseImage' | translate }}</label>
+				<input class="form-control" type="file" id="avatar-image" accept="image/*">
+			</div>
 		</div>
 		<div class="col-12 form-group">
 			<button class="btn update-button">{{ 'translate.pages.profile.infoSection.update' | translate }}</button>

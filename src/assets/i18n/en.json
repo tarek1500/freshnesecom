@@ -310,6 +310,7 @@
 					"password": "Password",
 					"phone": "Phone number",
 					"avatar": "Avatar image",
+					"chooseImage": "Choose image",
 					"update": "Update"
 				},
 				"addressesSection": {
@@ -391,6 +392,7 @@
 				"password": "Password",
 				"phone": "Phone number",
 				"avatar": "Avatar image",
+				"chooseImage": "Choose image",
 				"registering": "Register"
 			},
 			"returnPolicy": {

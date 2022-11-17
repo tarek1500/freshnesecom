@@ -54,18 +54,18 @@ form {
 
 			&[type=text],
 			&[type=email],
-			&[type=password] {
+			&[type=password],
+			&[type=file] {
 				padding: 11px 20px;
+				border: 1px solid $secondary-border-color;
+				background-color: $input-background-color;
+				color: $input-text-color;
 			}
 
 			&[type=text],
 			&[type=email],
-			&[type=password],
-			&[type=file] {
+			&[type=password] {
 				border-radius: $default-border-radius;
-				border: 1px solid $secondary-border-color;
-				background-color: $input-background-color;
-				color: $input-text-color;
 			}
 
 			&[name=email],
@@ -73,11 +73,36 @@ form {
 				direction: ltr;
 			}
 
+			&[type=file] {
+				border-radius: 0px $default-border-radius $default-border-radius 0px;
+
+				&::-webkit-file-upload-button,
+				&::file-selector-button {
+					display: none;
+				}
+			}
+
 			&::placeholder {
 				color: $input-placeholder-color;
 			}
 			&:focus {
 				box-shadow: 0 0 0 4px $secondary-box-shadow-color;
+			}
+		}
+
+		.custom-file-button {
+			&:hover {
+				.input-group-text {
+					background-color: $custom-file-hover-background-color;
+					cursor: pointer;
+				}
+			}
+
+			.input-group-text {
+				border-radius: $default-border-radius 0px 0px $default-border-radius;
+				font-family: $secondary-english-font;
+				font-weight: 400;
+				font-size: 14px;
 			}
 		}
 
@@ -112,6 +137,18 @@ form {
 					&::placeholder {
 						text-align: right;
 					}
+				}
+
+				&[type=file] {
+					margin: 0px -1px 0px 0px !important;
+					border-radius: $default-border-radius 0px 0px $default-border-radius !important;
+				}
+			}
+
+			.custom-file-button {
+				.input-group-text {
+					border-radius: 0px $default-border-radius $default-border-radius 0px;
+					font-family: $secondary-arabic-font;
 				}
 			}
 		}

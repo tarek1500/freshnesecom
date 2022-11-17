@@ -310,6 +310,7 @@
 					"password": "كلمة المرور",
 					"phone": "رقم الهاتف",
 					"avatar": "الصورة الرمزية",
+					"chooseImage": "اختر صورة",
 					"update": "تحديث"
 				},
 				"addressesSection": {
@@ -391,6 +392,7 @@
 				"password": "كلمة المرور",
 				"phone": "رقم الهاتف",
 				"avatar": "الصورة الرمزية",
+				"chooseImage": "اختر صورة",
 				"registering": "تسجيل"
 			},
 			"returnPolicy": {
