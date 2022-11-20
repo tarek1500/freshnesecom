@@ -5,6 +5,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+import { NgScrollbarReachedModule } from 'ngx-scrollbar/reached-event';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +35,7 @@ import { MessageComponent } from './components/message/message.component';
 			}
 		}),
 		NgScrollbarModule,
+		NgScrollbarReachedModule,
 		NgbModule,
 		TextInputGroupModule
 	],

@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { NgScrollbar } from 'ngx-scrollbar';
 import { Subscription } from 'rxjs';
 
 import { LanguageService } from '../../services/language/language.service';
@@ -10,9 +11,14 @@ import { Message } from '../../interfaces/message.interface';
 	templateUrl: './chat.component.html',
 	styleUrls: ['./chat.component.scss']
 })
-export class ChatComponent implements OnInit, OnDestroy {
+export class ChatComponent implements OnInit, AfterViewInit, OnDestroy {
+	@ViewChild(NgScrollbar) scrollbar!: NgScrollbar;
+	@ViewChild('content') content!: ElementRef<HTMLDivElement>;
+	@ViewChildren('messagesList') messagesList!: QueryList<HTMLDivElement>;
 	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
+	reachedBottomOffset: number = 40;
+	isReachedBottom: boolean = false;
 	isChatVisible: boolean = false;
 	isTyping: boolean = true;
 	messages!: Message[];
@@ -32,6 +38,27 @@ export class ChatComponent implements OnInit, OnDestroy {
 
 		subscription = this.chatService.chatSubject$.subscribe(chat => {
 			this.isChatVisible = chat;
+		});
+		this.subscriptions.push(subscription);
+	}
+
+	ngAfterViewInit() {
+		let subscription = this.scrollbar.scrolled.subscribe(event => {
+			let scrollViewport = event.target as HTMLDivElement;
+
+			if (scrollViewport.scrollHeight - scrollViewport.scrollTop >= this.content.nativeElement.offsetHeight + this.reachedBottomOffset) {
+				this.isReachedBottom = false;
+			}
+			else {
+				this.isReachedBottom = true;
+			}
+		});
+		this.subscriptions.push(subscription);
+
+		subscription = this.messagesList.changes.subscribe(event => {
+			if (this.isReachedBottom) {
+				this.scrollbar.scrollTo({ bottom: 0 });
+			}
 		});
 		this.subscriptions.push(subscription);
 	}
