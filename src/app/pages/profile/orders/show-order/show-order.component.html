@@ -1,6 +1,11 @@
 <div class="header" [ngClass]="{ 'rtl': rtl }">
 	<h3 class="heading">{{ 'translate.pages.profile.ordersSection.show.details' | translate }}</h3>
-	<a class="btn back-button" routerLink="/profile/orders"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> {{ 'translate.pages.profile.ordersSection.show.back' | translate }}</a>
+	<a class="btn back-button" routerLink="/profile/orders">
+		{{ 'translate.pages.profile.ordersSection.show.back' | translate }}
+		<svg width="12" height="15" class="back-icon">
+			<use xlink:href="../../../assets/icons/back.svg#back"></use>
+		</svg>
+	</a>
 </div>
 
 <div class="details" [ngClass]="{ 'rtl': rtl }">

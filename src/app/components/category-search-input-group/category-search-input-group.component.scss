@@ -35,9 +35,10 @@
 			overflow: hidden;
 		}
 
-		.down-arrow-icon {
+		.arrow-icon {
 			margin-left: 8px;
 			display: inline-block;
+			--color: #{$primary-color};
 
 			@media (max-width: 575.98px) {
 				margin-left: 4px;
@@ -102,11 +103,10 @@
 		position: absolute;
 		top: 50%;
 		right: 16px;
-		width: 16px;
-		height: 16px;
 		transform: translateY(-50%);
 		cursor: pointer;
 		z-index: 4;
+		--color: #{$dark-color};
 	}
 
 	&.rtl {
@@ -121,7 +121,7 @@
 				padding: 8px 13px 8px 21px;
 			}
 
-			.down-arrow-icon {
+			.arrow-icon {
 				margin: 0px 8px 0px 0px;
 
 				@media (max-width: 575.98px) {

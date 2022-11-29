@@ -68,8 +68,9 @@
 			box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 		}
 
-		.down-arrow-icon {
+		.arrow-icon {
 			margin-left: 4px;
+			--color: #{$dark-color};
 		}
 	}
 
@@ -111,7 +112,7 @@
 		}
 
 		.dropdown-button {
-			.down-arrow-icon {
+			.arrow-icon {
 				margin: 0px 4px 0px 0px;
 			}
 		}

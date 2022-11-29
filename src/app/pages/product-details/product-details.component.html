@@ -78,12 +78,27 @@
 						<div class="quantity">
 							<app-stock-input-group [availablePacks]="product.availablePacks" [(quantity)]="product.selectedQuantity" [large]="true"></app-stock-input-group>
 						</div>
-						<button class="btn add-button"><img class="plus-icon" src="../../../assets/icons/plus.svg" alt=""> {{ 'translate.pages.productDetails.addToCart' | translate }}</button>
+						<button class="btn add-button">
+							<svg width="14" height="14" class="plus-icon">
+								<use xlink:href="../../../assets/icons/plus.svg#plus"></use>
+							</svg>
+							{{ 'translate.pages.productDetails.addToCart' | translate }}
+						</button>
 					</div>
 				</div>
 				<div class="options">
-					<div class="wishlist"><img class="heart-icon" src="../../../assets/icons/heart-orange.svg" alt=""> {{ 'translate.pages.productDetails.addToWishlist' | translate }}</div>
-					<div class="compare"><img class="compare-icon" src="../../../assets/icons/compare.svg" alt=""> {{ 'translate.pages.productDetails.compare' | translate }}</div>
+					<div class="wishlist">
+						<svg width="17" height="17" class="heart-icon">
+							<use xlink:href="../../../assets/icons/heart.svg#heart"></use>
+						</svg>
+						{{ 'translate.pages.productDetails.addToWishlist' | translate }}
+					</div>
+					<div class="compare">
+						<svg width="17" height="17" class="compare-icon">
+							<use xlink:href="../../../assets/icons/compare.svg#compare"></use>
+						</svg>
+						{{ 'translate.pages.productDetails.compare' | translate }}
+					</div>
 				</div>
 				<div class="info" #info>
 					<nav ngbNav #infoNav="ngbNav" class="nav-tabs">

@@ -1,7 +1,9 @@
 <div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div class="chat" [ngClass]="{ 'visible': isChatVisible }">
 		<div class="header">
-			<img class="close-icon" src="../../../assets/icons/close-black.svg" alt="" (click)="isChatVisible = false">
+			<svg width="14" height="14" class="close-icon" (click)="isChatVisible = false">
+				<use xlink:href="../../../assets/icons/close.svg#close"></use>
+			</svg>
 		</div>
 		<ng-scrollbar [autoHeightDisabled]="false" [position]="rtl ? 'invertY' : 'native'">
 			<div class="content" #content>
@@ -22,6 +24,8 @@
 		</div>
 	</div>
 	<div class="icon" (click)="isChatVisible = !isChatVisible">
-		<img class="chat-icon" src="../../../assets/icons/chat.svg" alt="">
+		<svg width="40" height="40" class="chat-icon">
+			<use xlink:href="../../../assets/icons/chat.svg#chat"></use>
+		</svg>
 	</div>
 </div>

@@ -49,7 +49,10 @@
 		<div class="contacts">
 			<div class="row contacts-row">
 				<div class="col-lg-4 col-sm-5 contact" [ngClass]="contact.class" *ngFor="let contact of about.contactsInfo">
-					<img class="contact-icon" src="{{ contact.icon }}" alt=""><span class="contact-info">{{ contact.info }}</span>
+					<svg width="24" height="24" class="contact-icon">
+						<use [attr.xlink:href]="contact.icon"></use>
+					</svg>
+					<span class="contact-info">{{ contact.info }}</span>
 				</div>
 			</div>
 		</div>

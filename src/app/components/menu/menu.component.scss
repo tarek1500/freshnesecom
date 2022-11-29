@@ -58,9 +58,8 @@
 							box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 						}
 
-						.down-arrow-icon {
-							width: 7px;
-							height: 4.2px;
+						.arrow-icon {
+							--color: #{$primary-color};
 						}
 					}
 

@@ -43,7 +43,12 @@
 						<a [routerLink]="['/tags', tag.slug, 'blogs']">{{ tag.name }}</a>
 					</div>
 				</div>
-				<a class="btn back-button" routerLink="/blogs"><img class="back-icon" src="../../../assets/icons/back.svg" alt=""> {{ 'translate.pages.blogDetails.back' | translate }}</a>
+				<a class="btn back-button" routerLink="/blogs">
+					<svg width="12" height="15" class="back-icon">
+						<use xlink:href="../../../assets/icons/back.svg#back"></use>
+					</svg>
+					{{ 'translate.pages.blogDetails.back' | translate }}
+				</a>
 			</div>
 			<div class="col-xl-6 col-lg-8 col-md-8">
 				<div [innerHtml]="blog.content"></div>

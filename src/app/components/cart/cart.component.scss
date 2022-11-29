@@ -22,19 +22,13 @@
 		.close-button {
 			margin: auto 0px;
 			padding: 0px;
-			color: $input-text-color;
-			font-family: $secondary-english-font;
-			font-weight: 400;
-			font-size: 12px;
 
 			&:focus {
 				box-shadow: none;
 			}
 
 			.close-icon {
-				width: 16px;
-				height: 16px;
-				margin-left: 4px;
+				--color: #{$close-icon-dark-color};
 			}
 		}
 	}
@@ -135,14 +129,6 @@
 		.header {
 			.heading {
 				font-family: $primary-arabic-font;
-			}
-
-			.close-button {
-				font-family: $secondary-arabic-font;
-
-				.close-icon {
-					margin: 0px 4px 0px 0px;
-				}
 			}
 		}
 

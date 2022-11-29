@@ -130,6 +130,10 @@
 					&:focus {
 						box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 					}
+
+					.heart-icon {
+						--color: #{$dark-color};
+					}
 				}
 			}
 		}

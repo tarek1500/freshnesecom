@@ -364,6 +364,11 @@
 				.safe {
 					.icon {
 						margin-bottom: 10px;
+
+						.safe-icon {
+							--shield-color: #{$dark-color};
+							--mark-color: #{$primary-color};
+						}
 					}
 
 					.heading {

@@ -38,10 +38,9 @@
 			border-bottom: 2px solid $primary-border-color;
 			background-color: $primary-color;
 
-			img {
-				width: 14px;
-				height: 14px;
+			.close-icon {
 				cursor: pointer;
+				--color: #{$close-icon-dark-color};
 			}
 		}
 
@@ -115,12 +114,15 @@
 		position: fixed;
 		bottom: 30px;
 		right: 30px;
-		width: 40px;
-		height: 40px;
 		border-radius: $circle-border-radius;
 		border: 2px solid $primary-border-color;
 		cursor: pointer;
 		z-index: 5;
+
+		.chat-icon {
+			--background-color: #{$primary-color};
+			--color: #{$light-color};
+		}
 	}
 
 	&.rtl {

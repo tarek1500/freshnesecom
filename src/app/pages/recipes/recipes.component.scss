@@ -126,11 +126,9 @@
 					box-shadow: 0 0 0 4px $primary-box-shadow-color;
 				}
 
-				.down-arrow-icon {
-					width: 8px;
-					height: 9px;
+				.arrow-icon {
 					margin-left: 6px;
-					vertical-align: unset;
+					--color: #{$light-color};
 				}
 			}
 		}
@@ -208,9 +206,8 @@
 				.more-button {
 					font-family: $primary-arabic-font;
 
-					.down-arrow-icon {
+					.arrow-icon {
 						margin: 0px 6px 0px 0px;
-						transform: scaleX(-1);
 					}
 				}
 			}

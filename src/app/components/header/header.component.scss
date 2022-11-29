@@ -61,9 +61,8 @@
 						box-shadow: none;
 					}
 
-					.down-arrow-icon {
-						width: 7px;
-						height: 4.2px;
+					.arrow-icon {
+						--color: #{$primary-color};
 					}
 				}
 
@@ -206,10 +205,21 @@
 				}
 			}
 
+			.user {
+				.user-icon {
+					--color: #{$dark-color};
+				}
+			}
+
 			.wishlist {
 				.heart-icon {
-					width: 24px;
-					height: 24px;
+					--color: #{$dark-color};
+				}
+			}
+
+			.basket {
+				.basket-icon {
+					--color: #{$dark-color};
 				}
 			}
 		}

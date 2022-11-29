@@ -47,11 +47,18 @@
 				}
 				&.active {
 					color: $dark-color;
+
+					.grid-icon,
+					.list-icon {
+						--color: #{$primary-color};
+					}
 				}
 
 				.grid-icon,
 				.list-icon {
-					margin: 0px 4px 2px 0px;
+					margin-right: 4px;
+					vertical-align: sub;
+					--color: #{$input-text-color};
 				}
 
 				.count {
@@ -122,12 +129,12 @@
 					font-family: $secondary-arabic-font;
 
 					.grid-icon,
-					.list-icon {
-						margin: 0px 0px 2px 4px;
+					.list-icon,
+					.count {
+						margin: 0px 0px 0px 4px;
 					}
 
 					.count {
-						margin: 0px 0px 0px 4px;
 						font-family: $primary-arabic-font;
 					}
 				}

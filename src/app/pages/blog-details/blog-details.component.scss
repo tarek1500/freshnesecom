@@ -159,7 +159,7 @@
 				}
 
 				.back-icon {
-					margin-right: 6px;
+					--color: #{$dark-color};
 				}
 			}
 
@@ -424,7 +424,6 @@
 					font-family: $primary-arabic-font;
 
 					.back-icon {
-						margin: 0px 0px 0px 6px;
 						transform: scaleX(-1);
 					}
 				}

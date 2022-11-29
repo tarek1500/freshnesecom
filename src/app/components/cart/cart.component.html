@@ -1,7 +1,11 @@
 <div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div class="header">
 		<h2 class="heading">{{ 'translate.components.cart.shoppingCart' | translate }}</h2>
-		<button class="btn close-button" (click)="close($event)">{{ 'translate.components.cart.close' | translate }} <img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""></button>
+		<button class="btn close-button" (click)="close($event)">
+			<svg width="16" height="16" class="close-icon">
+				<use xlink:href="../../../assets/icons/close.svg#close"></use>
+			</svg>
+		</button>
 	</div>
 
 	<ng-scrollbar [autoHeightDisabled]="false" [position]="rtl ? 'invertY' : 'native'" *ngIf="cart.products.length > 0; else noProducts">

@@ -43,9 +43,8 @@
 					margin-bottom: 16px;
 
 					.contact-icon {
-						width: 24px;
-						height: 24px;
 						margin-right: 12px;
+						--color: #{$dark-color};
 					}
 
 					.contact-info {

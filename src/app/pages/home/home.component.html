@@ -8,12 +8,22 @@
 			<div class="link" *ngFor="let category of categories">
 				<a [routerLink]="['/categories', category.slug, 'products']">{{ category.name }}</a>
 			</div>
-			<a class="btn more-button" routerLink="/categories">{{ 'translate.pages.home.moreCategories' | translate }} <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-black.svg" alt=""></a>
+			<a class="btn more-button" routerLink="/categories">
+				{{ 'translate.pages.home.moreCategories' | translate }}
+				<svg width="10" height="7" class="arrow-icon">
+					<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+				</svg>
+			</a>
 		</div>
 		<div class="col-lg-9 banners">
 			<div class="header">
 				<h2 class="heading">{{ 'translate.pages.home.recipes' | translate }}</h2>
-				<a class="btn goto-button" routerLink="/recipes">{{ 'translate.pages.home.goToRecipes' | translate }} <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></a>
+				<a class="btn goto-button" routerLink="/recipes">
+					{{ 'translate.pages.home.goToRecipes' | translate }}
+					<svg width="10" height="7.75" class="arrow-icon">
+						<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+					</svg>
+				</a>
 			</div>
 			<div class="row">
 				<div class="col-md-6 banner" *ngFor="let recipe of recipes">
@@ -29,7 +39,12 @@
 			<div class="link" *ngFor="let category of bestSelling">
 				<a [routerLink]="['/categories', category.slug, 'products']">{{ category.name }}</a>
 			</div>
-			<a class="btn more-button" routerLink="/products">{{ 'translate.pages.home.moreProducts' | translate }} <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-black.svg" alt=""></a>
+			<a class="btn more-button" routerLink="/products">
+				{{ 'translate.pages.home.moreProducts' | translate }}
+				<svg width="10" height="7" class="arrow-icon">
+					<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+				</svg>
+			</a>
 		</div>
 		<div class="col-lg-9 products">
 			<div class="row">
@@ -46,7 +61,12 @@
 			<div class="link" *ngFor="let category of bestFromFarmers">
 				<a [routerLink]="['/categories', category.slug, 'products']">{{ category.name }}</a>
 			</div>
-			<a class="btn more-button" routerLink="/products">{{ 'translate.pages.home.moreProducts' | translate }} <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-black.svg" alt=""></a>
+			<a class="btn more-button" routerLink="/products">
+				{{ 'translate.pages.home.moreProducts' | translate }}
+				<svg width="10" height="7" class="arrow-icon">
+					<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+				</svg>
+			</a>
 		</div>
 		<div class="col-lg-9 products">
 			<div class="row">
@@ -60,7 +80,12 @@
 	<div class="quotes">
 		<div class="header">
 			<h2 class="heading">{{ 'translate.pages.home.ourCustomersSay' | translate }}</h2>
-			<button class="btn goto-button">{{ 'translate.pages.home.button' | translate }} <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></button>
+			<button class="btn goto-button">
+				{{ 'translate.pages.home.button' | translate }}
+				<svg width="10" height="7.75" class="arrow-icon">
+					<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+				</svg>
+			</button>
 		</div>
 		<div class="carousel">
 			<owl-carousel-o [options]="quotesOptions">
@@ -76,7 +101,12 @@
 	<div class="posts">
 		<div class="header">
 			<h2 class="heading">{{ 'translate.pages.home.readOurBlogPosts' | translate }}</h2>
-			<a class="btn goto-button" routerLink="/blogs">{{ 'translate.pages.home.goToBlog' | translate }} <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></a>
+			<a class="btn goto-button" routerLink="/blogs">
+				{{ 'translate.pages.home.goToBlog' | translate }}
+				<svg width="10" height="7.75" class="arrow-icon">
+					<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+				</svg>
+			</a>
 		</div>
 		<div class="row blogs">
 			<div class="col-xl-5 col-lg-6 blog">

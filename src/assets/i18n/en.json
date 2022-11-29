@@ -31,7 +31,6 @@
 			},
 			"cart": {
 				"shoppingCart": "Shopping cart",
-				"close": "Close",
 				"noProducts": "No products in cart",
 				"subtotal": "Subtotal",
 				"continue": "Continue shopping",
@@ -134,7 +133,7 @@
 				"yourEmail": "Your email address",
 				"subscribe": "Subscribe",
 				"page": "Page",
-				"nextPage": "Next page"
+				"showMore": "Show more blogs"
 			},
 			"categories" : {
 				"categories": "Categories"
@@ -381,7 +380,7 @@
 			"recipes": {
 				"recipes": "Recipes",
 				"page": "Page",
-				"nextPage": "Next page"
+				"showMore": "Show more recipes"
 			},
 			"register": {
 				"register": "Register",

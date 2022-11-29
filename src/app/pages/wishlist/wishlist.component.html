@@ -8,13 +8,15 @@
 		<h2 class="heading">{{ 'translate.pages.wishlist.wishlist' | translate }}</h2>
 		<div class="view">
 			<div class="item grid-view" [ngClass]="{ 'active': isGridView }" (click)="isGridView = true">
-				<img class="grid-icon" src="../../../assets/icons/grid-view-green.svg" alt="" *ngIf="isGridView">
-				<img class="grid-icon" src="../../../assets/icons/grid-view-gray.svg" alt="" *ngIf="!isGridView">
+				<svg width="16" height="16" class="grid-icon">
+					<use xlink:href="../../../assets/icons/grid-view.svg#grid-view"></use>
+				</svg>
 				<span class="text">{{ 'translate.pages.wishlist.grid' | translate }}</span>
 			</div>
 			<div class="item list-view" [ngClass]="{ 'active': !isGridView }" (click)="isGridView = false">
-				<img class="list-icon" src="../../../assets/icons/list-view-green.svg" alt="" *ngIf="!isGridView">
-				<img class="list-icon" src="../../../assets/icons/list-view-gray.svg" alt="" *ngIf="isGridView">
+				<svg width="16" height="16" class="list-icon">
+					<use xlink:href="../../../assets/icons/list-view.svg#list-view"></use>
+				</svg>
 				<span class="text">{{ 'translate.pages.wishlist.list' | translate }}</span>
 			</div>
 			<div class="item products">

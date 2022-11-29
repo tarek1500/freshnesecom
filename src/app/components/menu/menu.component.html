@@ -7,7 +7,12 @@
 			<ul class="navbar-nav">
 				<li class="nav-item" *ngFor="let category of categories">
 					<div ngbDropdown class="d-inline-block">
-						<button ngbDropdownToggle class="btn dropdown-button">{{ category.name }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
+						<button ngbDropdownToggle class="btn dropdown-button">
+							{{ category.name }}
+							<svg width="7" height="4.2" class="arrow-icon">
+								<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+							</svg>
+						</button>
 						<div ngbDropdownMenu class="dropdown-menu">
 							<a ngbDropdownItem class="dropdown-item" [routerLink]="['/categories', subcategory.slug, 'products']" *ngFor="let subcategory of category.subcategories">{{ subcategory.name }}</a>
 						</div>

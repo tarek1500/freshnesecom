@@ -59,7 +59,12 @@
 			<a class="page" href="#">4</a>
 		</div>
 		<div class="col-6 more">
-			<button class="btn more-button">{{ 'translate.pages.blogs.nextPage' | translate }} <img class="down-arrow-icon" src="../../../assets/icons/right-arrow-white.svg" alt=""></button>
+			<button class="btn more-button">
+				{{ 'translate.pages.blogs.showMore' | translate }}
+				<svg width="9" height="7" class="arrow-icon">
+					<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+				</svg>
+			</button>
 		</div>
 		<div class="col-3 blogs">
 			<span class="count">{{ largeBlogs.length + blogs.length }}</span>

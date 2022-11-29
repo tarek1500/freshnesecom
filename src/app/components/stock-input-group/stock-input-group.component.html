@@ -4,7 +4,12 @@
 	</div>
 	<div class="vertical-splitter"></div>
 	<div ngbDropdown class="d-inline-block">
-		<button ngbDropdownToggle class="btn dropdown-button"><div class="selected-item">{{ selectedPack.pack }}</div> <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-black.svg" alt=""></button>
+		<button ngbDropdownToggle class="btn dropdown-button">
+			<div class="selected-item">{{ selectedPack.pack }}</div>
+			<svg width="8" height="4" class="arrow-icon">
+				<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+			</svg>
+		</button>
 		<div ngbDropdownMenu class="dropdown-menu">
 			<button ngbDropdownItem class="dropdown-item" (click)="onPackSelected(pack)" *ngFor="let pack of availablePacks">{{ pack.pack }}</button>
 		</div>

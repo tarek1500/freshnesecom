@@ -18,8 +18,16 @@
 				<td>{{ address.title }}</td>
 				<td>{{ address.address + ', ' + address.city + ', ' + address.country.name + ', ' + address.postal }}</td>
 				<td>
-					<a class="edit" [routerLink]="['/profile/addresses', address.id, 'edit']"><img class="edit-icon" src="../../../../../assets/icons/edit.svg" alt=""></a>
-					<a class="delete" (click)="openDeleteModal(deleteModalContent, address)"><img class="delete-icon" src="../../../../../assets/icons/delete.svg" alt=""></a>
+					<a class="edit" [routerLink]="['/profile/addresses', address.id, 'edit']">
+						<svg width="20" height="20" class="edit-icon">
+							<use xlink:href="../../../assets/icons/edit.svg#edit"></use>
+						</svg>
+					</a>
+					<a class="delete" (click)="openDeleteModal(deleteModalContent, address)">
+						<svg width="20" height="20" class="delete-icon">
+							<use xlink:href="../../../assets/icons/delete.svg#delete"></use>
+						</svg>
+					</a>
 				</td>
 			</tr>
 		</tbody>

@@ -1,7 +1,12 @@
 <div class="container" [ngClass]="{ 'rtl': rtl }">
 	<div class="header">
 		<h2 class="heading">{{ heading }}</h2>
-		<button class="btn goto-button">{{ gotoButton }} <img class="right-arrow-icon" src="../../../assets/icons/right-arrow-green.svg" alt=""></button>
+		<button class="btn goto-button">
+			{{ gotoButton }}
+			<svg width="10" height="7.75" class="arrow-icon">
+				<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+			</svg>
+		</button>
 	</div>
 	<div class="row products">
 		<div class="col-xl-3 col-lg-4 col-md-6 product" *ngFor="let product of products">

@@ -88,7 +88,12 @@
 					<tr>
 						<td class="title"></td>
 						<td *ngFor="let product of products">
-							<div class="remove"><img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""> {{ 'translate.pages.compare.remove' | translate }}</div>
+							<div class="remove">
+								<svg width="8" height="8" class="close-icon">
+									<use xlink:href="../../../assets/icons/close.svg#close"></use>
+								</svg>
+								{{ 'translate.pages.compare.remove' | translate }}
+							</div>
 						</td>
 					</tr>
 				</tbody>

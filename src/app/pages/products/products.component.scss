@@ -47,11 +47,18 @@
 				}
 				&.active {
 					color: $dark-color;
+
+					.grid-icon,
+					.list-icon {
+						--color: #{$primary-color};
+					}
 				}
 
 				.grid-icon,
 				.list-icon {
-					margin: 0px 4px 2px 0px;
+					margin-right: 4px;
+					vertical-align: sub;
+					--color: #{$input-text-color};
 				}
 
 				.count {
@@ -149,6 +156,7 @@
 
 				.close-icon {
 					cursor: pointer;
+					--color: #{$close-icon-light-color};
 				}
 			}
 		}
@@ -237,9 +245,17 @@
 					}
 
 					.stars {
+						display: inline-block;
+						cursor: pointer;
+
 						.star-icon {
 							margin-right: 2px;
 							vertical-align: unset;
+							--border-color: #{$secondary-border-color};
+
+							&.filled {
+								--color: #{$star-color};
+							}
 						}
 					}
 				}
@@ -350,11 +366,6 @@
 						&:focus {
 							box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 						}
-
-						.left-arrow-icon {
-							margin-right: 6px;
-							vertical-align: unset;
-						}
 					}
 				}
 			}
@@ -434,8 +445,9 @@
 					box-shadow: 0 0 0 4px $primary-box-shadow-color;
 				}
 
-				.down-arrow-icon {
+				.arrow-icon {
 					margin-left: 6px;
+					--color: #{$light-color};
 				}
 			}
 		}
@@ -487,12 +499,12 @@
 					font-family: $secondary-arabic-font;
 
 					.grid-icon,
-					.list-icon {
-						margin: 0px 0px 2px 4px;
+					.list-icon,
+					.count {
+						margin: 0px 0px 0px 4px;
 					}
 
 					.count {
-						margin: 0px 0px 0px 4px;
 						font-family: $primary-arabic-font;
 					}
 				}
@@ -606,11 +618,6 @@
 
 						.reset-button {
 							font-family: $primary-arabic-font;
-
-							.left-arrow-icon {
-								margin: 0px 0px 0px 6px;
-								transform: scaleX(-1);
-							}
 						}
 					}
 				}
@@ -641,7 +648,7 @@
 				.more-button {
 					font-family: $primary-arabic-font;
 
-					.down-arrow-icon {
+					.arrow-icon {
 						margin: 0px 6px 0px 0px;
 					}
 				}

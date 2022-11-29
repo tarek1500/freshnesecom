@@ -249,6 +249,7 @@
 
 						.plus-icon {
 							margin-right: 6px;
+							--color: #{$light-color};
 						}
 					}
 				}
@@ -283,6 +284,7 @@
 
 					.heart-icon {
 						margin-right: 6px;
+						--color: #{$danger-color};
 					}
 				}
 
@@ -304,6 +306,7 @@
 
 					.compare-icon {
 						margin-right: 6px;
+						--color: #{$danger-color};
 					}
 				}
 			}

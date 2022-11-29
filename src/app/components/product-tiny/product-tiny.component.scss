@@ -51,24 +51,22 @@
 
 			.wishlist {
 				.heart-icon {
-					width: 12px;
-					height: 12px;
 					margin-right: 6px;
+					--color: #{$danger-color};
 				}
 			}
 
 			.compare {
 				.compare-icon {
-					width: 12px;
-					height: 12px;
 					margin-right: 6px;
+					--color: #{$danger-color};
 				}
 			}
 
 			.remove {
 				.close-icon {
-					margin-right: 8px;
-					margin-left: 2px;
+					margin: 0px 8px 0px 2px;
+					--color: #{$close-icon-dark-color};
 				}
 			}
 		}
@@ -207,8 +205,7 @@
 
 				.remove {
 					.close-icon {
-						margin-right: 2px;
-						margin-left: 8px;
+						margin: 0px 2px 0px 8px;
 						transform: scaleX(-1);
 					}
 				}

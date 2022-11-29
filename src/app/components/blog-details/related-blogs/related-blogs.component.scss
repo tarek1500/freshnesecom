@@ -28,8 +28,10 @@
 				box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 			}
 
-			.right-arrow-icon {
+			.arrow-icon {
 				margin-left: 7px;
+				transform: rotate(-90deg);
+				--color: #{$primary-color};
 			}
 		}
 	}
@@ -57,9 +59,9 @@
 			.goto-button {
 				font-family: $primary-arabic-font;
 
-				.right-arrow-icon {
+				.arrow-icon {
 					margin: 0px 7px 0px 0px;
-					transform: scaleX(-1);
+					transform: rotate(90deg);
 				}
 			}
 		}

@@ -31,7 +31,6 @@
 			},
 			"cart": {
 				"shoppingCart": "عربة التسوق",
-				"close": "أغلق",
 				"noProducts": "لا توجد منتجات في عربة التسوق",
 				"subtotal": "المجموع الفرعي",
 				"continue": "مواصلة التسوق",
@@ -134,7 +133,7 @@
 				"yourEmail": "بريدك  الإلكتروني",
 				"subscribe": "إشترك",
 				"page": "صفحة",
-				"nextPage": "الصفحة التالية"
+				"showMore": "عرض المزيد من المدونات"
 			},
 			"categories" : {
 				"categories": "التصنيفات"
@@ -381,7 +380,7 @@
 			"recipes": {
 				"recipes": "وصفات",
 				"page": "صفحة",
-				"nextPage": "الصفحة التالية"
+				"showMore": "عرض المزيد من الوصفات"
 			},
 			"register": {
 				"register": "التسجيل",

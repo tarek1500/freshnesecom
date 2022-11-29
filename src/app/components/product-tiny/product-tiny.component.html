@@ -4,9 +4,24 @@
 			<div class="cover-image">
 				<img src="{{ product.images[0] }}" alt="" *ngIf="product.images.length > 0">
 			</div>
-			<div class="wishlist"><img class="heart-icon" src="../../../assets/icons/heart-orange.svg" alt=""> {{ 'translate.components.productTiny.wishlist' | translate }}</div>
-			<div class="compare"><img class="compare-icon" src="../../../assets/icons/compare.svg" alt=""> {{ 'translate.components.productTiny.compare' | translate }}</div>
-			<div class="remove"><img class="close-icon" src="../../../assets/icons/close-black.svg" alt=""> {{ 'translate.components.productTiny.remove' | translate }}</div>
+			<div class="wishlist">
+				<svg width="14" height="14" class="heart-icon">
+					<use xlink:href="../../../assets/icons/heart.svg#heart"></use>
+				</svg>
+				{{ 'translate.components.productTiny.wishlist' | translate }}
+			</div>
+			<div class="compare">
+				<svg width="14" height="14" class="compare-icon">
+					<use xlink:href="../../../assets/icons/compare.svg#compare"></use>
+				</svg>
+				{{ 'translate.components.productTiny.compare' | translate }}
+			</div>
+			<div class="remove">
+				<svg width="10" height="10" class="close-icon">
+					<use xlink:href="../../../assets/icons/close.svg#close"></use>
+				</svg>
+				{{ 'translate.components.productTiny.remove' | translate }}
+			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-8 col-12 info">
 			<a class="heading" [routerLink]="['/products', product.slug]">{{ product.name }}</a>

@@ -1,7 +1,12 @@
 <div class="input-group" [ngClass]="{ 'rtl': rtl }">
 	<div class="input-group-prepend">
 		<div ngbDropdown class="d-inline-block">
-			<button ngbDropdownToggle class="btn dropdown-button"><div class="selected-item">{{ selectedCategory.name }}</div> <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-green.svg" alt=""></button>
+			<button ngbDropdownToggle class="btn dropdown-button">
+				<div class="selected-item">{{ selectedCategory.name }}</div>
+				<svg width="10" height="6" class="arrow-icon">
+					<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+				</svg>
+			</button>
 			<div ngbDropdownMenu class="dropdown-menu">
 				<button ngbDropdownItem class="dropdown-item" (click)="onCategorySelected(category)" *ngFor="let category of categories">{{ category.name }}</button>
 			</div>
@@ -9,5 +14,7 @@
 	</div>
 	<div class="vertical-splitter"></div>
 	<input class="form-control" type="text" placeholder="{{ 'translate.components.categorySearchInputGroup.placeholder' | translate }}" #searchInput (keypress)="onSearchKeyPressed($event)">
-	<img class="search-icon" src="../../../assets/icons/search.svg" alt="" (click)="onSearchIconClicked($event)">
+	<svg width="16" height="16" class="search-icon" (click)="onSearchIconClicked($event)">
+		<use xlink:href="../../../assets/icons/search.svg#search"></use>
+	</svg>
 </div>

@@ -8,13 +8,15 @@
 		<h2 class="heading">{{ title | translate }}</h2>
 		<div class="view">
 			<div class="item grid-view" [ngClass]="{ 'active': isGridView }" (click)="isGridView = true">
-				<img class="grid-icon" src="../../../assets/icons/grid-view-green.svg" alt="" *ngIf="isGridView">
-				<img class="grid-icon" src="../../../assets/icons/grid-view-gray.svg" alt="" *ngIf="!isGridView">
+				<svg width="16" height="16" class="grid-icon">
+					<use xlink:href="../../../assets/icons/grid-view.svg#grid-view"></use>
+				</svg>
 				<span class="text">{{ 'translate.pages.products.grid' | translate }}</span>
 			</div>
 			<div class="item list-view" [ngClass]="{ 'active': !isGridView }" (click)="isGridView = false">
-				<img class="list-icon" src="../../../assets/icons/list-view-green.svg" alt="" *ngIf="!isGridView">
-				<img class="list-icon" src="../../../assets/icons/list-view-gray.svg" alt="" *ngIf="isGridView">
+				<svg width="16" height="16" class="list-icon">
+					<use xlink:href="../../../assets/icons/list-view.svg#list-view"></use>
+				</svg>
 				<span class="text">{{ 'translate.pages.products.list' | translate }}</span>
 			</div>
 			<div class="item products">
@@ -56,8 +58,18 @@
 		</div>
 		<div class="tags">
 			<span class="heading">{{ 'translate.pages.products.appliedFilters' | translate }}:</span>
-			<span class="tag">{{ 'translate.pages.products.selectedFilter' | translate }} <img class="close-icon" src="../../../assets/icons/close-green.svg" alt=""></span>
-			<span class="tag">{{ 'translate.pages.products.selectedFilter' | translate }} <img class="close-icon" src="../../../assets/icons/close-green.svg" alt=""></span>
+			<span class="tag">
+				{{ 'translate.pages.products.selectedFilter' | translate }}
+				<svg width="8" height="8" class="close-icon">
+					<use xlink:href="../../../assets/icons/close.svg#close"></use>
+				</svg>
+			</span>
+			<span class="tag">
+				{{ 'translate.pages.products.selectedFilter' | translate }}
+				<svg width="8" height="8" class="close-icon">
+					<use xlink:href="../../../assets/icons/close.svg#close"></use>
+				</svg>
+			</span>
 		</div>
 	</div>
 
@@ -121,11 +133,21 @@
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" id="brand-text-6" #brandText1>
 						<div class="stars" (click)="brandText1.checked = !brandText1.checked;">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
 						</div>
 					</div>
 				</div>
@@ -133,11 +155,21 @@
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" id="brand-text-7" #brandText2>
 						<div class="stars" (click)="brandText2.checked = !brandText2.checked;">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
 						</div>
 					</div>
 				</div>
@@ -145,11 +177,21 @@
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" id="brand-text-8" #brandText3>
 						<div class="stars" (click)="brandText3.checked = !brandText3.checked;">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
 						</div>
 					</div>
 				</div>
@@ -157,11 +199,21 @@
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" id="brand-text-9" #brandText4>
 						<div class="stars" (click)="brandText4.checked = !brandText4.checked;">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
 						</div>
 					</div>
 				</div>
@@ -169,11 +221,21 @@
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" id="brand-text-10" #brandText5>
 						<div class="stars" (click)="brandText5.checked = !brandText5.checked;">
-							<img class="star-icon" src="../../../assets/icons/star-yellow.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
-							<img class="star-icon" src="../../../assets/icons/star-white.svg" alt="">
+							<svg width="15" height="15" class="star-icon filled">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
+							<svg width="15" height="15" class="star-icon">
+								<use xlink:href="../../../assets/icons/star.svg#star"></use>
+							</svg>
 						</div>
 					</div>
 				</div>
@@ -194,7 +256,7 @@
 				</div>
 				<div class="buttons">
 					<button class="btn apply-button">{{ 'translate.pages.products.apply' | translate }}</button>
-					<button class="btn reset-button"><img class="left-arrow-icon" src="../../../assets/icons/left-arrow-green.svg" alt=""> {{ 'translate.pages.products.reset' | translate }}</button>
+					<button class="btn reset-button">{{ 'translate.pages.products.reset' | translate }}</button>
 				</div>
 			</div>
 		</div>
@@ -216,7 +278,12 @@
 			<a class="page" href="#">4</a>
 		</div>
 		<div class="col-6 more">
-			<button class="btn more-button">{{ 'translate.pages.products.showMore' | translate }} <img class="down-arrow-icon" src="../../../assets/icons/down-arrow-white.svg" alt=""></button>
+			<button class="btn more-button">
+				{{ 'translate.pages.products.showMore' | translate }}
+				<svg width="9" height="7" class="arrow-icon">
+					<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+				</svg>
+			</button>
 		</div>
 		<div class="col-3 products">
 			<span class="count">{{ products.length }}</span>

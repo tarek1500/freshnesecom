@@ -59,9 +59,10 @@
 			overflow: hidden;
 		}
 
-		.down-arrow-icon {
+		.arrow-icon {
 			margin-left: 4px;
 			display: inline-block;
+			--color: #{$dark-color};
 		}
 	}
 
@@ -108,7 +109,7 @@
 			border-right: none;
 			font-family: $primary-arabic-font;
 
-			.down-arrow-icon {
+			.arrow-icon {
 				margin: 0px 4px 0px 0px;
 			}
 		}

@@ -71,10 +71,12 @@
 						margin-right: 4px;
 					}
 
-					.edit-icon,
+					.edit-icon {
+						--color: #{$primary-color};
+					}
+
 					.delete-icon {
-						width: 20px;
-						height: 20px;
+						--color: #{$danger-color};
 					}
 				}
 			}

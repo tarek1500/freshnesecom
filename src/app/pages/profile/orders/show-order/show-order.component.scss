@@ -25,6 +25,11 @@
 		&:focus {
 			box-shadow: 0 0 0 4px $secondary-box-shadow-color;
 		}
+
+		.back-icon {
+			transform: scaleX(-1);
+			--color: #{$dark-color};
+		}
 	}
 
 	&.rtl {
@@ -35,7 +40,7 @@
 
 		.back-button {
 			.back-icon {
-				transform: scaleX(-1);
+				transform: unset;
 			}
 		}
 	}
