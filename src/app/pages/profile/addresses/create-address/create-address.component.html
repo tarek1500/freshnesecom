@@ -35,9 +35,9 @@
 		</div>
 		<div class="col-12 form-group">
 			<div class="maps">
-				<agm-map [latitude]="mapCenter.latitude" [longitude]="mapCenter.longitude" [zoom]="15" (mapClick)="mapClicked($event)">
-					<agm-marker [latitude]="address.latitude" [longitude]="address.longitude"></agm-marker>
-				</agm-map>
+				<google-map width="100%" height="400" [center]="mapCenter" [zoom]="15" (mapClick)="mapClicked($event)" *ngIf="googleMapsLoaded | async">
+					<map-marker [position]="address.position"></map-marker>
+				</google-map>
 			</div>
 		</div>
 		<div class="col-12 form-group">

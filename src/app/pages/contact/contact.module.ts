@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import { ContactRoutingModule } from './contact-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
@@ -18,9 +18,7 @@ import { ContactComponent } from './contact.component';
 		ContactRoutingModule,
 		SharedModule,
 		BreadcrumbModule,
-		AgmCoreModule.forRoot({
-			apiKey: ''
-		})
+		GoogleMapsModule
 	]
 })
 export class ContactModule { }

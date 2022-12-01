@@ -1,7 +1,7 @@
-import { MouseEvent as MapMouseEvent } from '@agm/core';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { catchError, map, Observable, of, Subscription } from 'rxjs';
 
 import { LanguageService } from '../../../../services/language/language.service';
 import { Address } from '../../../../interfaces/address.interface';
@@ -15,6 +15,7 @@ import { Country } from '../../../../interfaces/country.interface';
 export class CreateAddressComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
+	googleMapsLoaded!: Observable<boolean>;
 	title: string = 'translate.pages.profile.addressesSection.create.create';
 	address: Address = {
 		id: 0,
@@ -26,18 +27,21 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 			name: ''
 		},
 		postal: '',
-		latitude: 0,
-		longitude: 0
+		position: {
+			lat: 0,
+			lng: 0
+		}
 	};
 	countries!: Country[];
-	mapCenter: { latitude: number, longitude: number } = {
-		latitude: 31.259672,
-		longitude: 29.996615
+	mapCenter: google.maps.LatLngLiteral = {
+		lat: 31.259672,
+		lng: 29.996615
 	};
 
 	constructor(
 		private languageService: LanguageService,
-		private route: ActivatedRoute
+		private route: ActivatedRoute,
+		private http: HttpClient
 	) { }
 
 	ngOnInit(): void {
@@ -66,6 +70,12 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 			this.loadCountries();
 		});
 		this.subscriptions.push(subscription);
+
+		this.googleMapsLoaded = this.http.jsonp('https://maps.googleapis.com/maps/api/js', 'callback')
+			.pipe(
+				map(() => true),
+				catchError(() => of(false))
+			);
 	}
 
 	ngOnDestroy(): void {
@@ -84,8 +94,10 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 					name: 'الولايات المتحدة الأمريكية'
 				},
 				postal: '12345',
-				latitude: 31.259672,
-				longitude: 29.996615
+				position: {
+					lat: 31.259672,
+					lng: 29.996615
+				}
 			};
 		}
 		else {
@@ -99,15 +111,14 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 					name: 'USA'
 				},
 				postal: '12345',
-				latitude: 31.259672,
-				longitude: 29.996615
+				position: {
+					lat: 31.259672,
+					lng: 29.996615
+				}
 			};
 		}
 
-		this.mapCenter = {
-			latitude: this.address.latitude,
-			longitude: this.address.longitude
-		}
+		this.mapCenter = this.address.position;
 	}
 
 	loadCountries() {
@@ -153,8 +164,7 @@ export class CreateAddressComponent implements OnInit, OnDestroy {
 		}
 	}
 
-	mapClicked($event: MapMouseEvent) {
-		this.address.latitude = $event.coords.lat;
-		this.address.longitude = $event.coords.lng;
+	mapClicked(event: google.maps.MapMouseEvent) {
+		this.address.position = event.latLng?.toJSON()!;
 	}
 }

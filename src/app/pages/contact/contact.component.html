@@ -20,9 +20,9 @@
 			</div>
 		</div>
 		<div class="maps">
-			<agm-map [latitude]="contact.latitude" [longitude]="contact.longitude" [zoom]="15">
-				<agm-marker [latitude]="contact.latitude" [longitude]="contact.longitude"></agm-marker>
-			</agm-map>
+			<google-map width="100%" [center]="contact.center" [zoom]="15" *ngIf="googleMapsLoaded | async">
+				<map-marker [position]="contact.center"></map-marker>
+			</google-map>
 		</div>
 		<form class="form">
 			<div class="row">

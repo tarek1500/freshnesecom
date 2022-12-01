@@ -6,7 +6,6 @@ export interface Address {
 	address: string,
 	city: string,
 	country: Country,
-	postal: string
-	latitude: number,
-	longitude: number
+	postal: string,
+	position: google.maps.LatLngLiteral
 }

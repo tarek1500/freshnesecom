@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { catchError, map, Observable, of, Subscription } from 'rxjs';
 
 import { LanguageService } from '../../services/language/language.service';
 import { Breadcrumb } from '../../interfaces/breadcrumb.interface';
 import { Contact } from '../../interfaces/contact.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
 	selector: 'app-contact',
@@ -13,13 +14,17 @@ import { Contact } from '../../interfaces/contact.interface';
 export class ContactComponent implements OnInit, OnDestroy {
 	subscriptions: Subscription[] = [];
 	rtl: boolean = false;
+	googleMapsLoaded!: Observable<boolean>;
 	breadcrumb: Breadcrumb[] = [
 		{ translate: 'translate.components.breadcrumb.home', text: 'Home', link: '/' },
 		{ translate: 'translate.components.breadcrumb.contact', text: 'Contact us', link: '' }
 	];
 	contact!: Contact;
 
-	constructor(private languageService: LanguageService) { }
+	constructor(
+		private languageService: LanguageService,
+		private http: HttpClient
+	) { }
 
 	ngOnInit(): void {
 		let subscription = this.languageService.languageSubject$.subscribe(language => {
@@ -28,6 +33,12 @@ export class ContactComponent implements OnInit, OnDestroy {
 			this.loadContact();
 		});
 		this.subscriptions.push(subscription);
+
+		this.googleMapsLoaded = this.http.jsonp('https://maps.googleapis.com/maps/api/js', 'callback')
+			.pipe(
+				map(() => true),
+				catchError(() => of(false))
+			);
 	}
 
 	ngOnDestroy(): void {
@@ -37,8 +48,10 @@ export class ContactComponent implements OnInit, OnDestroy {
 	loadContact() {
 		if (this.rtl) {
 			this.contact = {
-				latitude: 31.270429,
-				longitude: 29.997743,
+				center: {
+					lat: 31.270429,
+					lng: 29.997743
+				},
 				contactsInfo: [
 					{
 						id: 1,
@@ -89,8 +102,10 @@ export class ContactComponent implements OnInit, OnDestroy {
 		}
 		else {
 			this.contact = {
-				latitude: 31.270429,
-				longitude: 29.997743,
+				center: {
+					lat: 31.270429,
+					lng: 29.997743
+				},
 				contactsInfo: [
 					{
 						id: 1,

@@ -36,8 +36,10 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 				name: ''
 			},
 			postal: '',
-			latitude: 0,
-			longitude: 0
+			position: {
+				lat: 0,
+				lng: 0
+			}
 		},
 		total: 0,
 		currency: '',
@@ -189,8 +191,10 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 						name: 'الولايات المتحدة الأمريكية'
 					},
 					postal: '12345',
-					latitude: 31.259672,
-					longitude: 29.996615
+					position: {
+						lat: 31.228255,
+						lng: 29.952374
+					}
 				},
 				total: 51.8,
 				currency: 'جنيه',
@@ -311,8 +315,10 @@ export class ShowOrderComponent implements OnInit, OnDestroy {
 						name: 'USA'
 					},
 					postal: '12345',
-					latitude: 31.259672,
-					longitude: 29.996615
+					position: {
+						lat: 31.228255,
+						lng: 29.952374
+					}
 				},
 				total: 51.8,
 				currency: 'USD',

@@ -47,8 +47,10 @@ export class ListAddressesComponent implements OnInit, OnDestroy {
 						name: 'الولايات المتحدة الأمريكية'
 					},
 					postal: '12345',
-					latitude: 31.259672,
-					longitude: 29.996615
+					position: {
+						lat: 31.228255,
+						lng: 29.952374
+					}
 				},
 				{
 					id: 2,
@@ -60,8 +62,10 @@ export class ListAddressesComponent implements OnInit, OnDestroy {
 						name: 'الولايات المتحدة الأمريكية'
 					},
 					postal: '12345',
-					latitude: 31.228255,
-					longitude: 29.952374
+					position: {
+						lat: 31.228255,
+						lng: 29.952374
+					}
 				}
 			];
 		}
@@ -77,8 +81,10 @@ export class ListAddressesComponent implements OnInit, OnDestroy {
 						name: 'USA'
 					},
 					postal: '12345',
-					latitude: 31.259672,
-					longitude: 29.996615
+					position: {
+						lat: 31.228255,
+						lng: 29.952374
+					}
 				},
 				{
 					id: 2,
@@ -90,8 +96,10 @@ export class ListAddressesComponent implements OnInit, OnDestroy {
 						name: 'USA'
 					},
 					postal: '12345',
-					latitude: 31.228255,
-					longitude: 29.952374
+					position: {
+						lat: 31.228255,
+						lng: 29.952374
+					}
 				}
 			];
 		}

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
-import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import { AddressesRoutingModule } from './addresses-routing.module';
 import { AddressesComponent } from './addresses.component';
@@ -20,9 +20,7 @@ import { CreateAddressComponent } from './create-address/create-address.componen
 		TranslateModule,
 		FormsModule,
 		AddressesRoutingModule,
-		AgmCoreModule.forRoot({
-			apiKey: ''
-		})
+		GoogleMapsModule
 	]
 })
 export class AddressesModule { }

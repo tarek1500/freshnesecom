@@ -147,8 +147,10 @@ export class ListOrdersComponent implements OnInit, OnDestroy {
 							name: 'الولايات المتحدة الأمريكية'
 						},
 						postal: '12345',
-						latitude: 31.259672,
-						longitude: 29.996615
+						position: {
+							lat: 31.228255,
+							lng: 29.952374
+						}
 					},
 					total: 51.8,
 					currency: 'جنيه',
@@ -267,8 +269,10 @@ export class ListOrdersComponent implements OnInit, OnDestroy {
 							name: 'الولايات المتحدة الأمريكية'
 						},
 						postal: '12345',
-						latitude: 31.259672,
-						longitude: 29.996615
+						position: {
+							lat: 31.228255,
+							lng: 29.952374
+						}
 					},
 					total: 93,
 					currency: 'جنيه',
@@ -391,8 +395,10 @@ export class ListOrdersComponent implements OnInit, OnDestroy {
 							name: 'USA'
 						},
 						postal: '12345',
-						latitude: 31.259672,
-						longitude: 29.996615
+						position: {
+							lat: 31.228255,
+							lng: 29.952374
+						}
 					},
 					total: 51.8,
 					currency: 'USD',
@@ -511,8 +517,10 @@ export class ListOrdersComponent implements OnInit, OnDestroy {
 							name: 'USA'
 						},
 						postal: '12345',
-						latitude: 31.259672,
-						longitude: 29.996615
+						position: {
+							lat: 31.228255,
+							lng: 29.952374
+						}
 					},
 					total: 93,
 					currency: 'USD',

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgScrollbarModule } from 'ngx-scrollbar';
@@ -26,7 +26,8 @@ import { MessageComponent } from './components/message/message.component';
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
-		HttpClientModule, // Required for translate
+		HttpClientModule, // Required for translate,
+		HttpClientJsonpModule,
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
