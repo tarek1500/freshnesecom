@@ -261,73 +261,46 @@
 				}
 
 				::ng-deep {
-					.slider {
-						width: 100%;
-						margin-bottom: 16px;
+					.ngx-slider {
+						margin-bottom: 40px;
 
-						.slider-track {
+						.ngx-slider-bar {
 							height: 6px;
-							margin-top: -2px;
-
-							.slider-track-low,
-							.slider-track-high {
-								background-color: $input-placeholder-color;
-							}
-
-							.slider-selection {
-								background: $primary-color;
-							}
+							background-color: $input-placeholder-color;
 						}
 
-						.slider-handle {
-							background: $light-color;
+						.ngx-slider-selection {
+							background-color: $primary-color;
+						}
+
+						.ngx-slider-pointer {
+							top: -7px;
+							width: 20px;
+							height: 20px;
 							border: 1px solid $secondary-border-color;
+							border-radius: 50%;
+							background-color: $light-color;
 							box-shadow: 0px 2px 4px $primary-shadow;
-						}
-					}
-				}
 
-				.range {
-					margin-bottom: 31px;
-
-					div {
-						display: inline-block;
-
-						&.min,
-						&.max {
-							width: 44%;
-						}
-						&.horizontal-splitter {
-							color: $input-text-color;
-							margin: 0px 14px;
-							font-family: $secondary-english-font;
-							font-weight: 400;
-							font-size: 14px;
-						}
-
-						label {
-							color: $dark-color;
-							font-family: $primary-english-font;
-							font-weight: 600;
-							font-size: 12px;
-						}
-
-						input {
-							padding: 11px 20px;
-							border-radius: $default-border-radius;
-							border: 1px solid $secondary-border-color;
-							background-color: $input-background-color;
-							color: $input-text-color;
-							font-family: $secondary-english-font;
-							font-weight: 400;
-							font-size: 14px;
-
-							&::placeholder {
-								color: $input-placeholder-color;
+							&:after {
+								display: none;
 							}
 							&:focus {
-								box-shadow: 0 0 0 4px $secondary-box-shadow-color;
+								outline: none;
 							}
+						}
+
+						.ngx-slider-bubble {
+							font-family: $secondary-english-font;
+							font-weight: 400;
+							font-size: 14px;
+						}
+
+						.ngx-slider-limit {
+							color: $primary-color;
+							font-family: $secondary-english-font;
+							font-weight: 600;
+							font-size: 14px;
 						}
 					}
 				}
@@ -593,19 +566,6 @@
 						.stars {
 							.star-icon {
 								margin: 0px 0px 0px 2px;
-							}
-						}
-					}
-
-					.range {
-						div {
-							&.horizontal-splitter,
-							input {
-								font-family: $secondary-arabic-font;
-							}
-
-							label {
-								font-family: $primary-arabic-font;
 							}
 						}
 					}

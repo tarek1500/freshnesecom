@@ -242,18 +242,7 @@
 			</div>
 			<div class="filter-group">
 				<h3 class="heading">{{ 'translate.pages.products.price' | translate }}</h3>
-				<mv-slider [(value)]="priceValue" [min]="minPrice" [max]="maxPrice" [range]="true"></mv-slider>
-				<div class="range">
-					<div class="min">
-						<label for="min">{{ 'translate.pages.products.min' | translate }}</label>
-						<input class="form-control" id="min" type="text" placeholder="0" [value]="priceValue[0]">
-					</div>
-					<div class="horizontal-splitter">-</div>
-					<div class="max">
-						<label for="max">{{ 'translate.pages.products.max' | translate }}</label>
-						<input class="form-control" id="max" type="text" placeholder="000" [value]="priceValue[1]">
-					</div>
-				</div>
+				<ngx-slider [(value)]="priceValue[0]" [(highValue)]="priceValue[1]" [options]="sliderOptions"></ngx-slider>
 				<div class="buttons">
 					<button class="btn apply-button">{{ 'translate.pages.products.apply' | translate }}</button>
 					<button class="btn reset-button">{{ 'translate.pages.products.reset' | translate }}</button>

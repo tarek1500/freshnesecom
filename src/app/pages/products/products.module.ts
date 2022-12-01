@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
@@ -21,7 +21,7 @@ import { FilterInputGroupComponent } from '../../components/products/filter-inpu
 		TranslateModule,
 		ProductsRoutingModule,
 		NgbModule,
-		NgxBootstrapSliderModule,
+		NgxSliderModule,
 		SharedModule,
 		BreadcrumbModule,
 		ProductModule

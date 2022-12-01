@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
 
 import { WishlistRoutingModule } from './wishlist-routing.module';
 import { SharedModule } from '../../modules/shared/shared.module';
@@ -19,7 +18,6 @@ import { WishlistComponent } from './wishlist.component';
 		TranslateModule,
 		WishlistRoutingModule,
 		NgbModule,
-		NgxBootstrapSliderModule,
 		SharedModule,
 		BreadcrumbModule,
 		ProductModule

@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Options as SliderOptions } from '@angular-slider/ngx-slider';
 import { Subscription } from 'rxjs';
 
 import { LanguageService } from '../../services/language/language.service';
@@ -34,8 +35,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
 	title!: string;
 	products!: Product[];
 	isGridView: boolean = true;
-	minPrice: number = 0;
-	maxPrice: number = 1000;
+	sliderOptions: SliderOptions = {
+		floor: 0,
+		ceil: 1000
+	};
 	priceValue: number[] = [0, 1000];
 
 	constructor(
@@ -49,6 +52,13 @@ export class ProductsComponent implements OnInit, OnDestroy {
 
 			let subscription = this.languageService.languageSubject$.subscribe(language => {
 				this.rtl = language.rtl;
+
+				if (this.rtl) {
+					this.sliderOptions = { ...this.sliderOptions, rightToLeft: true };
+				}
+				else {
+					this.sliderOptions = { ...this.sliderOptions, rightToLeft: false };
+				}
 
 				if (name) {
 					if (this.category.id !== 0) {
@@ -1121,8 +1131,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
 			];
 		}
 
-		this.minPrice = Math.min(...this.products.map(product => product.price));
-		this.maxPrice = Math.max(...this.products.map(product => product.price));
-		this.priceValue = [this.minPrice, this.maxPrice];
+		this.sliderOptions.floor = Math.min(...this.products.map(product => product.price));
+		this.sliderOptions.ceil = Math.max(...this.products.map(product => product.price));
+		this.priceValue = [this.sliderOptions.floor, this.sliderOptions.ceil];
 	}
 }
