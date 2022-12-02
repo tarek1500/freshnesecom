@@ -1,6 +1,6 @@
 # Freshnesecom
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
 
 This project was made as a SPA from **eCommerce** template, you can have a look over the design from this [link](https://www.petrbilek.com/products/figma-ecommerce).
 
