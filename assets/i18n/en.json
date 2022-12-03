@@ -1,0 +1,416 @@
+{
+	"languageName": "English",
+	"direction": "ltr",
+	"translate": {
+		"components": {
+			"banner": {
+				"read": "Read recipe"
+			},
+			"relatedBlogs": {
+				"relatedTopics": "Related topics",
+				"button": "Button"
+			},
+			"breadcrumb": {
+				"home": "Home",
+				"login": "Login",
+				"register": "Register",
+				"profile": "Profile",
+				"categories": "Categories",
+				"products": "Products",
+				"blogs": "Blogs",
+				"recipes": "Recipes",
+				"checkout": "Checkout",
+				"wishlist": "Wishlist",
+				"compare": "Compare",
+				"about": "About us",
+				"contact": "Contact us",
+				"privacyPolicy": "Privacy Policy",
+				"returnPolicy": "Return Policy",
+				"shippingPolicy": "Shipping Policy",
+				"termsAndConditions": "Terms and Conditions"
+			},
+			"cart": {
+				"shoppingCart": "Shopping cart",
+				"noProducts": "No products in cart",
+				"subtotal": "Subtotal",
+				"continue": "Continue shopping",
+				"checkout": "Go to checkout"
+			},
+			"categorySearchInputGroup": {
+				"placeholder": "Search products, categories ..."
+			},
+			"chat": {
+				"message": "Message",
+				"send": "Send"
+			},
+			"footer": {
+				"getInTouch": "Get in touch",
+				"about": "About us",
+				"contact": "Contact us",
+				"blog": "Blog",
+				"connections": "Connections",
+				"facebook": "Facebook",
+				"twitter": "Twitter",
+				"instagram": "Instagram",
+				"youtube": "Youtube",
+				"linkedIn": "LinkedIn",
+				"policies": "Policies",
+				"privacy": "Privacy Policy",
+				"terms": "Terms and Conditions",
+				"return": "Return Policy",
+				"shipping": "Shipping Policy",
+				"account": "Account",
+				"yourAccount": "Your account",
+				"chat": "Chat with us",
+				"affiliate": "Become an affiliate",
+				"advertise": "Advertise your product",
+				"market": "Sell on market",
+				"help": "Help",
+				"productTags": "Product tags",
+				"copyrights": "Copyrights"
+			},
+			"header": {
+				"chat": "Chat with us",
+				"blog": "Blog",
+				"compare": "Compare",
+				"about": "About us"
+			},
+			"product": {
+				"freshness": "Freshness",
+				"farm": "Farm",
+				"delivery": "Delivery",
+				"stock": "Stock",
+				"deliveryIn": "Delivery in",
+				"days": "day(s)",
+				"buy": "Buy now",
+				"wishlist": "Wishlist"
+			},
+			"productTiny": {
+				"wishlist": "Wishlist",
+				"compare": "Compare",
+				"remove": "Remove",
+				"farm": "Farm",
+				"freshness": "Freshness"
+			},
+			"filterInputGroup": {
+				"filter": "Filter",
+				"select": "Select"
+			}
+		},
+		"pages": {
+			"about": {
+				"about": "About us"
+			},
+			"blogDetails": {
+				"date": "Date",
+				"category": "Category",
+				"author": "Author",
+				"tags": "Tags",
+				"back": "Back to blog",
+				"share": "Share",
+				"facebook": "Facebook",
+				"pinterest": "Pinterest",
+				"twitter": "Twitter",
+				"linkedIn": "LinkedIn",
+				"leaveReply": "Leave a reply",
+				"haveAccount": "Already have an account?",
+				"login": "Login",
+				"toLeaveReply": "to leave a reply.",
+				"name": "Name",
+				"email": "Email address",
+				"saveMyNameAndEmail": "Save my name and email in this browser for a next time comment.",
+				"comment": "Comment",
+				"spaceForComments": "Space for your comments",
+				"sendComment": "Send a comment",
+				"comments": "Comments"
+			},
+			"blogs": {
+				"blogs": "Blogs",
+				"archives": "Archives",
+				"categories": "Categories",
+				"join": "Join our list",
+				"signupToBeFirst": "Signup to be the first to hear about exclusive deals, special offers, recipes from our experts and others.",
+				"yourEmail": "Your email address",
+				"subscribe": "Subscribe",
+				"page": "Page",
+				"showMore": "Show more blogs"
+			},
+			"categories" : {
+				"categories": "Categories"
+			},
+			"checkout": {
+				"billingInfo": "Billing info",
+				"enterBillingInfo": "Please enter your billing info",
+				"step1": "Step 1 of 5",
+				"fullName": "Full name",
+				"email": "Email address",
+				"address": "Address",
+				"phone": "Phone number",
+				"city": "City",
+				"country": "Country",
+				"selectCountry": "Select country",
+				"postal": "Postal code",
+				"shipDifferentAddress": "Ship to a different address?",
+				"shippingMethod": "Shipping method",
+				"enterShippingMethod": "Please enter your shipping method",
+				"step2": "Step 2 of 5",
+				"additionalPrice": "Additional price",
+				"paymentMethod": "Payment method",
+				"enterPaymentMethod": "Please enter your payment method",
+				"step3": "Step 3 of 5",
+				"creditCard": "Credit card",
+				"cardNumber": "Card number",
+				"cardHolder": "Card holder",
+				"expirationDate": "Expiration date",
+				"dateFormat": "MM/YY",
+				"cvc": "CVC",
+				"payPal": "PayPal",
+				"bitcoin": "Bitcoin",
+				"additionalInfo": "Additional information",
+				"needSomething": "Need something else? We will make it for you!",
+				"step4": "Step 4 of 5",
+				"orderNotes": "Order notes",
+				"needSpecificDeliveryDay": "Need a specific delivery day? Sending a gift? Let’s say ...",
+				"confirmation": "Confirmation",
+				"gettingEnd": "We are getting to the end. Just few clicks and your order is ready!",
+				"step5": "Step 5 of 5",
+				"agreeSendingEmails": "I agree with sending an marketing and newsletter emails. No spam, promised!",
+				"agreeTerms": "I agree with our terms and conditions and privacy policy.",
+				"completeOrder": "Complete order",
+				"allDataSafe": "All your data are safe",
+				"usingMostSecurity": "We are using the most advanced security to provide you the best experience ever.",
+				"orderSummary": "Order summary",
+				"priceChange": "Price can change depending on shipping method and taxes of your country.",
+				"subtotal": "Subtotal",
+				"tax": "Tax",
+				"shipping": "Shipping",
+				"applyPromo": "Apply promo code",
+				"apply": "Apply now",
+				"totalOrder": "Total order",
+				"guaranteedDeliveryDay": "Guaranteed delivery day"
+			},
+			"compare": {
+				"compare": "Compare",
+				"products": "Products",
+				"name": "Name",
+				"image": "Image",
+				"description": "Description",
+				"rating": "Rating",
+				"price": "Price",
+				"oldPrice": "Old price",
+				"sku": "SKU",
+				"freshness": "Freshness",
+				"farm": "Farm",
+				"category": "Category",
+				"delivery": "Delivery",
+				"shipping": "Shipping",
+				"deliveryDays": "Delivery days",
+				"days": "day(s)",
+				"remove": "Remove"
+			},
+			"contact": {
+				"contact": "Contact us",
+				"name": "Name",
+				"email": "Email address",
+				"message": "Message",
+				"messageBody": "Message ...",
+				"submit": "Submit"
+			},
+			"home": {
+				"categoryMenu": "Category menu",
+				"moreCategories": "More categories",
+				"recipes": "Recipes",
+				"goToRecipes": "Go to recipes",
+				"bestSellingProducts": "Best selling products",
+				"moreProducts": "More products",
+				"bestFromFarmers": "Best from farmers",
+				"ourCustomersSay": "Our customers say",
+				"button": "Button",
+				"sectionHeadline": "Section headline",
+				"readOurBlogPosts": "Read our blog posts",
+				"goToBlog": "Go to blog"
+			},
+			"login": {
+				"login": "Login",
+				"noAccount": "Don't have an account?",
+				"register": "Register",
+				"email": "Email address",
+				"password": "Password",
+				"remember": "Remember me",
+				"logging": "Login"
+			},
+			"pageNotFound": {
+				"contentDoesNotExist": "Sorry. The content you’re looking for doesn’t exist.",
+				"wasRemoved": "Either it was removed, or you mistyped the link.",
+				"goToHome": "Go to home",
+				"contact": "Contact us"
+			},
+			"privacyPolicy": {
+				"privacyPolicy": "Privacy Policy",
+				"lastUpdated": "Last updated",
+				"tableOfContents": "Table of contents"
+			},
+			"productDetails": {
+				"customerReview": "customer review(s)",
+				"sku": "SKU",
+				"category": "Category",
+				"farm": "Farm",
+				"stock": "Stock",
+				"freshness": "Freshness",
+				"delivery": "Delivery",
+				"in": "in",
+				"days": "day(s)",
+				"deliveryArea": "Delivery area",
+				"addToCart": "Add to cart",
+				"addToWishlist": "Add to wishlist",
+				"compare": "Compare",
+				"description": "Description",
+				"reviews": "Reviews",
+				"questions": "Questions",
+				"leaveReview": "Leave a review",
+				"name": "Name",
+				"rate": "Rate",
+				"review": "Review",
+				"spaceForReview": "Space for your review",
+				"addReview": "Add a review",
+				"relatedProducts": "Related products",
+				"moreProducts": "More products"
+			},
+			"products": {
+				"grid": "Grid view",
+				"list": "List view",
+				"products": "Products",
+				"filterText": "Filter text",
+				"filter": "Filter",
+				"nbm": "Nbm",
+				"appliedFilters": "Applied filters",
+				"selectedFilter": "Selected filter",
+				"categories": "Categories",
+				"categoryName": "Category name",
+				"brands": "Brands",
+				"filterBy": "Filter by brand item",
+				"ratings": "Ratings",
+				"price": "Price",
+				"apply": "Apply",
+				"reset": "Reset",
+				"page": "Page",
+				"showMore": "Show more products"
+			},
+			"profile": {
+				"profile": "Profile",
+				"info": "Info",
+				"addresses": "Addresses",
+				"orders": "Orders",
+				"infoSection": {
+					"fullName": "Full name",
+					"email": "Email address",
+					"password": "Password",
+					"phone": "Phone number",
+					"avatar": "Avatar image",
+					"chooseImage": "Choose image",
+					"update": "Update"
+				},
+				"addressesSection": {
+					"list": {
+						"create": "Create address",
+						"title": "Title",
+						"address": "Address",
+						"options": "Options",
+						"deletion": "Address deletion",
+						"areYouSureToDelete": "Are you sure you want to delete this address?",
+						"cancel": "Cancel",
+						"delete": "Delete"
+					},
+					"create": {
+						"create": "Create",
+						"update": "Update",
+						"lowercaseAddress": "address",
+						"back": "Back",
+						"title": "Title",
+						"address": "Address",
+						"addressDetails": "Address in details ...",
+						"city": "City",
+						"country": "Country",
+						"selectCountry": "Select country",
+						"postal": "Postal code"
+					}
+				},
+				"ordersSection": {
+					"list": {
+						"number": "Number",
+						"count": "Items count",
+						"address": "Address",
+						"total": "Total",
+						"date": "Date",
+						"view": "View",
+						"page": "Page"
+					},
+					"show": {
+						"details": "Order details",
+						"back": "Back",
+						"number": "Number",
+						"date": "Date",
+						"total": "Total",
+						"address": "Address",
+						"product": "Product",
+						"quantity": "Quantity",
+						"price": "Price",
+						"view": "View"
+					}
+				}
+			},
+			"recipeDetails": {
+				"created": "Created",
+				"ingredients": "Ingredients",
+				"executionMethod": "Execution method",
+				"leaveReply": "Leave a reply",
+				"haveAccount": "Already have an account?",
+				"login": "Login",
+				"toLeaveReply": "to leave a reply.",
+				"name": "Name",
+				"email": "Email address",
+				"saveMyNameAndEmail": "Save my name and email in this browser for a next time comment.",
+				"comment": "Comment",
+				"spaceForComments": "Space for your comments",
+				"sendComment": "Send a comment",
+				"comments": "Comments"
+			},
+			"recipes": {
+				"recipes": "Recipes",
+				"page": "Page",
+				"showMore": "Show more recipes"
+			},
+			"register": {
+				"register": "Register",
+				"haveAccount": "Already have an account?",
+				"login": "Login",
+				"fullName": "Full name",
+				"email": "Email address",
+				"password": "Password",
+				"phone": "Phone number",
+				"avatar": "Avatar image",
+				"chooseImage": "Choose image",
+				"registering": "Register"
+			},
+			"returnPolicy": {
+				"returnPolicy": "Return Policy",
+				"lastUpdated": "Last updated"
+			},
+			"shippingPolicy": {
+				"shippingPolicy": "Shipping Policy",
+				"lastUpdated": "Last updated"
+			},
+			"termsAndConditions": {
+				"termsAndConditions": "Terms and Conditions",
+				"lastUpdated": "Last updated",
+				"tableOfContents": "Table of contents"
+			},
+			"wishlist": {
+				"wishlist": "Wishlist",
+				"grid": "Grid view",
+				"list": "List view",
+				"products": "Products"
+			}
+		}
+	}
+}

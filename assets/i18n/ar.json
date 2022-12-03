@@ -1,0 +1,416 @@
+{
+	"languageName": "العربية",
+	"direction": "rtl",
+	"translate": {
+		"components": {
+			"banner": {
+				"read": "اقرأ الوصفة"
+			},
+			"relatedBlogs": {
+				"relatedTopics": "مواضيع ذات صلة",
+				"button": "زر"
+			},
+			"breadcrumb": {
+				"home": "الرئيسية",
+				"login": "تسجيل الدخول",
+				"register": "التسجيل",
+				"profile": "الملف الشخصي",
+				"categories": "التصنيفات",
+				"products": "المنتجات",
+				"blogs": "المدونات",
+				"recipes": "الوصفات",
+				"checkout": "الدفع",
+				"wishlist": "قائمة الامنيات",
+				"compare": "المقارنة",
+				"about": "معلومات عنا",
+				"contact": "اتصل بنا",
+				"privacyPolicy": "سياسة الخصوصية",
+				"returnPolicy": "سياسة الإرجاع",
+				"shippingPolicy": "سياسة الشحن",
+				"termsAndConditions": "الأحكام و الشروط"
+			},
+			"cart": {
+				"shoppingCart": "عربة التسوق",
+				"noProducts": "لا توجد منتجات في عربة التسوق",
+				"subtotal": "المجموع الفرعي",
+				"continue": "مواصلة التسوق",
+				"checkout": "الذهاب إلى الدفع"
+			},
+			"categorySearchInputGroup": {
+				"placeholder": "البحث عن المنتجات، التصنيفات ..."
+			},
+			"chat": {
+				"message": "الرسالة",
+				"send": "إرسال"
+			},
+			"footer": {
+				"getInTouch": "ابقى على تواصل",
+				"about": "معلومات عنا",
+				"contact": "اتصل بنا",
+				"blog": "مدونة",
+				"connections": "الروابط",
+				"facebook": "فيسبوك",
+				"twitter": "تويتر",
+				"instagram": "انستغرام",
+				"youtube": "يوتيوب",
+				"linkedIn": "لينكد إن",
+				"policies": "السياسات",
+				"privacy": "سياسة الخصوصية",
+				"terms": "الأحكام و الشروط",
+				"return": "سياسة الإرجاع",
+				"shipping": "سياسة الشحن",
+				"account": "الحساب",
+				"yourAccount": "حسابك",
+				"chat": "تحدث معنا",
+				"affiliate": "كن شريكا",
+				"advertise": "أعلن عن منتجك",
+				"market": "بيع في السوق",
+				"help": "مساعدة",
+				"productTags": "وسوم المنتج",
+				"copyrights": "حقوق النشر"
+			},
+			"header": {
+				"chat": "تحدث معنا",
+				"blog": "مدونة",
+				"compare": "مقارنة",
+				"about": "معلومات عنا"
+			},
+			"product": {
+				"freshness": "النضارة",
+				"farm": "المزرعة",
+				"delivery": "التوصيل",
+				"stock": "المخزون",
+				"deliveryIn": "التوصيل في",
+				"days": "يوم/أيام",
+				"buy": "اشتري الآن",
+				"wishlist": "تمني"
+			},
+			"productTiny": {
+				"wishlist": "تمني",
+				"compare": "مقارنة",
+				"remove": "إزالة",
+				"farm": "المزرعة",
+				"freshness": "النضارة"
+			},
+			"filterInputGroup": {
+				"filter": "الفلتر",
+				"select": "اختار"
+			}
+		},
+		"pages": {
+			"about": {
+				"about": "معلومات عنا"
+			},
+			"blogDetails": {
+				"date": "التاريخ",
+				"category": "التصنيف",
+				"author": "المؤلف",
+				"tags": "الوسوم",
+				"back": "العودة إلى المدونة",
+				"share": "مشاركة",
+				"facebook": "فيسبوك",
+				"pinterest": "بينتيريست",
+				"twitter": "تويتر",
+				"linkedIn": "لينكد إن",
+				"leaveReply": "اترك رد",
+				"haveAccount": "هل لديك حساب؟",
+				"login": "تسجيل دخول",
+				"toLeaveReply": "لترك رد.",
+				"name": "الاسم",
+				"email": "البريد الالكترونى",
+				"saveMyNameAndEmail": "احفظ اسمي والبريد الإلكتروني في هذا المتصفح للتعليق في المرة القادمة.",
+				"comment": "التعليق",
+				"spaceForComments": "مساحة لتعليقاتكم",
+				"sendComment": "إرسال تعليق",
+				"comments": "التعليقات"
+			},
+			"blogs": {
+				"blogs": "مدونات",
+				"archives": "أرشيف",
+				"categories": "التصنيفات",
+				"join": "انضم إلى قائمتنا",
+				"signupToBeFirst": "اشترك لتكون أول من يسمع عن العروض الحصرية والعروض الخاصة والوصفات من خبرائنا وغيرهم.",
+				"yourEmail": "بريدك  الإلكتروني",
+				"subscribe": "إشترك",
+				"page": "صفحة",
+				"showMore": "عرض المزيد من المدونات"
+			},
+			"categories" : {
+				"categories": "التصنيفات"
+			},
+			"checkout": {
+				"billingInfo": "معلومات الفاتورة",
+				"enterBillingInfo": "الرجاء إدخال معلومات الفاتورة الخاصة بك",
+				"step1": "الخطوة 1 من 5",
+				"fullName": "الاسم الكامل",
+				"email": "البريد الالكترونى",
+				"address": "العنوان",
+				"phone": "رقم الهاتف",
+				"city": "المدينة",
+				"country": "الدولة",
+				"selectCountry": "اختر الدولة",
+				"postal": "الرمز البريدي",
+				"shipDifferentAddress": "هل تريد الشحن إلى عنوان مختلف؟",
+				"shippingMethod": "طريقة الشحن",
+				"enterShippingMethod": "الرجاء إدخال طريقة الشحن الخاصة بك",
+				"step2": "الخطوة 2 من 5",
+				"additionalPrice": "سعر إضافي",
+				"paymentMethod": "طريقة الدفع",
+				"enterPaymentMethod": "الرجاء إدخال طريقة الدفع الخاصة بك",
+				"step3": "الخطوة 3 من 5",
+				"creditCard": "بطاقة الائتمان",
+				"cardNumber": "رقم البطاقة",
+				"cardHolder": "حامل البطاقة",
+				"expirationDate": "تاريخ إنتهاء الصلاحية",
+				"dateFormat": "الشهر / السنة",
+				"cvc": "رمز التحقق من البطاقة",
+				"payPal": "باي بال",
+				"bitcoin": "بيتكوين",
+				"additionalInfo": "معلومات إضافية",
+				"needSomething": "هل تحتاج إلى شيء آخر؟ سوف نفعلها لك!",
+				"step4": "الخطوة 4 من 5",
+				"orderNotes": "ملاحظات الطلب",
+				"needSpecificDeliveryDay": "هل تحتاج إلى يوم تسليم محدد؟ إرسال هدية؟ دعنا نقول ...",
+				"confirmation": "تأكيد",
+				"gettingEnd": "نحن نقترب من النهاية. نقرات قليلة وطلبك جاهز!",
+				"step5": "الخطوة 5 من 5",
+				"agreeSendingEmails": "أوافق على إرسال رسائل بريد إلكتروني تسويقية وإخبارية. لا بريد مزعج، نوعدك!",
+				"agreeTerms": "أوافق على الأحكام و الشروط وسياسة الخصوصية الخاصة بكم.",
+				"completeOrder": "اكمل الطلب",
+				"allDataSafe": "جميع بياناتك آمنة",
+				"usingMostSecurity": "نحن نستخدم أحدث وسائل الأمان لنوفر لك أفضل تجربة على الإطلاق.",
+				"orderSummary": "ملخص الطلب",
+				"priceChange": "يمكن أن يتغير السعر اعتمادًا على طريقة الشحن والضرائب في بلدك.",
+				"subtotal": "المجموع الفرعي",
+				"tax": "الضريبة",
+				"shipping": "الشحن",
+				"applyPromo": "تطبيق الرمز الترويجي",
+				"apply": "طبق الآن",
+				"totalOrder": "إجمالي الطلب",
+				"guaranteedDeliveryDay": "يوم التسليم المضمون"
+			},
+			"compare": {
+				"compare": "المقارنة",
+				"products": "منتجات",
+				"name": "الاسم",
+				"image": "الصورة",
+				"description": "الوصف",
+				"rating": "التقييم",
+				"price": "السعر",
+				"oldPrice": "السعر القديم",
+				"sku": "وحدة حفظ المخزون",
+				"freshness": "النضارة",
+				"farm": "المزرعة",
+				"category": "التصنيف",
+				"delivery": "التوصيل",
+				"shipping": "الشحن",
+				"deliveryDays": "أيام التسليم",
+				"days": "يوم/أيام",
+				"remove": "إزالة"
+			},
+			"contact": {
+				"contact": "اتصل بنا",
+				"name": "الاسم",
+				"email": "البريد الالكترونى",
+				"message": "الرسالة",
+				"messageBody": "الرسالة ...",
+				"submit": "إرسال"
+			},
+			"home": {
+				"categoryMenu": "قائمة التصنيفات",
+				"moreCategories": "المزيد من التصنيفات",
+				"recipes": "الوصفات",
+				"goToRecipes": "انتقل إلى الوصفات",
+				"bestSellingProducts": "أفضل المنتجات مبيعًا",
+				"moreProducts": "المزيد من المنتجات",
+				"bestFromFarmers": "الأفضل من المزارعين",
+				"ourCustomersSay": "يقول عملاؤنا",
+				"button": "زر",
+				"sectionHeadline": "عنوان القسم",
+				"readOurBlogPosts": "اقرأ منشورات مدونتنا",
+				"goToBlog": "انتقل إلى المدونة"
+			},
+			"login": {
+				"login": "تسجيل الدخول",
+				"noAccount": "ليس لديك حساب؟",
+				"register": "تسجيل",
+				"email": "البريد الالكترونى",
+				"password": "كلمة المرور",
+				"remember": "تذكرنى",
+				"logging": "دخول"
+			},
+			"pageNotFound": {
+				"contentDoesNotExist": "عذراً. المحتوى الذي تبحث عنه غير موجود.",
+				"wasRemoved": "إما أنه تمت إزالته أو أخطأت في كتابة الرابط.",
+				"goToHome": "انتقل إلى الرئيسية",
+				"contact": "اتصل بنا"
+			},
+			"privacyPolicy": {
+				"privacyPolicy": "سياسة الخصوصية",
+				"lastUpdated": "آخر تحديث",
+				"tableOfContents": "جدول المحتويات"
+			},
+			"productDetails": {
+				"customerReview": "مراجعات العملاء",
+				"sku": "وحدة حفظ المخزون",
+				"category": "التصنيف",
+				"farm": "المزرعة",
+				"stock": "المخزون",
+				"freshness": "النضارة",
+				"delivery": "التوصيل",
+				"in": "في",
+				"days": "يوم/أيام",
+				"deliveryArea": "منطقة التوصيل",
+				"addToCart": "أضف إلى العربة",
+				"addToWishlist": "أضف إلى قائمة الامنيات",
+				"compare": "مقارنة",
+				"description": "الوصف",
+				"reviews": "المراجعات",
+				"questions": "الأسئلة",
+				"leaveReview": "ترك مراجعة",
+				"name": "الاسم",
+				"rate": "التقييم",
+				"review": "المراجعة",
+				"spaceForReview": "مساحة لمراجعتك",
+				"addReview": "إضافة مراجعة",
+				"relatedProducts": "منتجات ذات صله",
+				"moreProducts": "المزيد من المنتجات"
+			},
+			"products": {
+				"grid": "عرض الشبكة",
+				"list": "عرض القائمة",
+				"products": "منتجات",
+				"filterText": "نص الفلتر",
+				"filter": "الفلتر",
+				"nbm": "نبم",
+				"appliedFilters": "الفلترات المُطبَّقة",
+				"selectedFilter": "الفلتر المختار",
+				"categories": "التصنيفات",
+				"categoryName": "اسم التصنيف",
+				"brands": "العلامات التجارية",
+				"filterBy": "فلتر بواسطة عنصر العلامة التجارية",
+				"ratings": "التقييمات",
+				"price": "السعر",
+				"apply": "تطبيق",
+				"reset": "إعادة ضبط",
+				"page": "صفحة",
+				"showMore": "عرض المزيد من المنتجات"
+			},
+			"profile": {
+				"profile": "الملف الشخصي",
+				"info": "المعلومات",
+				"addresses": "العناوين",
+				"orders": "الطلبات",
+				"infoSection": {
+					"fullName": "الاسم الكامل",
+					"email": "البريد الالكترونى",
+					"password": "كلمة المرور",
+					"phone": "رقم الهاتف",
+					"avatar": "الصورة الرمزية",
+					"chooseImage": "اختر صورة",
+					"update": "تحديث"
+				},
+				"addressesSection": {
+					"list": {
+						"create": "إنشاء عنوان",
+						"title": "الاسم",
+						"address": "العنوان",
+						"options": "خيارات",
+						"deletion": "حذف العنوان",
+						"areYouSureToDelete": "هل أنت متأكد أنك تريد حذف هذا العنوان؟",
+						"cancel": "إلغاء",
+						"delete": "حذف"
+					},
+					"create": {
+						"create": "إنشاء",
+						"update": "تحديث",
+						"lowercaseAddress": "عنوان",
+						"back": "العودة",
+						"title": "الاسم",
+						"address": "العنوان",
+						"addressDetails": "العنوان بالتفصيل ...",
+						"city": "المدينة",
+						"country": "الدولة",
+						"selectCountry": "اختر الدولة",
+						"postal": "الرمز البريدي"
+					}
+				},
+				"ordersSection": {
+					"list": {
+						"number": "الرقم",
+						"count": "عدد العناصر",
+						"address": "العنوان",
+						"total": "المجموع",
+						"date": "التاريخ",
+						"view": "مشاهدة",
+						"page": "صفحة"
+					},
+					"show": {
+						"details": "تفاصيل الطلب",
+						"back": "العودة",
+						"number": "الرقم",
+						"date": "التاريخ",
+						"total": "المجموع",
+						"address": "العنوان",
+						"product": "المنتج",
+						"quantity": "الكمية",
+						"price": "السعر",
+						"view": "مشاهدة"
+					}
+				}
+			},
+			"recipeDetails": {
+				"created": "انشأت",
+				"ingredients": "المكونات",
+				"executionMethod": "طريقة التنفيذ",
+				"leaveReply": "اترك رد",
+				"haveAccount": "هل لديك حساب؟",
+				"login": "تسجيل دخول",
+				"toLeaveReply": "لترك رد.",
+				"name": "الاسم",
+				"email": "البريد الالكترونى",
+				"saveMyNameAndEmail": "احفظ اسمي والبريد الإلكتروني في هذا المتصفح للتعليق في المرة القادمة.",
+				"comment": "التعليق",
+				"spaceForComments": "مساحة لتعليقاتكم",
+				"sendComment": "إرسال تعليق",
+				"comments": "التعليقات"
+			},
+			"recipes": {
+				"recipes": "وصفات",
+				"page": "صفحة",
+				"showMore": "عرض المزيد من الوصفات"
+			},
+			"register": {
+				"register": "التسجيل",
+				"haveAccount": "هل لديك حساب؟",
+				"login": "تسجيل دخول",
+				"fullName": "الاسم الكامل",
+				"email": "البريد الالكترونى",
+				"password": "كلمة المرور",
+				"phone": "رقم الهاتف",
+				"avatar": "الصورة الرمزية",
+				"chooseImage": "اختر صورة",
+				"registering": "تسجيل"
+			},
+			"returnPolicy": {
+				"returnPolicy": "سياسة الإرجاع",
+				"lastUpdated": "آخر تحديث"
+			},
+			"shippingPolicy": {
+				"shippingPolicy": "سياسة الشحن",
+				"lastUpdated": "آخر تحديث"
+			},
+			"termsAndConditions": {
+				"termsAndConditions": "الأحكام و الشروط",
+				"lastUpdated": "آخر تحديث",
+				"tableOfContents": "جدول المحتويات"
+			},
+			"wishlist": {
+				"wishlist": "قائمة الامنيات",
+				"grid": "عرض الشبكة",
+				"list": "عرض القائمة",
+				"products": "منتجات"
+			}
+		}
+	}
+}
