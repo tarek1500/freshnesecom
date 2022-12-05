@@ -43,7 +43,7 @@ export class ShippingPolicyComponent implements OnInit, OnDestroy {
 				tableOfContents: [
 					{
 						name: '',
-						content: '<p>سياسة الشحن والتسليم هذه جزء من الأحكام و الشروط الخاصة بنا ("الشروط") وبالتالي يجب قراءتها جنبًا إلى جنب مع الشروط الرئيسية لدينا: <a href="https://freshnesecom-template.herokuapp.com/terms-and-conditions">الأحكام و الشروط</a>.</p><p>يرجى مراجعة سياسة الشحن والتوصيل بعناية عند شراء منتجاتنا. ستطبق هذه السياسة على أي طلب تقدمه معنا.</p>'
+						content: '<p>سياسة الشحن والتسليم هذه جزء من الأحكام و الشروط الخاصة بنا ("الشروط") وبالتالي يجب قراءتها جنبًا إلى جنب مع الشروط الرئيسية لدينا: <a href="https://tarek1500.github.io/freshnesecom/terms-and-conditions">الأحكام و الشروط</a>.</p><p>يرجى مراجعة سياسة الشحن والتوصيل بعناية عند شراء منتجاتنا. ستطبق هذه السياسة على أي طلب تقدمه معنا.</p>'
 					},
 					{
 						name: 'ما هي خيارات الشحن والتوصيل الخاصة بي؟',
@@ -59,11 +59,11 @@ export class ShippingPolicyComponent implements OnInit, OnDestroy {
 					},
 					{
 						name: 'أسئلة حول المرتجعات؟',
-						content: '<p>إذا كانت لديك أسئلة حول المرتجعات، فيرجى مراجعة سياسة الإرجاع الخاصة بنا: <a href="https://freshnesecom-template.herokuapp.com/return-policy">سياسة الإرجاع</a></p>'
+						content: '<p>إذا كانت لديك أسئلة حول المرتجعات، فيرجى مراجعة سياسة الإرجاع الخاصة بنا: <a href="https://tarek1500.github.io/freshnesecom/return-policy">سياسة الإرجاع</a></p>'
 					},
 					{
 						name: 'كيف يمكنك الاتصال بنا بخصوص هذه السياسة؟',
-						content: '<p>إذا كان لديك أي أسئلة أو تعليقات أخرى، يمكنك الاتصال بنا عن طريق:</p><ul><li>الهاتف (مجاني): <span class="phone">+420 336 775 664</span></li><li>البريد الإلكتروني: <span class="email">info@freshnesecom.com</span></li><li>نموذج الاتصال عبر الإنترنت: <a href="https://freshnesecom-template.herokuapp.com/contact">اتصل بنا</a></li></ul>'
+						content: '<p>إذا كان لديك أي أسئلة أو تعليقات أخرى، يمكنك الاتصال بنا عن طريق:</p><ul><li>الهاتف (مجاني): <span class="phone">+420 336 775 664</span></li><li>البريد الإلكتروني: <span class="email">info@freshnesecom.com</span></li><li>نموذج الاتصال عبر الإنترنت: <a href="https://tarek1500.github.io/freshnesecom/contact">اتصل بنا</a></li></ul>'
 					}
 				]
 			};
@@ -74,7 +74,7 @@ export class ShippingPolicyComponent implements OnInit, OnDestroy {
 				tableOfContents: [
 					{
 						name: '',
-						content: '<p>This Shipping & Delivery Policy is part of our Terms and Conditions ("Terms") and should be therefore read alongside our main Terms: <a href="https://freshnesecom-template.herokuapp.com/terms-and-conditions">Terms and Conditions</a>.</p><p>Please carefully review our Shipping & Delivery Policy when purchasing our products. This policy will apply to any order you place with us.</p>'
+						content: '<p>This Shipping & Delivery Policy is part of our Terms and Conditions ("Terms") and should be therefore read alongside our main Terms: <a href="https://tarek1500.github.io/freshnesecom/terms-and-conditions">Terms and Conditions</a>.</p><p>Please carefully review our Shipping & Delivery Policy when purchasing our products. This policy will apply to any order you place with us.</p>'
 					},
 					{
 						name: 'What are my shipping & delivery options?',
@@ -90,11 +90,11 @@ export class ShippingPolicyComponent implements OnInit, OnDestroy {
 					},
 					{
 						name: 'Questions about returns?',
-						content: '<p>If you have questions about returns, please review our Return Policy: <a href="https://freshnesecom-template.herokuapp.com/return-policy">Return Policy</a></p>'
+						content: '<p>If you have questions about returns, please review our Return Policy: <a href="https://tarek1500.github.io/freshnesecom/return-policy">Return Policy</a></p>'
 					},
 					{
 						name: 'How can you contact us about this policy?',
-						content: '<p>If you have any further questions or comments, you may contact us by:</p><ul><li>Phone (Toll free): <span class="phone">+420 336 775 664</span></li><li>Email: <span class="email">info@freshnesecom.com</span></li><li>Online contact form: <a href="https://freshnesecom-template.herokuapp.com/contact">contact us</a></li></ul>'
+						content: '<p>If you have any further questions or comments, you may contact us by:</p><ul><li>Phone (Toll free): <span class="phone">+420 336 775 664</span></li><li>Email: <span class="email">info@freshnesecom.com</span></li><li>Online contact form: <a href="https://tarek1500.github.io/freshnesecom/contact">contact us</a></li></ul>'
 					}
 				]
 			};

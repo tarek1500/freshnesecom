@@ -31,7 +31,7 @@ import { MessageComponent } from './components/message/message.component';
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
-				useFactory: HttpLoaderFactory,
+				useFactory: (createTranslateLoader),
 				deps: [HttpClient]
 			}
 		}),
@@ -48,6 +48,6 @@ import { MessageComponent } from './components/message/message.component';
 export class AppModule { }
 
 // required for AOT compilation
-export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-	return new TranslateHttpLoader(http);
+export function createTranslateLoader(http: HttpClient) {
+	return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }

@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project was made as a SPA from **eCommerce** template, you can have a look over the design from this [link](https://www.petrbilek.com/products/figma-ecommerce).
 
-You can have a look on the SPA demo from this [link](https://freshnesecom-template.herokuapp.com/).
+You can have a look on the SPA demo from this [link](https://tarek1500.github.io/freshnesecom/).
 
 ## Development server
 

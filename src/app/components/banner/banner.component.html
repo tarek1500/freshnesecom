@@ -1,5 +1,5 @@
 <div class="container" [ngClass]="{ 'rtl': rtl }">
-	<img class="background-image" src="../../../../assets/images/banner-background.svg" alt="">
+	<img class="background-image" src="assets/images/banner-background.svg" alt="">
 	<div class="banner">
 		<h3 class="subheading">{{ recipe.date | date:'dd. MM. yyyy' }}</h3>
 		<h2 class="heading">{{ recipe.title }}</h2>
@@ -7,7 +7,7 @@
 	<a class="btn read-button" [routerLink]="['/recipes', recipe.slug]">
 		{{ 'translate.components.banner.read' | translate }}
 		<svg width="10" height="7.75" class="arrow-icon">
-			<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+			<use xlink:href="assets/icons/arrow.svg#arrow"></use>
 		</svg>
 	</a>
 </div>

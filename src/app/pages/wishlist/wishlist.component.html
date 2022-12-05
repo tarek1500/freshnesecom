@@ -9,13 +9,13 @@
 		<div class="view">
 			<div class="item grid-view" [ngClass]="{ 'active': isGridView }" (click)="isGridView = true">
 				<svg width="16" height="16" class="grid-icon">
-					<use xlink:href="../../../assets/icons/grid-view.svg#grid-view"></use>
+					<use xlink:href="assets/icons/grid-view.svg#grid-view"></use>
 				</svg>
 				<span class="text">{{ 'translate.pages.wishlist.grid' | translate }}</span>
 			</div>
 			<div class="item list-view" [ngClass]="{ 'active': !isGridView }" (click)="isGridView = false">
 				<svg width="16" height="16" class="list-icon">
-					<use xlink:href="../../../assets/icons/list-view.svg#list-view"></use>
+					<use xlink:href="assets/icons/list-view.svg#list-view"></use>
 				</svg>
 				<span class="text">{{ 'translate.pages.wishlist.list' | translate }}</span>
 			</div>

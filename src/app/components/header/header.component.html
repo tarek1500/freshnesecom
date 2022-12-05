@@ -15,7 +15,7 @@
 					<button ngbDropdownToggle class="btn dropdown-button">
 						{{ selectedLanguage.name }}
 						<svg width="7" height="4.2" class="arrow-icon">
-							<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+							<use xlink:href="assets/icons/arrow.svg#arrow"></use>
 						</svg>
 					</button>
 					<div ngbDropdownMenu class="dropdown-menu">
@@ -45,7 +45,7 @@
 		</div>
 		<div class="col-3 brand">
 			<a routerLink="/">
-				<img class="brand-image" src="../../../assets/images/brand.svg" alt="">
+				<img class="brand-image" src="assets/images/brand.svg" alt="">
 			</a>
 		</div>
 		<div class="col-6 search">
@@ -55,21 +55,21 @@
 			<div class="user">
 				<a routerLink="/login">
 					<svg width="22" height="24" class="user-icon">
-						<use xlink:href="../../../assets/icons/user.svg#user"></use>
+						<use xlink:href="assets/icons/user.svg#user"></use>
 					</svg>
 				</a>
 			</div>
 			<div class="wishlist">
 				<a routerLink="/wishlist">
 					<svg width="24" height="22" class="heart-icon">
-						<use xlink:href="../../../assets/icons/heart.svg#heart"></use>
+						<use xlink:href="assets/icons/heart.svg#heart"></use>
 					</svg>
 					<span class="icon-badge">{{ wishlist.products.length }}</span>
 				</a>
 			</div>
 			<div class="basket" (click)="isCartVisible = !isCartVisible">
 				<svg width="24" height="22" class="basket-icon">
-					<use xlink:href="../../../assets/icons/basket.svg#basket"></use>
+					<use xlink:href="assets/icons/basket.svg#basket"></use>
 				</svg>
 				<span class="icon-badge">{{ cart.products.length }}</span>
 			</div>

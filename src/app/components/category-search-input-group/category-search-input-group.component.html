@@ -4,7 +4,7 @@
 			<button ngbDropdownToggle class="btn dropdown-button">
 				<div class="selected-item">{{ selectedCategory.name }}</div>
 				<svg width="10" height="6" class="arrow-icon">
-					<use xlink:href="../../../assets/icons/arrow.svg#arrow"></use>
+					<use xlink:href="assets/icons/arrow.svg#arrow"></use>
 				</svg>
 			</button>
 			<div ngbDropdownMenu class="dropdown-menu">
@@ -15,6 +15,6 @@
 	<div class="vertical-splitter"></div>
 	<input class="form-control" type="text" placeholder="{{ 'translate.components.categorySearchInputGroup.placeholder' | translate }}" #searchInput (keypress)="onSearchKeyPressed($event)">
 	<svg width="16" height="16" class="search-icon" (click)="onSearchIconClicked($event)">
-		<use xlink:href="../../../assets/icons/search.svg#search"></use>
+		<use xlink:href="assets/icons/search.svg#search"></use>
 	</svg>
 </div>

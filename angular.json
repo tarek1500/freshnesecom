@@ -121,6 +121,12 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://tarek1500.github.io/freshnesecom/"
+          }
         }
       }
     }

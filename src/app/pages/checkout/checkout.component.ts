@@ -103,14 +103,14 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 					name: 'فيديكس',
 					price: 32,
 					currency: 'جنيه',
-					logo: '../../../assets/icons/fedex.svg'
+					logo: 'assets/icons/fedex.svg'
 				},
 				{
 					id: 2,
 					name: 'دي إتش إل',
 					price: 15,
 					currency: 'جنيه',
-					logo: '../../../assets/icons/dhl.svg'
+					logo: 'assets/icons/dhl.svg'
 				}
 			];
 		}
@@ -121,14 +121,14 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 					name: 'FedEx',
 					price: 32,
 					currency: 'USD',
-					logo: '../../../assets/icons/fedex.svg'
+					logo: 'assets/icons/fedex.svg'
 				},
 				{
 					id: 2,
 					name: 'DHL',
 					price: 15,
 					currency: 'USD',
-					logo: '../../../assets/icons/dhl.svg'
+					logo: 'assets/icons/dhl.svg'
 				}
 			];
 		}

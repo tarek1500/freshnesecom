@@ -56,19 +56,19 @@ export class ContactComponent implements OnInit, OnDestroy {
 					{
 						id: 1,
 						info: '+420 336 775 664',
-						icon: '../../../assets/icons/phone.svg#phone',
+						icon: 'assets/icons/phone.svg#phone',
 						class: 'phone'
 					},
 					{
 						id: 2,
 						info: '1234 شارع فريشنس كوم، سان فرانسيسكو، كاليفورنيا، الولايات المتحدة الأمريكية، 12345',
-						icon: '../../../assets/icons/location.svg#location',
+						icon: 'assets/icons/location.svg#location',
 						class: 'address'
 					},
 					{
 						id: 3,
 						info: 'info@freshnesecom.com',
-						icon: '../../../assets/icons/envelope.svg#envelope',
+						icon: 'assets/icons/envelope.svg#envelope',
 						class: 'email'
 					}
 				],
@@ -77,25 +77,25 @@ export class ContactComponent implements OnInit, OnDestroy {
 						id: 1,
 						name: '',
 						link: '#',
-						icon: '../../../assets/icons/facebook.svg'
+						icon: 'assets/icons/facebook.svg'
 					},
 					{
 						id: 2,
 						name: '',
 						link: '#',
-						icon: '../../../assets/icons/pinterest.svg'
+						icon: 'assets/icons/pinterest.svg'
 					},
 					{
 						id: 3,
 						name: '',
 						link: '#',
-						icon: '../../../assets/icons/twitter.svg'
+						icon: 'assets/icons/twitter.svg'
 					},
 					{
 						id: 4,
 						name: '',
 						link: '#',
-						icon: '../../../assets/icons/linkedin.svg'
+						icon: 'assets/icons/linkedin.svg'
 					}
 				]
 			};
@@ -110,19 +110,19 @@ export class ContactComponent implements OnInit, OnDestroy {
 					{
 						id: 1,
 						info: '+420 336 775 664',
-						icon: '../../../assets/icons/phone.svg#phone',
+						icon: 'assets/icons/phone.svg#phone',
 						class: 'phone'
 					},
 					{
 						id: 2,
 						info: '1234 Freshnesecom St, San Francisco, CA 12345',
-						icon: '../../../assets/icons/location.svg#location',
+						icon: 'assets/icons/location.svg#location',
 						class: 'address'
 					},
 					{
 						id: 3,
 						info: 'info@freshnesecom.com',
-						icon: '../../../assets/icons/envelope.svg#envelope',
+						icon: 'assets/icons/envelope.svg#envelope',
 						class: 'email'
 					}
 				],
@@ -131,25 +131,25 @@ export class ContactComponent implements OnInit, OnDestroy {
 						id: 1,
 						name: '',
 						link: '#',
-						icon: '../../../assets/icons/facebook.svg'
+						icon: 'assets/icons/facebook.svg'
 					},
 					{
 						id: 2,
 						name: '',
 						link: '#',
-						icon: '../../../assets/icons/pinterest.svg'
+						icon: 'assets/icons/pinterest.svg'
 					},
 					{
 						id: 3,
 						name: '',
 						link: '#',
-						icon: '../../../assets/icons/twitter.svg'
+						icon: 'assets/icons/twitter.svg'
 					},
 					{
 						id: 4,
 						name: '',
 						link: '#',
-						icon: '../../../assets/icons/linkedin.svg'
+						icon: 'assets/icons/linkedin.svg'
 					}
 				]
 			};
