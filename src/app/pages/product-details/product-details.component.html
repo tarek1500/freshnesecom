@@ -19,9 +19,16 @@
 				<h2 class="heading">{{ product.name }}</h2>
 				<div class="stars">
 					<ng-template #starTemplate let-fill="fill">
-						<span class="star" [class.full]="fill === 100">
-							<span class="half" [style.width.%]="fill">&starf;</span>&starf;
-						</span>
+						<div class="star-container">
+							<svg width="18" height="18" class="star-icon">
+								<use xlink:href="assets/icons/star.svg#star"></use>
+							</svg>
+							<div class="filled-container" [ngStyle]="{ 'width.%': fill }" *ngIf="fill > 0">
+								<svg width="18" height="18" class="star-icon filled">
+									<use xlink:href="assets/icons/star.svg#star"></use>
+								</svg>
+							</div>
+						</div>
 					</ng-template>
 					<ngb-rating [(rate)]="product.rating" [starTemplate]="starTemplate" [readonly]="true" [max]="5"></ngb-rating>
 					<div class="review">
@@ -125,9 +132,16 @@
 											<label for="rate">{{ 'translate.pages.productDetails.rate' | translate }}</label>
 											<div class="review-stars">
 												<ng-template #reviewTemplate let-fill="fill">
-													<span class="star" [class.full]="fill === 100">
-														<span class="half" [style.width.%]="fill">&starf;</span>&starf;
-													</span>
+													<div class="star-container">
+														<svg width="18" height="18" class="star-icon">
+															<use xlink:href="assets/icons/star.svg#star"></use>
+														</svg>
+														<div class="filled-container" [ngStyle]="{ 'width.%': fill }" *ngIf="fill > 0">
+															<svg width="18" height="18" class="star-icon filled">
+																<use xlink:href="assets/icons/star.svg#star"></use>
+															</svg>
+														</div>
+													</div>
 												</ng-template>
 												<ngb-rating [(rate)]="review.rating" [starTemplate]="reviewTemplate" [max]="5"></ngb-rating>
 											</div>

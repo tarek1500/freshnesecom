@@ -41,9 +41,16 @@
 						<td *ngFor="let product of products">
 							<div class="stars">
 								<ng-template #starTemplate let-fill="fill">
-									<span class="star" [class.full]="fill === 100">
-										<span class="half" [style.width.%]="fill">&starf;</span>&starf;
-									</span>
+									<div class="star-container">
+										<svg width="15" height="15" class="star-icon">
+											<use xlink:href="assets/icons/star.svg#star"></use>
+										</svg>
+										<div class="filled-container" [ngStyle]="{ 'width.%': fill }" *ngIf="fill > 0">
+											<svg width="15" height="15" class="star-icon filled">
+												<use xlink:href="assets/icons/star.svg#star"></use>
+											</svg>
+										</div>
+									</div>
 								</ng-template>
 								<ngb-rating [(rate)]="product.rating" [starTemplate]="starTemplate" [readonly]="true" [max]="5"></ngb-rating>
 							</div>

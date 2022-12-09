@@ -88,6 +88,8 @@
 			}
 
 			.details {
+				margin-bottom: 6px;
+
 				.details-row {
 					margin: 0px 0px 7px 0px;
 
@@ -119,21 +121,29 @@
 			.stars {
 				margin-bottom: 8px;
 
-				.star {
-					position: relative;
-					display: inline-block;
-					font-size: 20px;
-					color: $secondary-border-color;
+				::ng-deep {
+					span {
+						margin-right: 2px;
 
-					&.full {
-						color: $star-color;
-					}
+						.star-container {
+							position: relative;
 
-					.half {
-						position: absolute;
-						display: inline-block;
-						overflow: hidden;
-						color: $star-color;
+							.star-icon {
+								vertical-align: unset;
+								--border-color: #{$secondary-border-color};
+
+								&.filled {
+									--color: #{$star-color};
+								}
+							}
+
+							.filled-container {
+								position: absolute;
+								top: 0px;
+								left: 0px;
+								overflow: hidden;
+							}
+						}
 					}
 				}
 			}
@@ -231,6 +241,21 @@
 
 						.value {
 							padding: 0px 12px 0px 0px;
+						}
+					}
+				}
+
+				.stars {
+					::ng-deep {
+						span {
+							margin: 0px 0px 0px 2px;
+
+							.star-container {
+								.filled-container {
+									right: 0px;
+									left: unset;
+								}
+							}
 						}
 					}
 				}
